@@ -1,0 +1,32 @@
+:root {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.appui-actionbutton{
+    height: 73px;
+    width: 100%;
+    flex-direction: column-reverse;
+    background-color: var(--appui-color-dark-gray-300);
+}
+.appui-actionbutton.is-hovered {
+    border-color: var(--appui-alias-field-border-color-hover);
+}
+.is-selected.appui-actionbutton {
+    border-width: 1px;
+    border-color: var(--appui-alias-field-border-color-focus);
+}
+
+.unity-disabled > .unity-image {
+    opacity: 0.5;
+}
+
+ModeButton ErrorView {
+    display: none;
+}
+
+.appui-actionbutton .unity-image {
+    flex-grow: 0;
+    max-height: 32px;
+}
+

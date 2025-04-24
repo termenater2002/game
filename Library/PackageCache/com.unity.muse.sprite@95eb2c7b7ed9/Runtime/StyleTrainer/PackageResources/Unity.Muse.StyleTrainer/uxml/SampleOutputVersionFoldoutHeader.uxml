@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/SampleOutputVersionRow.uss"/>
+    <styleTrainer:SampleOutputVersionFoldoutHeader class="styletrainer-sampleoutputlistitem__foldout__header" name="SampleOutputVersionFoldoutHeader">
+        <appui:Icon name="ErrorIcon" class="styletrainer-stylemodelinfo__erroricon" icon-name="warning" quiet="true"/>
+        <appui:CircularProgress name="TrainingIcon" class="styletrainer-stylemodelinfo__progress" quiet="true"/>
+        <appui:Text name="VersionName" class="styletrainer-sampleoutputlistitem__versionname" text="Version X"/>
+        <appui:Text name="Status" class="styletrainer-sampleoutputlistitem__status" text="Trained with 100 steps"/>
+        <ui:VisualElement name="Favourite" class="styletrainer-sampleoutputlistitem__favourite__container">
+            <ui:VisualElement name="Favourited" class="styletrainer-sampleoutputlistitem__favourited__container">
+                <appui:Icon name="FavouritedIcon" class="styletrainer-sampleoutputlistitem__favourited__icon" icon-name="star-filled" quiet="true"/>
+                <ui:Label name="FavouritedLabel" class="styletrainer-sampleoutputlistitem__favourited__label" text="Default Version"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="NotFavourite" class="styletrainer-sampleoutputlistitem__not__favourite__container">
+                <appui:ActionButton name="FavouriteButton" class="styletrainer-sampleoutputlistitem__favourite__button" icon="star" label="Set As Default Version" size="S"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </styleTrainer:SampleOutputVersionFoldoutHeader>
+</ui:UXML>

@@ -1,0 +1,86 @@
+<ui:UXML xmlns:museCommon="Unity.Muse.Common" xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project:/Packages/com.unity.muse.common/Runtime/UI/PackageResources/uss/Account.uss"/>
+    <appui:Panel name="deeppose-root-panel" theme="editor-dark" scale="small">
+        <ui:Image picking-mode="Ignore" name="background-texture" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; width: 100%; height: 100%;"/>
+        <appui:Panel name="deeppose-main-panel" theme="editor-dark" scale="small" style="background-color: rgba(0, 0, 0, 0);">
+
+            <!-- Tutorial Callout -->
+            <ui:VisualElement name="temp-tutorial-callout" style="display: none; position: absolute; right: auto; bottom: auto; top: 41px; left: -6px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
+                <ui:Image texture="backgroundTexture" style="position: relative; left: 0; top: 0; right: 0; bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; width: 200px; height: 68px;" />
+            </ui:VisualElement>
+
+            <!-- Application UI -->
+            <ui:VisualElement name="deeppose-event-handler" style="flex:auto;" picking-mode="Ignore">
+
+                <!-- Top Bar -->
+                <ui:VisualElement name="top-bar" class="deeppose-top-bar" picking-mode="Ignore">
+                    <appui:Button name="top-bar-back-button" leading-icon="caret-left" title="Library" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="top-bar-separator" class="deeppose-main-horizontal-separator" picking-mode="Ignore"/>
+
+                <!-- Main -->
+                <ui:VisualElement name="main" class="deeppose-main" picking-mode="Ignore">
+
+                    <!-- Main -> Left Section -->
+                    <ui:VisualElement name="main-left-section" class="deeppose-main-left-section" picking-mode="Ignore">
+                        <museAnimate:SidePanelUI name="side-panel-left"
+                                                 picking-mode="Ignore"
+                                                 quiet="false"
+                                                 select-default-page="true"
+                                                 align-bottom="false"
+                                                 align-right="false"
+                                                 reverse-order="false"
+                                                 left-button-tooltip="Close this panel"
+                                                 right-button-icon=""
+                                                 hide-page-title="true"
+                                                 hide-menu-if-page-shown="false"
+                                                 expand="true"
+                        />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="main-left-separator" class="deeppose-main-vertical-separator" picking-mode="Ignore"/>
+
+                    <!-- Main -> Right Section -->
+                    <ui:VisualElement name="main-right-section" class="deeppose-main-right-section" picking-mode="Ignore">
+
+                        <!-- Library -->
+                        <museAnimate:LibraryUI name="takes-library" class="deeppose-library"/>
+                        
+                        <!-- Editor -->
+                        <ui:VisualElement name="editor-area" class="deeppose-editor-area">
+                            <!-- Scene  -->
+                            <ui:VisualElement name="scene" class="deeppose-scene" picking-mode="Ignore">
+                                <!-- Scene Center (Scene View and Inspectors) -->
+                                <ui:VisualElement name="scene-center" class="deeppose-scene-center" picking-mode="Ignore">
+
+                                    <!-- Scene View -->
+                                    <museAnimate:SceneViewUI name="scene-view" class="deeppose-scene-view" picking-mode="Ignore"/>
+
+                                </ui:VisualElement> <!-- End of Scene Center UI -->
+
+                            </ui:VisualElement> <!-- End of Scene UI -->
+
+                            <!-- Timeline Authoring - Sequencer -->
+                            <museAnimate:TimelineView name="timeline-view" picking-mode="Ignore"/>
+                        </ui:VisualElement>
+
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- Tutorial Mask (Used to highlight/focus on a rect) -->
+            <appui:Mask name="tutorial-mask"
+                        style="display: None; width: 100%; height:100%; position: absolute;"
+                        mask-rect-x="200"
+                        mask-rect-y="320"
+                        mask-rect-width="200"
+                        mask-rect-height="320"
+                        inner-mask-color="#00000000"
+                        outer-mask-color="#000000bb"
+                        blur="1"
+                        radius="10"
+            />
+
+        </appui:Panel>
+    </appui:Panel>
+</ui:UXML>

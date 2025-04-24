@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/TrainingSetView.uss"/>
+    <styleTrainer:TrainingSetView class="styletrainer-trainingsetview" name="TrainingSetView">
+        <appui:ExVisualElement name="DataContent" class="styletrainer-trainingsetview__content">
+            <appui:ExVisualElement name="TrainingImagesHintContainer" class="styletrainer-trainingsetview__hints-training-images">
+                <appui:Text text="These images will be used as the basis of your style."/>
+            </appui:ExVisualElement>
+            <appui:ExVisualElement class="styletrainer-trainingsetview__training-images-container">
+                <appui:ExVisualElement name="HeaderTrainingImages" class="styletrainer-trainingsetview__header">
+                    <appui:Text name="TrainingImagesTitleText" text="Training Images" class="styletrainer-trainingsetview__text_title styletrainer-title-text"/>
+                    <appui:Text name="TrainingImagesTextCount" text="0/15" class="styletrainer-trainingsetview__text_count"
+                                size="S"/>
+                </appui:ExVisualElement>
+                <appui:ExVisualElement name="GridViewContainer" class="styletrainer-trainingsetview__gridview_container">
+                    <appui:GridView name="TrainingSetViewGridView" class="styletrainer-trainingsetview-gridview"/>
+                    <ui:VisualElement name="DragAndDropContainer"
+                                      class="styletrainer-trainingsetview__draganddropcontainer"/>
+                </appui:ExVisualElement>
+            </appui:ExVisualElement>
+        </appui:ExVisualElement>
+        <appui:ExVisualElement name="LoadingScreen" class="styletrainer-trainingsetview__loadingscreen">
+            <appui:CircularProgress name="LoadingIcon" class="styletrainer-trainingsetview__loadingicon" quiet="true"/>
+            <appui:Text name="LoadingText" class="styletrainer-trainingsetview__loadingtext"
+                        text="Loading Training Set..."/>
+        </appui:ExVisualElement>
+    </styleTrainer:TrainingSetView>
+</ui:UXML>

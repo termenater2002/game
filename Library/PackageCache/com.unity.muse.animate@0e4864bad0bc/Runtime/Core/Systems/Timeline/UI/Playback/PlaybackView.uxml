@@ -1,0 +1,21 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Timeline Playback Controls-->
+    <appui:ActionGroup name="deeppose-playback-controls" class="deeppose-playback-action-group" >
+        <appui:ActionButton name="go-to-prev-key" size="M" icon="fast-forward" tooltip="Go to Previous Key" quiet="true"/>
+        <appui:ActionButton name="play" size="M" icon="play" tooltip="Play" quiet="true"/>
+        <appui:ActionButton name="pause" size="M" icon="pause" tooltip="Pause" style="display: None;" quiet="true"/>
+        <appui:ActionButton name="go-to-next-key" style="margin-right:0;" size="M" icon="fast-forward" tooltip="Go to Next Key" quiet="true"/>
+    </appui:ActionGroup>
+
+    <!-- Timeline Playback Slider-->
+    <ui:VisualElement name="deeppose-playback-container" class="deeppose-playback-slider-container">
+        <museAnimate:PlaybackSlider name="playback-slider" class="deeppose-playback-slider" tickLabel="false" low-value="0" high-value="0" value="0" tooltip=""/>
+        <appui:Button name="playback-add-key" class="deeppose-playback-plus-button" leading-icon="plus" style="position:absolute;"/>
+    </ui:VisualElement>
+
+<!-- Timeline Playback Options-->
+    <appui:ActionGroup name="deeppose-playback-options" class="deeppose-playback-action-group">
+        <appui:ActionButton name="toggle-loop" size="M" icon="arrows-u-clockwise" tooltip="Loop" quiet="true"/>
+        <appui:ActionButton name="playback-speed" class="deeppose-playback-speed-button" style="margin-right:0;" size="M" label="x1" tooltip="Playback Speed" quiet="true"/>
+    </appui:ActionGroup>
+</ui:UXML>

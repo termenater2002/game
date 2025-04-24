@@ -1,0 +1,48 @@
+.styletrainer-sampleoutputpromptexample-item{
+    margin-right: var(--appui-spacing-100);
+    width: var(--appui-static-sizing-3000);
+}
+
+.styletrainer-sampleoutputpromptexample-item__no-margin{
+    margin-right: 0;
+}
+
+.styletrainer-sampleoutputpromptexample-favoritebutton{
+    width: var(--appui-sizing-500);
+    height: var(--appui-sizing-500);
+    margin-right: var(--appui-spacing-200);
+    margin-top: var(--appui-spacing-200);
+    display: none;
+}
+
+.styletrainer-sampleoutputpromptexample-container{
+
+}
+
+.styletrainer-sampleoutputpromptexample-image-container{
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+}
+
+.styletrainer-sampleoutputpromptexample-image{
+    background-color: var(--unity-theme-background-color-89);
+    border-radius: var(--appui-border-radius-lg);
+    flex-direction: row-reverse;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+:hover > .styletrainer-sampleoutputpromptexample-image > .styletrainer-sampleoutputpromptexample-favoritebutton {
+    display: flex;
+}
+
+.styletrainer-sampleoutputpromptexample-image > .styletrainer-sampleoutputpromptexample-favoritebutton.is-favorite{
+    display: flex;
+}

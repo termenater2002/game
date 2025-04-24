@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/TrainingItemGridItem.uss"/>
+    <styleTrainer:TrainingItemGridItem class="styletrainer-trainingitemgriditem" name="TrainingItemGridItem">
+        <appui:ExVisualElement name="GridItem" class="styletrainer-trainingitemgriditem__gridItem">
+            <styleTrainer:PreviewImage name="PreviewImage" class="styletrainer-trainingitemgriditem__previewimage"/>
+            <!--appui:TextField name = "Prompt" class="styletrainer-trainingitemgriditem__promptField" /-->
+        </appui:ExVisualElement>
+        <appui:ActionButton name="DeleteButton" class="styletrainer-trainingitemgriditem__deletebutton" icon="delete"/>
+    </styleTrainer:TrainingItemGridItem>
+</ui:UXML>

@@ -1,0 +1,36 @@
+.styletrainer-sampleoutputtrainedview-title-container{
+    flex-direction: column;
+    margin-bottom: var(--appui-static-spacing-50);
+}
+
+.styletrainer-sampleoutputtrainedview-description-container{
+    flex-direction: row;
+    margin-bottom: var(--appui-static-spacing-50);
+    align-items: center;
+}
+
+.styletrainer-sampleoutputtrainedview-description-container Button{
+    margin-left: var(--appui-spacing-200);
+}
+
+.styletrainer-sampleoutputtrainedview-description-text{
+    opacity: 0.5;
+    flex-shrink: 1;
+}
+
+.styletrainer-sampleoutputtrainedview-examples-title{
+    height: var(--appui-sizing-400);
+    margin-right: var(--appui-static-spacing-50);
+}
+
+.styletrainer-sampleoutputtrainedview-examples-container{
+    flex-direction: row;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.styletrainer-sampleoutputtrainedview-examples-container SampleOutputPromptExample{
+    flex-grow: 1;
+}

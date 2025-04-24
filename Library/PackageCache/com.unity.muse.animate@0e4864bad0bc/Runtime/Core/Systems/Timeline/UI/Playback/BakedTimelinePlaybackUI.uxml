@@ -1,0 +1,18 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Playback Controls-->
+    <appui:ActionGroup name="baked-timeline-playback-controls" class="deeppose-baked-timeline-playback-action-group" >
+        <appui:ActionButton name="play" size="M" icon="play" tooltip="Play" quiet="true" style="margin-right:0;"/>
+        <appui:ActionButton name="pause" size="M" icon="pause" tooltip="Pause" style="margin-right:0; display: None;" quiet="true"/>
+    </appui:ActionGroup>
+
+    <!-- Playback Slider-->
+    <ui:VisualElement name="baked-timeline-playback-slider-container" class="deeppose-baked-timeline-playback-slider-container">
+        <museAnimate:BakedTimelinePlaybackSlider name="baked-timeline-playback-slider" class="deeppose-baked-timeline-playback-slider" tickLabel="false" low-value="0" high-value="0" value="0" tooltip=""/>
+    </ui:VisualElement>
+
+    <!-- Playback Options-->
+    <appui:ActionGroup name="baked-timeline-playback-options" class="deeppose-baked-timeline-playback-action-group">
+        <appui:ActionButton name="toggle-loop" size="M" icon="arrows-u-clockwise" tooltip="Loop" quiet="true"/>
+        <appui:ActionButton name="playback-speed" class="deeppose-baked-timeline-playback-speed-button" style="margin-right:0;" size="M" label="x1" tooltip="Playback Speed" quiet="true"/>
+    </appui:ActionGroup>
+</ui:UXML>

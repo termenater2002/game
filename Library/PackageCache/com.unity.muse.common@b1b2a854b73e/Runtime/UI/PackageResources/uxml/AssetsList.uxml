@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xmlns:muse="Unity.Muse.Common"
+    xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/AssetsList.uss"/>
+    <ui:VisualElement name="__root__">
+        <appui:ExVisualElement class="muse-assetslist">
+            <ui:VisualElement name="muse-assetslist__context-menu-anchor" class="muse-assetslist__context-menu-anchor" picking-mode="Ignore" />
+
+            <ui:VisualElement class="muse-assetslist__titlebar">
+                <appui:Text class="muse-assetslist__title" text="Generations" primary="true" />
+                <appui:Button class="muse-assetslist__export-button" size="M" leading-icon="download-simple" quiet="true"/>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="muse-assetslist__header" class="muse-assetslist__header">
+                <appui:ActionButton class="muse-assetslist__bookmark-filter-button" icon="star"/>
+                <appui:SearchBar class="muse-assetslist__searchbar" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="muse-assetslist__body" class="muse-assetslist__body"/>
+
+            <ui:VisualElement class="muse-assetslist__footer">
+                <appui:SliderFloat name="muse-assetslist__thumbnail-slider" class="muse-assetslist__thumbnail-slider" low-value="0.4" high-value="1" value="1" inline-value="End"  />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="muse-assetslist__dragbar" class="muse-assetslist__dragbar cursor--ew-resize">
+                <ui:VisualElement class="muse-assetslist__dragbar-content" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </appui:ExVisualElement>
+    </ui:VisualElement>
+</ui:UXML>

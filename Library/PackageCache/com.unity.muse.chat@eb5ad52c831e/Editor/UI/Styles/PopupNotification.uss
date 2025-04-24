@@ -1,0 +1,47 @@
+#back {
+    background-color: var(--muse-chat-base-200);
+    max-width: 500px;
+    border-color: var(--muse-chat-backgrounds-200);
+    border-width: 1px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    margin-left: 12px;
+    padding: 2px;
+    flex-grow: 1;
+    flex-direction: row;
+    align-self: center;
+}
+
+#icon {
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-self: center;
+    margin-left: 16px;
+}
+
+#messageField {
+    align-items: flex-start;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+#dismissButton {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 16px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#dismissButton:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}

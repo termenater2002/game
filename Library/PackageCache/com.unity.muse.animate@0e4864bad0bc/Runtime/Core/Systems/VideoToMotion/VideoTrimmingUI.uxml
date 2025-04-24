@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:editor="UnityEditor.UIElements"
+    xmlns:museAnimate="Unity.Muse.Animate"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xsi:noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <!-- Video Player-->
+    <ui:VisualElement class="video-container">
+        <museAnimate:VideoPlayerUI name="video-preview" class="video-preview" auto-play="true" loop="true"/>
+        <ui:VisualElement name="video-preloader">
+            <appui:CircularProgress name="video-loading-spinner" />
+        </ui:VisualElement>
+        <appui:IconButton name="close-button" icon="x" class="close-button" quiet="true" size="S"/>
+    </ui:VisualElement>
+
+    <ui:VisualElement name="controls-container">
+        <!-- Timeline controls -->
+        <ui:VisualElement class="timeline-controls">
+            <!-- Playback Controls-->
+            <appui:ActionGroup name="playback-controls" class="playback-action-group">
+                <appui:ActionButton name="play-pause-button" size="M" icon="play"/>
+            </appui:ActionGroup>
+
+            <!-- Timeline Playback Slider-->
+            <ui:VisualElement class="slider-container">
+                <museAnimate:PlaybackSlider name="playback-slider" tickLabel="false" low-value="0" high-value="0" value="0" tooltip=""/>
+            </ui:VisualElement>
+
+            <!-- Timecode Display-->
+            <ui:VisualElement class="playback-label-container">
+                <appui:Text name="frame-number-text" class="frame-number-text" text="0"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+
+        <!-- Trimming controls -->
+        <ui:VisualElement class="trimming-controls">
+            <appui:Text text="Length:"/>
+            <appui:Text name="length-text" text="1000"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <ui:VisualElement class="trimming-controls">
+            <appui:Text text="Start:"/>
+            <appui:TextField name="start-frame-field"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <appui:Button title="Use Current Frame" name="use-current-frame-button"/>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <appui:TouchSliderFloat name="duration-slider"
+                                format-string="g3"
+                                label="Duration (sec)"/>
+    </ui:VisualElement>
+</ui:UXML>

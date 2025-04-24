@@ -1,0 +1,100 @@
+.chatelementuser__element {
+    align-self: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 8px 12px 8px 12px;
+    max-width: 716px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 96%;
+}
+
+.chatelementuser__element-root {
+    flex-grow: 1;
+    align-self: center;
+    margin: 2px;
+}
+
+.mui-chat-user-message {
+    -unity-text-align: upper-right;
+    border-width: 0;
+    background-color: var(--muse-chat-user-message-bg);
+}
+
+.mui-um-edit-mode-active {
+    background-color: var(--muse-chat-backgrounds-100);
+}
+
+.mui-um-edit-mode-active #textFieldRoot {
+    border-color: var(--muse-chat-color-pink);
+    border-width: 1px;
+}
+
+.mui-user-edit-controls {
+    position: absolute;
+    flex-direction: row;
+    right: 16px;
+    top: 16px;
+}
+
+#editButton {
+    background-color: rgba(0,0,0,0);
+    border-width: 0;
+    align-items: center;
+}
+
+#editCancelButton {
+    background-color: var(--muse-chat-backgrounds-100);
+    border-width: 0;
+}
+
+#editButton:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+#editCancelButton:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-user-edit-read-write-field {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#userName {
+    margin-right: 20px;
+    color: var(--muse-chat-header-text-color);
+}
+
+#contextContent {
+    padding-top: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mui-chat-context-foldout {
+    margin-right: 16px;
+    margin-bottom: 16px;
+    color: var(--muse-chat-text-primary);
+}
+
+.mui-chat-context-accordion-entry {
+    border-bottom-width: 0;
+    min-width: 300px;
+}
+
+#userMessageTextFieldRoot {
+    margin-bottom: 8px;
+    -unity-text-align: middle-left;
+}
+
+#userMessageTextFieldRoot .unity-text-element {
+    white-space: normal;
+}
+
+.mui-user-edit-control-button {
+    width: 24px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,209 @@
+:root {
+    --muse-chat-warning-25: #9d5500;
+    --muse-chat-color-dark-gray-800: #727272;
+    --muse-chat-base-200: #4f4f4f;
+    --muse-chat-primary-50: #202020;
+    --muse-chat-primary-500: #5d5d5d;
+    --muse-chat-primary-800: #a2a2a2;
+    --muse-chat-primary-1200: #e9e9e9;
+    --muse-chat-text-disabled: #858585;
+    --muse-chat-text-primary: #d2d2d2;
+    --muse-chat-accent-50: #0780df;
+    --muse-chat-foregrounds-25: #858585;
+    --muse-chat-foregrounds-100: #d2d2d2;
+    --muse-chat-foregrounds-200: #eeeeee;
+    --muse-chat-backgrounds-50: #202020;
+    --muse-chat-backgrounds-100: #2A2A2A;
+    --muse-chat-backgrounds-200: #383838;
+    --muse-chat-backgrounds-300: #424242;
+    --muse-chat-color-blue: #46adff;
+    --muse-chat-color-pink: #d33c79;
+    --muse-chat-color-user-message: #441a2b;
+    --muse-chat-color-crimson-dark: #FF85AB;
+    --muse-chat-header-text-color: #ffffff;
+    --muse-chat-header-text-strong: #ffffff;
+    --muse-chat-experimental-bg: #191919;
+    --muse-chat-experimental-border: #F4BC02;
+    --muse-chat-hover: #585858;
+    --muse-chat-drop-zone-bg: #383838;
+    --muse-chat-user-message-bg: var(--muse-chat-backgrounds-100);
+    --muse-chat-panel-bg: var(--muse-chat-backgrounds-50);
+    --muse-chat-source-border-color: var(--muse-chat-backgrounds-100);
+    --muse-chat-inspiration-button-border: var(--muse-chat-backgrounds-200);
+    --muse-chat-inspiration-button-border-hover: #858585;
+    --muse-chat-avatar-bg: var(--muse-chat-backgrounds-50);
+    --muse-chat-context-pill-bg: var(--muse-chat-backgrounds-100);
+    --muse-chat-disclaimer-text: rgba(255, 255, 255, 0.4);
+    --muse-chat-add-context-button-open: #4c607b;
+    --muse-chat-prefab-color: #6b8fc4;
+    --muse-chat-color-gray: rgba(88, 88, 88, 1);
+    --muse-chat-color-focus-blue: rgba(58, 121, 187, 1);
+    --muse-chat-action-button-default: #858585;
+    --muse-chat-text-action-button-default: #676767;
+    --muse-chat-text-focus: #4F657F;
+
+    --muse-chat-primary-200: #383838;
+    --muse-chat-primary-300: #595959;
+    --muse-chat-primary-400: #858585;
+    --muse-chat-primary-1000: #c0c0c0;
+    --muse-chat-primary-1300: #ffffff;
+    --muse-chat-light-mode-icon-tint: var(--muse-chat-primary-200);
+
+    --muse-agent-action-border: #BDBDBD;
+    --muse-agent-selection-empty: #808080;
+}
+
+.-muse-chat-panel {
+    background-color: var(--muse-chat-backgrounds-200);
+}
+
+.muse-chat-icon {
+    ---unity-image-tint-color: blue;
+}
+
+.mui-icon-empty {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/empty.png');
+}
+
+.mui-icon-empty-margin {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/empty.png');
+    width: 28px;
+    height: 14px;
+}
+
+.mui-icon-muse {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/muse.png');
+}
+
+.mui-icon-history {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/ClockCounterClockwise.png');
+}
+
+.mui-icon-copy {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CopySimple.png');
+}
+
+.mui-icon-cmd-run {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CmdRun.png');
+}
+
+.mui-icon-cmd-ask {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CmdAsk.png');
+}
+
+.mui-icon-cmd-code {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CmdCode.png');
+}
+
+.mui-icon-save {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/SaveAs.png');
+}
+
+.mui-icon-delete {
+    background-image: resource('d_console.erroricon');
+}
+
+.mui-icon-upvote {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/ThumbsUp.png');
+}
+
+.mui-icon-downvote {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/ThumbsDown.png');
+}
+
+.mui-icon-cancel {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/XSquare.png')
+}
+
+.mui-icon-stop {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/StopCircle.png');
+}
+
+.mui-icon-submit {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/PaperPlaneRight.png');
+}
+
+.mui-icon-submit-white {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/PaperPlaneRight.png');
+}
+
+.mui-icon-tick {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/tick.png');
+}
+
+.mui-icon-star-filled-white {
+    --unity-image: url("project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/StarFilledWhite.png");
+}
+
+.mui-icon-star-filled-grey {
+    --unity-image: url("project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/StarFilledWhite.png");
+    --unity-image-tint-color: rgba(100, 100, 100, 0.2);
+}
+
+.mui-icon-star-close-s-trimmed {
+    --unity-image: url("project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/Close_S_Trimmed.png");
+}
+
+.mui-icon-arrow-square-in {
+    --unity-image: url("project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/arrow-square-in.png");
+}
+
+.mui-icon-error {
+    background-image: resource('d_console.erroricon');
+}
+
+.mui-icon-close {
+    background-image: resource('d_clear@2x');
+}
+
+.mui-icon-warn {
+    background-image: resource('d_console.warnicon');
+}
+
+.mui-icon-info {
+    background-image: resource('d_console.infoicon');
+}
+
+.mui-icon-game-object {
+    --unity-image: resource('d_GameObject Icon');
+}
+
+.mui-icon-console {
+    --unity-image: resource('d_UnityEditor.ConsoleWindow');
+}
+
+.mui-icon-pick {
+    --unity-image: resource('d_pick.png');
+}
+
+.mui-icon-shortcut {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/Shortcut.png');
+}
+
+.mui-icon-arrow-up {
+    --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/ArrowUp.png');
+}
+
+.mui-icon-prefab {
+    --unity-image: resource('d_Prefab Icon');
+}
+
+.mui-icon-checkmark {
+    background-image: resource('check');
+}
+
+.mui-icon-pen {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/Pen.png');
+}
+
+.mui-icon-arrows-counter-clockwise {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/ArrowsCounterClockwise.png');
+}
+
+.mui-icon-plus {
+    background-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/Plus.png');
+}
+
+.mui-icon-undo {
+    --unity-image:resource("Icons/d_UndoHistory.png");
+}

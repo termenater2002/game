@@ -1,0 +1,57 @@
+.mui-chat-root {
+    border-radius: 6px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.mui-chat-avatar {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.mui-chat-avatar-frame {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border-radius: 4px;
+    background-color: var(--muse-chat-backgrounds-50);
+    justify-content: center;
+    align-items: center;
+}
+
+.mui-chat-username {
+    -unity-font-style: bold;
+    color: var(--muse-chat-header-text-color);
+    height: 20px;
+}
+
+.mui-chat-element-text-area {
+    margin-top: 8px;
+}
+
+.mui-um-edit-mode-active .mui-chat-element-text-area {
+    margin-top: 0;
+}
+
+.mui-chat-element-avatar-area {
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+
+.mui-chat-message-content {
+    min-width: 100px;
+    flex-direction: column;
+    padding-left: 16px;
+    padding-top: 16px;
+    padding-right: 16px;
+}
+
+.mui-chat-footer {
+    border-top-width: 2px;
+    border-top-color: var(--muse-chat-backgrounds-50);
+    padding: 4px;
+    flex-direction: row;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}

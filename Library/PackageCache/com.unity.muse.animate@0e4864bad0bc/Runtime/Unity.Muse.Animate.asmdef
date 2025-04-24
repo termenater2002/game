@@ -1,0 +1,67 @@
+{
+    "name": "Unity.Muse.Animate",
+    "rootNamespace": "",
+    "references": [
+        "Autodesk.Fbx",
+        "Unity.Mathematics",
+        "Unity.Burst",
+        "Unity.TextMeshPro",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.HighDefinition.Runtime",
+        "Unity.Muse.AppUI",
+        "Unity.Muse.Common",
+        "Unity.Sentis",
+        "Unity.InputSystem",
+        "Unity.Sentis.ONNX"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "0.0.0",
+            "define": "DEEPPOSE_HDRP"
+        },
+        {
+            "name": "com.unity.render-pipelines.universal",
+            "expression": "0.0.0",
+            "define": "DEEPPOSE_URP"
+        },
+        {
+            "name": "Unity",
+            "expression": "2023.3.0a1",
+            "define": "ENABLE_UXML_SERIALIZED_DATA"
+        },
+        {
+            "name": "Unity",
+            "expression": "[2021.3,2023.3.0a1)",
+            "define": "ENABLE_UXML_TRAITS"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "UNITY_INPUTSYSTEM_PRESENT"
+        },
+        {
+            "name": "Unity",
+            "expression": "2023.2.0a22",
+            "define": "ENABLE_UNITYENGINE_ANALYTICS"
+        },
+        {
+            "name": "com.autodesk.fbx",
+            "expression": "1.0.0",
+            "define": "ENABLE_FBX_DEPENDENCY"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,83 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements"
+         xmlns:uie="UnityEditor.UIElements"
+         xmlns:appui="Unity.Muse.AppUI.UI"
+         xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="root-panel">
+        <ui:VisualElement name="root-main">
+            <ui:VisualElement name="headerRoot" class="mui-header -muse-chat-panel">
+                <ui:Label name="conversationNameLabel" class="mui-chat-label mui-header-label" text="Conversation Name"/>
+                <ui:Button name="newChatButton" class="mui-header-button">
+                    <ui:Image class="mui-action-button-image mui-icon-plus"/>
+                </ui:Button>
+                <ui:Button name="historyButton" class="mui-header-button" text="History"/>
+                <ui:VisualElement name="museAccountContainer" class="mui-header-dropdown">
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="chatContentRoot" class="mui-chat-content">
+                <ui:VisualElement class="mui-conversation-panel">
+                    <ui:VisualElement name="inspirationPanelRoot">
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="chatPanelRoot">
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="notificationContainer" picking-mode="Ignore" >
+                </ui:VisualElement>
+
+                <ui:VisualElement name="historyPanelRoot">
+                </ui:VisualElement>
+
+                <ui:VisualElement name="musingElementContainer" picking-mode="Ignore">
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+
+            <ui:VisualElement name="footerRoot" class="mui-footer -muse-chat-panel">
+
+                <ui:VisualElement name="addContextRoot" class="mui-chat-selected-context-root">
+                    <ui:VisualElement class="mui-chat-context-spacer"/>
+                    <ui:Button name="clearContextButton" size="s" class="mui-chat-clear-context-button" text="Clear all"/>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="contextRoot" class="mui-chat-user-context-root">
+                    <ui:VisualElement name="userSelectedContextRoot" class="mui-chat-selected-context-root">
+                        <ui:ScrollView name="userSelectedContextListView" class="mui-chat-selected-context-scrollview"/>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="userSelectedContextWarningRoot" class="mui-chat-selected-context-warning-root">
+                    <ui:Image name="selectionWarningIcon" class="mui-icon-warn mui-selected-context-icon"/>
+                    <ui:Label name="selectionWarningText" text="For best results, attach fewer items or smaller objects. &lt;b&gt;[?]&lt;/b&gt;" class="mui-chat-label mui-selected-context-text" tooltip="Large objects (e.g. materials, meshes, or animation clips) are not currently supported as attachments and may cause performance issues."/>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="chatTextFieldRoot" class="mui-chat-input-root">
+                </ui:VisualElement>
+
+                <ui:VisualElement name="commandGroup" class="mui-chat-input-command-root">
+                    <ui:Button name="commandAsk" class="-muse-chat-button mui-chat-command-button" tooltip="/&lt;b&gt;ask&lt;/b&gt;  Ask Muse questions or troubleshoot">
+                        <ui:Image class="mui-action-button-image mui-icon-cmd-ask"/>
+                    </ui:Button>
+                    <ui:Button name="commandRun" class="-muse-chat-button mui-chat-command-button mui-chat-cmd-run" tooltip="/&lt;b&gt;run&lt;/b&gt;  Automate tasks by running commands in the Editor">
+                        <ui:Image class="mui-action-button-image mui-icon-cmd-run"/>
+                    </ui:Button>
+                    <ui:Button name="commandCode" class="-muse-chat-button mui-chat-command-button mui-chat-cmd-code" tooltip="/&lt;b&gt;code&lt;/b&gt;  Use a dedicated code generator">
+                        <ui:Image class="mui-action-button-image mui-icon-cmd-code"/>
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="notificationBannerRoot"/>
+        <ui:VisualElement name="chatDropZone" class="mui-chat-context-dropzone" picking-mode="Ignore">
+        </ui:VisualElement>
+
+        <ui:VisualElement name="chatModalPopupRoot" class="mui-chat-popup-container" picking-mode="Ignore">
+        </ui:VisualElement>
+
+        <appui:Panel name="appUICompatPanel" picking-mode="Ignore">
+            <ui:VisualElement name="account-notifications"/>
+        </appui:Panel>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,48 @@
+{
+  "modes":
+  [
+    {
+      "type": "TextToImage",
+      "label": "Materials",
+      "title": "Texture Generator",
+      "version": "1.0",
+      "enabled": true,
+      "group": "Materials",
+      "group_order": 0,
+      "icon_path": "Packages/com.unity.muse.common/PackageResources/Logos/UnityIcon.png",
+      "icon_label": "Unity",
+
+      "operators": [
+        {
+          "type": "GenerateOperator",
+          "version": "1.0",
+          "settings": [
+            "TextToImage",
+            "4"
+          ],
+          "enabled": true
+        },
+        {
+          "type": "PromptOperator",
+          "version": "2.0",
+          "enabled": true
+        },
+        {
+          "type": "LoraOperator",
+          "version": "1.0",
+          "enabled": false
+        },
+        {
+          "type": "ReferenceOperator",
+          "version": "1.0",
+          "enabled": true
+        },
+        {
+          "type": "MaskOperator",
+          "version": "1.0",
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}

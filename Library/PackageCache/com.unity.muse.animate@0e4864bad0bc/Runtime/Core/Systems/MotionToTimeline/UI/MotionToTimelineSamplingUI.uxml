@@ -1,0 +1,30 @@
+<ui:UXML
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:uie="UnityEditor.UIElements"
+        xsi="http://www.w3.org/2001/XMLSchema-instance"
+        editor="UnityEditor.UIElements"
+        MemoryProfiler="Unity.MemoryProfiler.Editor"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+        editor-extension-mode="False">
+
+    <appui:Text text="Sampling" name="mtt-title"/>
+    <appui:Text name="mtt-sampling-help"
+                text="Increasing the sampling sensitivity means more keyframes are generated in order to capture finer details in the motion."/>
+    <appui:TouchSliderInt name="mtt-sensitivity-slider"
+                            label="Sensitivity"
+                            class="deeppose-mtt-sensitivity-slider"
+                            low-value="0"
+                            high-value="100"
+                            inline-value="End"/>
+    <appui:Button name="mtt-button-convert"
+                  class="mtt-button"
+                  tabindex="-1"
+                  title="Sample"
+                  primary="true"/>
+    <appui:Button name="mtt-button-done"
+                  class="mtt-button"
+                  tabindex="-1"
+                  title="Convert To Frames"
+                  primary="true"/>
+</ui:UXML>

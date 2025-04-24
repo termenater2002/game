@@ -1,0 +1,20 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="mui-code-block-root">
+
+    <ui:VisualElement name="codeWarningContainer" class="notification-warning-content">
+        <ui:Label name="codeWarningText"/>
+    </ui:VisualElement>
+
+        <ui:VisualElement name="blockControls" class="mui-code-block-buttons">
+            <ui:Button name="saveCodeButton" tooltip="Save Code" class="mui-chat-response-code-block-button -muse-chat-button">
+                <ui:Image class="mui-action-button-image mui-icon-save"/>
+            </ui:Button>
+            <ui:Button name="copyCodeButton" tooltip="Copy Code" class="mui-chat-response-code-block-button -muse-chat-button">
+                <ui:Image class="mui-action-button-image mui-icon-copy"/>
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:Label name="codeText" class="mui-chat-label mui-code-block--monospaced-text"/>
+
+    </ui:VisualElement>
+</UXML>

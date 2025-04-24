@@ -1,0 +1,22 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Text to Motion Generator -->
+    <ui:VisualElement name="takes-t2m" class="deeppose-takes-t2m">
+        <appui:Dropdown name="takes-t2m-model" class="deeppose-model-dropdown"/>
+<!--        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>-->
+        <appui:Text text="Prompt" class="deeppose-takes-label"/>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <appui:TextArea name="takes-t2m-input-field" focusable="true" placeholder="Describe a motion here, then press generate." class="deeppose-takes-t2m-input-field" />
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <appui:TouchSliderInt name="takes-t2m-slider" label="Generations" low-value="1" high-value="4" value="1" class="deeppose-takes-t2m-slider"/>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <appui:TouchSliderFloat name="takes-t2m-duration" label="Duration (sec)" low-value="1" high-value="5" value="3" class="deeppose-takes-t2m-slider" format-string="g3"/>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+        <appui:Button name="takes-t2m-button-generate" primary="true" tabindex="-1" title="Generate" class="deeppose-takes-t2m-generate-button"/>
+        <ui:VisualElement name="takes-t2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+    </ui:VisualElement>
+    <appui:Accordion name="takes-optional-generators" class="deeppose-takes-t2m" style="display: none">
+        <appui:AccordionItem title="Video to Motion">
+            <museAnimate:VideoToMotionUI name="takes-v2m"/>
+        </appui:AccordionItem>
+    </appui:Accordion>
+</ui:UXML>

@@ -1,0 +1,11 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="routeEntryItemRoot" class="mui-route-popup-item">
+        <ui:VisualElement>
+            <Label picking-mode="ignore" name="commandItemText" class="mui-route-popup-command" />
+            <Label picking-mode="ignore" name="commandItemDescription" class="mui-route-popup-command-description" />
+        </ui:VisualElement>
+        <ui:VisualElement name="commandItemExperimentalDisclaimer" class="mui-route-popup-chip-container">
+            <Label picking-mode="ignore" text="Experimental" class="mui-route-popup-chip"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</UXML>

@@ -1,0 +1,20 @@
+<ui:UXML
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:museAnimate="Unity.Muse.Animate"
+        xmlns:uie="UnityEditor.UIElements"
+        xsi="http://www.w3.org/2001/XMLSchema-instance"
+        editor="UnityEditor.UIElements"
+        MemoryProfiler="Unity.MemoryProfiler.Editor"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd"
+        editor-extension-mode="False">
+
+    <ui:VisualElement name="mtt-main" class="deeppose-mtt-main">
+        <ui:VisualElement name="mtt-playback-section" class="deeppose-mtt-section">
+            <museAnimate:BakedTimelinePlaybackUI name="mtt-playback" class="deeppose-mtt-playback"/>
+        </ui:VisualElement>
+        <museAnimate:TimelineView name="mtt-timeline" class="deeppose-mtt-timeline"/>
+    </ui:VisualElement>
+
+
+</ui:UXML>

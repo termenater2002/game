@@ -1,0 +1,93 @@
+.styletrainer-sampleoutputview {
+    flex-direction: row;
+    margin-top: var(--appui-spacing-300);
+    flex-basis: auto;
+    overflow: hidden;
+}
+
+.styletrainer-sampleoutputview-gridview {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.styletrainer-sampleoutputview-gridview-disable {
+
+}
+
+.styletrainer-sampleoutputview-listview {
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 10px;
+    margin-top: var(--appui-spacing-100);
+}
+
+.styletrainer-sampleoutputview__hintext {
+    flex-grow: 1;
+    -unity-text-align: middle-center;
+    font-size: 15px;
+}
+
+.styletrainer-sampleoutputview-gridview_container {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.styletrainer-sampleoutputview-tooltip_container {
+    flex-direction: row;
+    width: 100%;
+    margin-top: var(--appui-sizing-60);
+    border-bottom-width: var(--appui-sizing-60);
+    border-bottom-color: var(--appui-backgrounds-300);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.styletrainer-sampleoutputview-tooltip_icon {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.styletrainer-sampleoutputview-tooltip_text {
+    font-size: 12px;
+    -unity-text-align: middle-center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    overflow: hidden;
+}
+
+.styletrainer-sampleoutputview-container{
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.styletrainer-sampleoutputview-container__title{
+    margin-bottom: var(--appui-spacing-100);
+}
+
+.styletrainer-sampleoutputview-prompts-hinttext{
+    padding: var(--appui-spacing-200);
+    padding-top: var(--appui-spacing-450);
+    margin-right: var(--appui-spacing-300);
+}
+
+.styletrainer-sampleoutputview-prompts-hinttext Text{
+    max-width: var(--appui-sizing-3100);
+    color: var(--appui-alias-text-secondary);
+    opacity: 0.5;
+}
+
+.styletrainer-sampleoutputview__untrained-container{
+    flex-direction: row;
+}
+
+.styletrainer-sampleoutputview__trained-container{
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 280px;
+}
+
+.styletrainer-sampleoutputview__hidden{
+    display: none;
+}

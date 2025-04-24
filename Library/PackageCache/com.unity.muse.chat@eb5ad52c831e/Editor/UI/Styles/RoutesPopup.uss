@@ -1,0 +1,44 @@
+.routespopup__element {
+    position: absolute;
+    bottom: -30px;
+    left: 16px;
+    right: 16px;
+    width: 400px;
+    height: 300px;
+    justify-content: flex-end;
+    border-radius: 2px;
+}
+
+.mui-route-popup-item {
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    justify-content: space-between;
+}
+
+.mui-route-popup-item:hover {
+    background-color: var(--muse-chat-hover);
+}
+
+.mui-route-popup-command {
+    -unity-font-style: bold;
+    margin-bottom: 2px;
+}
+
+.mui-route-popup-chip {
+    background-color: var(--muse-chat-experimental-bg);
+    border-width: 1px;
+    border-color: var(--muse-chat-experimental-border);
+    color: var(--muse-chat-experimental-border);
+    border-radius: 3px;
+}
+
+.mui-first-popup-item {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.mui-last-popup-item {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}

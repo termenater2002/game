@@ -1,0 +1,89 @@
+.mui-agent-execute-button {
+    min-height: 16px;
+    padding: 2px;
+    border-width: 0;
+    background-color: var(--muse-chat-color-pink);
+    display: flex;
+    align-self: center;
+}
+
+.mui-agent-execute-button .unity-text-element {
+    color: #FFF;
+    font-size: 12px;
+}
+
+.mui-agent-execute-button:disabled {
+    background-color: var(--muse-chat-backgrounds-50);
+}
+
+.mui-agent-debug-button  {
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    align-self: center;
+}
+
+.mui-agent-debug-button:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+.mui-agent-debug-button:disabled {
+    display: none;
+}
+
+.mui-agent-code-preview--monospaced-text {
+    padding: 4px;
+    margin: 0;
+    background-color: var(--muse-chat-backgrounds-100);
+    border-radius: 0 0 8px 8px;
+    -unity-font-definition: resource("Fonts/RobotoMono/RobotoMono-Regular SDF.asset");
+    white-space: normal;
+}
+
+.mui-agent-header-label {
+    align-self: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    height: 20px;
+    -unity-text-align: middle-left;
+    color: var(--muse-chat-header-text-color);
+}
+
+.top-line-divider {
+    border-top-color: var(--muse-chat-backgrounds-100);
+    border-top-width: 1px;
+}
+
+.command-detail-foldout {
+    margin: 0px;
+    padding: 4px 0px 4px 0px;
+    color: var(--muse-chat-foregrounds-100);
+}
+
+#previewContainer
+{
+    min-height: 10px;
+    padding: 6px;
+}
+
+.notification-warning-content {
+    align-self: center;
+    margin: 2px;
+    background-color: var(--muse-chat-backgrounds-50);
+    border-width: 1px;
+    border-color: #cd9f14;
+    border-radius: 4px;
+    padding: 4px;
+    width: 100%;
+}
+
+#warningText {
+    white-space: normal;
+}

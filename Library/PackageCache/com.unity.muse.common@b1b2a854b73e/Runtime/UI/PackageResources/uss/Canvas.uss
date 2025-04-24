@@ -1,0 +1,72 @@
+.muse-canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.muse-canvas .appui-canvas__horizontal-scroller,
+.muse-canvas .appui-canvas__vertical-scroller {
+    visibility: hidden;
+}
+
+.GraphEditor {
+    flex-grow: 1;
+}
+
+.muse-canvas .appui-canvas__background {
+    --grid-background-color: var(--appui-backgrounds-50);
+    --line-color: var(--appui-backgrounds-300);
+    --thick-line-color: var(--appui-backgrounds-300);
+    --thick-lines: 0; /* Every N lines the line is thicker (use 0 to disable) */
+    --line-spacing: 12; /* 12px of spacing between each lines' center point */
+    --draw-points: 1; /* 1 to draw points, 0 to draw lines */
+    --thickness: 1; /* line or point thickness */
+    --thick-line-thickness: 0; /* line or point thickness for thicker ones */
+    --next-grid-scale-factor: 4; /* 0 to disable, N to get the next grid N times bigger than the previous one */
+}
+
+Canvas #SelectionBorder {
+    border-width: 0;
+}
+
+Canvas #Content {
+    border-width: 0;
+}
+
+Canvas .GraphNode:hover > #SelectionBorder {
+    border-color: rgba(8, 146, 255, 0.25);
+}
+
+Canvas .Selected #SelectionBorder {
+    border-color: #0892ff;
+}
+
+Canvas .Selected:hover > #SelectionBorder {
+    border-color: #0892ff;
+}
+
+Canvas .selection-box {
+    border-color: #0892ff;
+    background-color: rgba(8, 146, 255, 0.25);
+    border-width: 3px;
+    opacity: 0.9;
+}
+
+.muse-canvas-node {
+    width: 513px;
+    height: 513px;
+    position: absolute;
+    border-width: 1px;
+    border-color: var(--appui-backgrounds-300);
+}
+
+.muse-canvas-node__preview {
+    width: 100%;
+    height: 100%;
+}
+
+.canvas-control__content, .canvas-control__middle{
+    flex-grow: 1;
+}

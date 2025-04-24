@@ -1,0 +1,45 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="mui-chat-root mui-chat-response">
+        <ui:VisualElement class="mui-chat-message-content">
+            <ui:VisualElement class="mui-chat-element-avatar-area">
+                <ui:VisualElement class="mui-chat-avatar-frame">
+                    <ui:Image name="museAvatar" class="mui-chat-avatar"/>
+                </ui:VisualElement>
+                <VisualElement class="mui-chat-context-spacer"/>
+                <ui:Image name="queryMode"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="textFieldRoot" class="mui-chat-element-text-area">
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement>
+            <ui:Foldout name="sourcesFoldout" class="mui-chat-foldout mui-chat-sources-foldout" text="Sources">
+                <ui:VisualElement name="sourcesContent">
+                </ui:VisualElement>
+            </ui:Foldout>
+        </ui:VisualElement>
+        <ui:VisualElement name="optionsSection" class="mui-chat-footer">
+            <ui:VisualElement class="mui-control-section-buttons">
+                <ui:Button name="copyButton" tooltip="Copy Message" class="mui-chat-response-button -muse-chat-button">
+                    <ui:Image class="mui-action-button-image mui-icon-copy"/>
+                </ui:Button>
+                <ui:Button name="upVoteButton" class="mui-chat-response-button -muse-chat-button">
+                    <ui:Image class="mui-action-button-image mui-icon-upvote"/>
+                </ui:Button>
+                <ui:Button name="downVoteButton" class="mui-chat-response-button -muse-chat-button">
+                    <ui:Image class="mui-action-button-image mui-icon-downvote"/>
+                </ui:Button>
+            </ui:VisualElement>
+            <ui:VisualElement name="feedbackParamSection" class="mui-feedback-parameters">
+                <ui:Toggle label="Flag as inappropriate" name="feedbackFlagCheckbox"/>
+                <ui:Label text="Add a feedback category" class="mui-chat-label mui-feedback-label"/>
+                <ui:DropdownField name="feedbackType"/>
+                <ui:Label text="Your feedback" class="mui-chat-label mui-feedback-label"/>
+                <ui:ScrollView class="mui-feedback-text-scrollroot">
+                    <ui:TextField name="feedbackValueText"/>
+                </ui:ScrollView>
+                <ui:Button name="feedbackSendButton" text="Send"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="errorFrame" picking-mode="Ignore" />
+</UXML>

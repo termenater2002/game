@@ -1,0 +1,39 @@
+.muse-scopetoolbar {
+    flex-shrink: 0;
+    background-color: var(--appui-backgrounds-100);
+    padding: var(--appui-spacing-125) var(--appui-spacing-275);
+    flex-direction: row;
+    align-items: center;
+    border-bottom-width: var(--appui-sizing-10);
+    border-bottom-color: var(--appui-backgrounds-300);
+    display: none;
+}
+
+.muse-scopetoolbar__icon {
+    --unity-image: url("../../../../PackageResources/Logos/Unity Logo.png");
+    height: 25px;
+    width: 73px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.muse-scopetoolbar__scopes {
+    margin-left: var(--appui-spacing-300);
+    flex-direction: row;
+}
+
+.muse-scopetoolbar__link {
+    padding: 0 var(--appui-spacing-300);
+    -unity-font-style: bold;
+    color: var(--appui-foregrounds-25);
+}
+
+.muse-scopetoolbar__link.is-selected {
+    color: var(--appui-foregrounds-200);
+}
+
+.muse-scopetoolbar__title {
+    flex-shrink: 0;
+    flex-grow: 0;
+    color: var(--appui-foregrounds-200);
+}

@@ -1,0 +1,325 @@
+.muse-input-label--toggle-flexend {
+    --appui-inputlabel-label-size: 50%;
+}
+
+.appui-numericalfield,
+.appui-inputlabel {
+    width: auto;
+}
+
+.appui-dialog__buttongroup > .appui-checkbox > .appui-checkbox__box {
+    margin-left: 0;
+}
+
+.bottom-gap {
+    margin-bottom: var(--appui-spacing-125);
+}
+
+.right-gap {
+    margin-right: var(--appui-spacing-125);
+}
+
+.right-gap-sm {
+    margin-right: var(--appui-spacing-50);
+}
+
+.left-gap {
+    margin-left: var(--appui-spacing-125);
+}
+
+.row {
+    flex-direction: row;
+    align-self: stretch;
+}
+
+.muse-spacer {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.appui-inputlabel--horizontal > .appui-inputlabel__label {
+    padding-right: var(--appui-alias-control-gap-md);
+}
+
+.appui-inputlabel--horizontal > .appui-inputlabel__label {
+    padding-right: var(--appui-alias-control-gap-md);
+    flex-basis: initial;
+}
+
+.muse-dropzone {
+    background-color: var(--appui-backgrounds-100);
+    padding: var(--appui-alias-control-gap-lg);
+    border-width: var(--appui-alias-control-border-width);
+    border-color: var(--appui-alias-actions-border-color-default);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.muse-dropzone:hover,
+.muse-dropzone.is-hovered {
+    border-color: var(--appui-alias-actions-border-color-hover);
+}
+
+.muse-dropzone:focus,
+.muse-dropzone.is-focused {
+    border-color: var(--appui-accent-100);
+}
+
+.muse-dropzone__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.muse-dropzone__helper {
+    justify-content: center;
+    align-items: center;
+}
+
+.muse-dropzone__message {
+    -unity-text-align: middle-center;
+}
+
+.muse-dropzone.accept-drag,
+.muse-dropzone.accept-drag:hover,
+.muse-dropzone.accept-drag.is-hovered,
+.muse-dropzone.accept-drag:focus,
+.muse-dropzone.accept-drag.is-focused {
+    border-color: var(--appui-accent-100);
+}
+
+.muse-clear-image-button {
+    position: absolute;
+    top: var(--appui-spacing-100);
+    right: var(--appui-spacing-100);
+}
+
+.muse-patterns-view {
+    width: 230px;
+    height: 230px;
+}
+
+.muse-patterns-view__item {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    padding: 4px;
+}
+
+.muse-patterns-view__image {
+    width: 100%;
+    height: 100%;
+    border-width: var(--appui-alias-control-border-width);
+    border-color: rgba(0,0,0,0);
+}
+
+.appui-grid-view__item.is-selected .muse-patterns-view__image {
+    border-color: var(--appui-accent-100);
+}
+
+.muse-editor-toolbar-container {
+    background-color: rgba(0,0,0,0);
+    max-width: 100px; /* Limit the size to not take over everything as a backup measure in case something goes wrong */
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.muse-editor-toolbar-container #main-container {
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.muse-color-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-width: var(--appui-alias-control-border-width);
+    border-radius: var(--appui-alias-control-border-radius);
+    padding: 0 var(--appui-alias-control-gap-sm) 0 var(--appui-alias-control-gap-md);
+    background-color: var(--appui-alias-field-background-color-default);
+    border-color: var(--appui-alias-field-border-color-default);
+    cursor: var(--appui-alias-control-cursor-pointer);
+    color: var(--appui-foregrounds-50);
+    flex-shrink: 0;
+}
+
+.muse-color-field:hover {
+    background-color: var(--appui-alias-field-background-color-hover);
+    border-color: var(--appui-alias-field-border-color-hover);
+}
+
+.muse-color-field.is-focused {
+    background-color: var(--appui-alias-field-background-color-focus);
+    border-color: var(--appui-alias-field-border-color-focus);
+}
+
+.muse-color-field.keyboard-focus {
+    --outline-width: var(--appui-alias-control-outline-width);
+    --outline-color: var(--appui-alias-control-outline-color);
+    --outline-offset: var(--appui-alias-control-outline-offset);
+}
+
+.appui-textfield:active {
+    background-color: var(--appui-alias-field-background-color-active);
+    border-color: var(--appui-alias-field-border-color-active);
+}
+
+.eula-modal {
+    --appui-accent-300: #f86797;
+    --appui-accent-200: #f35388;
+    --appui-accent-100: #eb417a;
+    --appui-accent-50: #d13468;
+    --appui-accent-25: #aa2652;
+
+    --appui-positive-300: var(--appui-accent-300);
+    --appui-positive-200: var(--appui-accent-200);
+    --appui-positive-100: var(--appui-accent-100);
+    --appui-positive-50: var(--appui-accent-50);
+    --appui-positive-25: var(--appui-accent-25);
+
+    --appui-primary-100: #2b051e;
+    --appui-primary-200: #3B0A2A;
+    --appui-primary-300: #4f233f;
+    --appui-primary-400: #652e4e;
+    --appui-primary-700: var(--appui-color-transparent-white-400);
+    --appui-primary-900: var(--appui-color-transparent-white-600);
+    --appui-primary-1000: var(--appui-color-transparent-white-800);
+    --appui-primary-1100: var(--appui-color-white);
+
+    --appui-alias-actions-background-color-default: var(--appui-backgrounds-200);
+    --appui-alias-actions-background-color-hover: var(--appui-backgrounds-200);
+    --appui-alias-actions-background-color-active: var(--appui-backgrounds-200);
+    --appui-alias-actions-background-color-disabled: var(--appui-backgrounds-300);
+
+    --appui-alias-actions-border-color-default: var(--appui-backgrounds-200);
+    --appui-alias-actions-border-color-hover: var(--appui-backgrounds-200);
+    --appui-alias-actions-border-color-active: var(--appui-backgrounds-200);
+    --appui-alias-actions-border-color-disabled: var(--appui-backgrounds-200);
+
+    border-radius: 20px;
+}
+
+.mpp-eula-view {
+    width: 460px;
+    flex-grow: 1;
+    padding: var(--appui-spacing-600);
+}
+
+.mpp-eula-title {
+    -unity-font-definition: resource('Fonts/Inter/Inter-SemiBold.ttf');
+    color: var(--appui-color-white);
+    font-size: var(--appui-font-sizes-900);
+}
+
+.mpp-eula-message {
+    -unity-font-definition: resource('Fonts/Inter/Inter-SemiBold.ttf');
+    color: var(--appui-color-white);
+    -unity-text-align: upper-left;
+    padding: var(--appui-spacing-400) 0;
+}
+
+.mpp-eula-box {
+    padding: var(--appui-spacing-300) var(--appui-spacing-400);
+    border-radius: var(--appui-alias-control-border-radius);
+    background-color: #421432;
+    border-color: #562c47;
+    border-width: var(--appui-alias-control-border-width);
+    flex-direction: row;
+    margin-bottom: var(--appui-spacing-400);
+}
+
+.mpp-eula-understand-message {
+    margin-left: var(--appui-spacing-400);
+    flex: 1;
+    color: var(--appui-color-transparent-white-800);
+    font-size: 13px;
+}
+
+.mpp-eula-button-group {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+    margin-top: var(--appui-spacing-400);
+    height: 30px;
+}
+
+.mpp-eula-button-group .appui-button {
+    padding: var(--appui-spacing-200);
+    margin-left: var(--appui-spacing-200);
+}
+
+.eula-modal .text-link {
+    color: var(--appui-accent-100);
+    cursor: link;
+}
+
+.mpp-menu--with-description {
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.mpp-menu--with-description .unity-scroll-view {
+    flex: 1;
+}
+
+.mpp-menu-description-container {
+    flex-direction: column;
+    width: 180px;
+    padding: var(--appui-spacing-100);
+    padding-left: var(--appui-spacing-200);
+}
+
+.mpp-menu-description-image.li-element {
+    flex: 0;
+    flex-basis: 110px;
+}
+
+.mpp-menu-description {
+    padding-top: var(--appui-spacing-150);
+    color: var(--appui-foregrounds-25);
+    -unity-font-style: italic;
+}
+
+.mpp-model-selector {
+    max-width: 950px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+}
+
+.muse-stack-indicator {
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+    flex-direction: row;
+    flex-shrink: 0;
+    display: none;
+}
+
+.muse-artifact--with-refinements .muse-stack-indicator {
+    display: flex;
+}
+
+.muse-stack-indicator__image {
+    width: var(--appui-sizing-500);
+    height: var(--appui-sizing-500);
+    --unity-image: url('../../Runtime/UI/PackageResources/Images/StackingImageIcon.png');
+    --unity-image-size: scale-and-crop;
+}
+
+.muse-stack-indicator__counter {
+    padding-left: var(--appui-spacing-50);
+    -unity-font-style: bold;
+    color: var(--appui-color-white);
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.generation-settings-popover,
+.artifact-overlay-popover {
+    width: 380px;
+    max-width: 100%;
+    max-height: 100%;
+}

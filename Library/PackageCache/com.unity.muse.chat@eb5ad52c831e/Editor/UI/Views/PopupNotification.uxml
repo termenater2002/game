@@ -1,0 +1,9 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="back" color="001100ff">
+        <ui:Image name="icon" />
+        <ui:Label tabindex="-1" text="message" name="messageField" class="mui-chat-label"/>
+        <ui:Button name="dismissButton" flex-direction="row-reverse">
+            <ui:Image class="mui-action-button-image mui-icon-close"/>
+        </ui:Button>
+    </ui:VisualElement>
+</UXML>

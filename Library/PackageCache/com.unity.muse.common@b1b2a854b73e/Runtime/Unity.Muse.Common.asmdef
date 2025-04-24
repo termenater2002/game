@@ -1,0 +1,45 @@
+{
+    "name": "Unity.Muse.Common",
+    "rootNamespace": "Unity.Muse.Common",
+    "references": [
+        "GUID:2edcef92c5756d2da266000405840bb7",
+        "GUID:08f205778252448b1bed9825eb0de4d5",
+        "GUID:f024f9ab4c2d3aa4eaa748b31a0f2463",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:513441d7ec19542e28b1f21365ecdc3c",
+        "GUID:df5ee7bbe4797deda3ee000426751c81"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.addressables",
+            "expression": "1",
+            "define": "UNITY_MUSE_ADDRESSABLES_PRESENT"
+        },
+        {
+            "name": "Unity",
+            "expression": "2023.3.0a1",
+            "define": "ENABLE_UXML_SERIALIZED_DATA"
+        },
+        {
+            "name": "Unity",
+            "expression": "[2021.3,2023.3.0a1)",
+            "define": "ENABLE_UXML_TRAITS"
+        },
+        {
+            "name": "Unity",
+            "expression": "2023.2.0a22",
+            "define": "ENABLE_UNITYENGINE_ANALYTICS"
+        }
+    ],
+    "noEngineReferences": false
+}

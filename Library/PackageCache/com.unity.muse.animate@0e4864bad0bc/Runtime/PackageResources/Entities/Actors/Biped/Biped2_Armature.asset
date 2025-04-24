@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c707e5c6248c54ebe75f3bbfc59e5e, type: 3}
+  m_Name: Biped2_Armature
+  m_EditorClassIdentifier: 
+  m_Armature:
+    Joints:
+    - Name: Pelvis
+      Path: Pelvis
+      ParentIndex: -1
+    - Name: Thigh.L
+      Path: Pelvis/Thigh.L
+      ParentIndex: 0
+    - Name: Calf.L
+      Path: Pelvis/Thigh.L/Calf.L
+      ParentIndex: 1
+    - Name: Foot.L
+      Path: Pelvis/Thigh.L/Calf.L/Foot.L
+      ParentIndex: 2
+    - Name: Toe.L
+      Path: Pelvis/Thigh.L/Calf.L/Foot.L/Toe.L
+      ParentIndex: 3
+    - Name: Toe.L_end
+      Path: Pelvis/Thigh.L/Calf.L/Foot.L/Toe.L/Toe.L_end
+      ParentIndex: 4
+    - Name: Spine_0
+      Path: Pelvis/Spine_0
+      ParentIndex: 0
+    - Name: Spine_1
+      Path: Pelvis/Spine_0/Spine_1
+      ParentIndex: 6
+    - Name: Chest
+      Path: Pelvis/Spine_0/Spine_1/Chest
+      ParentIndex: 7
+    - Name: Neck
+      Path: Pelvis/Spine_0/Spine_1/Chest/Neck
+      ParentIndex: 8
+    - Name: Head
+      Path: Pelvis/Spine_0/Spine_1/Chest/Neck/Head
+      ParentIndex: 9
+    - Name: Head_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Neck/Head/Head_end
+      ParentIndex: 10
+    - Name: Clavicle.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L
+      ParentIndex: 8
+    - Name: Bicep.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L
+      ParentIndex: 12
+    - Name: Forarm.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L
+      ParentIndex: 13
+    - Name: Hand.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L
+      ParentIndex: 14
+    - Name: Thumb_0.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Thumb_0.L
+      ParentIndex: 15
+    - Name: Thumb_1.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Thumb_0.L/Thumb_1.L
+      ParentIndex: 16
+    - Name: Thumb_2.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Thumb_0.L/Thumb_1.L/Thumb_2.L
+      ParentIndex: 17
+    - Name: Thumb_2.L_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Thumb_0.L/Thumb_1.L/Thumb_2.L/Thumb_2.L_end
+      ParentIndex: 18
+    - Name: Pinky_0.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Pinky_0.L
+      ParentIndex: 15
+    - Name: Pinky_1.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Pinky_0.L/Pinky_1.L
+      ParentIndex: 20
+    - Name: Pinky_2.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Pinky_0.L/Pinky_1.L/Pinky_2.L
+      ParentIndex: 21
+    - Name: Pinky_2.L_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Pinky_0.L/Pinky_1.L/Pinky_2.L/Pinky_2.L_end
+      ParentIndex: 22
+    - Name: Ring_0.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Ring_0.L
+      ParentIndex: 15
+    - Name: Ring_1.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Ring_0.L/Ring_1.L
+      ParentIndex: 24
+    - Name: Ring_2.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Ring_0.L/Ring_1.L/Ring_2.L
+      ParentIndex: 25
+    - Name: Ring_2.L_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Ring_0.L/Ring_1.L/Ring_2.L/Ring_2.L_end
+      ParentIndex: 26
+    - Name: Middle_0.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Middle_0.L
+      ParentIndex: 15
+    - Name: Middle_1.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Middle_0.L/Middle_1.L
+      ParentIndex: 28
+    - Name: Middle_2.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Middle_0.L/Middle_1.L/Middle_2.L
+      ParentIndex: 29
+    - Name: Middle_2.L_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Middle_0.L/Middle_1.L/Middle_2.L/Middle_2.L_end
+      ParentIndex: 30
+    - Name: Index_0.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Index_0.L
+      ParentIndex: 15
+    - Name: Index_1.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Index_0.L/Index_1.L
+      ParentIndex: 32
+    - Name: Index_2.L
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Index_0.L/Index_1.L/Index_2.L
+      ParentIndex: 33
+    - Name: Index_2.L_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.L/Bicep.L/Forarm.L/Hand.L/Index_0.L/Index_1.L/Index_2.L/Index_2.L_end
+      ParentIndex: 34
+    - Name: Clavicle.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R
+      ParentIndex: 8
+    - Name: Bicep.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R
+      ParentIndex: 36
+    - Name: Forarm.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R
+      ParentIndex: 37
+    - Name: Hand.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R
+      ParentIndex: 38
+    - Name: Thumb_0.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Thumb_0.R
+      ParentIndex: 39
+    - Name: Thumb_1.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Thumb_0.R/Thumb_1.R
+      ParentIndex: 40
+    - Name: Thumb_2.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Thumb_0.R/Thumb_1.R/Thumb_2.R
+      ParentIndex: 41
+    - Name: Thumb_2.R_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Thumb_0.R/Thumb_1.R/Thumb_2.R/Thumb_2.R_end
+      ParentIndex: 42
+    - Name: Pinky_0.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Pinky_0.R
+      ParentIndex: 39
+    - Name: Pinky_1.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Pinky_0.R/Pinky_1.R
+      ParentIndex: 44
+    - Name: Pinky_2.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Pinky_0.R/Pinky_1.R/Pinky_2.R
+      ParentIndex: 45
+    - Name: Pinky_2.R_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Pinky_0.R/Pinky_1.R/Pinky_2.R/Pinky_2.R_end
+      ParentIndex: 46
+    - Name: Ring_0.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Ring_0.R
+      ParentIndex: 39
+    - Name: Ring_1.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Ring_0.R/Ring_1.R
+      ParentIndex: 48
+    - Name: Ring_2.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Ring_0.R/Ring_1.R/Ring_2.R
+      ParentIndex: 49
+    - Name: Ring_2.R_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Ring_0.R/Ring_1.R/Ring_2.R/Ring_2.R_end
+      ParentIndex: 50
+    - Name: Middle_0.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Middle_0.R
+      ParentIndex: 39
+    - Name: Middle_1.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Middle_0.R/Middle_1.R
+      ParentIndex: 52
+    - Name: Middle_2.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Middle_0.R/Middle_1.R/Middle_2.R
+      ParentIndex: 53
+    - Name: Middle_2.R_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Middle_0.R/Middle_1.R/Middle_2.R/Middle_2.R_end
+      ParentIndex: 54
+    - Name: Index_0.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Index_0.R
+      ParentIndex: 39
+    - Name: Index_1.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Index_0.R/Index_1.R
+      ParentIndex: 56
+    - Name: Index_2.R
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Index_0.R/Index_1.R/Index_2.R
+      ParentIndex: 57
+    - Name: Index_2.R_end
+      Path: Pelvis/Spine_0/Spine_1/Chest/Clavicle.R/Bicep.R/Forarm.R/Hand.R/Index_0.R/Index_1.R/Index_2.R/Index_2.R_end
+      ParentIndex: 58
+    - Name: Thigh.R
+      Path: Pelvis/Thigh.R
+      ParentIndex: 0
+    - Name: Calf.R
+      Path: Pelvis/Thigh.R/Calf.R
+      ParentIndex: 60
+    - Name: Foot.R
+      Path: Pelvis/Thigh.R/Calf.R/Foot.R
+      ParentIndex: 61
+    - Name: Toe.R
+      Path: Pelvis/Thigh.R/Calf.R/Foot.R/Toe.R
+      ParentIndex: 62
+    - Name: Toe.R_end
+      Path: Pelvis/Thigh.R/Calf.R/Foot.R/Toe.R/Toe.R_end
+      ParentIndex: 63

@@ -1,0 +1,31 @@
+.deeppose-baking-container
+{
+    flex-direction: column;
+    width: 50px;
+    align-content: center;
+    justify-content: center;
+}
+
+.deeppose-baking-circular-progress
+{
+    position: relative;
+    align-self: center;
+    --progress-color: var(--appui-accent-100);
+}
+
+.deeppose-baking-circular-progress-done
+{
+    --progress-color: var(--appui-positive-100);
+}
+
+.deeppose-baking-progress-label 
+{
+    font-size: 8px;
+    position: absolute;
+    align-self: center;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    width: 100%;
+    margin-left: 7px;
+    color: var(--percentage-color);
+}

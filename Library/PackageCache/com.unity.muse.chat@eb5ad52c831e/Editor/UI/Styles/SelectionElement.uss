@@ -1,0 +1,73 @@
+.mui-selection-element-root {
+    border-color: var(--muse-chat-backgrounds-50);
+    background-color: var(--muse-chat-backgrounds-200);
+}
+
+.mui-selection-element-row {
+    height: 22px;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.mui-selection-element-row:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-selection-element-text {
+    flex-shrink: 1;
+    margin-right: 20px;
+}
+
+.mui-selection-element-spacer {
+    flex-grow: 1;
+}
+
+.mui-selection-element-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 3px;
+    --unity-image-tint-color: white;
+}
+
+.mui-selection-element-check-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+.mui-selection-element-spacer {
+    flex-grow: 1;
+}
+
+.mui-chat-selection-element-button  {
+    margin-top: 4px;
+    margin-left: 8px;
+    margin-bottom: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    justify-content: flex-end;
+}
+
+.mui-selection-element-find-button {
+    flex-direction: row;
+    justify-content: flex-end;
+    border-bottom-color: var(--muse-chat-backgrounds-50);
+    border-bottom-width: 1px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--muse-chat-action-button-default);
+    padding-right: 8px;
+    border-width: 0;
+}
+
+#selectionElementFindButton:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mui-selection-element-find-button:disabled {
+    display: none;
+}

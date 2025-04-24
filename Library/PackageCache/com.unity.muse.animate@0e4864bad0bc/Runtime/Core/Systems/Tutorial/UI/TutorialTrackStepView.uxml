@@ -1,0 +1,28 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Title -->
+    <ui:VisualElement name="title-container" class="deeppose-track-step-title-container" picking-mode="Ignore" >
+        <appui:Heading name="title-label" class="deeppose-track-step-title-label" text="Title header" size="M" picking-mode="Ignore" primary="true"/>
+    </ui:VisualElement>
+
+    <!-- Body -->
+    <ui:VisualElement name="body-container" class="deeppose-track-step-body-container" picking-mode="Ignore" >
+        <appui:Text name="body-label" class="deeppose-track-step-body-label" text="Body label" picking-mode="Ignore"/>
+        <ui:VisualElement name="body-buttons-container" class="deeppose-track-step-body-buttons-container" picking-mode="Ignore" >
+            <ui:VisualElement name="body-buttons-container-let" class="deeppose-track-step-body-buttons-container-left" picking-mode="Ignore" >
+                <appui:Button name="previous-button" class="deeppose-track-step-button-left" title="Previous"/>
+                <appui:Button name="skip-button" class="deeppose-track-step-button-left" title="Skip"/>
+                <appui:Button name="dismiss-button" class="deeppose-track-step-button-left" title="Dismiss"/>
+                <appui:Button name="accept-button" class="deeppose-track-step-button-left" title="Accept" primary="true"/>
+                <appui:Button name="next-button" class="deeppose-track-step-button-left" title="Next" primary="true"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+
+    <!-- Footer -->
+<!--    @james.mccafferty: The footer below is commented out because it is not in the design. It may return. Leaving here temporarily for reference.-->
+    
+<!--    <ui:VisualElement name="footer-container" class="deeppose-track-step-footer-container" picking-mode="Ignore" >-->
+<!--        <ui:Label name="footer-label" class="deeppose-track-step-footer-label" text="Footer label" picking-mode="Ignore"/>-->
+<!--    </ui:VisualElement>-->
+    
+</ui:UXML>

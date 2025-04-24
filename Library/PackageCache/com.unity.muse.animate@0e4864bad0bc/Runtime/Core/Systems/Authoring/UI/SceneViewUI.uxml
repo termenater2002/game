@@ -1,0 +1,62 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    
+    <!-- Scene View -> Play Area -->
+    <museAnimate:SceneViewPlayArea name="scene-view-play-area" class="deeppose-scene-view-play-area" picking-mode="Position"/>
+
+    <!-- Scene View -> Left Column-->
+    <ui:VisualElement name="scene-view-left" class="deeppose-scene-view-left" picking-mode="Ignore">
+
+        <!-- Scene View Header -->
+        <museAnimate:SceneViewHeaderUI name="scene-view-header" class="deeppose-scene-view-header" picking-mode="Position"/>
+        
+        <!-- Scene View -> Left -> Top -->
+        <ui:VisualElement name="scene-view-left-top" class="deeppose-scene-view-left-top" picking-mode="Ignore"/>
+
+        <!-- Scene View -> Left -> Bottom -->
+        <ui:VisualElement name="scene-view-left-bottom" class="deeppose-scene-view-left-bottom" picking-mode="Ignore"/>
+    </ui:VisualElement>
+
+    <!-- Scene View -> Right Column -->
+    <ui:VisualElement name="scene-view-right" class="deeppose-scene-view-right" picking-mode="Ignore">
+
+        <!-- Baking Task Status -->
+        <museAnimate:BakingTaskStatusView name="task-status-view" picking-mode="Ignore"/>
+
+        <!-- Spacer -->
+        <ui:VisualElement name="spacer" picking-mode="Ignore" style="flex-grow:1; " />
+
+        <!-- Scene View -> Right -> Inspectors Panel -->
+        <museAnimate:InspectorsPanelView name="inspectors-panel"
+                                         picking-mode="Ignore"
+                                         quiet="true"
+                                         select-default-page="true"
+                                         align-bottom="true"
+                                         align-right="true"
+                                         reverse-order="false"
+                                         expand="false"
+                                         hide-menu-if-page-shown="true"
+                                         hide-menu-when-no-page="true"
+                                         hide-page-if-empty="true"
+                                         hide-page-title="true"
+                                         content-width="200"
+        />
+
+    </ui:VisualElement>
+
+    <!-- Scene View -> Overlays -->
+    <ui:VisualElement name="scene-overlays" class="deeppose-scene-view-overlays" picking-mode="Ignore">
+
+        <!-- Text To Motion - Scene View UI-->
+        <museAnimate:TextToMotionUI name="text-to-motion-ui" picking-mode="Ignore"/>
+        
+        <!-- Video To Motion - Scene View UI -->
+        <museAnimate:VideoToMotionPlaybackUI name="video-to-motion-ui" picking-mode="Ignore"/>
+
+        <!-- Motion To Timeline  - Scene View UI -->
+        <museAnimate:MotionToTimelineUI name="motion-to-timeline-ui" picking-mode="Ignore"/>
+
+        <!-- Baking Notice -->
+        <museAnimate:BakingNoticeView name="notice-view" picking-mode="Ignore" />
+
+    </ui:VisualElement>
+</ui:UXML>

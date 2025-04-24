@@ -1,0 +1,48 @@
+.appui-sprite-keyimage {
+    overflow: hidden;
+}
+
+.appui-sprite-keyimage__image-container {
+    border-width: var(--appui-alias-control-border-width);
+    background-color: var(--appui-backgrounds-100);
+    justify-content: center;
+    align-items: center;
+}
+
+.appui-sprite-keyimage__accept-drag .appui-sprite-keyimage__image-container {
+    border-color: var(--appui-accent-300);
+}
+
+.appui-sprite-keyimage__control-buttons-container {
+    flex-direction: row;
+}
+
+.appui-sprite-keyimage__control-buttons-container-left {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-grow: 0;
+}
+
+.appui-sprite-keyimage__control-buttons-container-right {
+    flex-direction: row;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.appui-sprite-keyimage__reference-image {
+    flex-grow: 1;
+    position: absolute;
+}
+
+.appui-sprite-keyimage__hint {
+    -unity-text-align: middle-center;
+    align-self: center;
+    display: none;
+    white-space: normal;
+    margin: 0 var(--appui-sizing-200);
+}
+
+#brush-size-slider {
+    flex-grow: 1;
+    width: 120px;
+}

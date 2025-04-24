@@ -1,0 +1,62 @@
+.selectionpopup__element {
+    position: absolute;
+    bottom: -30px;
+    left: 16px;
+    right: 16px;
+    min-width: 380px;
+    max-width: 500px;
+    height: 300px;
+}
+
+.mui-selection-popup-root {
+    background-color: var(--muse-chat-backgrounds-200);
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+.mui-selection-popup-title-row {
+    flex-direction: row;
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-selection-popup-history-title {
+    flex-grow: 1;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.mui-selection-popup-empty-list-hint-text {
+    padding: 8px;
+    color: var(--muse-agent-selection-empty);
+}
+
+.mui-selection-popup-history-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--muse-chat-color-blue);
+    border-width: 0;
+    padding-right: 8px;
+}
+
+#addSelectionButton:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mui-selection-popup-listview {
+    flex-grow: 1;
+    background-color: black;
+}
+
+.mui-selection-search-bar {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: auto;
+}
+
+.mui-selection-search-bar-row {
+    padding: 8px;
+}
+
+.mui-selection-popup-adaptive-list-view-container {
+    max-height: 200px;
+}

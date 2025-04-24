@@ -1,0 +1,10 @@
+apiRules:
+  - exclude:
+      uidRegex: Unity\.Muse\.Sprite\.Tests
+      type: Namespace
+  - exclude:
+      uidRegex: Unity\.Muse\.Sprite\.Editor\.Tests
+      type: Namespace
+  - exclude:
+      uidRegex: Unity\.Muse\.Sprite\.Samples\..*
+      type: Namespace

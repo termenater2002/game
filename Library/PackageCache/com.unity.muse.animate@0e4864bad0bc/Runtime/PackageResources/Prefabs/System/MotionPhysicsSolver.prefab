@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8385884301646669017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8385884301646669023}
+  - component: {fileID: 8385884301646669022}
+  m_Layer: 0
+  m_Name: MotionPhysicsSolver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8385884301646669023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385884301646669017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8385884301646669022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8385884301646669017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbb4e8362178d64ca00441f6a976bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoSolve: 0
+  UseFixedUpdate: 0
+  m_Ragdolls: []
+  m_SolverSettings:
+    FixedDeltaTime: 0.01
+    DeltaTimeFactor: 1
+    IterationCount: 10
+    CumulativeForces: 1
+  m_SimulationSettings:
+    ApplyForceToParent: 1
+    UseLocalTorque: 0
+    UseConfigurableJoint: 0
+    MaxForce: 10000
+    MaxTorque: 100
+    PositionTolerance: 0.001
+    RotationTolerance: 0.005
+    ForceFactor: 0.1
+    TorqueFactor: 1
+    PositionForceMode: 2
+    RotationForceMode: 2
+  m_RigidBodySettings:
+    MaxAngularVelocity: 10000
+    CollisionDetectionMode: 0
+    SolverVelocityIterations: 20
+    SolverIterations: 10
+  OnWakeUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSleepEvent:
+    m_PersistentCalls:
+      m_Calls: []

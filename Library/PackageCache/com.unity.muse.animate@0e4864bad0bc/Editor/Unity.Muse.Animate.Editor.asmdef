@@ -1,0 +1,39 @@
+{
+    "name": "Unity.Muse.Animate.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Mathematics",
+        "Unity.Burst",
+        "Unity.DeepPose.Core",
+        "Unity.DeepPose.Core.Editor",
+        "Unity.DeepPose.Components",
+        "Unity.EditorCoroutines.Editor",
+        "Unity.Muse.Animate",
+        "Unity.Muse.Common",
+        "Unity.Muse.AppUI",
+        "Unity.Muse.Common.Editor",
+        "Unity.Sentis"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.muse.common",
+            "expression": "1.1.0",
+            "define": "MUSE_CHAT_PLUGIN_ENABLED"
+        },
+        {
+            "name": "Unity",
+            "expression": "2023.2.0a22",
+            "define": "ENABLE_UNITYENGINE_ANALYTICS"
+        }
+    ],
+    "noEngineReferences": false
+}

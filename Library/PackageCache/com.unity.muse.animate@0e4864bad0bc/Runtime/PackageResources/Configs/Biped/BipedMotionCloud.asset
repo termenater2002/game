@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c707e5c6248c54ebe75f3bbfc59e5e, type: 3}
+  m_Name: BipedMotionCloud
+  m_EditorClassIdentifier: 
+  m_Armature:
+    Joints:
+    - Name: Hips
+      Path: Hips
+      ParentIndex: -1
+    - Name: Spine0
+      Path: Hips/Spine0
+      ParentIndex: 0
+    - Name: Spine1
+      Path: Hips/Spine0/Spine1
+      ParentIndex: 1
+    - Name: Chest
+      Path: Hips/Spine0/Spine1/Chest
+      ParentIndex: 2
+    - Name: ClavicleLeft
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft
+      ParentIndex: 3
+    - Name: BicepLeft
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft
+      ParentIndex: 4
+    - Name: ForarmLeft
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft
+      ParentIndex: 5
+    - Name: HandLeft
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft
+      ParentIndex: 6
+    - Name: Index0Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Index0Left
+      ParentIndex: 7
+    - Name: Index1Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Index0Left/Index1Left
+      ParentIndex: 8
+    - Name: Index2Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Index0Left/Index1Left/Index2Left
+      ParentIndex: 9
+    - Name: Index2LeftEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Index0Left/Index1Left/Index2Left/Index2LeftEnd
+      ParentIndex: 10
+    - Name: Middle0Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Middle0Left
+      ParentIndex: 7
+    - Name: Middle1Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Middle0Left/Middle1Left
+      ParentIndex: 12
+    - Name: Middle2Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Middle0Left/Middle1Left/Middle2Left
+      ParentIndex: 13
+    - Name: Middle2LeftEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Middle0Left/Middle1Left/Middle2Left/Middle2LeftEnd
+      ParentIndex: 14
+    - Name: Pinky0Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Pinky0Left
+      ParentIndex: 7
+    - Name: Pinky1Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Pinky0Left/Pinky1Left
+      ParentIndex: 16
+    - Name: Pinky2Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Pinky0Left/Pinky1Left/Pinky2Left
+      ParentIndex: 17
+    - Name: Pinky2LeftEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Pinky0Left/Pinky1Left/Pinky2Left/Pinky2LeftEnd
+      ParentIndex: 18
+    - Name: Ring0Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Ring0Left
+      ParentIndex: 7
+    - Name: Ring1Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Ring0Left/Ring1Left
+      ParentIndex: 20
+    - Name: Ring2Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Ring0Left/Ring1Left/Ring2Left
+      ParentIndex: 21
+    - Name: Ring2LeftEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Ring0Left/Ring1Left/Ring2Left/Ring2LeftEnd
+      ParentIndex: 22
+    - Name: Thumb0Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Thumb0Left
+      ParentIndex: 7
+    - Name: Thumb1Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Thumb0Left/Thumb1Left
+      ParentIndex: 24
+    - Name: Thumb2Left
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Thumb0Left/Thumb1Left/Thumb2Left
+      ParentIndex: 25
+    - Name: Thumb2LeftEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleLeft/BicepLeft/ForarmLeft/HandLeft/Thumb0Left/Thumb1Left/Thumb2Left/Thumb2LeftEnd
+      ParentIndex: 26
+    - Name: ClavicleRight
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight
+      ParentIndex: 3
+    - Name: BicepRight
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight
+      ParentIndex: 28
+    - Name: ForarmRight
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight
+      ParentIndex: 29
+    - Name: HandRight
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight
+      ParentIndex: 30
+    - Name: Index0Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Index0Right
+      ParentIndex: 31
+    - Name: Index1Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Index0Right/Index1Right
+      ParentIndex: 32
+    - Name: Index2Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Index0Right/Index1Right/Index2Right
+      ParentIndex: 33
+    - Name: Index2RightEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Index0Right/Index1Right/Index2Right/Index2RightEnd
+      ParentIndex: 34
+    - Name: Middle0Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Middle0Right
+      ParentIndex: 31
+    - Name: Middle1Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Middle0Right/Middle1Right
+      ParentIndex: 36
+    - Name: Middle2Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Middle0Right/Middle1Right/Middle2Right
+      ParentIndex: 37
+    - Name: Middle2RightEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Middle0Right/Middle1Right/Middle2Right/Middle2RightEnd
+      ParentIndex: 38
+    - Name: Pinky0Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Pinky0Right
+      ParentIndex: 31
+    - Name: Pinky1Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Pinky0Right/Pinky1Right
+      ParentIndex: 40
+    - Name: Pinky2Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Pinky0Right/Pinky1Right/Pinky2Right
+      ParentIndex: 41
+    - Name: Pinky2RightEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Pinky0Right/Pinky1Right/Pinky2Right/Pinky2RightEnd
+      ParentIndex: 42
+    - Name: Ring0Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Ring0Right
+      ParentIndex: 31
+    - Name: Ring1Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Ring0Right/Ring1Right
+      ParentIndex: 44
+    - Name: Ring2Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Ring0Right/Ring1Right/Ring2Right
+      ParentIndex: 45
+    - Name: Ring2RightEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Ring0Right/Ring1Right/Ring2Right/Ring2RightEnd
+      ParentIndex: 46
+    - Name: Thumb0Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Thumb0Right
+      ParentIndex: 31
+    - Name: Thumb1Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Thumb0Right/Thumb1Right
+      ParentIndex: 48
+    - Name: Thumb2Right
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Thumb0Right/Thumb1Right/Thumb2Right
+      ParentIndex: 49
+    - Name: Thumb2RightEnd
+      Path: Hips/Spine0/Spine1/Chest/ClavicleRight/BicepRight/ForarmRight/HandRight/Thumb0Right/Thumb1Right/Thumb2Right/Thumb2RightEnd
+      ParentIndex: 50
+    - Name: Neck
+      Path: Hips/Spine0/Spine1/Chest/Neck
+      ParentIndex: 3
+    - Name: Head
+      Path: Hips/Spine0/Spine1/Chest/Neck/Head
+      ParentIndex: 52
+    - Name: HeadEnd
+      Path: Hips/Spine0/Spine1/Chest/Neck/Head/HeadEnd
+      ParentIndex: 53
+    - Name: ThighLeft
+      Path: Hips/ThighLeft
+      ParentIndex: 0
+    - Name: CalfLeft
+      Path: Hips/ThighLeft/CalfLeft
+      ParentIndex: 55
+    - Name: FootLeft
+      Path: Hips/ThighLeft/CalfLeft/FootLeft
+      ParentIndex: 56
+    - Name: ToeLeft
+      Path: Hips/ThighLeft/CalfLeft/FootLeft/ToeLeft
+      ParentIndex: 57
+    - Name: ToeLeftEnd
+      Path: Hips/ThighLeft/CalfLeft/FootLeft/ToeLeft/ToeLeftEnd
+      ParentIndex: 58
+    - Name: ThighRight
+      Path: Hips/ThighRight
+      ParentIndex: 0
+    - Name: CalfRight
+      Path: Hips/ThighRight/CalfRight
+      ParentIndex: 60
+    - Name: FootRight
+      Path: Hips/ThighRight/CalfRight/FootRight
+      ParentIndex: 61
+    - Name: ToeRight
+      Path: Hips/ThighRight/CalfRight/FootRight/ToeRight
+      ParentIndex: 62
+    - Name: ToeRightEnd
+      Path: Hips/ThighRight/CalfRight/FootRight/ToeRight/ToeRightEnd
+      ParentIndex: 63

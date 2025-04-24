@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xmlns:muse="Unity.Muse.Common"
+    xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/ScopeToolbar.uss"/>
+    <!-- ScopeToolbar -->
+    <muse:ScopeToolbar class="muse-scopetoolbar">
+        <ui:Image class="muse-scopetoolbar__icon" />
+        <ui:VisualElement class="muse-scopetoolbar__scopes">
+<!--            <appui:Link class="muse-scopetoolbar__link is-selected" text="Soil Textures" />-->
+<!--            <appui:Link class="muse-scopetoolbar__link" text="Brick Walls 2" />-->
+<!--            <appui:Link class="muse-scopetoolbar__link" text="Decals and Graffitis" />-->
+        </ui:VisualElement>
+
+        <ui:VisualElement class="muse-spacer" />
+
+        <appui:Text text="NeuralGen" class="muse-scopetoolbar__title" />
+
+    </muse:ScopeToolbar>
+
+</ui:UXML>

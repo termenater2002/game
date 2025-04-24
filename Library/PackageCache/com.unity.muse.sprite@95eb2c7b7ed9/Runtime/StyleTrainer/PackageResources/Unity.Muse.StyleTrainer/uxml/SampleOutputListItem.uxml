@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/SampleOutputListItem.uss"/>
+    <styleTrainer:SampleOutputListItem class="styletrainer-sampleoutputlistitem" name="SampleOutputListItem">
+        <appui:ExVisualElement
+                class="styletrainer-sampleoutputlistitem__initial__field styletrainer-sampleoutputlistitem__prompt">
+            <appui:Text name="SamplePromptLabel" text="Sample Prompt"
+                        class="styletrainer-sampleoutputlistitem__prompt__label" size="S"/>
+            <appui:TextField name="SamplePrompt" class="styletrainer-sampleoutputlistitem__prompttextfield" size="S"
+                             placeholder="Sample prompt to test the sample output"/>
+        </appui:ExVisualElement>
+        <appui:ActionButton name="DeleteButton" class="styletrainer-sampleoutputlistitem__deletebutton" icon="minus"
+                            quiet="true"/>
+    </styleTrainer:SampleOutputListItem>
+</ui:UXML>

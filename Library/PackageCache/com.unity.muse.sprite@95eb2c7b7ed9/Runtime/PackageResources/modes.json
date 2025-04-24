@@ -1,0 +1,56 @@
+{
+  "modes":
+  [
+    {
+      "type": "TextToSprite",
+      "label": "Sprites",
+      "title": "Sprite Generator",
+      "version": "1.0",
+      "enabled": true,
+      "group": "Sprite",
+      "group_order": 0,
+      "icon_path": "Packages/com.unity.muse.common/PackageResources/Logos/UnityIcon.png",
+      "icon_label": "Unity",
+      "operators": [
+        {
+          "type": "GenerateOperator",
+          "version": "1.0",
+          "settings": [
+            "TextToSprite",
+            "4"
+          ],
+          "enabled": true
+        },
+        {
+          "type": "PromptOperator",
+          "version": "2.0",
+          "enabled": true
+        },
+        {
+          "type": "Unity.Muse.Sprite.Operators.SpriteGeneratorSettingsOperator",
+          "assembly": "Unity.Muse.Sprite",
+          "version": "1.0",
+          "enabled": true
+        },
+        {
+          "type": "Unity.Muse.Sprite.Operators.KeyImageOperator",
+          "assembly": "Unity.Muse.Sprite",
+          "version": "1.0",
+          "enabled": true
+        },
+        {
+          "type": "Unity.Muse.Sprite.Operators.SpriteRefiningMaskOperator",
+          "assembly": "Unity.Muse.Sprite",
+          "version": "1.0",
+          "enabled": false
+        },
+        {
+          "type": "Unity.Muse.Sprite.Operators.SessionOperator",
+          "assembly": "Unity.Muse.Sprite",
+          "version": "1.0",
+          "enabled": false
+        }
+      ]
+    }
+  ]
+}

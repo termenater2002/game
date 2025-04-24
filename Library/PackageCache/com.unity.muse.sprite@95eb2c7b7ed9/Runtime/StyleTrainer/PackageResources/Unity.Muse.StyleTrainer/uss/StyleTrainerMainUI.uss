@@ -1,0 +1,123 @@
+.styletrainer-mainui {
+    flex-grow: 1;
+    flex-shrink: 1;
+    background-color: var(--appui-backgrounds-50);
+}
+
+.styletrainer-mainui__login {
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.styletrainer-mainui__login__button {
+}
+
+.styletrainer-mainui__NoAsset {
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-width: 0;
+    border-color: rgba(0,0,0,0);
+}
+
+.styletrainer-mainui__NoAsset_dragging {
+    border-width: var(--appui-sizing-60);
+    border-color: var(--appui-accent-50);
+}
+
+.styletrainer-mainui__NoAsset__text {
+
+}
+
+.styletrainer-mainui__createasset__button {
+
+}
+
+.styletrainer-mainui__content{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.styletrainer-mainui__topmenu{
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--appui-backgrounds-200);
+    height: var(--appui-sizing-900);
+    padding-left: var(--appui-spacing-200);
+    padding-right: var(--appui-spacing-200);
+}
+
+.styletrainer-mainui__splitview {
+    border-top-width: var(--appui-sizing-10);
+    border-top-color: var(--appui-alias-control-border-color-default);
+}
+
+.styletrainer-mainui__loadingscreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.styletrainer-mainui__loadingicon {
+    align-self: center;
+}
+
+.styletrainer-mainui__topmenu__library-button {
+    padding-left: var(--appui-spacing-50);
+    padding-right: var(--appui-spacing-50);
+    background-color: var(--appui-alias-actions-background-color-selected);
+    border-color: var(--appui-alias-actions-border-color-selected);
+    border-width: var(--appui-border-width-sm);
+}
+
+.styletrainer-mainui__topmenu__library-button.is-collapsed {
+    background-color: var(--appui-alias-actions-background-color-default);
+}
+
+.styletrainer-mainui__topmenu__library-button:hover {
+    background-color: var(--appui-backgrounds-300);
+}
+
+.styletrainer-mainui__topmenu__style-name {
+    font-size: var(--appui-font-sizes-100);
+    -unity-font-style: bold;
+}
+
+.styletrainer-mainui__loadingtext {
+    align-self: center;
+}
+
+#unity-dragline{
+}
+
+#unity-dragline-anchor{
+    width: var(--appui-sizing-10);
+    background-color: var(--appui-alias-control-border-color-default)
+}
+
+#style-name{
+    font-size: var(--appui-font-sizes-100);
+    color: var(--appui-foregrounds-200);
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: var(--appui-spacing-200);
+    margin-right: var(--appui-spacing-200);
+    -unity-text-align: middle-center;
+}
+
+.styletrainer-mainui__accoutdropdown_container{
+    flex-shrink: 0;
+}

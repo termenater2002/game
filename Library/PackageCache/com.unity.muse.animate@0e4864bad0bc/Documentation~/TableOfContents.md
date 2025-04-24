@@ -1,0 +1,13 @@
+
+* [About Muse Animate](index.md)
+* [Install Muse Animate with the Package Manager](install-animate.md)
+* [Muse Animate interface](animate-interface.md)
+* [Get started with Muse Animate](get-started.md)
+   * [Generate animation](generate-animation.md)
+   * [Manage Library](library.md)
+   * [Work with playback controls](playback-controls.md)
+   * [Create keyframes](create-frames.md)
+   * [Refine with keyframes](keyframes.md)
+   * [Edit a pose with effectors](effectors.md)
+   * [Export animation](export-animation.md)
+* [Best practices for using Muse Animate](best-practice.md)

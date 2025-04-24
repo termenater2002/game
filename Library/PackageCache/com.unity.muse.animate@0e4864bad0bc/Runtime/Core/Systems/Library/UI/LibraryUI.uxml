@@ -1,0 +1,26 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Library Items -->
+    <ui:VisualElement name="deeppose-library-top" class="deeppose-library-top">
+        <ui:VisualElement name="deeppose-library__context-menu-anchor" class="deeppose-library__context-menu-anchor" picking-mode="Ignore" />
+        <ui:VisualElement class="deeppose-library__titlebar">
+            <appui:Text class="deeppose-library__title" text="Library" primary="false" />
+        </ui:VisualElement>
+        <ui:VisualElement class="deeppose-library__header">
+            <appui:SearchBar class="deeppose-library__searchbar" />
+            <appui:Dropdown class="deeppose-library-filter-dropdown"/>
+            <!-- Hiding star button until feature is ready -->
+            <!-- https://github.cds.internal.unity3d.com/unity/UnityMuseAITools/pull/1311 -->
+            <!-- https://jira.unity3d.com/browse/MUSEANIM-384 -->
+            <!-- <appui:IconButton icon="star" /> -->
+            <ui:VisualElement class="deeppose-library-slider-container" >
+                <appui:Icon icon-name="minus" size="M" />
+                <appui:SliderFloat name="deeppose-library__thumbnail-slider" class="deeppose-library__thumbnail-slider" value="1" inline-value="End"  />
+                <appui:Icon icon-name="plus" size="M" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement class="deeppose-library-grid-container">
+        <appui:GridView name="deeppose-library__gridview" class="deeppose-library__gridview" />
+        <appui:Text name="deeppose-library-empty-text" class="deeppose-library-empty-text" />
+    </ui:VisualElement>
+</ui:UXML>

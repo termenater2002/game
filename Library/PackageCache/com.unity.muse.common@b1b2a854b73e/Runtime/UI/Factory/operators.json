@@ -1,0 +1,50 @@
+[
+  {
+    "name"  : "generator",
+    "version" : "1.0",
+    "components" :
+    [
+      {
+        "label" : "Images",
+        "type": "TouchSliderInt"
+      },
+      {
+        "label" : "Generate",
+        "type": "Button"
+      }
+    ]
+  },
+  {
+    "name"  : "prompt",
+    "version" : "1.0",
+    "components" :
+    [
+      {
+        "label" : "",
+        "type": "TextField"
+      }
+    ]
+  },
+  {
+    "name"  : "negativePrompt",
+    "version" : "1.0",
+    "components" :
+    [
+      {
+        "label" : "",
+        "type": "TextField"
+      }
+    ]
+  },
+  {
+    "name": "referenceImageNode",
+    "version" : "1.0",
+    "components" :
+    [
+      {
+        "label" : "",
+        "type": "Image"
+      }
+    ]
+  }
+]

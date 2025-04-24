@@ -1,0 +1,70 @@
+.mui-context-view-element-root {
+    flex-direction: row;
+    border-color: var(--muse-chat-backgrounds-50);
+    padding-bottom: 4px;
+}
+
+.mui-context-view-element-row {
+    flex-direction: row;
+    flex-grow: 1;
+    max-height: 22px;
+
+    border-radius: 6px;
+    margin-right: 6px;
+    margin-bottom: 2px;
+    background-color: var(--muse-chat-backgrounds-100);
+}
+
+.mui-context-entry-user-message {
+    background-color: var(--muse-chat-backgrounds-50);
+}
+
+.mui-context-view-element-row:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-context-entry-user-message.mui-context-element-target-missing:hover {
+    background-color: var(--muse-chat-backgrounds-50);
+}
+
+.mui-context-view-element-icon {
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px;
+    --unity-image-tint-color: white;
+}
+
+.mui-context-view-element-remove-button {
+    min-width: 24px;
+    border-width: 0;
+    border-radius: 6px;
+    background-color: rgba(0,0,0,0);
+}
+
+#removeButton:hover {
+    background-color: rgba(0,0,0,0);
+}
+
+.mui-context-view-element-remove-button:disabled {
+    display: none;
+}
+
+.mui-context-prefab {
+    color: var(--muse-chat-prefab-color);
+}
+
+#contextText {
+    margin-right: 8px;
+    -unity-text-align: middle-left;
+}
+
+#contextIconMissingOverlay {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    right: 4px;
+    bottom: 1px;
+    -unity-font-style: bold;
+    font-size: 14px;
+    color: var(--muse-chat-color-pink);
+}

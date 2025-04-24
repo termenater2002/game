@@ -1,0 +1,143 @@
+.deeppose-v2m
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.deeppose-v2m-overlay
+{
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.deeppose-v2m-overlay-box
+{
+    min-width: auto;
+    width: auto;
+    padding: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    background-color: var(--appui-backgrounds-100);
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.deeppose-v2m-buttons
+{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    padding: 8px;
+    flex-grow: 1;
+    align-items: stretch;
+    flex-direction: row;
+    align-self: center;
+}
+
+.deeppose-v2m-info
+{
+    flex-direction: row;
+    position: absolute;
+    bottom:12px;
+    left:12px;
+    width: 500px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: var(--appui-backgrounds-50);
+}
+
+.deeppose-v2m-video
+{
+    position: absolute;
+    bottom:80px;
+    left:12px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: var(--appui-backgrounds-50);
+}
+
+.deeppose-v2m-section {
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: var(--appui-backgrounds-200);
+    padding: 0 4px;
+    border-color: var(--appui-backgrounds-50);
+    border-top-width: 1px;
+}
+
+.deeppose-v2m-info .appui-heading {
+    padding: 0 0 4px;
+    -unity-text-align: lower-center;
+    -unity-font-style: bold;
+    font-size: 12px;
+}
+
+.deeppose-v2m-info .appui-inputlabel {
+    flex-grow: 1;
+    padding-bottom: 0px;
+    padding-top: 6px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.deeppose-v2m-info .appui-inputlabel__label {
+    -unity-text-align: middle-left;
+    align-self: flex-start;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.deeppose-v2m-info .appui-inputlabel__content {
+    -unity-text-align: middle-left;
+    align-self: flex-start;
+    flex-grow: 1;
+}
+
+.deeppose-v2m-filename-container {
+    flex-direction: row;
+    padding-top: 4px;
+}
+
+.deeppose-v2m-input-field {
+    margin-bottom: 4px;
+}
+
+.deeppose-v2m-filename {
+    -unity-font-style: bold;
+    align-self: flex-start;
+}
+
+.deeppose-v2m-filename-text {
+    margin-right: auto;
+    flex-shrink: 1;
+}
+
+#v2m-title {
+    -unity-text-align: middle-left;
+}
+
+#v2m-button-extract-keys {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#v2m-button-extract-keys, #v2m-button-export {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 6px 0 6px;
+    background-color: var(--appui-backgrounds-100);
+    border-width: 1px;
+    border-color: var(--appui-backgrounds-300);
+    flex-shrink: 0;
+}

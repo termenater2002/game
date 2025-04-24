@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7087514a53549f2825f7471c483cfa5, type: 3}
+  m_Name: StyleTrainerConfig
+  m_EditorClassIdentifier: 
+  trainingSteps: 2000
+  minTrainingSetSize: 5
+  maxTrainingSetSize: 15
+  minSampleSetSize: 3
+  maxSampleSetSize: 5
+  minTrainingImageSize: {x: 128, y: 128}
+  maxTrainingImageSize: {x: 512, y: 512}
+  debugLog: 0
+  logToFile: 0
+  defaultStyleVersion: 2023111600
+  defaultStyles:
+  - m_Guid: 00000000-0000-0000-0000-000000000000
+    m_State: 1
+    m_Disposing: 0
+    m_IsFallback: 1
+    m_Thumbnail:
+      rid: -2
+    m_Visible: 0
+    selectedCheckPointGUID: 00000000-0000-0000-0000-000000000000
+    m_FavoriteCheckPointGUID: active
+    parentID: 00000000-0000-0000-0000-000000000000
+    m_ProjectID: 00000000-0000-0000-0000-000000000000
+    m_TrainingSteps: 2000
+    m_CheckPoints:
+    - m_Guid: 00000000-0000-0000-0000-000000000000
+      m_State: 1
+      m_Disposing: 0
+      m_ProjectID: 00000000-0000-0000-0000-000000000000
+      m_Name: Default
+      m_Description: Default style.
+      parent_id: 00000000-0000-0000-0000-000000000000
+      m_TrainingSetData:
+        m_Guid: 
+        m_State: 0
+        m_Disposing: 0
+        m_TrainingSet: []
+        m_ProjectID: 
+      m_ValidationImagesData: []
+      m_TrainingSteps: 2000
+    m_SampleOutputPrompts: []
+    m_TrainingSetData: []
+    m_Name: Default
+    m_Description: Default style.
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

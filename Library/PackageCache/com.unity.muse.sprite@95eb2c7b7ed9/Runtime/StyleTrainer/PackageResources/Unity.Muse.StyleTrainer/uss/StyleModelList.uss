@@ -1,0 +1,105 @@
+.styletrainer-stylemodellist {
+    width: 538px;
+    min-width: 300px;
+    background-color: var(--appui-backgrounds-200);
+}
+
+.styletrainer-stylemodellist__collapsed{
+    min-width: var(--appui-sizing-1600);
+    width: var(--appui-sizing-1600);
+    max-width: var(--appui-sizing-1600);
+    padding-top: var(--appui-spacing-200);
+}
+
+.styletrainer-stylemodellist__collapsed Text{
+    display: none;
+}
+
+.styletrainer-stylemodellist__titlebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: var(--appui-spacing-300);
+    flex-shrink: 0;
+    margin-right: var(--appui-spacing-300);
+}
+
+.styletrainer-stylemodellist__titlebar__new-button{
+    margin-left: var(--appui-spacing-300);
+    padding-right: var(--appui-spacing-100);
+}
+
+.styletrainer-stylemodellist__title {
+    color: var(--appui-foregrounds-200);
+    font-size: var(--appui-font-sizes-100);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    flex-grow: 1;
+    margin-right: var(--appui-static-spacing-500);
+}
+
+.styletrainer-stylemodellist-add-style__container{
+    display: none;
+    margin-left: var(--appui-spacing-300);
+    margin-right: var(--appui-spacing-300);
+    margin-bottom: var(--appui-spacing-200);
+}
+
+.styletrainer-stylemodellist-add-style__container.is-collapsed{
+    display: flex;
+}
+
+.styletrainer-stylemodellist-add-style__button-container{
+    height: var(--appui-sizing-1000);
+    width: var(--appui-sizing-1000);
+    background-color: rgba(71, 71, 71, 0.20);
+    border-width: 0;
+    border-radius: var(--appui-border-radius-lg);
+    align-items: center;
+    justify-content: center;
+}
+
+.styletrainer-stylemodellist-add-style__button{
+}
+
+.styletrainer-stylemodellist__listview {
+    margin-top: var(--appui-spacing-275);
+    flex: 1;
+}
+
+.styletrainer-stylemodellist__footer {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    border-top-color: var(--appui-backgrounds-300);
+    border-top-width: var(--appui-sizing-10);
+    margin-right: var(--appui-spacing-275);
+    margin-left: var(--appui-spacing-50);
+    height: 60px;
+}
+
+.styletrainer-stylemodellist__searchbar {
+    width: auto;
+    margin: var(--appui-sizing-200) var(--appui-spacing-300);
+    height: 20px;
+}
+
+.styletrainer-stylemodellist__searchbar #appui-textfield__trailingcontainer .hidden {
+    display: none;
+}
+
+.styletrainer-stylemodellist__context-menu-anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.styletrainer-stylemodellist__title-container__collapsed{
+    display: none;
+}
+
+.unity-list-view__empty-label {
+    display: none;
+}

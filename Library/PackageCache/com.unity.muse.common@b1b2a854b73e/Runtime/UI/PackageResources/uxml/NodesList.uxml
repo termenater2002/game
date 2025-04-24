@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:ui="UnityEngine.UIElements">
+    <Style src="../uss/NodesList.uss"/>
+    <ui:VisualElement name="__root__">
+        <appui:Panel class="muse-nodeslist__panel" scale="small" pickingMode="Ignore">
+            <ui:VisualElement name="notifications-area"/>
+            <ui:ScrollView class="muse-nodeslist-container">
+                <ui:VisualElement class="muse-nodeslist__content"/>
+            </ui:ScrollView>
+            <appui:Spacer class="muse-nodeslist__spacer"/>
+            <ui:VisualElement name="muse-nodeslist__dragbar" class="muse-nodeslist__dragbar cursor--ew-resize">
+                <ui:VisualElement class="muse-nodeslist__dragbar-content" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </appui:Panel>
+    </ui:VisualElement>
+</ui:UXML>

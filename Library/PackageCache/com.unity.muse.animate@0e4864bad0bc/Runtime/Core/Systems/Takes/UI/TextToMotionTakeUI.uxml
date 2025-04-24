@@ -1,0 +1,12 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement class="t2m-take-container">
+        <ui:VisualElement name="t2m-take-info-container" class="t2m-take-component">
+            <ui:VisualElement style="margin-bottom: 4px">
+                <appui:Text name="t2m-take-info-prompt-label" text="Prompt" class="deeppose-takes-label" />
+                <appui:Text name="t2m-take-info-prompt" text="Running jumping flying dragon kick with arms extended mid jump, like Bruce Lee" class="deeppose-take-description" />
+            </ui:VisualElement>
+            <appui:Text name="t2m-take-info-name-label" text="Name" class="deeppose-takes-label" />
+            <appui:TextField focusable="true" name="t2m-take-info-name-field" class="deeppose-take-name-field" />            
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xmlns:muse="Unity.Muse.Common"
+    xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/ControlToolbar.uss"/>
+    <muse:ControlToolbar class="muse-controltoolbar">
+
+        <ui:VisualElement class="muse-controltoolbar__leftarea">
+        </ui:VisualElement>
+
+        <ui:VisualElement class="muse-spacer" />
+
+        <ui:VisualElement class="muse-controltoolbar__rightarea">
+
+<!--            <appui:Dropdown class="muse-controltoolbar__dropdown">-->
+
+<!--            </appui:Dropdown>-->
+
+        </ui:VisualElement>
+
+        <ui:VisualElement class="muse-controltoolbar__centerarea" picking-mode="Ignore">
+
+            <appui:ActionGroup name="muse-controltoolbar__actiongroup" class="muse-controltoolbar__actiongroup" quiet="true">
+                <!--<appui:ActionButton name="muse-boundingbox-tool-button" class="muse-controltoolbar__actionbutton" quiet="true" label="Bounding Box" icon="focus" />
+                <appui:ActionButton name="muse-spline-tool-button" class="muse-controltoolbar__actionbutton" quiet="true" label="Path Tool" icon="spline-tool" />
+                <appui:ActionButton name="muse-pencil-tool-button" class="muse-controltoolbar__actionbutton" quiet="true" label="Pencil" icon="pen" />
+                <appui:ActionButton name="muse-pen-tool-button" class="muse-controltoolbar__actionbutton" quiet="true" label="Paint" icon="paint-brush" />
+                <appui:ActionButton name="muse-colorpicker-tool-button" class="muse-controltoolbar__actionbutton" quiet="true" label="Color Picker" icon="color-picker" /> -->
+            </appui:ActionGroup>
+
+        </ui:VisualElement>
+
+    </muse:ControlToolbar>
+</ui:UXML>

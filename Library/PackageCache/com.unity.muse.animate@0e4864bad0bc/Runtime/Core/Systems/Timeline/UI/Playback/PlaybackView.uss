@@ -1,0 +1,209 @@
+@import url("../../../../../PackageResources/UI/Styles/Main.uss");
+
+.deeppose-playback
+{
+    flex-direction: row;
+    flex-grow: 1;
+    width: 100%;
+    height: 28px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.deeppose-playback-action-group
+{
+    flex-grow: 0;
+    align-self: center;
+}
+
+.deeppose-playback-slider-container {
+    flex-direction: row;
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.deeppose-playback-slider {
+    flex-grow: 1;
+}
+
+.deeppose-playback-plus-button {
+    border-radius: 2px;
+    border-width: 0;
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    top: -30px;
+    background-color: var(--appui-backgrounds-50);
+    padding-bottom: 1px;
+    transition: scale 0.2s ease-in-out;
+}
+
+.deeppose-playback-plus-button:hover {
+    scale: 1.15;
+}
+
+.deeppose-playback-speed-button {
+    width: var(--appui-sizing-1100);
+}
+
+.deeppose-playback-fps-field {
+    flex-direction: row;
+    width: 75px;
+    height: 28px;
+    align-self: center;
+    align-content: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.deeppose-playback-int-field {
+    width: 40px;
+    height: 28px;
+    padding: var(--appui-spacing-25);
+    padding-left: var(--appui-spacing-100);
+    border-radius: 6px;
+    flex: none;
+    align-self: center;
+    align-content: center;
+    -unity-text-align: middle-center;
+    justify-content: center;
+    margin-right: var(--appui-spacing-50);
+    margin-left: var(--appui-spacing-50);
+    background-color: var(--appui-base-100);
+    border-color: var(--appui-base-400);
+    color: var(--appui-foregrounds-100);
+}
+
+/* HACK for 26th June Release: PlaybackSlider USS here*/
+/* Mostly adapted from AppUI */
+
+/* Slider */
+.playback-slider {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-direction: column;
+    justify-content: center;
+    cursor: var(--appui-alias-control-cursor-pointer);
+    width: 100%;
+}
+
+.playback-slider__control-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.playback-slider__controls {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    min-height: 8px;
+}
+
+.playback-slider__track {
+    left:-3px;
+    right:-3px;
+    height: 8px;
+    background-color: var(--appui-base-200);
+    border-radius: var(--appui-sizing-75);
+    position: absolute;
+    align-self: center;
+}
+
+.playback-slider__handle-container {
+    position: absolute;
+    width: var(--appui-sizing-100);
+    height: var(--appui-sizing-300);
+    align-self: center;
+}
+
+.playback-slider__handle {
+    background-color: var(--appui-foregrounds-200);
+    border-color: var(--appui-backgrounds-100);
+    border-width: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -50%;
+    cursor: var(--appui-alias-control-cursor-pointer);
+    scale: 1.0;
+    transition: scale var(--appui-animation-easing-ease-out) var(--appui-animation-duration-50), border-width var(--appui-animation-easing-ease-out) var(--appui-animation-duration-50);
+}
+
+.playback-slider__handle {
+    border-radius: var(--appui-sizing-50);
+}
+
+.playback-slider:focus .playback-slider__handle {
+    --outline-offset: var(--appui-alias-control-outline-offset);
+    --outline-width: var(--appui-alias-control-outline-width);
+    --outline-color: var(--appui-alias-control-outline-color);
+}
+
+.playback-slider:focus .playback-slider__handle,
+.playback-slider.is-focused .playback-slider__handle,
+.playback-slider:hover .playback-slider__handle,
+.playback-slider:active .playback-slider__handle {
+    scale: 1.2;
+}
+
+.playback-slider__handleinput {
+    display: none;
+}
+
+.playback-slider__ticks {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.playback-slider__progress {
+    height: 8px;
+    align-self: center;
+    background-color: var(--appui-foregrounds-25);
+}
+
+.playback-slider__progress-primary {
+    background-color: var(--appui-accent-100);
+}
+
+.playback-slider__progress-start {
+    border-bottom-left-radius: var(--appui-sizing-75);
+    border-top-left-radius: var(--appui-sizing-75);
+}
+
+.playback-slider__progress-end {
+    border-bottom-right-radius: var(--appui-sizing-75);
+    border-top-right-radius: var(--appui-sizing-75);
+}
+
+.playback-slider__tick {
+    width: 2px;
+    height: 8px;
+    background-color: var(--appui-backgrounds-200);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.playback-slider:disabled {
+    opacity: 0.5;
+    cursor: var(--appui-alias-control-cursor-disabled);
+}
+
+.playback-slider:disabled:hover .playback-slider__handle {
+    scale: 1.0;
+}
+
+#go-to-prev-key {
+    scale: -1 1;
+}

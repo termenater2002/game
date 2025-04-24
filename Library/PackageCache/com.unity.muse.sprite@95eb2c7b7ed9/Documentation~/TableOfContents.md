@@ -1,0 +1,13 @@
+
+* [Get started](xref:get-started)
+* [Generate sprites](xref:generate)
+   * [Write a prompt](xref:write-prompt)
+   * [Generate from a seed](xref:generate-from-seed)
+   * [Generate from a reference image](xref:generate-from-reference)
+   * [Generate from a scribble](xref:generate-from-scribble)
+   * [Manage generated sprites](xref:manage-sprites)
+* [Refine with masking](xref:refine)
+* [Style trainer](xref:style-trainer)
+* [Tool reference](xref:reference)
+   * [UI elements](xref:ui-elements)
+   * [Keyboard shortcuts](xref:keyboard-shortcuts)

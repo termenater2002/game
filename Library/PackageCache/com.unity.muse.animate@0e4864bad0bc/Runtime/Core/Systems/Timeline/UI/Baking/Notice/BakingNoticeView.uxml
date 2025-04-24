@@ -1,0 +1,10 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Baking Notice : Icon -->
+    <ui:VisualElement name="notice-icon-container" class="deeppose-notice-icon-container" picking-mode="Ignore" >
+        <appui:Icon name="notice-icon" class="deeppose-notice-icon" icon="warning" picking-mode="Ignore" />
+    </ui:VisualElement>
+    <!-- Baking Notice : Main -->
+    <ui:VisualElement name="notice-main-container" class="deeppose-notice-main-container" picking-mode="Ignore" >
+        <ui:Label name="notice-main-label" class="deeppose-notice-main-label" text="Notice" picking-mode="Ignore"/>
+    </ui:VisualElement>
+</ui:UXML>

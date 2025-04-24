@@ -1,0 +1,30 @@
+.styletrainer-sampleoutputlistitem {
+    margin-right: var(--appui-spacing-400);
+    margin-bottom: var(--appui-spacing-200);
+}
+
+.styletrainer-sampleoutputlistitem__prompt__label {
+    margin-left: var(--appui-spacing-100);
+    margin-bottom: var(--appui-spacing-150);
+}
+
+.styletrainer-sampleoutputlistitem__prompttextfield {
+    margin-right: var(--appui-spacing-500);
+}
+
+.styletrainer-sampleoutputlistitem__deletebutton {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    display: none;
+    width: 5px;
+    height: 15px;
+}
+
+*:hover > .styletrainer-sampleoutputlistitem__deletebutton {
+    display: flex;
+}
+
+.is-selected .delete-button-webgl {
+    display: flex;
+}

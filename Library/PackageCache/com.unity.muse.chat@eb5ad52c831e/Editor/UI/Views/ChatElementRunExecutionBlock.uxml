@@ -1,0 +1,12 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement>
+        <ui:VisualElement class="execution-block-header">
+            <ui:Label name="runActionTitle" class="execution-header-label"/>
+            <ui:Button name="undoButton" class="mui-action-button mui-agent-undo-button">
+                <ui:Image class="mui-action-button-image mui-icon-undo"/>
+                <ui:Label text="Undo history" class="mui-action-button-label"/>
+            </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement name="executionContainer"/>
+    </ui:VisualElement>
+</UXML>

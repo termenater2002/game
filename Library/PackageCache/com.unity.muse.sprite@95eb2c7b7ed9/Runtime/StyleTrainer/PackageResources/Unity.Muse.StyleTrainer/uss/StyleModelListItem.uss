@@ -1,0 +1,213 @@
+:root {
+    --selected-color-list-view-focus: var(--appui-alias-actions-background-color-selected);
+    --selected-color-list-view-not-focus: var(--appui-alias-actions-background-color-default);
+}
+
+.styletrainer-stylemodellistitem__container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    padding-left: var(--appui-spacing-300);
+    padding-right: var(--appui-spacing-300);
+}
+
+.styletrainer-stylemodellistitem {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.styletrainer-stylemodellistitem__previewimage {
+    width: 150px;
+    height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: center;
+}
+
+.styletrainer-stylemodellistitem__container-text{
+    margin-left: var(--appui-spacing-200);
+}
+
+.styletrainer-stylemodellistitem__fields {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.styletrainer-stylemodellistitem__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: var(--appui-spacing-100);
+    -unity-font-style: bold;
+    font-size: var(--appui-font-sizes-100);
+}
+
+.styletrainer-stylemodellistitem__status {
+    font-size: var(--appui-font-sizes-100);
+}
+
+.styletrainer-stylemodellistitem__visibilitytoggle-icon {
+    flex-grow: 1;
+}
+
+.is-checked .styletrainer-stylemodellistitem__visibilitytoggle-icon {
+    display: none;
+}
+
+.appui-checkbox__box {
+    border-width: 0;
+    width: 25px;
+    height: 25px;
+}
+
+#VisibilityToggle:hover .appui-checkbox__box {
+    border-color: var(--appui-accent-100);
+    border-width: 1px;
+    border-radius: 100px;
+}
+
+.appui .unity-collection-view__item:hover {
+    background-color: var(--appui-backgrounds-300);
+    color: var(--appui-foregrounds-200);
+}
+
+.unity-collection-view .unity-collection-view__item--selected:checked:hover {
+    background-color: var(--selected-color-list-view-not-focus);
+    color: var(--appui-foregrounds-200);
+}
+
+.unity-collection-view:focus .unity-collection-view__item--selected:hover {
+    background-color: var(--selected-color-list-view-focus);
+    color: var(--appui-foregrounds-200);
+}
+
+.styletrainer-stylemodellist__collapsed .unity-collection-view .unity-collection-view__item:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+}
+
+.styletrainer-stylemodellist__collapsed .unity-collection-view__item:hover #StylePreviewImage{
+    border-width: var(--appui-border-width-md);
+    border-color: var(--appui-alias-actions-background-color-hover);
+}
+
+.styletrainer-stylemodellistitem__iconcontainer {
+    width: var(--appui-sizing-700);
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    padding-right: var(--appui-sizing-50);
+    background-color: var(--appui-backgrounds-300);
+    align-items: center;
+    align-content: center;
+}
+
+.styletrainer-stylemodellistitem__visibilitytoggle {
+    align-self: center;
+    justify-content: center;
+}
+
+.styletrainer-stylemodellistitem__prohibiticon {
+    align-self: center;
+    justify-content: center;
+}
+
+.styletrainer-stylemodellistitem__progress {
+    margin-top: var(--appui-sizing-100);
+    align-self: center;
+    justify-content: center;
+    width: var(--appui-sizing-400);
+    height: var(--appui-sizing-400);
+}
+
+.styletrainer-stylemodellistitem__deletebutton {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    display: none;
+
+}
+
+.styletrainer-stylemodellistitem__deletebutton:disabled {
+    display: none;
+}
+
+*:hover > .styletrainer-stylemodellistitem__deletebutton:enabled {
+    display: flex;
+}
+
+.styletrainer-stylemodellistitem__styleloading__progress_container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: none;
+    position: absolute;
+    margin-left: var(--appui-spacing-450);
+}
+
+.styletrainer-stylemodellistitem__styleloading__progress {
+
+}
+
+.styletrainer-stylemodellistitem__image{
+    width: var(--appui-sizing-1000);
+    height: var(--appui-sizing-1000);
+    min-width: var(--appui-sizing-1000);
+    min-height: var(--appui-sizing-1000);
+    border-radius: var(--appui-border-radius-lg);
+}
+
+#StylePreviewImage{
+    background-color: var(--appui-color-gray-500);
+    flex-grow: 0;
+}
+
+.text-color-orange-800{
+    color: var(--appui-color-orange-800);
+}
+
+.text-color-blue-800{
+    color: var(--appui-color-blue-800);
+}
+
+.text-color-green-800{
+    color: var(--appui-color-green-800);
+}
+
+.text-color-red-800{
+    color: var(--appui-color-red-800);
+}
+
+.unity-collection-view:focus .unity-collection-view__item--selected {
+    background-color: var(--selected-color-list-view-focus);
+    color: var(--appui-foregrounds-200);
+}
+
+.styletrainer-stylemodellist__collapsed .unity-collection-view:focus .unity-collection-view__item--selected {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-collection-view__item--selected:enabled {
+    background-color: var(--selected-color-list-view-not-focus);
+    color: var(--appui-foregrounds-200);
+}
+
+.styletrainer-stylemodellist__collapsed .unity-collection-view__item--selected:enabled {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.styletrainer-stylemodellist__collapsed .unity-collection-view__item--selected:enabled #StylePreviewImage {
+    border-width: var(--appui-border-width-md);
+    border-color: var(--appui-alias-control-foreground-color-selected);
+}

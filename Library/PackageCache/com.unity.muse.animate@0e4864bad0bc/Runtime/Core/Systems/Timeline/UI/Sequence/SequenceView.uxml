@@ -1,0 +1,28 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <!-- Sequence Items -->
+    <ui:VisualElement name="sequence-top" class="deeppose-sequence-top">
+        <ui:VisualElement  name="sequence-drag-layer" class="deeppose-sequence-drag-layer" picking-mode="Position">
+            <ui:ScrollView name="sequence-scrollview" class="deeppose-sequence-scrollview" mode="Horizontal">
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    
+    <!-- Sequence Menu-->
+    <ui:VisualElement name="sequence-menu" class="deeppose-sequence-menu" >
+        <!-- Sequence Toolbar-->
+        <ui:VisualElement name="sequence-toolbar-container" class="deeppose-sequence-toolbar-top">
+            <appui:ActionGroup name="sequence-toolbar" class="deeppose-sequence-action-group" size="S" justified="true" compact="true">
+                <appui:ActionButton name="timeline-add-key" size="S" tooltip="Add Key" icon="plus" />
+                <appui:ActionButton name="sequence-delete-keys" size="S" tooltip="Delete Selected Keys" icon="delete" />
+                <appui:ActionButton name="sequence-toggle-transitions" size="S" tooltip="Toggle Transitions" icon="eye" />
+            </appui:ActionGroup>
+            <appui:Divider size="S" spacing="S" vertical="true"/>
+            <appui:ActionGroup name="sequence-browse-toolbar" class="deeppose-sequence-action-group" size="S" justified="true" compact="true">
+                <appui:ActionButton name="go-to-first-key" size="S" icon="caret-double-left"/>
+                <appui:ActionButton name="go-to-previous-key" size="S" icon="caret-left"/>
+                <appui:ActionButton name="go-to-next-key" size="S" icon="caret-right"/>
+                <appui:ActionButton name="go-to-last-key" size="S" icon="caret-double-right"/>
+            </appui:ActionGroup>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

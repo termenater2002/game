@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+>
+    <ui:VisualElement name="v2m-upload-container">
+        <appui:Text name="file-types" text="MP4, WebM, AVI, FLV, OGG, MOV, 3GP and other video files"/>
+        <appui:Text name="max-size" text="Max file size: &lt;b&gt;200 MB&lt;/b&gt;"/>
+        <ui:VisualElement class="deeppose-takes-t2m-spacer"/>
+        <appui:Button name="browse-button" title="Browse"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,31 @@
+.deeppose-notice
+{
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-top: var(--appui-spacing-150);
+    flex-grow:0;
+    border-radius: var(--appui-spacing-100);
+    padding: 0;
+    padding-left: var(--appui-spacing-150);
+    padding-right: var(--appui-spacing-100);
+    height: 24px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.deeppose-notice-icon-container
+{
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-grow: 0;
+    margin-right: var(--appui-spacing-25);
+}
+
+.deeppose-notice-main-label {
+    align-self: center;
+    -unity-text-align: middle-center;
+    font-size: 10px;
+    -unity-font-style: bold;
+    width: 100%;
+}

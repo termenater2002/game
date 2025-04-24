@@ -1,0 +1,54 @@
+.li-status-loading {
+    flex-grow: 1;
+    background-image: resource('spinner.png');
+}
+
+.li-element {
+    overflow: hidden;
+    background-color: var(--appui-backgrounds-100);
+    flex-grow: 1;
+
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.li-element.cover  {
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.muse-canvas .li-element {
+    background-color: var(--appui-color-transparent-black-0);
+}
+
+#Buttons {
+    flex-grow: 1;
+}
+
+#Buttons {
+    opacity: 0;
+    transition-duration: var(--anim-duration);
+}
+
+#Buttons:hover {
+    opacity: 1;
+    transition-duration: var(--anim-duration);
+}
+
+.unity-texture-genai-element-main > * > #Buttons {
+    display: none;
+}
+
+.li-resolution-chip {
+    align-self: flex-end;
+    bottom: var(--appui-spacing-50);
+    right: var(--appui-spacing-50);
+    border-radius: var(--appui-border-radius-xs);
+    height: auto;
+    background-color: var(--appui-color-transparent-black-300);
+    border-color: var(--appui-color-transparent-black-0);
+}
+
+.li-resolution-chip > .appui-chip__label {
+    padding: var(--appui-spacing-25) var(--appui-spacing-50);
+    color: var(--appui-primary-1300);
+    font-size: var(--appui-font-sizes-100);
+}

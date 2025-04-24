@@ -1,0 +1,34 @@
+.deeppose-task-status
+{
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    flex-grow:0;
+    padding: var(--appui-spacing-100);
+    width: 100%;
+}
+
+.deeppose-task-status-circular-progress-container
+{
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-right: var(--appui-spacing-50);
+}
+
+.deeppose-task-status-circular-progress
+{
+    position: relative;
+    align-self: center;
+    --variant: 0;
+    width: 26px;
+    height: 26px;
+}
+
+.deeppose-task-status-main-label {
+    align-self: center;
+    -unity-text-align: middle-center;
+    font-size: 11px;
+    -unity-font-style: bold;
+    width: 100%;
+}

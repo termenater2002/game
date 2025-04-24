@@ -1,0 +1,24 @@
+{
+  "modes":
+  [
+    {
+      "type": "muse-chat-beta",
+      "label": "Muse Chat Agent",
+      "title": "Muse Chat Agent",
+      "version": "1.0",
+      "enabled": true,
+      "group": "Chat",
+      "group_order": 0,
+      "icon_path": "Packages/com.unity.muse.common/PackageResources/Logos/UnityIcon.png",
+      "icon_label": "Unity",
+
+      "operators": [
+        {
+          "type": "PromptOperator",
+          "version": "2.0",
+          "enabled": true
+        }        
+      ]
+    }
+  ]
+}

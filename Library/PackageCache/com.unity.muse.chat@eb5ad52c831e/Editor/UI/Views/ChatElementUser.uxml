@@ -1,0 +1,30 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="chatRoot" class="mui-chat-root -muse-chat-panel mui-chat-user-message">
+        <ui:VisualElement class="mui-chat-message-content">
+            <ui:VisualElement class="mui-chat-element-avatar-area">
+                <ui:VisualElement class="mui-chat-avatar-frame" name="userIconFrame">
+                    <ui:Image class="mui-chat-avatar" name="userIcon"/>
+                </ui:VisualElement>
+                <ui:Label text="User Name" name="userName" class="mui-chat-label mui-chat-username" />
+            </ui:VisualElement>
+            <ui:VisualElement class="mui-chat-element-text-area">
+                <ui:VisualElement name="userMessageTextFieldRoot">
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:Foldout name="contextFoldout" class="mui-chat-foldout mui-chat-context-foldout" text="Context">
+                    <ui:VisualElement name="contextContent">
+                    </ui:VisualElement>
+                </ui:Foldout>
+            </ui:VisualElement>
+            <ui:VisualElement name="editControls" class="mui-user-edit-controls">
+                <ui:Button name="editButton" class="-muse-chat-button mui-user-edit-control-button">
+                    <ui:Image class="mui-action-button-image mui-icon-pen"/>
+                </ui:Button>
+                <ui:Button name="editCancelButton" class="-muse-chat-button mui-user-edit-control-button">
+                    <ui:Image class="mui-action-button-image mui-icon-cancel"/>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</UXML>

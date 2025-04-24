@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd">
+    <Style src="../uss/GenerationSettings.uss"/>
+    <ui:VisualElement name="__root__">
+        <ui:ScrollView class="scroll-view">
+            <ui:VisualElement class="titlebar">
+                <appui:Text class="title" text="Generation Data"/>
+                <appui:ActionButton name="use-all" label="Use All" class="use-all-button"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="operators"/>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

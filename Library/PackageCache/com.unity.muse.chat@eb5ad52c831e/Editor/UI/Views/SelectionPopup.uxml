@@ -1,0 +1,18 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="mui-popup-shadow" picking-mode="Ignore">
+    </ui:VisualElement>
+
+    <ui:VisualElement name="popupRoot" class="mui-selection-popup-root">
+        <VisualElement name="attachItemSearchFieldRoot" class="mui-selection-search-bar-row">
+        </VisualElement>
+        <ui:VisualElement class="mui-selection-popup-title-row">
+            <ui:Label name="title" text="Attach items" class="mui-chat-label mui-selection-popup-history-title"/>
+            <ui:Button name="addSelectionButton" class="mui-selection-popup-history-button" text="Add All"/>
+        </ui:VisualElement>
+
+        <ui:Label name="emptyListHint" text="Attach items to your prompt" class="mui-chat-label mui-selection-popup-empty-list-hint-text"/>
+
+        <ui:VisualElement name="adaptiveListViewContainer" class="mui-selection-popup-adaptive-list-view-container"/>
+
+    </ui:VisualElement>
+</UXML>

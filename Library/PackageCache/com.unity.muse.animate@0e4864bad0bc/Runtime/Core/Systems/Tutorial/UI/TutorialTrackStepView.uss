@@ -1,0 +1,93 @@
+.deeppose-track-step {
+    min-height: 60px;
+    min-width: 200px;
+    margin: 0;
+    padding: var(--appui-spacing-600);
+    border-radius: var(--appui-border-radius-lg);
+    background-color: var(--appui-backgrounds-50);
+    flex-direction: column;
+    width: 571px;
+    height: 300px;
+}
+
+.deeppose-track-step-title-container {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.deeppose-track-step-body-container {
+    margin-right: var(--appui-spacing-200);
+    margin-top: var(--appui-spacing-200);
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.deeppose-track-step-body-buttons-container {
+    flex-direction: row;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-top: var(--appui-spacing-150);
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.deeppose-track-step-body-buttons-container-left {
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-grow: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.deeppose-track-step-body-buttons-container-right {
+    flex-direction: row-reverse;
+    flex-shrink: 1;
+    flex-grow: 1;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.deeppose-track-step-button-right {
+    margin-left: var(--appui-spacing-125);
+}
+
+.deeppose-track-step-button-left {
+    margin-right: var(--appui-spacing-125);
+}
+
+.deeppose-track-step-footer-container {
+    margin-top: var(--appui-spacing-150);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.deeppose-track-step-title-label {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    -unity-font-style: bold;
+    color: var(--appui-foregrounds-200);
+}
+
+.deeppose-track-step-body-label {
+    align-self: center;
+    -unity-text-align: upper-left;
+    flex-wrap: wrap;
+    font-size: 14px;
+    -unity-font-style: normal;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: var(--appui-foregrounds-50);
+}
+
+.deeppose-track-step-footer-label {
+    align-self: center;
+    -unity-text-align: middle-center;
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--appui-foregrounds-50);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,29 @@
+﻿.deeppose-scene-view-header
+{
+    flex-direction: column;
+    width: auto;
+    align-items: flex-start;
+}
+
+.deeppose-scene-view-header-toolbars
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: var(--appui-spacing-100);
+}
+
+.deeppose-scene-view-header-title
+{
+    background-color: var(--appui-backgrounds-100);
+    flex-direction: row;
+    padding-left: var(--appui-spacing-150);
+    padding-top: var(--appui-spacing-150);
+    padding-right: var(--appui-spacing-150);
+    padding-bottom: var(--appui-spacing-150);
+}

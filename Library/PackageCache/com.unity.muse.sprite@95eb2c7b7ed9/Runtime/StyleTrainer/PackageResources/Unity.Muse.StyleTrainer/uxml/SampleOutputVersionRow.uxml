@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/SampleOutputVersionRow.uss"/>
+    <styleTrainer:SampleOutputVersionRow class="styletrainer-sampleoutputversionrow" name="SampleOutputVersionRow">
+        <ui:Foldout class="styletrainer-sampleoutputlistitem__foldout" name="Foldout">
+            <appui:ExVisualElement name="Content" class="styletrainer-sampleoutputlistitem__content"/>
+        </ui:Foldout>
+    </styleTrainer:SampleOutputVersionRow>
+</ui:UXML>

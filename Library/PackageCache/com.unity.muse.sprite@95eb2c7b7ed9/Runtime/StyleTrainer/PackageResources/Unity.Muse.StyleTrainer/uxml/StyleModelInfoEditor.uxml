@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/StyleModelInfoEditor.uss"/>
+    <styleTrainer:StyleModelInfoEditor class="styletrainer-stylemodelinfoeditor" name="StyleModelInfoEditor">
+        <ui:ScrollView class="styletrainer-stylemodelinfoeditor__maincontainer">
+            <ui:VisualElement name="styletrainer-stylemodelinfoeditor__context-menu-anchor"
+                          class="styletrainer-stylemodelinfoeditor__context-menu-anchor" picking-mode="Ignore"/>
+            <!--
+            <ui:VisualElement class="styletrainer-stylemodelinfoeditor__titlebar">
+                <appui:Text class="styletrainer-stylemodelinfoeditor__title" text="Info" primary="true" />
+            </ui:VisualElement>
+            -->
+            <ui:VisualElement name="StyleModelEditorSplashScreen" class="styletrainer-stylemodelinfoeditor-splashscreen">
+                <appui:Text name="HintText" class="styletrainer-stylemodelinfoeditor__hinttext"
+                            text="Create a new style to begin"/>
+            </ui:VisualElement>
+            <!-- <ui:VisualElement name="StyleModelEditorStyleLoadingScreen" -->
+            <!--                   class="styletrainer-stylemodelinfoeditor-styleloadingscreen"> -->
+            <!--     <appui:CircularProgress name="StyleLoading" -->
+            <!--                             class="styletrainer-stylemodelinfoeditor__styleloading__progress" quiet="true"/> -->
+            <!--     <appui:Text name="StyleLoadingText" class="styletrainer-stylemodelinfoeditor__styleloadingtext" -->
+            <!--                 text="Loading Style..."/> -->
+            <!-- </ui:VisualElement> -->
+            <appui:ExVisualElement name="StyleModelEditorContainer" class="variables styletrainer-stylemodelinfoeditor-container">
+                <appui:ExVisualElement class="styletrainer-stylemodelinfoeditor__splitview" name="StyleModelInfoEditorContent"/>
+            </appui:ExVisualElement>
+        </ui:ScrollView>
+        <appui:ExVisualElement class="variables styletrainer-stylemodelinfoeditor__footer">
+            <appui:ExVisualElement style="display:flex" class="styletrainer-stylemodelinfoeditor__buttons-container">
+                <appui:Button name="DeleteStyleButton" title="Delete Style" leading-icon="delete" />
+                <appui:Button name="TrainStyleButton" title="Train Style" variant="Accent" />
+                <appui:Button name="TrainingStyleButton" title="Training" disabled="true" />
+                <appui:Button name="PublishStyleButton" title="Publish Style" variant="Accent" />
+                <appui:Button name="UnpublishStyleButton" title="Unpublish Style" />
+                <appui:Button name="SelectFavoriteStyleButton" title="Select a Favorite" />
+            </appui:ExVisualElement>
+        </appui:ExVisualElement>
+    </styleTrainer:StyleModelInfoEditor>
+</ui:UXML>

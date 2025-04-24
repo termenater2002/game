@@ -1,0 +1,61 @@
+.historypanelentry__element {
+    min-height: 24px;
+    padding-left: 8px;
+}
+
+#historyPanelHeaderRoot {
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+#historyPanelHeaderText {
+    color: var(--muse-chat-text-disabled);
+    -unity-font-style: bold;
+}
+
+#historyPanelElementConversationRoot {
+    min-height: 24px;
+    flex-direction: row;
+}
+
+#historyPanelFavoriteStateButton {
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    margin-right: 4px;
+}
+
+#historyPanelFavoriteStateButton:hover .muse-chat-icon {
+    --unity-image-tint-color: white;
+}
+
+#historyPanelElementConversationText {
+    flex-grow: 1;
+
+    text-overflow: ellipsis;
+    -unity-text-overflow-position: end;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 170px;
+}
+
+#historyPanelElementConversationEditText {
+    align-self: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.mui-history-panel-header-entry:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mui-history-panel-entry-selected {
+    background-color: var(--muse-chat-accent-50);
+}
+
+.mui-history-panel-entry-controls {
+    flex-grow: 1;
+    min-width: 48px;
+    flex-direction: row;
+    justify-content: flex-end;
+}

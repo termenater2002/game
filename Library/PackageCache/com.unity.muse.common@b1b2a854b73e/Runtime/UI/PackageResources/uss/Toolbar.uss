@@ -1,0 +1,23 @@
+.muse-toolbar {
+    margin-top: var(--appui-spacing-100);
+    flex-shrink: 0;
+    border-radius: var(--appui-alias-control-border-radius); 
+    background-color: rgba(0,0,0,0.75);
+    padding: var(--appui-spacing-50);
+    align-items: center;
+    flex-direction: row;
+    align-self: center;
+}
+
+.muse-toolbar > .appui-actionbutton {
+    margin-left: var(--appui-sizing-100);
+}
+
+.appui-actiongroup {
+    flex-grow: 0;
+    margin-right: var(--appui-sizing-100);
+}
+
+.appui-actiongroup > .appui-actionbutton {
+    width: var(--appui-sizing-1000);
+}

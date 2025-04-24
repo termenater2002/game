@@ -1,0 +1,54 @@
+.mui-code-block-root {
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: var(--muse-agent-action-border);
+    margin-bottom: 20px;
+    font-size: 10px;
+    cursor: text;
+    justify-content: center;
+}
+
+.mui-code-block-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    border-bottom-color: var(--muse-chat-backgrounds-100);
+    border-bottom-width: 1px;
+    padding-right: 6px;
+    height: 33px;
+}
+
+.mui-code-block--monospaced-text {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 10px 12px 12px;
+    -unity-font-definition: resource("Fonts/RobotoMono/RobotoMono-Regular SDF.asset");
+    white-space: normal;
+}
+
+.mui-chat-response-code-block-button  {
+    margin-top: 4px;
+    margin-left: 8px;
+    margin-bottom: 4px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#saveCodeButton:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+#copyCodeButton:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+.mui-chat-response-code-block-button:disabled {
+    display: none;
+}
+
+#warningText {
+    white-space: normal;
+}

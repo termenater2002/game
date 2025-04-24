@@ -1,0 +1,27 @@
+{
+  "name": "com.unity.muse.chat",
+  "displayName": "Muse Chat",
+  "version": "1.1.1-pre.4",
+  "unity": "2022.3",
+  "description": "With Muse Chat, you can easily enhance your Unity skills and boost productivity by generating project-specific information, coding solutions, and resolutions to issues such as console errors.",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.serialization": "3.1.1",
+    "com.unity.muse.common": "2.0.10"
+  },
+  "unityRelease": "26f1",
+  "_upm": {
+    "changelog": "### Changed\n- Major update to chat bar UX\n- Updated WebAPI calls to be fully async\n- Disabled rich text in SelectionElements\n- Reduced calling of the `/versions` endpoint\n- Improvements to the ObjectDataExtractor\n- Optimized conversation retrieval"
+  },
+  "upmCi": {
+    "footprint": "852c3f0979cc21a99852bbb301fff17b15669bdd"
+  },
+  "documentationUrl": "https://docs.unity3d.com/Packages/com.unity.muse.chat@1.1/manual/index.html",
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/muse-editor.git",
+    "type": "git",
+    "revision": "a1006af890e9c9ab683b833695b17147bfe2841f"
+  },
+  "_fingerprint": "eb5ad52c831e9b7e253bec6a62364388cd85638b"
+}

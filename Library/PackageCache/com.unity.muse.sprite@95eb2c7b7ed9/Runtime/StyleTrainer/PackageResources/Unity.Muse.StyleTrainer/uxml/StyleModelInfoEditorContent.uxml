@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/StyleModelInfoEditor.uss"/>
+    <ui:Template src="StyleModelInfo.uxml" name="StyleModelInfo"/>
+    <styleTrainer:StyleModelInfoEditorContent class="styletrainer-stylemodelinfoeditor" name="StyleModelInfoEditorContent">
+        <ui:Instance template="StyleModelInfo" name="StyleModelInfo"/>
+        <ui:VisualElement name="StyleTabContainer" class="styletrainer-stylemodelinfoeditor__tabcontainer">
+            <ui:VisualElement name="TabContent" class="styletrainer-stylemodelinfoeditor__tabcontent"/>
+        </ui:VisualElement>
+    </styleTrainer:StyleModelInfoEditorContent>
+</ui:UXML>

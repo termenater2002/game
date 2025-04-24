@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:engine="UnityEngine.UIElements"
+        xmlns:editor="UnityEditor.UIElements"
+        xmlns:muse="Unity.Muse.Common"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/Canvas.uss"/>
+    <muse:Canvas>
+        <engine:VisualElement name="ControlContent" class="canvas-control__content">
+            <engine:VisualElement name="ContentTopSection" class="canvas-control__top"/>
+            <engine:VisualElement name="ContentMiddleSection" class="canvas-control__middle"/>
+            <engine:VisualElement name="ContentBottomSection" class="canvas-control__bottom"/>
+        </engine:VisualElement>
+    </muse:Canvas>
+
+</engine:UXML>

@@ -1,0 +1,91 @@
+.deeppose-takes {
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    padding: 12px;
+}
+.deeppose-takes-library
+{
+    flex-grow: 1;
+    height: 100%;
+}
+.deeppose-takes-t2m {
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+    min-height: auto;
+}
+
+.deeppose-takes-t2m-generate-button
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: auto;
+    width: 100%;
+}
+
+.deeppose-takes-t2m-spacer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 6px;
+    height: 8px;
+}
+
+.deeppose-takes-t2m-slider
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+}
+
+.deeppose-takes-t2m-slider .appui-slider__control-container {
+    padding-left: 4px;
+    padding-right: 4px;
+    flex-grow: 1;
+}
+
+.deeppose-takes-label {
+    height: 28px;
+    align-items: center;
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+.deeppose-takes-t2m-input-field
+{
+    margin: 0;
+    min-height: 55px;
+    height: 55px;
+    max-height: 140px;
+    width: initial;
+}
+
+.deeppose-take-description {
+    font-size: 12px;
+    color: var(--appui-alias-text-disabled)
+}
+
+.deeppose-take-name-field {
+    height: 30px;
+    padding: 6px;
+    align-items: flex-start;
+    align-self: stretch;    
+}
+
+.deeppose-takes-t2m-action-group
+{
+    flex-grow: 0;
+    flex-direction: row;
+}
+
+#takes-t2m-model
+{
+    display: none;
+}
+
+.t2m-take-component {
+    padding: 12px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--appui-backgrounds-50);
+}

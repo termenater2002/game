@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ui="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="../uss/StyleModelListItem.uss"/>
+    <styleTrainer:StyleModelListItem class="styletrainer-stylemodellistitem" name="StyleModelListItem">
+        <!--
+        <styleTrainer:PreviewImage name="PreviewImage" class="styletrainer-stylemodellistitem__previewimage">
+            <appui:Checkbox name="VisibilityToggle" class="styletrainer-stylemodellistitem__visibilitytoggle" quiet="true"/>
+        </styleTrainer:PreviewImage>
+        /-->
+        <appui:ExVisualElement name="ListViewContainer" class="styletrainer-stylemodellistitem__container">
+            <!-- <appui:ExVisualElement name="Icons" class="styletrainer-stylemodellistitem__iconcontainer"> -->
+            <!--     <appui:Checkbox name="VisibilityToggle" class="styletrainer-stylemodellistitem__visibilitytoggle" -->
+            <!--                     quiet="true"/> -->
+            <!--     ~1~appui:Icon name="ProhibitIcon" class="styletrainer-stylemodellistitem__prohibiticon" icon-name="prohibit" quiet="true"/@1@ -->
+            <!--     <appui:CircularProgress name="Progress" class="styletrainer-stylemodellistitem__progress"/> -->
+            <!-- </appui:ExVisualElement> -->
+            <appui:ExVisualElement class="styletrainer-stylemodellistitem__fields">
+                <styleTrainer:PreviewImage name="StylePreviewImage" class="styletrainer-stylemodellistitem__image"/>
+                <appui:ExVisualElement class="styletrainer-stylemodellistitem__container-text">
+                    <appui:Text name="StyleName" text="Style" class="styletrainer-stylemodellistitem__name" size="S"
+                                display-tooltip-when-elided="true" emphasized="true"/>
+                    <appui:Text name="StyleStatus" text="Untrained" class="styletrainer-stylemodellistitem__status" size="S"/>
+                </appui:ExVisualElement>
+            </appui:ExVisualElement>
+            <!-- <appui:ActionButton name="DeleteButton" class="styletrainer-stylemodellistitem__deletebutton" icon="delete" -->
+            <!--                     quiet="true"/> -->
+        </appui:ExVisualElement>
+        <appui:ExVisualElement name="StyleLoadingContainer"
+                               class="styletrainer-stylemodellistitem__styleloading__progress_container">
+            <appui:CircularProgress name="StyleLoading" class="styletrainer-stylemodellistitem__styleloading__progress"
+                                    quiet="true"/>
+        </appui:ExVisualElement>
+
+    </styleTrainer:StyleModelListItem>
+</ui:UXML>

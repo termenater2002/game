@@ -1,0 +1,58 @@
+@import "../../../../../UI/Inspector/InspectorView.uss";
+
+.deeppose-sequence-item-inspector 
+{
+    flex-grow: 0;
+    flex-direction: row;
+    align-self: flex-end;
+    align-content: center;
+    width: 15%;
+    height: 100%;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 2px;
+    background-color: var(--appui-color-gray-200);
+}
+
+.deeppose-sequence-item-inspector-top 
+{
+    position: absolute;
+    bottom: 220px;
+    flex-grow: 1;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.deeppose-sequence-item-duration-slider 
+{
+    margin-left: var(--appui-sizing-200);
+    margin-right: var(--appui-sizing-200);
+    flex-grow: 1;
+    width: 0; /* fix for slider going outside of its inspector */
+}
+
+.deeppose-slider-no-inline-value
+{
+    width: 0;
+    max-width: 0;
+}
+
+#deeppose-sequence-item-duration-slider #appui-inputlabel__input-container,
+#loop-pose-toggle-label #appui-inputlabel__input-container
+{
+    flex-grow:0;
+}
+
+#extrapolate-pose-toggle-label #appui-inputlabel__label-container,
+#loop-pose-toggle-label #appui-inputlabel__label-container
+{
+    flex-grow:1;
+}
+
+#key-inspector-heading
+{
+    -unity-text-align: middle-left;
+}

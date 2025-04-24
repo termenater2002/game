@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:museAnimate="Unity.Muse.Animate"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xsi:noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <ui:VisualElement name="v2m-overlay" class="deeppose-v2m-overlay" picking-mode="Ignore">
+        <ui:VisualElement name="v2m-overlay-box" class="deeppose-v2m-overlay-box">
+            <appui:Text name="v2m-overlay-box-text" text="Overlay box" size="XS" class="deeppose-v2m-overlay-box-text"/>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="v2m-buttons" class="deeppose-v2m-buttons" picking-mode="Ignore">
+            <appui:Button name="v2m-button-delete" tabindex="-1" title="Delete"/>            
+        </ui:VisualElement>
+        
+        <ui:VisualElement name="v2m-video" class="deeppose-v2m-video">
+            <museAnimate:VideoPlayerUI name="v2m-overlay-box-video" class="deeppose-v2m-overlay-box-video" max-width="256" max-height="256" autoplay="false"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="v2m-info" class="deeppose-v2m-info" picking-mode="Ignore">
+            <ui:VisualElement style="flex-grow:1">
+                <appui:Heading name="v2m-title" text="Generation Information"/>
+                <ui:VisualElement class="deeppose-v2m-filename-container">
+                    <appui:Text name="v2m-filename" class="deeppose-v2m-filename" size="M" text="Video name: " />
+                    <appui:Text name="v2m-filename-value" class="deeppose-v2m-filename-value" size="M" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <appui:ActionButton name="v2m-button-extract-keys" tabindex="-1" label="Make Editable" icon="pen" size="L" quiet="true"/>
+            <ui:VisualElement name="spacer" style="flex-grow: 0; width: 4px;" picking-mode="Ignore"/>
+            <appui:ActionButton name="v2m-button-export" tabindex="-1" label="Export" icon="export" size="L" quiet="true"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="v2m-section" class="deeppose-v2m-section">
+        <museAnimate:BakedTimelinePlaybackUI name="v2m-playback" class="deeppose-v2m-playback"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,151 @@
+.deeppose-baked-timeline-playback
+{
+    flex-direction: row;
+    flex-grow: 1;
+    height: 28px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.deeppose-baked-timeline-playback-action-group
+{
+    justify-content: center;
+    flex-grow: 0;
+    align-self: center;
+}
+
+.deeppose-baked-timeline-playback-slider-container {
+    flex-direction: row;
+    flex-grow: 1;
+    border-radius: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.deeppose-baked-timeline-playback-speed-button {
+    width: var(--appui-sizing-1100);
+}
+
+/* HACK for 26th June Release: PlaybackSlider USS here*/
+/* Mostly adapted from AppUI */
+
+/* Slider */
+.deeppose-baked-timeline-playback-slider {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    cursor: var(--appui-alias-control-cursor-pointer);
+    width: 100%;
+}
+
+.deeppose-baked-timeline-playback-slider__control-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.deeppose-baked-timeline-playback-slider__controls {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin: 0 0 0 0;
+    min-height: 8px;
+}
+
+.deeppose-baked-timeline-playback-slider__track {
+    width: 100%;
+    height: 8px;
+    background-color: var(--appui-base-200);
+    border-radius: var(--appui-sizing-75);
+    position: absolute;
+}
+
+.deeppose-baked-timeline-playback-slider__handle-container {
+    position: absolute;
+}
+
+.deeppose-baked-timeline-playback-slider__handle-container {
+    width: var(--appui-sizing-100);
+    height: var(--appui-sizing-300);
+    align-self: center;
+}
+
+.deeppose-baked-timeline-playback-slider__handle {
+    background-color: var(--appui-foregrounds-200);
+    border-color: var(--appui-backgrounds-100);
+    border-width: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: -50%;
+    cursor: var(--appui-alias-control-cursor-pointer);
+    scale: 1.0;
+    transition: scale var(--appui-animation-easing-ease-out) var(--appui-animation-duration-50), border-width var(--appui-animation-easing-ease-out) var(--appui-animation-duration-50);
+}
+
+.deeppose-baked-timeline-playback-slider__handle {
+    border-radius: var(--appui-sizing-50);
+}
+
+.deeppose-baked-timeline-playback-slider:focus .deeppose-baked-timeline-playback-slider__handle {
+    --outline-offset: var(--appui-alias-control-outline-offset);
+    --outline-width: var(--appui-alias-control-outline-width);
+    --outline-color: var(--appui-alias-control-outline-color);
+}
+
+.deeppose-baked-timeline-playback-slider:focus .deeppose-baked-timeline-playback-slider__handle,
+.deeppose-baked-timeline-playback-slider.is-focused .deeppose-baked-timeline-playback-slider__handle,
+.deeppose-baked-timeline-playback-slider:hover .deeppose-baked-timeline-playback-slider__handle,
+.deeppose-baked-timeline-playback-slider:active .deeppose-baked-timeline-playback-slider__handle {
+    scale: 1.2;
+}
+
+.deeppose-baked-timeline-playback-slider__handleinput {
+    display: none;
+}
+
+.deeppose-baked-timeline-playback-slider__progress {
+    height: 8px;
+    background-color: var(--appui-foregrounds-25);
+    position: absolute;
+    top: 4px;
+}
+
+.deeppose-baked-timeline-playback-slider__progress-primary {
+    background-color: var(--appui-accent-100);
+}
+
+.deeppose-baked-timeline-playback-slider__progress-start {
+    border-bottom-left-radius: var(--appui-sizing-75);
+    border-top-left-radius: var(--appui-sizing-75);
+}
+
+.deeppose-baked-timeline-playback-slider__progress-end {
+    border-bottom-right-radius: var(--appui-sizing-75);
+    border-top-right-radius: var(--appui-sizing-75);
+}
+
+.deeppose-baked-timeline-playback-slider__tick {
+    width: 2px;
+    height: 8px;
+    background-color: var(--appui-backgrounds-200);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.deeppose-baked-timeline-playback-slider:disabled {
+    opacity: 0.5;
+    cursor: var(--appui-alias-control-cursor-disabled);
+}
+
+.deeppose-baked-timeline-playback-slider:disabled:hover .deeppose-baked-timeline-playback-slider__handle {
+    scale: 1.0;
+}

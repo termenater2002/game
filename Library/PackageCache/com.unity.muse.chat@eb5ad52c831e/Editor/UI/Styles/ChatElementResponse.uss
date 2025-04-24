@@ -1,0 +1,148 @@
+.chatelementresponse__element {
+    align-self: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 8px 12px 8px 12px;
+    max-width: 716px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 96%;
+}
+
+.chatelementresponse__element-root {
+    align-self: center;
+    flex-grow: 1;
+    background-color: var(--muse-chat-backgrounds-200);
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.mui-chat-response {
+    -unity-text-align: upper-left;
+}
+
+.mui-chat-response-button {
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyButton:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+#upVoteButton:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+#downVoteButton:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+.mui-chat-response-button:disabled {
+    display: none;
+}
+
+#sourcesContent {
+    padding-top: 8px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mui-chat-sources-foldout {
+    margin-left: 18px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    color: var(--muse-chat-text-primary);
+}
+
+#optionsSection {
+    flex-direction: column;
+}
+
+.mui-control-section-buttons {
+    flex-direction: row;
+}
+
+.mui-feedback-parameters {
+    margin-top: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-bottom: 50px;
+}
+
+.mui-feedback-label {
+    margin-top: 8px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+
+#feedbackFlagCheckbox {
+    margin-left: 2px;
+}
+
+#feedbackFlagCheckbox .unity-label {
+    position: absolute;
+    margin-left: 16px;
+    color: var(--muse-chat-text-primary);
+}
+
+#feedbackFlagCheckbox:hover .unity-label {
+    color: var(--muse-chat-header-text-color);
+}
+
+#feedbackSendButton {
+    position: absolute;
+    bottom: 8px;
+    right: 2px;
+}
+
+#errorFrame {
+    border-width: 2px;
+    border-color: rgba(192,60,65,255);
+    border-radius: 8px;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mui-feedback-button-active {
+    background-color: var(--muse-chat-backgrounds-100);
+}
+
+#museAvatar {
+    background-color: var(--muse-chat-avatar-bg);
+}
+
+#feedbackValueText {
+    white-space: normal;
+    min-height: 48px;
+}
+
+#feedbackValueText .unity-base-text-field__input {
+    background-color: var(--muse-chat-backgrounds-100);
+    height: 100%;
+}
+
+.mui-feedback-text-scrollroot {
+    max-height: 160px;
+    padding: 1px;
+    border-radius: 4px;
+    background-color: var(--muse-chat-backgrounds-100);
+}
+
+#queryMode {
+    width: 16px;
+    height: 16px;
+    --unity-image-tint-color: rgba(150, 150, 150, 0.6);
+ }

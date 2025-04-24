@@ -1,0 +1,93 @@
+.musechatinspirationpanel__element {
+    flex-grow: 1;
+}
+
+.musechatinspirationpanel__element-root {
+    flex-grow: 1;
+}
+
+.mui-chat-inspiration-panel {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+#inspirationContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
+}
+
+.mui-chat-inspiration-text {
+    color: var(--muse-chat-color-dark-gray-800);
+    align-self: center;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+}
+
+.mui-chat-disclaimer {
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 24px;
+    max-width: 410px;
+    flex-shrink: 1;
+}
+
+.mui-chat-disclaimer-text {
+    -unity-text-align: middle-center;
+    font-size: 10px;
+    color: var(--muse-chat-disclaimer-text);
+}
+
+.mui-chat-inspiration-refresh-btn-label {
+    margin-left: 4px;
+}
+
+#refreshButton {
+    flex-grow: 1;
+    align-self: center;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    flex-direction: row;
+}
+
+.mui-chat-inspiration-main-content {
+    margin-bottom: 54px;
+}
+
+#refreshButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mui-chat-inspiration-section-header {
+    flex-direction: row;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+.mui-chat-inspiration-section {
+    margin: 12px;
+}
+
+.mui-chat-inspiration-section-header-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.mui-chat-inspiration-section-header-label {
+    font-size: 14px;
+    color: var(--muse-chat-header-text-color);
+}
+
+#runSection {
+    display: none;
+}
+
+#codeSection {
+    display: none;
+}

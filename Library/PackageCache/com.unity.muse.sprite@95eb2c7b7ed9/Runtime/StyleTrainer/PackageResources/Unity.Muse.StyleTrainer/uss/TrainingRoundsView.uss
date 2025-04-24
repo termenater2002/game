@@ -1,0 +1,51 @@
+.appui-accordionitem__header{
+    height: var(--appui-sizing-600);
+    margin-top: var(--appui-spacing-300)
+}
+
+.appui-accordionitem__content-parent{
+    margin-bottom: var(--appui-spacing-200);
+}
+
+Radio >.appui-radio__button{
+    background-color: var(--appui-alias-field-background-color-default);
+}
+
+Radio.is-checked >.appui-radio__button{
+    background-color: var(--appui-color-blue-800);
+}
+
+.styletrainer-trainingrounds-image-small-container{
+    margin-right: var(--appui-spacing-100);
+    width: 100%;
+    height: 0;
+}
+
+.styletrainer-trainingrounds-preview-image{
+    border-radius: var(--appui-border-radius-xl);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#StyleTrainingRoundPreviewImage{
+}
+
+.styletrainer-trainingrounds-image-container{
+    flex-direction: row;
+}
+
+.appui-accordionitem__header{
+    justify-content: flex-start;
+}
+
+.appui-accordionitem__headertext{
+    flex-grow: 0;
+    margin-left: var(--appui-spacing-25);
+}
+
+.appui-accordionitem{
+    border-bottom-color: var(--appui-backgrounds-300);
+}

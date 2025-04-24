@@ -1,0 +1,20 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="notificationBanner" class="mui-chat-content">
+        <ui:VisualElement class="mui-notification-banner-content">
+            <ui:VisualElement name="notificationBannerContainer">
+                <ui:VisualElement class="mui-notification-banner-title-content">
+                    <ui:Image class="mui-icon-warn mui-notification-banner-warning-icon" />
+                    <ui:Label name="notificationBannerTitle" class="mui-chat-label mui-header-label" />
+                </ui:VisualElement>
+                <Label name="notificationBannerMessage" class="mui-chat-label mui-header-label" />
+                <ui:VisualElement class="mui-notification-action-area">
+                    <ui:Button name="notificationBannerActionButton">
+                        <ui:Image class="mui-action-button-image mui-icon-arrow-square-in"/>
+                        <ui:Label class="mui-action-button-label" name="notificationBannerActionButtonLabel"/>
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Button name="notificationBannerDismissButton" class="mui-icon-close" flex-direction="row-reverse"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</UXML>

@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="inspirationPanel" class="mui-chat-inspiration-panel">
+        <ui:ScrollView class="mui-chat-inspiration-main-content">
+            <ui:Button name="refreshButton" tooltip="Refresh currently listed Inspirations" class="mui-chat-inspiration-refresh-btn -muse-chat-button">
+                <ui:Image class="mui-action-button-image mui-icon-arrows-counter-clockwise"/>
+                <ui:Label text="Refresh" class="mui-chat-label mui-chat-inspiration-refresh-btn-label"/>
+            </ui:Button>
+
+            <ui:VisualElement class="mui-chat-inspiration-main-content">
+                <ui:VisualElement class="mui-chat-inspiration-section" name="askSection">
+                    <ui:VisualElement class="mui-chat-inspiration-section-header">
+                        <ui:Image class="mui-icon-cmd-ask mui-chat-inspiration-section-header-icon"/>
+                        <ui:Label text="Ask Muse" class="mui-chat-label mui-chat-inspiration-section-header-label"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="askInspirationSectionContent" class="mui-chat-inspiration-content">
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="mui-chat-inspiration-section" name="runSection">
+                    <ui:VisualElement class="mui-chat-inspiration-section-header">
+                        <ui:Image class="mui-icon-cmd-run mui-chat-inspiration-section-header-icon"/>
+                        <ui:Label text="Run commands" class="mui-chat-label mui-chat-inspiration-section-header-label"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="runInspirationSectionContent" class="mui-chat-inspiration-content">
+
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="mui-chat-inspiration-section" name="codeSection">
+                    <ui:VisualElement class="mui-chat-inspiration-section-header">
+                        <ui:Image class="mui-icon-cmd-code mui-chat-inspiration-section-header-icon"/>
+                        <ui:Label text="Generate code" class="mui-chat-label mui-chat-inspiration-section-header-label"/>
+                    </ui:VisualElement>
+
+                    <ui:VisualElement name="generateInspirationSectionContent" class="mui-chat-inspiration-content">
+
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:ScrollView>
+
+        <ui:VisualElement class="mui-chat-disclaimer">
+            <ui:Label text="Muse is in early access, so surprises and mistakes are possible." class="mui-chat-label mui-chat-disclaimer-text"/>
+            <ui:Label text="Make sure to check results, and share feedback so we can learn and improve." class="mui-chat-label mui-chat-disclaimer-text"/>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

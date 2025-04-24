@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:engine="UnityEngine.UIElements"
+        xmlns:appui="Unity.Muse.AppUI.UI"
+        xmlns:styleTrainer="Unity.Muse.StyleTrainer" xmlns:ui="UnityEngine.UIElements"
+        xsi:noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd"
+        xsi:schemaLocation="../../../../../../../UIElementsSchema/UnityEngine.UIElements.xsd">
+    <Style src="../uss/StyleTrainerStyle.uss"/>
+    <Style src="project:/Packages/com.unity.muse.common/Runtime/UI/PackageResources/uss/Account.uss"/>
+    <appui:Panel name="muse-root" class="muse-root" scale="small">
+        <engine:VisualElement>
+        </engine:VisualElement>
+        <styleTrainer:StyleTrainerMainUI class="styletrainer-mainui">
+            <engine:VisualElement name="LoginScreen" class="styletrainer-mainui__login">
+                <appui:Button name="LoginButton" class="styletrainer-mainui__login__button" title="Sign In"
+                              variant="Accent"/>
+            </engine:VisualElement>
+            <engine:VisualElement name="NoAssetContainer" class="styletrainer-mainui__NoAsset">
+                <appui:Text name="NoAssetText" class="styletrainer-mainui__NoAsset__text"
+                            text="Create or Drag and Drop a Style Trainer Asset"/>
+                <appui:Button name="CreateAsset" class="styletrainer-mainui__createasset__button"
+                              title="Create Style Trainer" variant="Accent"/>
+            </engine:VisualElement>
+            <engine:VisualElement name = "StyleTrainerContent" class="styletrainer-mainui__content">
+                <engine:VisualElement name = "StyleTrainerTopMenu" class="styletrainer-mainui__topmenu">
+                    <appui:Button name="library-button" class="styletrainer-mainui__topmenu__library-button" title="Library"/>
+                    <appui:Text name="style-name" class="styletrainer-mainui__topmenu__style-name" text="My Style"/>
+                </engine:VisualElement>
+                <ui:TwoPaneSplitView name="StyleTrainerUISplitView" class="styletrainer-mainui__splitview">
+                </ui:TwoPaneSplitView>
+            </engine:VisualElement>
+            <engine:VisualElement name="LoadingScreen" class="styletrainer-mainui__loadingscreen">
+                <appui:CircularProgress name="LoadingIcon" class="styletrainer-mainui__loadingicon" quiet="true"/>
+                <appui:Text name="LoadingText" class="styletrainer-mainui__loadingtext" text="Loading Training Set..."/>
+            </engine:VisualElement>
+        </styleTrainer:StyleTrainerMainUI>
+    </appui:Panel>
+</engine:UXML>

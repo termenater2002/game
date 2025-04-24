@@ -1,0 +1,343 @@
+.musechatview__element-root {
+    flex-grow: 1;
+}
+
+#root-main {
+    flex-grow: 1;
+}
+
+.mui-header {
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mui-header-button {
+    margin: 8px;
+    margin-right: 0;
+
+    height: 22px;
+    min-height: 22px;
+    min-width: 30px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.mui-header-label.mui-compact {
+    display: none;
+}
+
+.mui-header-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    align-self: center;
+    -unity-text-align: middle-center;
+    -unity-font-style: bold;
+    color: var(--muse-chat-header-text-color);
+}
+
+.mui-header-dropdown {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    min-width: 15px;
+    height: 24px;
+}
+
+.mui-chat-content {
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.mui-footer {
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 14px;
+    flex-direction: column;
+}
+
+#chatContentRoot {
+    background-color: var(--muse-chat-panel-bg);
+    flex-grow: 1;
+}
+
+#historyPanelRoot {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    bottom: 1px;
+}
+
+.mui-conversation-panel {
+    flex-grow: 1;
+    margin: 1px;
+}
+
+#inspirationPanelRoot {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+}
+
+
+
+#chatPanelRoot {
+    flex-grow: 1;
+}
+
+#musingElementContainer {
+    align-self: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 4px;
+}
+
+#notificationContainer {
+    align-self: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 4px;
+}
+
+#chatTextFieldRoot {
+    flex-direction: row;
+    max-width: 700px;
+    width: 100%;
+    align-self: center;
+}
+
+.mui-chat-input-command-root {
+    max-width: 700px;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 6px;
+}
+
+.mui-chat-command-button {
+    margin: 0;
+    padding: 4px;
+    min-height: 24px;
+    min-width: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+}
+
+.mui-chat-command-button:hover {
+    background-color: var(--muse-chat-foregrounds-25);
+}
+
+.mui-chat-cmd-ask.is-selected .muse-chat-icon{
+   --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CmdAskOn.png');
+}
+
+.mui-chat-cmd-run.is-selected .muse-chat-icon{
+   --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CmdRunOn.png');
+}
+
+.mui-chat-cmd-code.is-selected .muse-chat-icon{
+   --unity-image: url('project://database/Packages/com.unity.muse.chat/Editor/UI/Assets/icons/CmdCodeOn.png');
+}
+
+.mui-chat-selected-context-root {
+    max-width: 700px;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.mui-chat-selected-context-notification {
+    max-width: 700px;
+    flex-direction: row;
+    align-self: center;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.mui-chat-selected-context-scrollview {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 90px;
+}
+
+.mui-chat-context-dropzone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: arrow;
+}
+
+.mui-chat-context-dropzone-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--muse-chat-drop-zone-bg);
+    border-width: 2px;
+    border-color: var(--muse-chat-primary-800);
+}
+
+.mui-chat-drop-zone {
+    flex-grow: 1;
+    margin: 4px;
+}
+
+.mui-chat-dropzone-text-title {
+    align-self: center;
+    color: var(--muse-chat-color-dark-gray-800);
+    -unity-font-style: bold;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.mui-chat-dropzone-text {
+    align-self: center;
+    color: var(--muse-chat-color-dark-gray-800);
+    font-size: 14px;
+}
+
+.mui-chat-selected-context-labels-root{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mui-context-selection-text {
+    padding-right: 8px;
+}
+
+#selectionLabel.mui-compact {
+    display: none;
+}
+
+.mui-chat-selected-context-root {
+    max-width: 700px;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.mui-chat-selected-context-button {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+    border-width: 0;
+    height: 20px;
+    background-color: var(--muse-chat-backgrounds-200);
+}
+
+.mui-chat-selected-context-button:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-chat-selected-context-button-default-behavior:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-chat-selected-context-button-label {
+    margin-left: 4px;
+}
+
+.mui-chat-context-spacer {
+    flex-grow: 1;
+}
+
+.mui-chat-clear-context-button {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+    border-width: 0;
+    background-color: var(--muse-chat-backgrounds-200);
+}
+
+.mui-chat-clear-context-button:hover {
+    background-color: var(--muse-chat-backgrounds-300);
+}
+
+.mui-chat-clear-context-button:disabled {
+    display: none;
+}
+
+.mui-selected-context-button-open {
+    background-color: var(--muse-chat-add-context-button-open);
+}
+
+.mui-chat-selected-context-warning-root {
+    max-width: 700px;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 4px;
+    background-color: var(--muse-chat-backgrounds-100);
+    border-color: var(--muse-chat-warning-25);
+    border-width: 1px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#selectionWarningText {
+    margin-left: 4px;
+    margin-right: 16px;
+}
+
+#notificationBannerRoot {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    align-self: center;
+    margin-top: 42px;
+}
+
+#root-panel {
+    flex-grow: 1;
+}
+
+.mui-chat-popup-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#appUICompatPanel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 0;
+    left: 0;
+}
+
+#appUICompatPanel .notifications-area {
+    min-height: 100px;
+}

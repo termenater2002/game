@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:UXML
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:appui="Unity.Muse.AppUI.UI"
+    xmlns:museAnimate="Unity.Muse.Animate"
+    xsi:noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <museAnimate:VideoUploadUI name="v2m-video-upload" max-file-size="200"/>
+    <ui:VisualElement name="takes-v2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+    <museAnimate:VideoTrimmingUI name="v2m-trimming"/>
+    <ui:VisualElement name="takes-v2m-buttons-divider" class="deeppose-takes-t2m-spacer"/>
+    <appui:Button title="Generate" name="v2m-generate" class="deeppose-takes-v2m-generate-button"/>
+</ui:UXML>

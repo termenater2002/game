@@ -1,0 +1,40 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <VisualElement name="museTextFieldRoot" class="mui-mtf-root">
+        <ui:VisualElement name="museTextFieldPopupRoot" class="mui-text-field-popup-container" picking-mode="Ignore">
+        </ui:VisualElement>
+
+        <ScrollView name="inputScrollView" class="mui-mtf-scroll-view">
+            <VisualElement class="mui-mtf-input-root">
+                <ui:VisualElement name="mui-route-chip-container">
+                    <VisualElement tab-index="0" name="routeChip" class="mui-route-chip mui-route-chip-hidden mui-route-chip-default">
+                        <TextElement text="Ask" />
+                    </VisualElement>
+                </ui:VisualElement>
+                <TextField name="input" />
+                <VisualElement name="placeholderContent" class="mui-mtf-placeholder-root">
+                    <Label picking-mode="ignore" text="Ask anything" name="placeholderText"/>
+                </VisualElement>
+            </VisualElement>
+        </ScrollView>
+
+
+        <VisualElement name="actionsRow" class="mui-actions-row">
+            <VisualElement class="mui-left-actions">
+                <ui:Button name="addContextButton" size="s" class="mui-chat-selected-context-button mui-selected-context-button-default-behavior" tooltip="Attach items from your project">
+                    <ui:Image picking-mode="ignore" class="mui-action-button-image mui-icon-pick"/>
+                    <ui:Label picking-mode="ignore" class="mui-chat-label mui-chat-selected-context-button-label" text="Attach items"/>
+                </ui:Button>
+                <ui:Button name="addRouteButton" size="s" class="mui-chat-selected-context-button mui-selected-context-button-default-behavior" style="display: none" tooltip="Choose a route">
+                    <ui:Image picking-mode="ignore" class="mui-action-button-image mui-icon-shortcut"/>
+                    <ui:Label picking-mode="ignore" class="mui-chat-label mui-chat-selected-context-button-label" text="Shortcuts"/>
+                </ui:Button>
+            </VisualElement>
+
+            <VisualElement name="submitButton" class="mui-submit-button">
+                <ui:Image picking-mode="ignore" name="submitIconDefault" icon-name="mui-icon-arrow-up" size="L" class="mui-icon-arrow-up mui-icon-arrow-small"/>
+            </VisualElement>
+        </VisualElement>
+
+        <Label name="characterCount" text="0/1000" class="mui-chat-label"/>
+    </VisualElement>
+</UXML>

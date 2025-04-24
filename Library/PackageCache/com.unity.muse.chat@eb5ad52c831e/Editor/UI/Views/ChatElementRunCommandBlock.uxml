@@ -1,0 +1,24 @@
+<UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="mui-code-block-root">
+        <VisualElement class="mui-code-block-buttons">
+            <ui:Label name="actionTitle" class="mui-agent-header-label"/>
+            <ui:Button name="executeButton" class="mui-action-button mui-agent-execute-button">
+                <ui:Image class="mui-action-button-image mui-icon-cmd-run"/>
+                <ui:Label text="Run" class="mui-action-button-label"/>
+            </ui:Button>
+            <ui:Button name="devToolButton" class="mui-chat-response-code-block-button">
+                <ui:Image class="mui-action-button-image mui-icon-devtool"/>
+            </ui:Button>
+        </VisualElement>
+        <ui:Foldout name="overviewFoldout" text="Tasks" class="mui-chat-foldout command-detail-foldout">
+            <ui:VisualElement name="previewContainer">
+                <ui:VisualElement name="warningContainer" class="notification-warning-content">
+                    <ui:Label name="warningText"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Foldout>
+        <ui:Foldout name="codePreviewFoldout" text="Command logic" class="mui-chat-foldout command-detail-foldout top-line-divider">
+            <ui:Label name="actionCode" multiline="true" class="mui-agent-code-preview--monospaced-text"/>
+        </ui:Foldout>
+    </ui:VisualElement>
+</UXML>

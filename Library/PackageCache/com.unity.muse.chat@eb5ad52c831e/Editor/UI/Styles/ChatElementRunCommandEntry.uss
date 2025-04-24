@@ -1,0 +1,43 @@
+.preview-entry-container {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-height: 20px;
+    margin-bottom: 5px;
+}
+
+.preview-entry-description {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    min-height: 20px;
+}
+
+.entry-label-item {
+    padding: 0px;
+    margin: 1px 3px 0px 0px;
+    -unity-text-align: middle-left;
+    align-self: center;
+    white-space: normal;
+    max-width: 120px;
+    height: 20px;
+}
+
+.entry-label-item Label {
+    font-size: 11px;
+    margin: 1px;
+}
+
+.preview-entry-actionable {
+    background-color: var(--muse-chat-backgrounds-300);
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.preview-entry-action-button {
+    height: 14px;
+    border-width: 0;
+    display: flex;
+    margin-right: 8px;
+    align-self: center;
+}

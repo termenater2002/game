@@ -1,0 +1,20 @@
+<ui:UXML xmlns:museAnimate="Unity.Muse.Animate" xmlns:ui="UnityEngine.UIElements" xmlns:appui="Unity.Muse.AppUI.UI" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <appui:Heading name="key-inspector-heading" text="Key Settings" size="S"/>
+    <appui:InputLabel direction="Vertical" label="Transition Duration" size="S" class="deeppose-inspector-input-label-v">
+        <ui:VisualElement class="deeppose-inspector-row">
+            <appui:Icon size="L" primary="true" icon-name="deep-pose-fast" />
+            <appui:SliderFloat name="transition-speed" size="S" inline-value="End" label="" class="no-inline-value-slider" low-value="1" high-value="60" value="30" filled="true" tooltip="Adjust the duration of the transition" />
+            <appui:Icon size="L" primary="true" icon-name="deep-pose-slow" />
+        </ui:VisualElement>
+    </appui:InputLabel>
+    <ui:VisualElement class="deeppose-inspector-row">
+        <appui:InputLabel direction="Horizontal" label="Extrapolated pose" size="S" input-alignment="FlexEnd" class="no-label-toggle-container" name="extrapolate-pose-toggle-label">
+            <appui:Toggle name="extrapolate-pose-toggle" size="M" label="" emphasized="true" tooltip="Let the magic predict what happens next" />
+        </appui:InputLabel>
+    </ui:VisualElement>
+    <ui:VisualElement class="deeppose-inspector-row">
+        <appui:InputLabel direction="Horizontal" label="Loop to first pose" size="S" input-alignment="FlexEnd" class="no-label-toggle-container" name="loop-pose-toggle-label">
+            <appui:Toggle name="loop-pose-toggle" size="M" label="" emphasized="true" tooltip="Make the animation loop to the start, with a user-defined offset" />
+        </appui:InputLabel>
+    </ui:VisualElement>
+</ui:UXML>

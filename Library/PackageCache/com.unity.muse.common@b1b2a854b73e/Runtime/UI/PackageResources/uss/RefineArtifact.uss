@@ -1,0 +1,20 @@
+.refine-button-item {
+    margin-left: var(--appui-spacing-50);
+}
+
+.refine-button {
+    display: none;
+}
+
+.refine-button-hidden {
+    display: none;
+}
+
+:hover > .muse-asset-image__control-buttons-container > .refine-button,
+.is-hovered > .refine-button {
+    display: flex;
+}
+
+.is-selected > .no-mouse .refine-button {
+    display: flex;
+}

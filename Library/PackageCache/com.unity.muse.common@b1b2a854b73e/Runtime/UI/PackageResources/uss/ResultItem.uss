@@ -1,0 +1,28 @@
+.left-vertical-container {
+    position: absolute;
+    left: var(--appui-spacing-50);
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+:hover > * > .left-vertical-container > .container-button,
+.is-selected > .no-mouse .left-vertical-container > .container-button {
+    display: flex;
+}
+
+.container-button {
+    display: none;
+}
+
+.bookmarked {
+    display: flex;
+}
+
+.dislike-button {
+    margin-top: 2px;
+}
+
+.container-hidden {
+    display: none;
+}

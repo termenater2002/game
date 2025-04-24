@@ -1,0 +1,86 @@
+.generation-settings {
+    padding: var(--appui-spacing-200);
+    background-color: var(--appui-backgrounds-200);
+    flex-grow: 1;
+    max-height: 400px;
+    border-radius: var(--appui-alias-control-border-radius);
+}
+
+.generation-settings > .scroll-view {
+    flex-grow: 1;
+}
+
+.generation-settings > .scroll-view .unity-scroller--vertical {
+    translate: var(--appui-alias-control-gap-md) 0;
+}
+
+.generation-settings .titlebar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generation-settings .title {
+    color: var(--appui-foregrounds-200);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin-right: var(--appui-alias-control-gap-lg);
+}
+
+.generation-settings .row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.generation-settings .row.operator-settings {
+    align-items: flex-start;
+    padding: var(--appui-spacing-150);
+    background-color: var(--appui-backgrounds-100);
+    border-radius: var(--appui-alias-control-border-radius);
+    margin-top: var(--appui-spacing-150);
+}
+
+.generation-settings .row #content {
+    flex-grow: 1;
+    padding-left: var(--appui-spacing-125);
+    flex-direction: column;
+    justify-content: center;
+}
+
+.generation-settings .row #content > .unity-text-element {
+    flex-grow: 1;
+}
+
+.generation-settings .unity-text-element {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -unity-text-align: middle-left;
+}
+
+.generation-settings .row #label {
+    color: var(--appui-foregrounds-25);
+    white-space: normal;
+    width: 92px;
+    align-self: center;
+    -unity-text-align: middle-left;
+    -unity-font-style: bold;
+    font-size: var(--appui-font-sizes-75);
+}
+
+.generation-settings .row Image {
+    width: 100px;
+    height: 100px;
+    background-color: var(--appui-primary-100);
+    border-radius: var(--appui-border-radius-sm);
+}
+
+.generation-settings .operators {
+    flex-shrink: 0;
+}
+
+.generation-settings .operator-settings__use-button {
+    flex-shrink: 0;
+    margin-left: var(--appui-spacing-300);
+}
