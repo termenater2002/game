@@ -25,7 +25,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-35381
+35107
 -job-worker-count
 3
 -background-job-worker-count
@@ -34,9 +34,9 @@ Logs/AssetImportWorker0.log
 1
 Successfully changed project path to: /home/deck/My project
 
-(Unity:10599): Gtk-CRITICAL **: 22:44:57.378: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+(Unity:11376): Gtk-CRITICAL **: 22:49:18.778: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
 
-(Unity:10599): Gtk-CRITICAL **: 22:44:57.379: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
+(Unity:11376): Gtk-CRITICAL **: 22:49:18.779: gtk_label_set_text: assertion 'GTK_IS_LABEL (label)' failed
 /home/deck/My project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
@@ -73,12 +73,12 @@ Successfully changed project path to: /home/deck/My project
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [140003309286464]  Target information:
+Player connection [140311399339072]  Target information:
 
-Player connection [140003309286464]  * "[IP] 192.168.0.106 [Port] 0 [Flags] 2 [Guid] 3071159605 [EditorId] 3071159605 [Version] 1048832 [Id] LinuxEditor(16,192.168.0.106) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+Player connection [140311399339072]  * "[IP] 192.168.0.106 [Port] 0 [Flags] 2 [Guid] 681256280 [EditorId] 681256280 [Version] 1048832 [Id] LinuxEditor(16,192.168.0.106) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
 
-Player connection [140003309286464] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [140003309286464] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [140311399339072] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [140311399339072] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -90,7 +90,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2,92 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1,33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0,00 ms.
 Initialize engine version: 6000.0.43f1 (97272b72f107)
 [Subsystems] Discovering subsystems at path /home/deck/Unity/Hub/Editor/6000.0.43f1/Editor/Data/Resources/UnitySubsystems
@@ -109,51 +109,51 @@ clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessel
 ttrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_meminfo GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_debug_label GL_EXT_demote_to_helper_invocation GL_EXT_depth_bounds_test GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_memory_object GL_EXT_memory_object_fd GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_
 EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_RG8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_const_bandwidth GL_MESA_texture_signed_rgba GL_NVX_gpu_memory_info GL_NV_alpha_to_coverage_dither_control GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_d
 epth_clamp GL_NV_packed_depth_stencil GL_NV_shader_atomic_int64 GL_NV_texture_barrier GL_NV_vdpau_interop GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 694827424
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -847459200
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
 Initialize mono
 Mono path[0] = '/home/deck/Unity/Hub/Editor/6000.0.43f1/Editor/Data/Managed'
 Mono path[1] = '/home/deck/Unity/Hub/Editor/6000.0.43f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
 Mono config path = '/home/deck/Unity/Hub/Editor/6000.0.43f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56599
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/deck/Unity/Hub/Editor/6000.0.43f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /home/deck/Unity/Hub/Editor/6000.0.43f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0,006418 seconds.
-- Loaded All Assemblies, in  0,510 seconds
+Registered in 0,003748 seconds.
+- Loaded All Assemblies, in  0,454 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0,597 seconds
-Domain Reload Profiling: 1107ms
-	BeginReloadAssembly (160ms)
+- Finished resetting the current domain, in  0,599 seconds
+Domain Reload Profiling: 1053ms
+	BeginReloadAssembly (102ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (51ms)
+	RebuildCommonClasses (53ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (73ms)
-	LoadAllAssembliesAndSetupDomain (215ms)
-		LoadAssemblies (159ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (216ms)
+		LoadAssemblies (100ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (210ms)
-			TypeCache.Refresh (208ms)
-				TypeCache.ScanAssembly (192ms)
+		AnalyzeDomain (213ms)
+			TypeCache.Refresh (211ms)
+				TypeCache.ScanAssembly (195ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (598ms)
+	FinalizeReload (600ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (528ms)
+		SetupLoadedEditorAssemblies (523ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (136ms)
+			InitializePlatformSupportModulesInManaged (111ms)
 			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (83ms)
-			ProcessInitializeOnLoadAttributes (239ms)
-			ProcessInitializeOnLoadMethodAttributes (63ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (235ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -164,8 +164,8 @@ Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1,401 seconds
-Refreshing native plugins compatible for Editor in 1,51 ms, found 0 plugins.
+- Loaded All Assemblies, in  1,501 seconds
+Refreshing native plugins compatible for Editor in 0,65 ms, found 0 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WebGL target not found
 Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
@@ -195,54 +195,54 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (
 [./Library/PackageCache/com.unity.muse.animate@0e4864bad0bc/Runtime/Core/Systems/Library/Assets/LibraryRegistry.cs line 255]
 
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1,462 seconds
-Domain Reload Profiling: 2856ms
-	BeginReloadAssembly (166ms)
+- Finished resetting the current domain, in  1,489 seconds
+Domain Reload Profiling: 2985ms
+	BeginReloadAssembly (171ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (8ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (47ms)
-	RebuildCommonClasses (50ms)
+		CreateAndSetChildDomain (49ms)
+	RebuildCommonClasses (52ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (1114ms)
-		LoadAssemblies (618ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (1204ms)
+		LoadAssemblies (571ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (570ms)
-			TypeCache.Refresh (475ms)
-				TypeCache.ScanAssembly (447ms)
-			BuildScriptInfoCaches (76ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1463ms)
+		AnalyzeDomain (709ms)
+			TypeCache.Refresh (611ms)
+				TypeCache.ScanAssembly (563ms)
+			BuildScriptInfoCaches (78ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1490ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1226ms)
+		SetupLoadedEditorAssemblies (1289ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (80ms)
+			InitializePlatformSupportModulesInManaged (72ms)
 			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (215ms)
-			ProcessInitializeOnLoadAttributes (591ms)
-			ProcessInitializeOnLoadMethodAttributes (325ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			BeforeProcessingInitializeOnLoad (279ms)
+			ProcessInitializeOnLoadAttributes (627ms)
+			ProcessInitializeOnLoadMethodAttributes (296ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (5ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
 AutoLocale: current locale expects 'C' but got 'ru_RU.UTF-8'Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 327 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7887 unused Assets / (21.7 MB). Loaded Objects now: 8613.
-Memory consumption went from 227.5 MB to 205.8 MB.
-Total: 39.305919 ms (FindLiveObjects: 1.257683 ms CreateObjectMapping: 1.905125 ms MarkObjects: 17.752865 ms  DeleteObjects: 18.387326 ms)
+Unloading 7887 unused Assets / (21.3 MB). Loaded Objects now: 8613.
+Memory consumption went from 227.6 MB to 206.3 MB.
+Total: 29.977636 ms (FindLiveObjects: 1.263833 ms CreateObjectMapping: 1.702405 ms MarkObjects: 14.422326 ms  DeleteObjects: 12.586052 ms)
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.164 seconds
+- Loaded All Assemblies, in  1.188 seconds
 Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
 Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
 
@@ -262,45 +262,790 @@ Serialization hierarchy:
 Native extension for LinuxStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.321 seconds
-Domain Reload Profiling: 2485ms
-	BeginReloadAssembly (234ms)
+- Finished resetting the current domain, in  1.355 seconds
+Domain Reload Profiling: 2544ms
+	BeginReloadAssembly (230ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (97ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (856ms)
+		LoadAssemblies (511ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (413ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (382ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1356ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1062ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (67ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (247ms)
+			ProcessInitializeOnLoadAttributes (535ms)
+			ProcessInitializeOnLoadMethodAttributes (197ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (20.5 MB). Loaded Objects now: 8617.
+Memory consumption went from 186.0 MB to 165.5 MB.
+Total: 30.329427 ms (FindLiveObjects: 1.418104 ms CreateObjectMapping: 1.942005 ms MarkObjects: 14.677627 ms  DeleteObjects: 12.289721 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1287.435769 seconds.
+  path: Assets/Scripts/test.cs
+  artifactKey: Guid(c8d05c50f9d4beb65b6f960bb1ed121d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/test.cs using Guid(c8d05c50f9d4beb65b6f960bb1ed121d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '98baabb84bfb284891d2390114b77129') in 0.004408681 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.157 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.345 seconds
+Domain Reload Profiling: 2503ms
+	BeginReloadAssembly (236ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (102ms)
-	RebuildCommonClasses (51ms)
+		CreateAndSetChildDomain (97ms)
+	RebuildCommonClasses (54ms)
 	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (829ms)
-		LoadAssemblies (491ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (816ms)
+		LoadAssemblies (487ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (407ms)
-			TypeCache.Refresh (10ms)
+		AnalyzeDomain (405ms)
+			TypeCache.Refresh (11ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (375ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (1321ms)
+			BuildScriptInfoCaches (374ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1346ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1008ms)
+		SetupLoadedEditorAssemblies (1044ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (69ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (225ms)
-			ProcessInitializeOnLoadAttributes (511ms)
-			ProcessInitializeOnLoadMethodAttributes (189ms)
+			InitializePlatformSupportModulesInManaged (65ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (244ms)
+			ProcessInitializeOnLoadAttributes (526ms)
+			ProcessInitializeOnLoadMethodAttributes (192ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.1 MB). Loaded Objects now: 8623.
+Memory consumption went from 186.6 MB to 165.5 MB.
+Total: 30.810788 ms (FindLiveObjects: 1.203863 ms CreateObjectMapping: 1.338863 ms MarkObjects: 14.215116 ms  DeleteObjects: 14.050446 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.187 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.401 seconds
+Domain Reload Profiling: 2589ms
+	BeginReloadAssembly (228ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (94ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (851ms)
+		LoadAssemblies (501ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (422ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (391ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1402ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1095ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (232ms)
+			ProcessInitializeOnLoadAttributes (580ms)
+			ProcessInitializeOnLoadMethodAttributes (196ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.1 MB). Loaded Objects now: 8627.
+Memory consumption went from 181.5 MB to 160.4 MB.
+Total: 30.249317 ms (FindLiveObjects: 1.137773 ms CreateObjectMapping: 1.562854 ms MarkObjects: 13.942665 ms  DeleteObjects: 13.603815 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.185 seconds
+Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.363 seconds
+Domain Reload Profiling: 2548ms
+	BeginReloadAssembly (238ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (97ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (841ms)
+		LoadAssemblies (497ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (421ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (390ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1363ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1044ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (66ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (235ms)
+			ProcessInitializeOnLoadAttributes (512ms)
+			ProcessInitializeOnLoadMethodAttributes (213ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (22ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.0 MB). Loaded Objects now: 8631.
+Memory consumption went from 181.5 MB to 160.5 MB.
+Total: 28.705433 ms (FindLiveObjects: 1.275773 ms CreateObjectMapping: 2.139396 ms MarkObjects: 13.757024 ms  DeleteObjects: 11.530810 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.233 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.317 seconds
+Domain Reload Profiling: 2551ms
+	BeginReloadAssembly (269ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (117ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (857ms)
+		LoadAssemblies (503ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (427ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (396ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1318ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1021ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (245ms)
+			ProcessInitializeOnLoadAttributes (519ms)
+			ProcessInitializeOnLoadMethodAttributes (174ms)
 			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (15ms)
 Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7883 unused Assets / (20.9 MB). Loaded Objects now: 8617.
-Memory consumption went from 186.0 MB to 165.0 MB.
-Total: 28.769093 ms (FindLiveObjects: 1.710944 ms CreateObjectMapping: 1.681694 ms MarkObjects: 13.802225 ms  DeleteObjects: 11.570470 ms)
+Unloading 7883 unused Assets / (21.0 MB). Loaded Objects now: 8635.
+Memory consumption went from 186.5 MB to 165.5 MB.
+Total: 30.700607 ms (FindLiveObjects: 1.400283 ms CreateObjectMapping: 1.541744 ms MarkObjects: 14.265176 ms  DeleteObjects: 13.491094 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.249 seconds
+Refreshing native plugins compatible for Editor in 0.68 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.400 seconds
+Domain Reload Profiling: 2650ms
+	BeginReloadAssembly (240ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (101ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (901ms)
+		LoadAssemblies (532ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (445ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (413ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1401ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1086ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (69ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (265ms)
+			ProcessInitializeOnLoadAttributes (539ms)
+			ProcessInitializeOnLoadMethodAttributes (198ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.1 MB). Loaded Objects now: 8639.
+Memory consumption went from 186.6 MB to 165.5 MB.
+Total: 29.682745 ms (FindLiveObjects: 1.269523 ms CreateObjectMapping: 1.803765 ms MarkObjects: 14.180396 ms  DeleteObjects: 12.426981 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.236 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.370 seconds
+Domain Reload Profiling: 2607ms
+	BeginReloadAssembly (255ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (11ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (109ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (871ms)
+		LoadAssemblies (507ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (438ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (406ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1371ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1061ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (70ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (247ms)
+			ProcessInitializeOnLoadAttributes (532ms)
+			ProcessInitializeOnLoadMethodAttributes (196ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.2 MB). Loaded Objects now: 8643.
+Memory consumption went from 186.6 MB to 165.4 MB.
+Total: 32.961074 ms (FindLiveObjects: 1.239223 ms CreateObjectMapping: 1.405064 ms MarkObjects: 15.343039 ms  DeleteObjects: 14.971258 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.278 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.545 seconds
+Domain Reload Profiling: 2824ms
+	BeginReloadAssembly (268ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (113ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (902ms)
+		LoadAssemblies (529ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (448ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (415ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1546ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1223ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (249ms)
+			ProcessInitializeOnLoadAttributes (625ms)
+			ProcessInitializeOnLoadMethodAttributes (264ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.88 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.0 MB). Loaded Objects now: 8647.
+Memory consumption went from 186.6 MB to 165.7 MB.
+Total: 30.626737 ms (FindLiveObjects: 1.688194 ms CreateObjectMapping: 2.212536 ms MarkObjects: 15.303598 ms  DeleteObjects: 11.420259 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.255 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.390 seconds
+Domain Reload Profiling: 2646ms
+	BeginReloadAssembly (259ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (111ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (887ms)
+		LoadAssemblies (513ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (454ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (421ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1390ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1068ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (79ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (237ms)
+			ProcessInitializeOnLoadAttributes (543ms)
+			ProcessInitializeOnLoadMethodAttributes (193ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.1 MB). Loaded Objects now: 8651.
+Memory consumption went from 186.8 MB to 165.6 MB.
+Total: 28.847003 ms (FindLiveObjects: 1.092603 ms CreateObjectMapping: 1.432764 ms MarkObjects: 14.569126 ms  DeleteObjects: 11.750560 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.243 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.466 seconds
+Domain Reload Profiling: 2710ms
+	BeginReloadAssembly (260ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (116ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (871ms)
+		LoadAssemblies (503ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (447ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (415ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1467ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1139ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (68ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (283ms)
+			ProcessInitializeOnLoadAttributes (563ms)
+			ProcessInitializeOnLoadMethodAttributes (208ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.4 MB). Loaded Objects now: 8655.
+Memory consumption went from 186.7 MB to 165.3 MB.
+Total: 33.579145 ms (FindLiveObjects: 1.732155 ms CreateObjectMapping: 2.040395 ms MarkObjects: 16.673762 ms  DeleteObjects: 13.129513 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.184 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.350 seconds
+Domain Reload Profiling: 2535ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (103ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (841ms)
+		LoadAssemblies (484ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (430ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (398ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1350ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1042ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (67ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (236ms)
+			ProcessInitializeOnLoadAttributes (519ms)
+			ProcessInitializeOnLoadMethodAttributes (203ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (21ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.1 MB). Loaded Objects now: 8659.
+Memory consumption went from 181.6 MB to 160.5 MB.
+Total: 31.825990 ms (FindLiveObjects: 1.284263 ms CreateObjectMapping: 1.440994 ms MarkObjects: 16.150040 ms  DeleteObjects: 12.947853 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.211 seconds
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Serialization depth limit 10 exceeded at 'Unity.Muse.Animate::RigidTransformData.Position'. There may be an object composition cycle in one or more of your serialized classes. Consider rearranging data or use `[SerializeReference]`. 
+
+Serialization hierarchy:
+11: Unity.Muse.Animate::RigidTransformData.Position
+10: Unity.Muse.Animate::RigidTransformModel.m_Data
+9: Unity.Muse.Animate::ArmatureStaticPoseData.TransformModels
+8: Unity.Muse.Animate::ArmatureStaticPoseModel.m_Data
+7: Unity.Muse.Animate::BakedArmaturePoseData.LocalPose
+6: Unity.Muse.Animate::BakedArmaturePoseModel.m_Data
+5: Unity.Muse.Animate::EntityPose.Model
+4: Unity.Muse.Animate::BakedFrameData.Entities
+3: Unity.Muse.Animate::BakedFrameModel.m_Data
+2: Unity.Muse.Animate::BakedTimelineData.Frames
+1: Unity.Muse.Animate::BakedTimelineModel.m_Data
+0: Unity.Muse.Animate::DenseTake.m_BakedTimelineModel
+Native extension for LinuxStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.416 seconds
+Domain Reload Profiling: 2627ms
+	BeginReloadAssembly (269ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (7ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (127ms)
+	RebuildCommonClasses (53ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (39ms)
+	LoadAllAssembliesAndSetupDomain (836ms)
+		LoadAssemblies (489ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (425ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (394ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (1417ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1110ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (71ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (279ms)
+			ProcessInitializeOnLoadAttributes (532ms)
+			ProcessInitializeOnLoadMethodAttributes (212ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (17ms)
+Shader Hidden/ProbeVolume/VoxelizeScene is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 65 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7883 unused Assets / (21.2 MB). Loaded Objects now: 8663.
+Memory consumption went from 186.8 MB to 165.5 MB.
+Total: 29.059883 ms (FindLiveObjects: 1.343303 ms CreateObjectMapping: 2.328656 ms MarkObjects: 13.681965 ms  DeleteObjects: 11.703469 ms)
 
 Prepare: number of updated asset objects reloaded= 0

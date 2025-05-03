@@ -2,20 +2,33 @@ using UnityEngine;
 
 public class DamageOnImpact : MonoBehaviour
 {
+    [Header("Прочность объекта")]
     public float maxHP = 100f;
     private float currentHP;
+    public float damageMultiplier = 1f; // Новый множитель урона
 
-    public float impactThreshold = 5f; // Минимальная сила удара, чтобы начать получать урон
+    [Header("Сила столкновения")]
+    public float impactThreshold = 5f;
 
+    [Header("Визуализация повреждений")]
     private Renderer objRenderer;
     private Color originalColor;
-    private Color damagedColor = Color.black; // Цвет при максимальных повреждениях
+    private Color damagedColor = Color.black;
+
+    [Header("Разрушение")]
+    public GameObject brokenPrefab;
+    public float explosionForce = 300f;
+    public float explosionRadius = 2f;
+    public float debrisLifetime = 5f;
+
+    [Header("Экономика")]
+    public float objectValue = 100f; // Цена объекта
+    private float totalDamageDealt = 0f; // Накопленный урон
 
     private void Start()
     {
         currentHP = maxHP;
 
-        // Находим Renderer объекта
         objRenderer = GetComponent<Renderer>();
         if (objRenderer != null)
         {
@@ -29,18 +42,25 @@ public class DamageOnImpact : MonoBehaviour
 
         if (impactForce >= impactThreshold)
         {
-            // Уменьшаем HP в зависимости от силы удара
-            float damage = impactForce * 5f; // Можешь настроить множитель
-            TakeDamage(damage);
+            float baseDamage = impactForce * 5f;
+            float finalDamage = baseDamage * damageMultiplier;
+            TakeDamage(finalDamage);
         }
     }
 
     private void TakeDamage(float amount)
     {
+        float previousHP = currentHP;
+
         currentHP -= amount;
         currentHP = Mathf.Max(currentHP, 0f);
 
+        float damageThisHit = previousHP - currentHP;
+        totalDamageDealt += damageThisHit;
+
         UpdateColor();
+
+        AwardMoneyForDamage(damageThisHit);
 
         if (currentHP <= 0f)
         {
@@ -57,11 +77,30 @@ public class DamageOnImpact : MonoBehaviour
         }
     }
 
+    private void AwardMoneyForDamage(float damage)
+    {
+        float percent = damage / maxHP;
+        float reward = percent * objectValue;
+
+        // Заглушка — в будущем здесь будет реальная система
+        Debug.Log("💰 Получено денег за повреждение: " + Mathf.RoundToInt(reward));
+    }
+
     private void BreakObject()
     {
-        Debug.Log(gameObject.name + " сломан!");
+        if (brokenPrefab != null)
+        {
+            GameObject broken = Instantiate(brokenPrefab, transform.position, transform.rotation);
 
-        // Можно заменить Destroy на что-то красивее — например, спавнить сломанные куски
+            foreach (Rigidbody piece in broken.GetComponentsInChildren<Rigidbody>())
+            {
+                Vector3 explosionPos = transform.position;
+                piece.AddExplosionForce(explosionForce, explosionPos, explosionRadius);
+            }
+
+            Destroy(broken, debrisLifetime);
+        }
+
         Destroy(gameObject);
     }
 }
