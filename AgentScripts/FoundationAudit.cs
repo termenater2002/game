@@ -24,6 +24,11 @@ public static class FoundationAudit
         if (look == null || look.playerBody != player.transform || grabber == null) throw new Exception("Camera / grab references broken.");
         int listeners = UnityEngine.Object.FindObjectsByType<AudioListener>(FindObjectsSortMode.None).Count(l => l.enabled && l.gameObject.activeInHierarchy);
         if (listeners != 1) throw new Exception("Expected one active AudioListener, got " + listeners);
+        var invalidColliders = objects.SelectMany(go => go.GetComponents<MeshCollider>())
+            .Where(c => c.enabled && c.gameObject.activeInHierarchy && !c.convex)
+            .Where(c => c.GetComponentInParent<Rigidbody>() != null && !c.GetComponentInParent<Rigidbody>().isKinematic)
+            .Select(c => c.gameObject.name).ToArray();
+        if (invalidColliders.Length != 0) throw new Exception("Dynamic concave colliders: " + string.Join(", ", invalidColliders));
         if (damage.Length != 4) throw new Exception("Expected four original damage components.");
         var wallet = UnityEngine.Object.FindAnyObjectByType<SessionWallet>();
         var hud = UnityEngine.Object.FindAnyObjectByType<DemoHud>();
@@ -32,7 +37,7 @@ public static class FoundationAudit
         // Plain helper classes need not resolve to UnityEngine.Object via MonoScript.GetClass().
         return new {
             scene = scene.path, sceneDirty = scene.isDirty, objectCount = objects.Length,
-            missingScripts = missing, activeListeners = listeners,
+            missingScripts = missing, activeListeners = listeners, invalidDynamicColliders = invalidColliders,
             player = player.name, mass = player.GetComponent<Rigidbody>().mass,
             movement = new { player.moveForce, player.jumpForce, player.maxSpeed },
             grab = new { grabber.grabDistance, grabber.grabForce },

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(-50)]
 public class FirstPersonCamera : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
