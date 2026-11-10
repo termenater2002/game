@@ -1,0 +1,311 @@
+{
+  "sourceEditor": "6000.0.43f1",
+  "validationEditor": "6000.6.8f1",
+  "sourcePackagesUnchanged": true,
+  "editMode": {
+    "status": "completed",
+    "duration": 0.03,
+    "summary": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FoundationStateTests.EarningsAccumulateAndResetWithoutNegativeRewards",
+        "Status": "Passed",
+        "Duration": 0.0091461,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.ExpiredJumpDoesNotTriggerOnLaterLanding",
+        "Status": "Passed",
+        "Duration": 0.0003415,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.ImpactPreservesOriginalThresholdAndMultiplier",
+        "Status": "Passed",
+        "Duration": 0.0005668,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(-10.0f)",
+        "Status": "Passed",
+        "Duration": 0.0005754,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(0.0f)",
+        "Status": "Passed",
+        "Duration": 3.16e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(float.NaN)",
+        "Status": "Passed",
+        "Duration": 2.99e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(float.PositiveInfinity)",
+        "Status": "Passed",
+        "Duration": 3e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.JumpPressIsBufferedAndConsumedOnce",
+        "Status": "Passed",
+        "Duration": 0.0002049,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.OverkillPaysOnlyRemainingValue",
+        "Status": "Passed",
+        "Duration": 0.0008728,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.SmallHitsCannotFarmRoundingRewards",
+        "Status": "Passed",
+        "Duration": 0.00028,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  },
+  "playMode": {
+    "status": "completed",
+    "duration": 1.31,
+    "summary": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FoundationPhysicsTests.DamagePaysSessionOnceAndActuallyDestroysObject",
+        "Status": "Passed",
+        "Duration": 0.0611807,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.FallingDoesNotDisableHorizontalAcceleration",
+        "Status": "Passed",
+        "Duration": 0.0629831,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.GrabForceIsBoundedAndDestroyedBodyReleasesSafely",
+        "Status": "Passed",
+        "Duration": 0.2669438,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.OneQueuedJumpProducesOnePhysicsImpulse",
+        "Status": "Passed",
+        "Duration": 0.065822,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.RealCollisionDamagesObjectAndPaysWallet",
+        "Status": "Passed",
+        "Duration": 0.7996109,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  },
+  "runtimeEvidence": {
+    "target": "Scrap Bin A",
+    "damage": 10,
+    "reward": 10,
+    "before": 6278.396,
+    "after": 6288.396,
+    "destructionReward": 3721.604,
+    "debris": "Impact Debris",
+    "debrisActive": true,
+    "finalBalance": 10010,
+    "hud": "$ 10,010.00",
+    "frame": 3170,
+    "time": 52.8181839
+  },
+  "consoleAfterRuntime": {
+    "sampledUtc": "2026-11-10T21:33:19.188079Z",
+    "ageMs": 93,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "consoleLogs": 0,
+    "seeded": true
+  },
+  "frameCounterEvidence": {
+    "state": "met",
+    "met": true,
+    "timedOut": false,
+    "member": "UnityEngine.Time.frameCount",
+    "op": "changed",
+    "value": 3186,
+    "initialValue": 3179,
+    "elapsedMs": 132,
+    "framesObserved": 2
+  },
+  "sourceSceneAudit": {
+    "scene": "Assets/Game/Scenes/SampleScene.unity",
+    "sceneDirty": false,
+    "objectCount": 129,
+    "missingScripts": [],
+    "activeListeners": 1,
+    "invalidDynamicColliders": [],
+    "player": "Player",
+    "mass": 1,
+    "movement": {
+      "moveForce": 8,
+      "jumpForce": 4.2,
+      "maxSpeed": 5
+    },
+    "grab": {
+      "grabDistance": 1,
+      "grabForce": 10
+    },
+    "targets": [
+      {
+        "name": "Police Car - Standard",
+        "maxHP": 100,
+        "impactThreshold": 3,
+        "objectValue": 10000,
+        "brokenTemplate": "Debris Template (inactive)"
+      },
+      {
+        "name": "Scrap Bin B",
+        "maxHP": 100,
+        "impactThreshold": 5,
+        "objectValue": 100,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Scrap Bin A",
+        "maxHP": 100,
+        "impactThreshold": 5,
+        "objectValue": 100,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Police Car - High Value",
+        "maxHP": 100,
+        "impactThreshold": 3,
+        "objectValue": 100000,
+        "brokenTemplate": "Debris Template (inactive)"
+      }
+    ],
+    "prefabCount": 7,
+    "runtime": false,
+    "frame": 18,
+    "version": "6000.6.8f1"
+  },
+  "originalAssetGuids": 372,
+  "missingAssetGuids": 0,
+  "duplicateAssetGuids": 0,
+  "exactSourceEditorTested": false,
+  "standaloneBuildTested": false,
+  "nativeInput": {
+    "firstClick": {
+      "position": [
+        2.45000029,
+        0.09721649,
+        -0.0419999957
+      ],
+      "velocity": [
+        0,
+        0,
+        7.29172365e-13
+      ],
+      "heldBody": null,
+      "grounded": true,
+      "frame": 2250,
+      "time": 37.8095,
+      "focused": true,
+      "cursor": "Locked"
+    },
+    "afterW": {
+      "position": [
+        2.45,
+        0.09721649,
+        0.500368655
+      ],
+      "velocity": [
+        0,
+        -1.49011612e-07,
+        0.368919373
+      ],
+      "heldBody": null,
+      "grounded": true,
+      "frame": 2991,
+      "time": 50.4545631,
+      "focused": true,
+      "cursor": "Locked"
+    },
+    "distanceMeters": 0.5423686507000776,
+    "afterEscape": {
+      "position": [
+        2.45,
+        0.09721649,
+        0.51037854
+      ],
+      "velocity": [
+        0,
+        -1.49011612e-07,
+        7.289169e-13
+      ],
+      "heldBody": null,
+      "grounded": true,
+      "frame": 5449,
+      "time": 91.45244,
+      "focused": true,
+      "cursor": "None"
+    }
+  },
+  "finalEditorState": {
+    "status": "ready",
+    "compiling": false,
+    "domainReloadInProgress": false,
+    "codeLoadCount": 11,
+    "autoRefresh": "enabled",
+    "playMode": "stopped",
+    "runInBackground": false,
+    "lastHeartbeat": "2026-11-10T21:44:28.574487Z",
+    "projectPath": "/var/home/deck/Desktop/tests/foundation-work/validation",
+    "unityVersion": "6000.6.8f1",
+    "role": "main",
+    "instanceName": "Main Editor"
+  },
+  "autoTickEnabledAtEnd": false,
+  "consoleAfterStop": {
+    "sampledUtc": "2026-11-10T21:43:16.92285Z",
+    "ageMs": 91,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "consoleLogs": 0,
+    "seeded": true
+  }
+}
