@@ -77,7 +77,8 @@ public class PlayerAnimationDriver : MonoBehaviour
         animator.SetBool(Holding, holding);
         holdingWeight = Mathf.MoveTowards(holdingWeight, holding ? 1f : 0f, Time.deltaTime * 6f);
         // Backwards has only a walk clip. Match its cadence, without unbounded toy-scale strides.
-        float reference = LocalVelocity.z < -.03f || speed < runReferenceSpeed ? walkReferenceSpeed : runReferenceSpeed;
+        float reference = LocalVelocity.z < -.03f ? walkReferenceSpeed
+            : Mathf.Clamp(speed, walkReferenceSpeed, Mathf.Max(walkReferenceSpeed, runReferenceSpeed));
         float rate = speed < .03f ? 1f : Mathf.Clamp(speed / Mathf.Max(.01f, reference), .4f, maximumPlaybackRate);
         animator.SetFloat(Rate, rate, damping, Time.deltaTime);
         float yaw = transform.eulerAngles.y;

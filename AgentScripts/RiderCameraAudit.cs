@@ -28,8 +28,9 @@ public static class RiderCameraAudit
         var light=UnityEngine.Object.FindObjectsByType<Light>(FindObjectsSortMode.None).First(l=>l.type==LightType.Directional);
         var direction=Vector3.ProjectOnPlane(light.transform.forward,Vector3.up).normalized;
         var oldRotation=camera.transform.rotation; var oldEnabled=visibility.bodyRenderers.Select(r=>r.enabled).ToArray();
-        Texture2D on=null,off=null;
+        Texture2D on=null,off=null;bool originalBodyVisible=visibility.showFirstPersonBody;
         try {
+            visibility.showFirstPersonBody=false;
             driver.GetComponentInChildren<FirstPersonCamera>().ReleaseCursor();
             float height=driver.GetComponent<CapsuleCollider>().bounds.size.y;
             camera.transform.LookAt(driver.transform.position+direction*height*.65f);
@@ -42,6 +43,7 @@ public static class RiderCameraAudit
             return Newtonsoft.Json.JsonConvert.SerializeObject(new {darkenedPixels=darkened,averageDarkening=difference/Math.Max(1,darkened),width=on.width,height=on.height,
                 firstPersonOnly=true, bodyInvisibleButCasts=true, frame=Time.frameCount,forceRenderingOff=visibility.bodyRenderers.Select(r=>r.forceRenderingOff).ToArray()});
         } finally {
+            visibility.showFirstPersonBody=originalBodyVisible;
             for(int i=0;i<oldEnabled.Length;i++) visibility.bodyRenderers[i].enabled=oldEnabled[i];
             camera.transform.rotation=oldRotation;if(on!=null) UnityEngine.Object.DestroyImmediate(on);if(off!=null) UnityEngine.Object.DestroyImmediate(off);
         }
