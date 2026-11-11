@@ -2,7 +2,7 @@
 import bpy,bmesh,math,json
 from mathutils import Vector
 from math import sin,cos,pi,exp
-V3_RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pants':(128,256,256,512),'skin':(256,256,384,384),'midriff':(256,256,384,384),'shoe':(384,256,512,384),'trim':(256,384,384,512),'metal':(384,384,512,512),'rider_face':(256,256,384,384),'shell':(0,0,256,128),'visor':(0,128,256,256)}
+V3_RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pants':(128,256,256,512),'skin':(256,256,384,384),'midriff':(256,256,384,384),'shoe':(384,256,512,384),'trim':(256,384,384,512),'metal':(384,384,512,512),'neckline':(256,256,384,384),'rider_face':(256,256,384,384),'shell':(0,0,256,128),'visor':(0,128,256,256)}
 
 def v3_uv(role,u=.5,v=.5):
     if role in ('silver','gold','ruby','ivory'):
@@ -135,6 +135,10 @@ def v3_head(collection,parts,name,material,chin=1.59,height=.25,width=.12,neck_b
         for li in poly.loop_indices:
             co=ob.data.vertices[ob.data.loops[li].vertex_index].co
             if poly.index in lid_polys:uv.data[li].uv=v3_uv(lid_polys[poly.index],.2,.1)
+            elif age=='mother' and (center.z-chin)/height>.38 and (center.y>=-.028 or abs(center.x)>width*.86):
+                # Side/back scalp uses the same painted strands as the bob, never a skin swatch.
+                u=(math.atan2(co.x,-co.y)+pi)/(2*pi);v=(co.z-chin-.09)/(height-.05)
+                uv.data[li].uv=v3_uv('hair',u,v)
             else:uv.data[li].uv=v3_uv('face',(co.x+width*1.04)/(width*2.08),(co.z-chin)/height) if is_front else v3_uv('skin')
     ob['v3_head']=True;ob['head_chin']=chin;ob['head_height']=height;ob['head_width']=width
     ob.shape_key_add(name='Basis')

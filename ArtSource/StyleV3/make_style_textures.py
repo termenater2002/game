@@ -58,6 +58,12 @@ def face(role,skin):
  else:
   d.line([(108,201),(117,204),(127,200),(136,203),(147,198)],fill=ink,width=2)
   d.point((146,201),fill=ink)
+ if mom:
+  # Scalp hair is painted on the head, beneath the separate bob geometry.
+  d.polygon([(0,0),(255,0),(255,113),(241,104),(234,81),(218,70),(185,58),(145,54),(111,57),(74,63),(38,72),(23,95),(17,119),(0,132)],fill=(33,33,40))
+  for points in [[(50,0),(43,24),(36,49),(26,75)],[(81,0),(75,18),(64,44),(54,63)],[(114,0),(115,20),(104,42),(96,58)],[(145,0),(153,19),(165,39),(183,56)],[(181,0),(195,24),(211,46),(226,71)],[(214,0),(229,28),(240,62),(247,96)]]:
+   d.line(points,fill=(44,44,52),width=3)
+  d.line([(112,0),(117,18),(114,32)],fill=(57,57,65),width=2)
  return im
 
 def floral(base,purple=False):
@@ -136,6 +142,16 @@ def atlas(role):
  tile=Image.new('RGB',(128,128),skin);d=ImageDraw.Draw(tile)
  d.polygon([(2,0),(17,48),(8,122),(0,128)],fill=tuple(max(0,c-10) for c in skin));d.polygon([(126,0),(111,48),(120,122),(128,128)],fill=tuple(max(0,c-10) for c in skin))
  d.line([(61,66),(65,68),(63,72)],fill=tuple(max(0,c-65) for c in skin),width=2)
+ if role=='FamilyMotherV3':
+  # Painted collarbones and neckline define the chest on one broad garment volume.
+  tile=Image.new('RGB',(128,128),skin);d=ImageDraw.Draw(tile)
+  shadow=tuple(max(0,c-28) for c in skin);soft=tuple(max(0,c-12) for c in skin)
+  d.line([(13,19),(31,23),(47,31)],fill=soft,width=2)
+  d.line([(115,19),(97,23),(81,31)],fill=soft,width=2)
+  d.line([(48,54),(55,59),(61,69),(64,83)],fill=soft,width=3)
+  d.line([(80,54),(73,59),(67,69),(64,83)],fill=soft,width=3)
+  d.line([(62,74),(64,86),(64,96)],fill=shadow,width=1)
+  d.line([(66,77),(67,90)],fill=tuple(min(255,c+5) for c in skin),width=1)
  if role.startswith('Rider'):tile=face(role,skin).resize((128,128),Image.Resampling.NEAREST)
  im.paste(tile,(256,256))
  shoe=Image.new('RGB',(128,128),(32,34,40));d=ImageDraw.Draw(shoe);d.rectangle((0,94,127,110),fill=(199,198,186));d.line((0,92,127,92),fill=(76,78,84),width=2)

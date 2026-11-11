@@ -96,7 +96,7 @@ for j,(z,rx,ry) in enumerate(levels):
             x=sign*(opening if k in (1,23) else min(rx*.9,opening+.04))
             y=-ry*math.sqrt(max(0,1-(x/rx)**2))
         if not FATHER and y<0:
-            y-=.061*exp(-((abs(x)-.086)/.067)**2-((z-1.385)/.089)**2)*max(0,min(1,-y/.075))
+            y-=.058*exp(-(x/.170)**4-((z-1.385)/.095)**2)*max(0,min(1,-y/.075))
         vs.append((x,y,z))
 for j in range(len(levels)-1):
     for k in range(N):
@@ -350,7 +350,7 @@ for ob in parts:
         if original==cloth:role='cloth'
         if original==clothdark:role='cloth'
         if original==trousers:role='pants'
-        if original==shirt:role='ivory'
+        if original==shirt:role='ivory' if FATHER else 'neckline'
         if original==purple:role='hair' # Father's unused hair region contains ascot embroidery.
         if original==gold:role='gold'
         if original==silver:role='silver'
@@ -363,6 +363,7 @@ for ob in parts:
             if role=='cloth':
                 if ax>(.39 if FATHER else .26):u=(math.atan2(z-arm_z,-y)+pi)/(2*pi);v=(ax-shoulder)/(wrist-shoulder)
                 else:u=(x+(.39 if FATHER else .25))/(.78 if FATHER else .50);v=(z-(.59 if FATHER else .985))/(1.10 if FATHER else .582)
+            elif role=='neckline':u=(x+.13)/.26;v=(z-1.30)/.267
             elif role=='pants':u=(math.atan2(ax-legx,-y)+pi)/(2*pi);v=(z-.10)/(hip-.10)
             elif role=='hair':u=(x+.045)/.09;v=(z-1.52)/.14
             elif role=='shoe':u=(y+.2)/.28;v=z/.19
@@ -374,7 +375,7 @@ for ob in parts:
         for li,u,v in local_uvs:
             if cross:u=(1 if high else u) if u<.5 else (u if high else 0)
             uv.data[li].uv=v3_uv(role,u,v)
-        poly.material_index=0;poly.use_smooth=role in ('cloth','pants','skin','shoe')
+        poly.material_index=0;poly.use_smooth=role in ('cloth','pants','skin','neckline','shoe')
     ob.data.materials.clear();ob.data.materials.append(atlas)
 # Mother retains her age and tailoring; torso/legs now follow the same proportion language.
 if not FATHER:
