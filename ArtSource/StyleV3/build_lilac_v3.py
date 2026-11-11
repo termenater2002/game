@@ -9,25 +9,6 @@ mat=v3_material(NAME,P+NAME+'_atlas.png')
 for label,levels in [('Bare waist',[(0,0,1.055,.164,.098),(0,0,1.10,.122,.078),(0,0,1.155,.127,.081)])]:
     ob=v3_rings(collection,parts,label,levels,mat,'midriff' if label=='Bare waist' else 'skin',16,caps=False)
 
-# Continuous upper chest, deltoid sockets and upper arms beneath the dropped knit.
-shoulder_levels=[(1.425,.170,.079),(1.465,.183,.084),(1.495,.176,.080),(1.520,.145,.067),(1.545,.054,.049)]
-nskin=24;vv=[];ff=[]
-for z,rx,ry in shoulder_levels:
-    for k in range(nskin):a=2*pi*k/nskin;vv.append((rx*sin(a),-ry*cos(a),z))
-for j in range(4):
-    for k in range(nskin):
-        if 1<=j<3 and (4<=k<8 or 16<=k<20):continue
-        a=j*nskin+k;ff.append((a,j*nskin+(k+1)%nskin,(j+1)*nskin+(k+1)%nskin,a+nskin))
-for sign,lo,hi in [(1,4,8),(-1,16,20)]:
-    boundary=[nskin+k for k in range(lo,hi+1)]+[j*nskin+hi for j in (2,3)]+[3*nskin+k for k in range(hi-1,lo-1,-1)]+[2*nskin+lo]
-    order=[(math.atan2(vv[i][2]-1.493,-vv[i][1]),i) for i in boundary];order.sort();prev=[i for a,i in order];angles=[a for a,i in order]
-    for x,ry,rz in [(.210,.053,.055),(.242,.050,.052),(.275,.046,.048),(.305,.044,.046)]:
-        ring=[]
-        for a in angles:ring.append(len(vv));vv.append((sign*x,-ry*cos(a),1.495+rz*sin(a)))
-        for k in range(len(ring)):q=(k+1)%len(ring);ff.append((prev[k],prev[q],ring[q],ring[k]))
-        prev=ring
-shoulders=v3_mesh(collection,parts,'Connected shoulders and upper arms',vv,ff,mat,'skin');shoulders['kind']='shoulders'
-
 # Project the navel onto the front midriff; the back uses the clean skin swatch.
 waist=next(o for o in parts if o.name.startswith('Bare waist'))
 for poly in waist.data.polygons:
@@ -36,34 +17,45 @@ for poly in waist.data.polygons:
         co=waist.data.vertices[waist.data.loops[li].vertex_index].co
         waist.data.uv_layers.active.data[li].uv=v3_uv('midriff',(co.x+.164)/.328,(co.z-1.055)/.10) if c.y<0 else v3_uv('skin')
 
-# One connected cropped knit torso and both bell sleeves.
-levels=[(1.145,.132,.091),(1.18,.137,.094),(1.25,.146,.097),(1.32,.164,.101),(1.38,.178,.098),(1.425,.179,.085),(1.445,.174,.081)]
+# One shared surface: torso, bare shoulders and bell sleeves use welded vertices
+# and one skinning rule. Clothing is painted on that surface, never an independent arm tube.
+levels=[(1.145,.132,.091),(1.18,.137,.094),(1.25,.146,.097),(1.32,.164,.101),(1.38,.178,.098),(1.425,.179,.085),(1.430,.181,.087),(1.447,.177,.084),(1.465,.183,.084),(1.495,.176,.080),(1.520,.145,.067),(1.545,.054,.049)]
 n=24;vs=[];fs=[];uvs=[]
 for j,(z,rx,ry) in enumerate(levels):
     for k in range(n+1):
-        a=2*pi*k/n;vs.append((rx*sin(a),-ry*cos(a),z));uvs.append((k/n,j/(len(levels)-1)))
+        a=2*pi*k/n;vs.append((rx*sin(a),-ry*cos(a),z));uvs.append((k/n,(z-1.145)/.302))
 for j in range(len(levels)-1):
     for k in range(n):
-        if 3<=j<5 and (4<=k<8 or 16<=k<20):continue
+        if 7<=j<10 and (4<=k<8 or 16<=k<20):continue
         a=j*(n+1)+k;fs.append((a,a+1,a+n+2,a+n+1))
 for sign,lo,hi in [(1,4,8),(-1,16,20)]:
-    boundary=[3*(n+1)+k for k in range(lo,hi+1)]+[j*(n+1)+hi for j in range(4,6)]+[5*(n+1)+k for k in range(hi-1,lo-1,-1)]+[4*(n+1)+lo]
-    ordered=[(math.atan2(vs[i][2]-1.3725,-vs[i][1]),i) for i in boundary];ordered.sort();prev=[i for a,i in ordered];angles=[a for a,i in ordered]
-    sleeve=[(.24,1.465,.061,.066),(.29,1.485,.058,.061),(.36,1.49,.056,.059),(.405,1.485,.060,.065),(.44,1.49,.066,.071),(.51,1.495,.081,.082),(.59,1.495,.096,.097),(.65,1.495,.102,.103)]
-    for j,(x,z,ry,rz) in enumerate(sleeve):
+    boundary=[7*(n+1)+k for k in range(lo,hi+1)]+[j*(n+1)+hi for j in (8,9,10)]+[10*(n+1)+k for k in range(hi-1,lo-1,-1)]+[j*(n+1)+lo for j in (9,8)]
+    ordered=[(math.atan2(vs[i][2]-1.490,-vs[i][1]),i) for i in boundary];ordered.sort();prev=[i for a,i in ordered];angles=[a for a,i in ordered]
+    sleeve=[(.205,.053,.055),(.240,.052,.054),(.265,.054,.056),(.278,.056,.058),(.290,.058,.061),(.36,.056,.059),(.405,.060,.065),(.44,.066,.071),(.51,.081,.082),(.59,.096,.097),(.628,.104,.104),(.653,.105,.105)]
+    for j,(x,ry,rz) in enumerate(sleeve):
         ring=[]
-        for k,a in enumerate(angles):
-            ring.append(len(vs));vs.append((sign*x,-ry*cos(a),z+rz*sin(a)));uvs.append(((a+pi)/(2*pi),1-j/(len(sleeve)-1)))
+        for a in angles:
+            ring.append(len(vs));vs.append((sign*x,-ry*cos(a),1.495+rz*sin(a)));uvs.append(((a+pi)/(2*pi),1-(x-.278)/.375))
         for k in range(len(ring)):q=(k+1)%len(ring);fs.append((prev[k],prev[q],ring[q],ring[k]))
         prev=ring
-knit=v3_mesh(collection,parts,'Connected floral bell-sleeve knit',vs,fs,mat,'cloth',uvs);knit['kind']='top'
-for label,levels2 in [('Knit hem',[(0,0,1.138,.134,.093),(0,0,1.156,.137,.095)]),('Off shoulder rib edge',[(0,0,1.430,.181,.087),(0,0,1.447,.177,.084)])]:v3_rings(collection,parts,label,levels2,mat,'trim',24,caps=False)
-for sign in [-1,1]:
-    vv=[];ff=[];uu=[];n2=12
-    for j,(x,r) in enumerate([(.628,.104),(.653,.105)]):
-        for k in range(n2+1):a=2*pi*k/n2;vv.append((sign*x,-r*cos(a),1.495+r*sin(a)));uu.append((k/n2,j))
-    for k in range(n2):ff.append((k,k+1,k+n2+2,k+n2+1))
-    cuff=v3_mesh(collection,parts,'Flared rib cuff',vv,ff,mat,'trim',uu);cuff['kind']='arms'
+knit=v3_mesh(collection,parts,'Connected floral knit and anatomical arms',vs,fs,mat,'cloth',uvs);knit['kind']='unified_upper_body'
+# Remove unused grid points inside the cut armholes, preserving the welded surface and UVs.
+bm=bmesh.new();bm.from_mesh(knit.data)
+bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context='VERTS')
+bm.to_mesh(knit.data);bm.free();knit.data.update()
+# Painted skin/knit transitions share the same vertices and normals.
+for poly in knit.data.polygons:
+    c=sum((knit.data.vertices[i].co for i in poly.vertices),Vector())/len(poly.vertices);ax=abs(c.x)
+    role='cloth'
+    if ax<.19 and c.z>1.447:role='skin'
+    elif .19<=ax<.265 and c.z>1.455+.015*(ax-.19)/.075:role='skin'
+    if ax<.19 and 1.430<c.z<1.447:role='trim'
+    if .265<=ax<.278 or ax>.628:role='trim'
+    if role!='cloth':
+        for li in poly.loop_indices:
+            co=knit.data.vertices[knit.data.loops[li].vertex_index].co
+            knit.data.uv_layers.active.data[li].uv=v3_uv(role,.5,(co.z-1.43)/.12) if role=='trim' else v3_uv('skin')
+v3_rings(collection,parts,'Knit hem',[(0,0,1.138,.134,.093),(0,0,1.156,.137,.095)],mat,'trim',24,caps=False)
 
 # Welded pelvis / crotch, long thighs and a deliberate knee-to-hem flare.
 vs=[];fs=[];uvs=[];n=12

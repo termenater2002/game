@@ -77,4 +77,26 @@ public class PlayerAnimationAssetTests
             Assert.That(names.Any(n=>n.Contains("Left"))&&names.Any(n=>n.Contains("Right")),Is.False,"A lower trouser / shoe triangle spans both leg weights.");
         }
     }
+    [Test] public void LilacSkinAndSleevesShareWeightsAtTheirTextureSeams()
+    {
+        var prefab=AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/StyleV3/LilacV3/LilacV3.prefab");
+        var skin=prefab.GetComponentsInChildren<SkinnedMeshRenderer>().Single(s=>s.name=="LilacV3_Body");
+        var mesh=skin.sharedMesh;var points=mesh.vertices;var uv=mesh.uv;var weights=mesh.boneWeights;int shared=0;
+        float Influence(BoneWeight w,int bone) => (w.boneIndex0==bone?w.weight0:0)+(w.boneIndex1==bone?w.weight1:0)
+            +(w.boneIndex2==bone?w.weight2:0)+(w.boneIndex3==bone?w.weight3:0);
+        // FBX duplicates vertices at UV boundaries. Their positions and deformation must agree.
+        var seams=Enumerable.Range(0,points.Length).GroupBy(i=>(Mathf.RoundToInt(points[i].x*100000),Mathf.RoundToInt(points[i].y*100000),Mathf.RoundToInt(points[i].z*100000)));
+        foreach(var seam in seams)
+        {
+            var bare=seam.Where(i=>Vector2.Distance(uv[i],new Vector2(.53f,.47f))<.0001f).ToArray();
+            var cloth=seam.Where(i=>uv[i].x>.499f&&(uv[i].y>.499f||uv[i].y<.251f)).ToArray();
+            if(bare.Length==0||cloth.Length==0)continue;
+            shared++;
+            foreach(var b in bare)foreach(var c in cloth)
+                for(int bone=0;bone<skin.bones.Length;bone++)
+                    Assert.That(Influence(weights[b],bone),Is.EqualTo(Influence(weights[c],bone)).Within(.00001f),"Skin / fabric seam deforms independently: "+skin.bones[bone].name);
+        }
+        Assert.That(shared,Is.GreaterThan(24),"The shoulder and sleeve need actual shared UV boundaries.");
+    }
+
 }

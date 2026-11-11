@@ -176,6 +176,14 @@ def v3_weight(p,ob):
         if z<.67:
             t=v3_smooth((z-.47)/.2);return {side+'LowerLeg':1-t,side+'UpperLeg':t}
         t=v3_smooth((z-.90)/.14);return {side+'UpperLeg':1-t,'Hips':t}
+    if kind=='unified_upper_body' and ax>.135 and (ax>.285 or z>1.405):
+        if ax<.285:
+            t=v3_smooth((ax-.135)/.12);return {'UpperChest':1-t,side+'UpperArm':t}
+        if ax<.47:
+            t=v3_smooth((ax-.36)/.11);return {side+'UpperArm':1-t,side+'LowerArm':t}
+        if ax<.685:
+            t=v3_smooth((ax-.635)/.05);return {side+'LowerArm':1-t,side+'Hand':t}
+        return {side+'Hand':1}
     if kind=='shoulders':
         t=v3_smooth((ax-.115)/.12);return {'UpperChest':1-t,side+'UpperArm':t}
     if kind=='arms' or (kind=='top' and ax>.205):

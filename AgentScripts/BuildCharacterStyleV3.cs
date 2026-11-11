@@ -91,6 +91,7 @@ public static class BuildCharacterStyleV3
         if(Application.isPlaying)throw new Exception("Use Edit Mode.");
         return Names.Select(Import).ToArray();
     }
+    public static object ImportGirl() => Import("LilacV3");
     public static object ImportMother() => Import("FamilyMotherV3");
     public static object ImportCorrections()
     {
