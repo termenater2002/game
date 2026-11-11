@@ -162,6 +162,17 @@ def atlas(role):
  for y in range(0,128,6):d.line((0,y,127,y),fill=(111,82,142) if role=='LilacV3' else (54,60,69))
  im.paste(trim,(256,384))
  metals=Image.new('RGB',(128,128),(192,193,184));d=ImageDraw.Draw(metals);d.rectangle((64,0,127,63),fill=(164,121,48));d.rectangle((0,64,63,127),fill=(118,20,41));d.rectangle((64,64,127,127),fill=(223,216,195));im.paste(metals,(384,384))
+ if role=='LilacV3':
+  # A subtle painted neckline uses the otherwise unused ruby swatch for this character.
+  neckline=Image.new('RGB',(64,64),skin);d=ImageDraw.Draw(neckline)
+  soft=tuple(max(0,c-12) for c in skin);shadow=tuple(max(0,c-22) for c in skin)
+  d.line([(8,21),(18,23),(27,28)],fill=soft,width=1)
+  d.line([(56,21),(46,23),(37,28)],fill=soft,width=1)
+  d.line([(27,45),(30,49),(32,56)],fill=soft,width=1)
+  d.line([(37,45),(34,49),(32,56)],fill=soft,width=1)
+  d.line([(32,53),(32,58)],fill=shadow,width=1)
+  im.paste(neckline,(384,448))
+
  im.save(P/(role+'_atlas.png'))
 for role in ROLES:atlas(role)
 print('Created five 512px original character atlases (256px face regions).')

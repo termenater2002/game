@@ -83,3 +83,5 @@ blender --background --factory-startup --python ArtSource/StyleV3/build_all.py
 Проверка Blender: одна связная компонента верхнего тела, 56 общих рёбер кожи/ткани, проверены все 72 кадра; нет вершин рукава, ошибочно привязанных к торсу. Проверка Unity `LilacSkinAndSleevesShareWeightsAtTheirTextureSeams` проверяет одинаковые веса у дублированных FBX-вершин на UV-швах. Все 18 Edit Mode тестов прошли. Отчёты — `Documentation/StyleV3/ArmSync/`.
 
 Повторная проверка авторской сетки: `blender --background ArtSource/StyleV3/LilacV3.blend --python ArtSource/StyleV3/verify_lilac_arm_sync.py`. Проверка не сохраняет и не меняет исходный `.blend`, отчёт пишет рядом с ним.
+
+У девушки дополнительно нарисовано небольшое декольте с лёгкими линиями ключиц. Для открытого участка груди выделен отдельный фрагмент атласа; геометрия, кости и общий стык плеча с рукавом сохранены. Крупный план: `Documentation/StyleV3/LilacV3_Neckline.png`.

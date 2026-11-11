@@ -2,7 +2,7 @@
 import bpy,bmesh,math,json
 from mathutils import Vector
 from math import sin,cos,pi,exp
-V3_RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pants':(128,256,256,512),'skin':(256,256,384,384),'midriff':(256,256,384,384),'shoe':(384,256,512,384),'trim':(256,384,384,512),'metal':(384,384,512,512),'neckline':(256,256,384,384),'rider_face':(256,256,384,384),'shell':(0,0,256,128),'visor':(0,128,256,256)}
+V3_RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pants':(128,256,256,512),'skin':(256,256,384,384),'midriff':(256,256,384,384),'shoe':(384,256,512,384),'trim':(256,384,384,512),'metal':(384,384,512,512),'lilac_neckline':(384,448,448,512),'neckline':(256,256,384,384),'rider_face':(256,256,384,384),'shell':(0,0,256,128),'visor':(0,128,256,256)}
 
 def v3_uv(role,u=.5,v=.5):
     if role in ('silver','gold','ruby','ivory'):

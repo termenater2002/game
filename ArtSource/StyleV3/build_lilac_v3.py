@@ -55,6 +55,15 @@ for poly in knit.data.polygons:
         for li in poly.loop_indices:
             co=knit.data.vertices[knit.data.loops[li].vertex_index].co
             knit.data.uv_layers.active.data[li].uv=v3_uv(role,.5,(co.z-1.43)/.12) if role=='trim' else v3_uv('skin')
+# Small painted neckline on the exposed chest; topology and skin weights stay shared.
+for poly in knit.data.polygons:
+    c=sum((knit.data.vertices[i].co for i in poly.vertices),Vector())/len(poly.vertices)
+    coords=[knit.data.uv_layers.active.data[li].uv for li in poly.loop_indices]
+    bare=all(abs(uv.x-.53)<.00001 and abs(uv.y-.47)<.00001 for uv in coords)
+    if bare and c.y<-.035 and abs(c.x)<.13 and c.z>1.447:
+        for li in poly.loop_indices:
+            co=knit.data.vertices[knit.data.loops[li].vertex_index].co
+            knit.data.uv_layers.active.data[li].uv=v3_uv('lilac_neckline',(co.x+.145)/.29,(co.z-1.447)/.098)
 v3_rings(collection,parts,'Knit hem',[(0,0,1.138,.134,.093),(0,0,1.156,.137,.095)],mat,'trim',24,caps=False)
 
 # Welded pelvis / crotch, long thighs and a deliberate knee-to-hem flare.
