@@ -3,24 +3,21 @@
   "sourceProjectVersionUnchanged": "6000.0.43f1",
   "blenderVersion": "5.3.0",
   "mesh": "RiderV2_UnityMesh",
-  "trianglesInUnity": 7956,
-  "trianglesInBlender": 7980,
+  "trianglesInUnity": 7004,
+  "trianglesInBlender": 7028,
   "bones": 22,
   "materials": 13,
   "humanoidAvatarValid": true,
   "applyRootMotion": false,
   "humanScale": 1.89528167,
-  "editMode": {"passed": 14, "failed": 0},
-  "playMode": {"passed": 10, "failed": 0},
-  "fpsShadow": {
-    "width": 1200,
-    "height": 900,
-    "darkenedPixels": 83995,
-    "averageDarkening": 0.075505210317396765,
-    "bodyInvisibleButCasts": true,
-    "forceRenderingOff": false
+  "editMode": {
+    "passed": 15,
+    "failed": 0
   },
-  "liveFramesObserved": [138, 1240],
+  "playMode": {
+    "passed": 15,
+    "failed": 0
+  },
   "sideCameraVerified": true,
   "finalConsoleErrors": 0,
   "finalConsoleWarnings": 0,
@@ -29,5 +26,70 @@
   "missingGuids": 0,
   "duplicateGuids": 0,
   "standaloneTested": false,
-  "exactOriginalEditorTested": false
+  "exactOriginalEditorTested": false,
+  "outfits": {
+    "jacket": {
+      "triangles": 7004,
+      "bones": 22,
+      "materials": 13
+    },
+    "tshirt": {
+      "triangles": 6276,
+      "bones": 22,
+      "materials": 14,
+      "humanScale": 1.89528167,
+      "previewScene": "Assets/Game/Scenes/AnimationPreviewTShirt.unity",
+      "armVolumeUpdated": true,
+      "upperArmRadius": 0.046,
+      "forearmRadius": 0.045,
+      "wristRadius": 0.036
+    }
+  },
+  "clothingFix": {
+    "panelsAreGarmentFaces": true,
+    "floatingTorsoOverlaysRemoved": true,
+    "trimFollowsSurfaceAndBarycentricWeights": true,
+    "hemOutsideWaistband": true
+  },
+  "previousVersionShadowEvidence": {
+    "width": 1200,
+    "height": 900,
+    "darkenedPixels": 83995,
+    "averageDarkening": 0.07550521031739676,
+    "bodyInvisibleButCasts": true,
+    "forceRenderingOff": false
+  },
+  "previousVersionLiveFrames": [
+    138,
+    1240
+  ],
+  "previousVersionEvidenceCommit": "2ce4267b",
+  "tshirtAfterArmUpdate": {
+    "playModePassed": 5,
+    "failed": 0,
+    "realAnimationCaptureFrames": [
+      141,
+      805
+    ]
+  },
+  "jacketAnimationCaptureFrames": [
+    100,
+    769
+  ],
+  "currentGuids": 517,
+  "handUpdate": {
+    "bothOutfits": true,
+    "lengthScale": 1.3,
+    "maximumPalmWidthScale": 1.22,
+    "wristFitPreserved": true
+  },
+  "tshirtAnimationCaptureFrames": [
+    100,
+    765
+  ],
+  "finalHandUpdateTests": {
+    "editModePassed": 15,
+    "playModePassed": 15,
+    "failed": 0
+  }
 }

@@ -1,9 +1,13 @@
 import bpy, bmesh, math, json
 from mathutils import Vector
+from mathutils.bvhtree import BVHTree
+from mathutils.geometry import barycentric_transform
 from math import sin, cos, pi, exp
 
 P = '/var/home/deck/Desktop/tests/rider-v2/'
-scene = bpy.data.scenes.new('Rider V2 • low poly streetwear')
+OUTFIT = 'jacket'
+BASENAME = 'RiderV2TShirt' if OUTFIT=='tshirt' else 'RiderV2'
+scene = bpy.data.scenes.new('Rider V2 • '+OUTFIT+' low poly streetwear')
 bpy.context.window.scene = scene
 scene.unit_settings.system = 'METRIC'
 asset = bpy.data.collections.new('RIDER_V2'); scene.collection.children.link(asset)
@@ -30,6 +34,9 @@ shelltrim=mat('R2 • helmet black trim',(.009,.014,.019),.48)
 glass=mat('R2 • smoked blue visor',(.008,.017,.023),.28,.08)
 chrome=mat('R2 • satin alloy',(.32,.37,.38),.32,.72)
 amber=mat('R2 • muted amber',(.53,.26,.085),.55)
+if OUTFIT=='tshirt':
+    cotton=mat('R2 • washed cotton',(.44,.42,.35),.86)
+    skin=mat('R2 • warm skin',(.38,.235,.16),.86)
 
 def mesh(name, vs, fs, material, smooth=False, sub=0):
     me=bpy.data.meshes.new(name);me.from_pydata(vs,[],fs);me.update()
@@ -69,59 +76,90 @@ def patch(name,coords,material,t=.002,sub=1):
     ob=mesh(name,coords,[tuple(range(len(coords)))],material,sub=0)
     thickness(ob,t,.0015);return ob
 
-# A connected jacket: two armholes are bridged into hanging, wrinkled sleeve sections.
-body_levels=[(1.075,.176,.095),(1.09,.181,.101),(1.12,.190,.108),(1.20,.203,.118),(1.30,.221,.123),(1.36,.234,.119),(1.42,.244,.111),(1.48,.239,.101),(1.51,.199,.078),(1.55,.071,.059)]
-N=24;vs=[];fs=[]
+# Connected garment; colour panels are faces of the same surface, never floating decals.
+if OUTFIT=='tshirt':
+    body_levels=[(1.055,.169,.116),(1.08,.171,.114),(1.12,.170,.113),(1.20,.175,.112),(1.30,.184,.109),(1.36,.200,.104),(1.42,.218,.099),(1.48,.222,.091),(1.51,.186,.074),(1.55,.066,.053)]
+else:
+    body_levels=[(1.075,.179,.119),(1.09,.183,.121),(1.12,.190,.122),(1.20,.203,.124),(1.30,.221,.126),(1.36,.234,.121),(1.42,.244,.113),(1.48,.239,.103),(1.51,.199,.080),(1.55,.071,.059)]
+N=24;vs=[];fs=[];colour_faces=[]
 for j,(z,rx,ry) in enumerate(body_levels):
     for i in range(N):
         a=2*pi*i/N
-        fold=.006*sin(5*a+.5*j)*exp(-((z-1.14)/.12)**2)+.003*sin(3*a-1.2*j)
-        vs.append(((rx+fold)*sin(a),-(ry+fold*.8)*cos(a),z+.004*sin(3*a+.4*j)))
+        fold=.004*sin(5*a+.5*j)*exp(-((z-1.14)/.12)**2)+.002*sin(3*a-1.2*j)
+        vs.append(((rx+fold)*sin(a),-(ry+fold*.8)*cos(a),z+.003*sin(3*a+.4*j)))
 for j in range(len(body_levels)-1):
     for i in range(N):
-        # Socket rectangle around each side; open upper chest for folded lapels.
         sidehole=(4<=j<7 and (4<=i<8 or 16<=i<20))
-        opening=(j>=5 and i in (23,0))
-        if not sidehole and not opening:fs.append((j*N+i,j*N+(i+1)%N,(j+1)*N+(i+1)%N,(j+1)*N+i))
+        if not sidehole:
+            if OUTFIT=='jacket' and j==6 and (i<=3 or i>=20):colour_faces.append(len(fs))
+            fs.append((j*N+i,j*N+(i+1)%N,(j+1)*N+(i+1)%N,(j+1)*N+i))
 for sign,lo,hi in [(1,4,8),(-1,16,20)]:
     boundary=[4*N+i for i in range(lo,hi+1)]+[j*N+hi for j in range(5,8)]+[7*N+i for i in range(hi-1,lo-1,-1)]+[j*N+lo for j in (6,5)]
     ordered=[(math.atan2(vs[idx][2]-1.39,-vs[idx][1]),idx) for idx in boundary];ordered.sort();boundary=[idx for angle,idx in ordered]
     angles=[math.atan2(vs[idx][2]-1.39,-vs[idx][1]) for idx in boundary]
     prev=boundary
-    sleeve=[(.275,1.415,.086,.092),(.31,1.43,.087,.093),(.36,1.445,.081,.089),(.402,1.45,.083,.084),(.426,1.453,.081,.081),(.449,1.46,.082,.082),(.475,1.46,.077,.08),(.51,1.46,.075,.078),(.55,1.46,.070,.072),(.586,1.46,.065,.066),(.61,1.46,.051,.052),(.632,1.46,.049,.048)]
+    if OUTFIT=='tshirt':
+        sleeve=[(.255,1.435,.068,.073),(.29,1.45,.065,.068),(.325,1.46,.060,.061),(.338,1.46,.060,.061)]
+    else:
+        sleeve=[(.275,1.415,.086,.092),(.31,1.43,.087,.093),(.36,1.445,.081,.089),(.402,1.45,.083,.084),(.426,1.453,.081,.081),(.449,1.46,.082,.082),(.475,1.46,.077,.08),(.51,1.46,.075,.078),(.55,1.46,.070,.072),(.586,1.46,.065,.066),(.61,1.46,.051,.052),(.632,1.46,.047,.047)]
     for j,(x,z,ry,rz) in enumerate(sleeve):
         ring=[]
         for a in angles:
-            f=.006*sin(2*a+j*.65)*exp(-((x-.44)/.14)**2)
-            ring.append(len(vs));vs.append((sign*x,-(ry+f)*cos(a),(z+(rz+f)*sin(a)+.010*sin(a*2+j*.8)*exp(-((x-.43)/.1)**2))))
+            f=.005*sin(2*a+j*.65)*exp(-((x-.44)/.14)**2)
+            ring.append(len(vs));vs.append((sign*x,-(ry+f)*cos(a),z+(rz+f)*sin(a)+.007*sin(a*2+j*.8)*exp(-((x-.43)/.1)**2)))
         for i in range(len(ring)):k=(i+1)%len(ring);fs.append((prev[i],prev[k],ring[k],ring[i]))
         prev=ring
-    fs.append(tuple(reversed(prev)))
-jacket=mesh('Jacket • continuous torso and sleeves',vs,fs,nylon)
-# Undershirt and soft, ribbed elastic hem.
-rings('Undershirt visible in opening',[(0,0,1.04,.128,.079),(0,0,1.2,.142,.083),(0,0,1.4,.169,.09),(0,0,1.49,.158,.077)],panel,n=16,sub=1)
-rings('Jacket ribbed hem',[(0,0,1.068,.174,.096),(0,0,1.077,.179,.10),(0,0,1.096,.181,.103),(0,0,1.106,.18,.102)],seam,24,1)
-for s in [-1,1]:
-    patch('Folded jacket lapel',[(s*.014,-.126,1.40),(s*.048,-.12,1.43),(s*.072,-.095,1.50),(s*.037,-.07,1.554),(s*.005,-.083,1.49)],nylon,.004)
-    patch('Shoulder fabric yoke',[(s*.075,-.092,1.49),(s*.18,-.075,1.498),(s*.225,-.054,1.448),(s*.19,-.094,1.434),(s*.075,-.116,1.452)],panel,.002)
-    line('Yoke seam',[(s*.075,-.119,1.451),(s*.15,-.108,1.442),(s*.193,-.097,1.434)],.0013,stitch)
-    line('Lower welt pocket',[(s*.081,-.12,1.16),(s*.12,-.119,1.19),(s*.153,-.112,1.24)],.004,seam)
-    line('Pocket top stitching',[(s*.085,-.124,1.153),(s*.124,-.123,1.183),(s*.157,-.116,1.233)],.0011,stitch)
-    # Sleeve cuff is shaped along the arm, with its seam visibly folded under.
-    coords=[];faces=[]
-    for j,x in enumerate([.611,.616,.64,.645]):
-        for k in range(16):a=2*pi*k/16;coords.append((s*x,-.049*cos(a),1.46+.049*sin(a)))
-    for j in range(3):
-        for k in range(16):a=j*16+k;b=j*16+(k+1)%16;faces.append((a,b,b+16,a+16))
-    ob=mesh('Elastic cuff',coords,faces,seam,sub=1);thickness(ob,.003)
-    for j in range(1):line('Cuff rib',[(s*(.62+j*.007),-.051*cos(k*2*pi/16),1.46+.051*sin(k*2*pi/16)) for k in range(17)],.0008,stitch)
-line('Main jacket zip',[(0,-.106,1.103),(0,-.125,1.20),(0,-.129,1.30),(0,-.131,1.36)],.0035,seam)
-for j in range(9):
-    z=1.113+j*.028;y=-.112-(z-1.113)*.08
-    line('Zip teeth', [(-.0037,y,z),(.0037,y,z)],.0012,chrome)
-line('Zip pull',[(0,-.139,1.36),(0,-.147,1.342),(.009,-.147,1.342),(.009,-.139,1.36),(0,-.139,1.36)],.0015,chrome)
-# Rear yoke and tailoring; deliberately no letters or symbols.
-for s in [-1,1]:line('Back shoulder seam',[(0,.083,1.50),(s*.11,.099,1.46),(s*.21,.078,1.43)],.0018,stitch)
+jacket=mesh('T-Shirt • connected torso and short sleeves' if OUTFIT=='tshirt' else 'Jacket • continuous torso and sleeves',vs,fs,cotton if OUTFIT=='tshirt' else nylon)
+jacket.data.materials.append(panel)
+for i in colour_faces:jacket.data.polygons[i].material_index=1
+# Thin seams follow the actual garment triangles and inherit their barycentric skin weights.
+jacket.data.calc_loop_triangles()
+surface_vertices=[v.co.copy() for v in jacket.data.vertices]
+surface_triangles=[tuple(t.vertices) for t in jacket.data.loop_triangles]
+garment_bvh=BVHTree.FromPolygons(surface_vertices,surface_triangles,all_triangles=True)
+def on_front(x,z,offset=.003):
+    hit,normal,index,distance=garment_bvh.ray_cast(Vector((x,-1,z)),Vector((0,1,0)))
+    if hit is None:raise ValueError('Seam point missed garment: '+str((x,z)))
+    return hit+normal*offset
+
+def front_line(name,xz,radius,material):
+    ob=line(name,[on_front(x,z,max(.002,radius+.001)) for x,z in xz],radius,material)
+    ob['bind_garment']=True
+    return ob
+
+if OUTFIT=='tshirt':
+    # Bare arms continue beneath the short sleeve; no hidden full-length jacket sleeves.
+    for sign in [-1,1]:
+        av=[];af=[];n=12
+        for x,ry,rz in [(.315,.046,.047),(.35,.047,.047),(.40,.044,.045),(.435,.040,.042),(.47,.045,.044),(.53,.043,.042),(.59,.039,.036),(.642,.036,.033)]:
+            for k in range(n):a=2*pi*k/n;av.append((sign*x,-ry*cos(a),1.46+rz*sin(a)))
+        for j in range(7):
+            for k in range(n):a=j*n+k;b=j*n+(k+1)%n;af.append((a,b,b+n,a+n))
+        mesh('Bare arm',av,af,skin)
+        # Sleeve hem is an actual narrow band of the shirt surface.
+        for poly in jacket.data.polygons:
+            centre=sum((jacket.data.vertices[i].co for i in poly.vertices),Vector())/len(poly.vertices)
+            if abs(centre.x)>.327:poly.material_index=1
+    for poly in jacket.data.polygons:
+        centre=sum((jacket.data.vertices[i].co for i in poly.vertices),Vector())/len(poly.vertices)
+        if centre.z>1.525 or centre.z<1.071:poly.material_index=1
+else:
+    # Hem sits outside the waistband, including the forward extreme of the trousers.
+    rings('Jacket ribbed hem',[(0,0,1.068,.180,.122),(0,0,1.077,.185,.125),(0,0,1.096,.187,.127),(0,0,1.106,.185,.125)],seam,24,0,caps=False)
+    for sign in [-1,1]:
+        front_line('Lower welt pocket',[(sign*.081,1.16),(sign*.105,1.18),(sign*.13,1.21),(sign*.153,1.24)],.003,seam)
+        front_line('Pocket top stitching',[(sign*.085,1.153),(sign*.109,1.173),(sign*.134,1.203),(sign*.157,1.233)],.0009,stitch)
+        cv=[];cf=[]
+        for j,(x,r) in enumerate([(.612,.056),(.621,.057),(.640,.050),(.648,.042)]):
+            for k in range(16):a=2*pi*k/16;cv.append((sign*x,-r*cos(a),1.46+r*sin(a)))
+        for j in range(3):
+            for k in range(16):a=j*16+k;b=j*16+(k+1)%16;cf.append((a,b,b+16,a+16))
+        mesh('Elastic cuff',cv,cf,seam)
+    front_line('Main jacket zip',[(0,1.103),(0,1.12),(0,1.20),(0,1.30),(0,1.36),(0,1.42),(0,1.48),(0,1.515)],.0025,seam)
+    for j in range(12):
+        z=1.12+j*.032
+        front_line('Zip teeth',[(-.004,z),(.004,z)],.001,chrome)
+    front_line('Zip pull',[(0,1.40),(0,1.38),(.008,1.38),(.008,1.40),(0,1.40)],.0015,chrome)
 
 # One welded trouser mesh: waist/seat flow into both legs at a shared crotch vertex.
 vs=[];fs=[]
@@ -176,7 +214,7 @@ for s in [-1,1]:
 for s in [-1,1]:
     # Palm surface along X, made with custom rounded cross sections.
     vs=[];fs=[];n=8
-    for x,ry,rz in [(.637,.025,.024),(.66,.038,.027),(.69,.041,.027),(.713,.035,.023)]:
+    for x,ry,rz in [(.637,.039 if OUTFIT=='tshirt' else .025,.036 if OUTFIT=='tshirt' else .024),(.66,.041 if OUTFIT=='tshirt' else .038,.032 if OUTFIT=='tshirt' else .027),(.69,.041,.027),(.713,.035,.023)]:
         for k in range(n):a=2*pi*k/n;vs.append((s*x,ry*cos(a),1.46+rz*sin(a)))
     for j in range(3):
         for k in range(n):a=j*n+k;b=j*n+(k+1)%n;fs.append((a,b,b+n,a+n))
@@ -262,6 +300,17 @@ for ob in parts:
             v.co.z-=.035
     for poly in ob.data.polygons:poly.use_smooth=False
 
+# Larger hands: length and palm breadth grow away from the fitted wrist cuff.
+for ob in parts:
+    if ob.name.startswith(('Gloved palm','Shaped glove finger','Curved glove thumb','Glove knuckle seam')):
+        for v in ob.data.vertices:
+            ax=abs(v.co.x);sign=1 if v.co.x>=0 else -1
+            t=max(0,min(1,(ax-.637)/.045));t=t*t*(3-2*t)
+            v.co.x=sign*(.637+(ax-.637)*1.30)
+            v.co.y*=1+.22*t
+            v.co.z=1.46+(v.co.z-1.46)*(1+.18*t)
+        ob.data.update()
+
 # Anatomical rig retained in proportions, with new mesh weights rather than geometry glued to primitives.
 previous=bpy.data.objects.get('RiderV2_Rig')
 if previous is not None:previous.name='RiderV2_Draft_Rig'
@@ -279,6 +328,15 @@ for name,head,tail,parent in spec:
 bpy.ops.object.mode_set(mode='OBJECT');rig.select_set(False)
 def smooth(v):v=max(0,min(1,v));return v*v*(3-2*v)
 def weights(p,ob):
+    if ob.get('bind_garment',False):
+        hit,normal,index,distance=garment_bvh.find_nearest(p)
+        tri=surface_triangles[index]
+        bary=barycentric_transform(hit,surface_vertices[tri[0]],surface_vertices[tri[1]],surface_vertices[tri[2]],Vector((1,0,0)),Vector((0,1,0)),Vector((0,0,1)))
+        result={}
+        for k in range(3):
+            for name,w in weights(surface_vertices[tri[k]],jacket).items():result[name]=result.get(name,0)+max(0,bary[k])*w
+        total=sum(result.values())
+        return {name:w/total for name,w in result.items()}
     x,y,z=p;ax=abs(x);side='Left' if x>0 else 'Right'
     if ob.name.startswith(('Helmet','Visor','Eye port','Chin','Brow','Cheek','Recessed','Pivot','Rear','Crown')):return {'Head':1}
     if z>1.56:return {'Head':smooth((z-1.55)/.12),'Neck':1-smooth((z-1.55)/.12)}
@@ -318,7 +376,7 @@ for original in parts:
     copy=original.copy();copy.data=original.data.copy();asset.objects.link(copy);copy.select_set(True);export_copies.append(copy)
 bpy.context.view_layer.objects.active=export_copies[0];bpy.ops.object.join();export_mesh=bpy.context.object;export_mesh.name='RiderV2_UnityMesh'
 rig.select_set(True)
-bpy.ops.export_scene.fbx(filepath=P+'RiderV2.fbx',use_selection=True,object_types={'MESH','ARMATURE'},add_leaf_bones=False,bake_anim=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,use_mesh_modifiers=True)
+bpy.ops.export_scene.fbx(filepath=P+BASENAME+'.fbx',use_selection=True,object_types={'MESH','ARMATURE'},add_leaf_bones=False,bake_anim=False,axis_forward='-Z',axis_up='Y',apply_unit_scale=True,use_mesh_modifiers=True)
 bpy.data.objects.remove(export_mesh,do_unlink=True)
 arm.pose_position='POSE'
 for name,angle in [('LeftUpperArm',-63),('RightUpperArm',63)]:rig.pose.bones['MD_'+name].rotation_mode='XYZ';rig.pose.bones['MD_'+name].rotation_euler.z=math.radians(angle)
@@ -334,7 +392,7 @@ data=bpy.data.cameras.new('Rider V2 presentation');camera=studio_obj('Rider V2 p
 try:scene.render.engine='BLENDER_EEVEE'
 except TypeError:pass
 scene.render.resolution_x=1000;scene.render.resolution_y=1100;scene.render.resolution_percentage=100
-scene.render.image_settings.file_format='PNG';scene.render.filepath=P+'RiderV2_Front.png'
+scene.render.image_settings.file_format='PNG';scene.render.filepath=P+BASENAME+'_Front.png'
 scene.view_settings.view_transform='AgX';scene.view_settings.exposure=-.5
 for ob in scene.objects:ob.select_set(False)
 rig.select_set(True);bpy.context.view_layer.objects.active=rig
@@ -342,6 +400,6 @@ for screen in bpy.data.screens:
     for area in screen.areas:
         if area.type=='VIEW_3D':
             area.spaces.active.region_3d.view_distance=3.3;area.spaces.active.region_3d.view_location=(0,0,1.0);area.spaces.active.shading.type='MATERIAL'
-bpy.ops.wm.save_as_mainfile(filepath=P+'RiderV2.blend',compress=True)
+bpy.ops.wm.save_as_mainfile(filepath=P+BASENAME+'.blend',compress=True)
 triangles=sum(sum(len(p.vertices)-2 for p in o.data.polygons) for o in parts)
-print(json.dumps({'meshes':len(parts),'vertices':sum(len(o.data.vertices) for o in parts),'triangles':triangles,'bones':len(arm.bones),'blend':P+'RiderV2.blend','fbx':P+'RiderV2.fbx'}))
+print(json.dumps({'meshes':len(parts),'vertices':sum(len(o.data.vertices) for o in parts),'triangles':triangles,'bones':len(arm.bones),'blend':P+BASENAME+'.blend','fbx':P+BASENAME+'.fbx'}))

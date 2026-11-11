@@ -9,8 +9,9 @@ using UnityEngine.Rendering;
 using UnityEditor;
 #endif
 
-public class PlayerAnimationPhysicsTests
+public abstract class PlayerAnimationPhysicsTests
 {
+    protected abstract string Outfit { get; }
     readonly List<GameObject> created = new List<GameObject>();
     GameObject actor;
     Rigidbody body;
@@ -21,7 +22,7 @@ public class PlayerAnimationPhysicsTests
 #if UNITY_EDITOR
         var floor = GameObject.CreatePrimitive(PrimitiveType.Cube); created.Add(floor);
         floor.transform.position = new Vector3(1000, -.1f, 1000); floor.transform.localScale = new Vector3(30, .2f, 30);
-        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/RiderV2/RiderV2.prefab");
+        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/"+Outfit+"/"+Outfit+".prefab");
         actor = new GameObject("Rider Physics Test Actor"); created.Add(actor); actor.SetActive(false);
         actor.transform.position = new Vector3(1000, .025f, 1000); actor.transform.localScale = Vector3.one * .5f;
         var visual = Object.Instantiate(model,actor.transform,false);
@@ -132,4 +133,15 @@ public class PlayerAnimationPhysicsTests
         cameraControl.SetSideView(false); Assert.That(side.enabled, Is.False); Assert.That(fps.enabled, Is.True);
         Assert.That(cameraControl.SideViewActive, Is.False);
     }
+}
+
+// Unity's PlayMode runner discovers parameterless fixtures; parameterized fixtures
+// can disappear from its test tree even though NUnit accepts them in EditMode.
+public class PlayerJacketAnimationPhysicsTests : PlayerAnimationPhysicsTests
+{
+    protected override string Outfit => "RiderV2";
+}
+public class PlayerTShirtAnimationPhysicsTests : PlayerAnimationPhysicsTests
+{
+    protected override string Outfit => "RiderV2TShirt";
 }

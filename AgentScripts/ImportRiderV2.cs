@@ -12,8 +12,13 @@ public static class ImportRiderV2
     const string Folder = "Assets/Game/Characters/RiderV2";
     const string Model = Folder + "/RiderV2.fbx";
     const string Prefab = Folder + "/RiderV2.prefab";
-    public static object Import()
+    public static object Import() => ImportOutfit("RiderV2");
+    public static object ImportTShirt() => ImportOutfit("RiderV2TShirt");
+    static object ImportOutfit(string assetName)
     {
+        string Folder = "Assets/Game/Characters/" + assetName;
+        string Model = Folder + "/" + assetName + ".fbx";
+        string Prefab = Folder + "/" + assetName + ".prefab";
         if (Application.isPlaying) throw new Exception("Import in Edit Mode.");
         AssetDatabase.ImportAsset(Model, ImportAssetOptions.ForceSynchronousImport);
         var importer = (ModelImporter)AssetImporter.GetAtPath(Model);
@@ -29,12 +34,18 @@ public static class ImportRiderV2
         var human = HumanTrait.BoneName.Where(n => boneNames.Contains("MD_" + n.Replace(" ", "")))
             .Select(n => new HumanBone { humanName = n, boneName = "MD_" + n.Replace(" ", ""), limit = new HumanLimit { useDefaultValues = true } }).ToArray();
         if (human.Length != 22) throw new Exception("Expected 22 mapped Humanoid bones; got " + human.Length);
-        var description = importer.humanDescription; description.human = human;
-        description.skeleton = source.GetComponentsInChildren<Transform>().Select(t => new SkeletonBone { name = t.name, position = t.localPosition, rotation = t.localRotation, scale = t.localScale }).ToArray();
-        description.upperArmTwist = .5f; description.lowerArmTwist = .5f;
-        description.upperLegTwist = .5f; description.lowerLegTwist = .5f;
-        description.armStretch = .02f; description.legStretch = .02f;
-        importer.humanDescription = description; importer.SaveAndReimport();
+        // The first Humanoid import normalizes FBX unit transforms. Read that pose again
+        // before saving the final Avatar; using the pre-import Generic pose can inflate humanScale.
+        for (int posePass = 0; posePass < 2; posePass++)
+        {
+            source = AssetDatabase.LoadAssetAtPath<GameObject>(Model);
+            var description = importer.humanDescription; description.human = human;
+            description.skeleton = source.GetComponentsInChildren<Transform>().Select(t => new SkeletonBone { name = t.name, position = t.localPosition, rotation = t.localRotation, scale = t.localScale }).ToArray();
+            description.upperArmTwist = .5f; description.lowerArmTwist = .5f;
+            description.upperLegTwist = .5f; description.lowerLegTwist = .5f;
+            description.armStretch = .02f; description.legStretch = .02f;
+            importer.humanDescription = description; importer.SaveAndReimport();
+        }
         source = AssetDatabase.LoadAssetAtPath<GameObject>(Model);
         var avatar = AssetDatabase.LoadAllAssetsAtPath(Model).OfType<Avatar>().Single();
         if (!avatar.isValid || !avatar.isHuman) throw new Exception("Invalid imported Humanoid avatar.");

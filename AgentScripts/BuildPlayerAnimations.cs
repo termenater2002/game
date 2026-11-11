@@ -115,12 +115,25 @@ public static class BuildPlayerAnimations
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene()); EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
         return "Rebuilt existing controller: directional locomotion, jump/fall/landing, Rigidbody driver, hand IK and per-camera body visibility.";
     }
-    public static object PreviewScene()
+    public static object PreviewScene() => Preview(null, "Assets/Game/Scenes/AnimationPreview.unity");
+    public static object PreviewTShirtScene() => Preview("Assets/Game/Characters/RiderV2TShirt/RiderV2TShirt.prefab", "Assets/Game/Scenes/AnimationPreviewTShirt.unity");
+    static object Preview(string outfitPrefab, string outputPath)
     {
         if (Application.isPlaying || SceneManager.GetActiveScene().name != "SampleScene") throw new Exception("Open SampleScene in Edit Mode.");
         var original = UnityEngine.Object.FindAnyObjectByType<FunnyMovement>();
         var clone = UnityEngine.Object.Instantiate(original.gameObject); clone.name = "Player Animation Preview";
         if (PrefabUtility.IsPartOfPrefabInstance(clone)) PrefabUtility.UnpackPrefabInstance(clone, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+        if (outfitPrefab != null)
+        {
+            var model = AssetDatabase.LoadAssetAtPath<GameObject>(outfitPrefab);
+            if (model == null || !model.GetComponent<Animator>().avatar.isHuman) throw new Exception("Import the outfit first.");
+            var previous = clone.transform.Find("RiderVisual");
+            if (previous != null) UnityEngine.Object.DestroyImmediate(previous.gameObject);
+            var visual = (GameObject)PrefabUtility.InstantiatePrefab(model, clone.transform); visual.name = "RiderVisual";
+            visual.transform.localPosition = Vector3.zero; visual.transform.localRotation = Quaternion.identity;
+            clone.GetComponent<PlayerAnimationDriver>().characterAnimator = visual.GetComponent<Animator>();
+            clone.GetComponent<FirstPersonBodyVisibility>().bodyRenderers = visual.GetComponentsInChildren<Renderer>();
+        }
         var sky = RenderSettings.ambientSkyColor; var equator = RenderSettings.ambientEquatorColor; var ground = RenderSettings.ambientGroundColor;
         var preview = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Additive); SceneManager.MoveGameObjectToScene(clone, preview); SceneManager.SetActiveScene(preview);
         clone.transform.SetPositionAndRotation(new Vector3(0, .03f, 0), Quaternion.identity); clone.transform.localScale = Vector3.one * .5f;
@@ -141,7 +154,7 @@ public static class BuildPlayerAnimations
         var key = new GameObject("Preview Key").AddComponent<Light>(); key.type = LightType.Directional; key.transform.rotation = Quaternion.Euler(45, -35, 0); key.intensity = 1.65f; key.shadows = LightShadows.Soft; key.shadowStrength = .65f;
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight; RenderSettings.ambientSkyColor = sky; RenderSettings.ambientEquatorColor = equator; RenderSettings.ambientGroundColor = ground;
         RenderSettings.skybox = null; RenderSettings.fog = false;
-        EditorSceneManager.MarkSceneDirty(preview); EditorSceneManager.SaveScene(preview, "Assets/Game/Scenes/AnimationPreview.unity");
-        EditorSceneManager.OpenScene("Assets/Game/Scenes/SampleScene.unity"); return "Saved AnimationPreview: same avatar/controller, physical movement, 1–8 select modes, P automatic cycle.";
+        EditorSceneManager.MarkSceneDirty(preview); EditorSceneManager.SaveScene(preview, outputPath);
+        EditorSceneManager.OpenScene("Assets/Game/Scenes/SampleScene.unity"); return "Saved " + outputPath + ": same controller, physical movement, 1–8 select modes, P automatic cycle.";
     }
 }

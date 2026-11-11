@@ -46,9 +46,11 @@ public class PlayerAnimationAssetTests
             Assert.That(m.GetFloat("_Metallic"), Is.Zero, m.name); Assert.That(m.GetFloat("_Smoothness"), Is.LessThanOrEqualTo(.1f), m.name);
         }
     }
-    [Test] public void RiderHasAValidWeightedHumanoidAndLongLeggedSlimProportions()
+    [TestCase("RiderV2")]
+    [TestCase("RiderV2TShirt")]
+    public void RiderHasAValidWeightedHumanoidAndLongLeggedSlimProportions(string outfit)
     {
-        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/RiderV2/RiderV2.prefab");
+        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/"+outfit+"/"+outfit+".prefab");
         Assert.That(prefab,Is.Not.Null);var animator=prefab.GetComponent<Animator>();
         Assert.That(animator.avatar.isValid&&animator.avatar.isHuman,Is.True);Assert.That(animator.applyRootMotion,Is.False);
         var skin=prefab.GetComponentInChildren<SkinnedMeshRenderer>();var mesh=skin.sharedMesh;
@@ -56,6 +58,7 @@ public class PlayerAnimationAssetTests
         Assert.That(mesh.boneWeights.All(w=>Mathf.Abs(w.weight0+w.weight1+w.weight2+w.weight3-1)<.0001f),Is.True);
         var points=mesh.vertices.Select(v=>prefab.transform.InverseTransformPoint(skin.transform.TransformPoint(v))).ToArray();
         var bones=prefab.GetComponentsInChildren<Transform>();float height=points.Max(p=>p.y)-points.Min(p=>p.y);
+        Assert.That(animator.humanScale/height,Is.InRange(.45f,.65f),"FBX unit normalization must not inflate Humanoid retargeting scale.");
         float hipHeight=bones.Single(t=>t.name=="MD_Hips").position.y;
         float shoulderWidth=Vector3.Distance(bones.Single(t=>t.name=="MD_LeftUpperArm").position,bones.Single(t=>t.name=="MD_RightUpperArm").position);
         Assert.That(hipHeight/height,Is.InRange(.49f,.55f));Assert.That(shoulderWidth/height,Is.InRange(.17f,.22f));
