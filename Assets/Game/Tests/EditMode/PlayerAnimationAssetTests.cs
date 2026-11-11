@@ -46,11 +46,13 @@ public class PlayerAnimationAssetTests
             Assert.That(m.GetFloat("_Metallic"), Is.Zero, m.name); Assert.That(m.GetFloat("_Smoothness"), Is.LessThanOrEqualTo(.1f), m.name);
         }
     }
-    [TestCase("RiderV2")]
-    [TestCase("RiderV2TShirt")]
-    public void RiderHasAValidWeightedHumanoidAndLongLeggedSlimProportions(string outfit)
+    [TestCase("RiderV2", "RiderV2")]
+    [TestCase("RiderV2TShirt", "RiderV2TShirt")]
+    [TestCase("StyleV3/RiderV3", "RiderV3")]
+    [TestCase("StyleV3/RiderTShirtV3", "RiderTShirtV3")]
+    public void RiderHasAValidWeightedHumanoidAndLongLeggedSlimProportions(string folder, string outfit)
     {
-        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/"+outfit+"/"+outfit+".prefab");
+        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/"+folder+"/"+outfit+".prefab");
         Assert.That(prefab,Is.Not.Null);var animator=prefab.GetComponent<Animator>();
         Assert.That(animator.avatar.isValid&&animator.avatar.isHuman,Is.True);Assert.That(animator.applyRootMotion,Is.False);
         var skin=prefab.GetComponentInChildren<SkinnedMeshRenderer>();var mesh=skin.sharedMesh;

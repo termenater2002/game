@@ -12,6 +12,7 @@ using UnityEditor;
 public abstract class PlayerAnimationPhysicsTests
 {
     protected abstract string Outfit { get; }
+    protected virtual string PrefabPath => "Assets/Game/Characters/"+Outfit+"/"+Outfit+".prefab";
     readonly List<GameObject> created = new List<GameObject>();
     GameObject actor;
     Rigidbody body;
@@ -22,7 +23,7 @@ public abstract class PlayerAnimationPhysicsTests
 #if UNITY_EDITOR
         var floor = GameObject.CreatePrimitive(PrimitiveType.Cube); created.Add(floor);
         floor.transform.position = new Vector3(1000, -.1f, 1000); floor.transform.localScale = new Vector3(30, .2f, 30);
-        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/"+Outfit+"/"+Outfit+".prefab");
+        var model = AssetDatabase.LoadAssetAtPath<GameObject>(PrefabPath);
         actor = new GameObject("Rider Physics Test Actor"); created.Add(actor); actor.SetActive(false);
         actor.transform.position = new Vector3(1000, .025f, 1000); actor.transform.localScale = Vector3.one * .5f;
         var visual = Object.Instantiate(model,actor.transform,false);
@@ -144,4 +145,15 @@ public class PlayerJacketAnimationPhysicsTests : PlayerAnimationPhysicsTests
 public class PlayerTShirtAnimationPhysicsTests : PlayerAnimationPhysicsTests
 {
     protected override string Outfit => "RiderV2TShirt";
+}
+
+public class PlayerV3JacketAnimationPhysicsTests : PlayerAnimationPhysicsTests
+{
+    protected override string Outfit => "RiderV3";
+    protected override string PrefabPath => "Assets/Game/Characters/StyleV3/RiderV3/RiderV3.prefab";
+}
+public class PlayerV3TShirtAnimationPhysicsTests : PlayerAnimationPhysicsTests
+{
+    protected override string Outfit => "RiderTShirtV3";
+    protected override string PrefabPath => "Assets/Game/Characters/StyleV3/RiderTShirtV3/RiderTShirtV3.prefab";
 }

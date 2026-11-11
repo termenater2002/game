@@ -115,6 +115,8 @@ public static class BuildPlayerAnimations
         EditorSceneManager.MarkSceneDirty(SceneManager.GetActiveScene()); EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
         return "Rebuilt existing controller: directional locomotion, jump/fall/landing, Rigidbody driver, hand IK and per-camera body visibility.";
     }
+    public static object PreviewV3Scene() => Preview("Assets/Game/Characters/StyleV3/RiderV3/RiderV3.prefab", "Assets/Game/Scenes/AnimationPreviewV3.unity");
+    public static object PreviewV3TShirtScene() => Preview("Assets/Game/Characters/StyleV3/RiderTShirtV3/RiderTShirtV3.prefab", "Assets/Game/Scenes/AnimationPreviewTShirtV3.unity");
     public static object PreviewScene() => Preview(null, "Assets/Game/Scenes/AnimationPreview.unity");
     public static object PreviewTShirtScene() => Preview("Assets/Game/Characters/RiderV2TShirt/RiderV2TShirt.prefab", "Assets/Game/Scenes/AnimationPreviewTShirt.unity");
     static object Preview(string outfitPrefab, string outputPath)
@@ -151,7 +153,7 @@ public static class BuildPlayerAnimations
         var cameraObject = new GameObject("Preview Camera"); var camera = cameraObject.AddComponent<Camera>(); cameraObject.AddComponent<AudioListener>(); camera.tag = "MainCamera";
         camera.transform.position = new Vector3(2.8f, 2f, 3.7f); camera.transform.LookAt(Vector3.up * .85f); camera.clearFlags = CameraClearFlags.SolidColor;
         camera.backgroundColor = new Color(.6353f, .7333f, .7647f); camera.nearClipPlane = .03f; camera.fieldOfView = 36; show.previewCamera = camera;
-        var key = new GameObject("Preview Key").AddComponent<Light>(); key.type = LightType.Directional; key.transform.rotation = Quaternion.Euler(45, -35, 0); key.intensity = 1.65f; key.shadows = LightShadows.Soft; key.shadowStrength = .65f;
+        var key = new GameObject("Preview Key").AddComponent<Light>(); key.type = LightType.Directional; key.transform.rotation = Quaternion.Euler(45, outputPath.Contains("V3") ? 145 : -35, 0); key.intensity = 1.65f; key.shadows = LightShadows.Soft; key.shadowStrength = .65f;
         RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight; RenderSettings.ambientSkyColor = sky; RenderSettings.ambientEquatorColor = equator; RenderSettings.ambientGroundColor = ground;
         RenderSettings.skybox = null; RenderSettings.fog = false;
         EditorSceneManager.MarkSceneDirty(preview); EditorSceneManager.SaveScene(preview, outputPath);
