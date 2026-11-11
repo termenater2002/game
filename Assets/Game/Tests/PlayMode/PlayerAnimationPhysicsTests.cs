@@ -46,7 +46,9 @@ public abstract class PlayerAnimationPhysicsTests
         {
             body.linearVelocity = vectors[i]; var start = body.position; float elapsed = 0;
             var initialFoot = animator.GetBoneTransform(HumanBodyBones.LeftFoot).localRotation;
-            while (elapsed < .4f) { yield return new WaitForFixedUpdate(); elapsed += Time.fixedDeltaTime; }
+            int firstFrame=Time.frameCount;
+            // Physics can tick repeatedly before Animator gets a rendered update on a busy Editor.
+            while (elapsed < .4f || Time.frameCount-firstFrame<8) { yield return new WaitForFixedUpdate(); elapsed += Time.fixedDeltaTime; }
             yield return null;
             Assert.That(animator.applyRootMotion, Is.False);
             Assert.That(Vector3.Distance(body.linearVelocity, vectors[i]), Is.LessThan(.02f));

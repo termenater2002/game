@@ -19,6 +19,11 @@ for name,script,option in [('LilacV3','build_lilac_v3.py',None),('RiderV3','buil
     bpy.data.orphans_purge(do_recursive=True)
     # Native scene now contains only this authored character and its presentation stage.
     scene.frame_set(1)
+    finger=runpy.run_path(str(P/'finger_rig.py'))
+    finger['add_finger_rig'](rig,parts)
+    finger['verify_fingers'](rig,parts)
+    props=ns.get('props',[])
+    ns['v3_export'](scene,collection,parts,rig,name,str(P/(name+'.fbx')),props)
     if name=='LilacV3':
         ns['v3_export'](scene,collection,parts,rig,name,str(P/(name+'_Salute.fbx')),bake=True)
     bpy.ops.wm.save_as_mainfile(filepath=str(P/(name+'.blend')),compress=True)

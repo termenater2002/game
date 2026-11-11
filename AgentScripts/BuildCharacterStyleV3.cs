@@ -37,7 +37,7 @@ public static class BuildCharacterStyleV3
             var names=transforms.Select(t=>t.name).ToHashSet();var desc=importer.humanDescription;
             desc.human=HumanTrait.BoneName.Where(n=>names.Contains("MD_"+n.Replace(" ","")))
                 .Select(n=>new HumanBone{humanName=n,boneName="MD_"+n.Replace(" ",""),limit=new HumanLimit{useDefaultValues=true}}).ToArray();
-            if(desc.human.Length!=22)throw new Exception(name+": expected 22 human bones.");
+            if(desc.human.Length!=52)throw new Exception(name+": expected 52 human bones including all finger joints.");
             desc.skeleton=transforms.Select(t=>new SkeletonBone{name=t.name,position=t.localPosition,rotation=t.localRotation,scale=t.localScale}).ToArray();
             desc.upperArmTwist=.5f;desc.lowerArmTwist=.5f;desc.upperLegTwist=.5f;desc.lowerLegTwist=.5f;desc.armStretch=.02f;desc.legStretch=.02f;
             importer.humanDescription=desc;importer.SaveAndReimport();
