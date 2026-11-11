@@ -300,6 +300,20 @@ for ob in parts:
             v.co.z-=.035
     for poly in ob.data.polygons:poly.use_smooth=False
 
+# A closed anatomical head fills the helmet behind the visor and vent cutouts.
+internal_skin=mat('R3 • rider head skin',(.52,.37,.28),.9)
+internal_levels=[(1.55,.045,.045),(1.60,.050,.052),(1.64,.064,.069),(1.69,.092,.101),(1.735,.109,.114),(1.79,.109,.119),(1.835,.083,.094),(1.87,.041,.048),(1.885,.008,.010)]
+vv=[];ff=[];nhead=20
+for z,rx,ry in internal_levels:
+    for k in range(nhead):
+        a=2*pi*k/nhead;y=.012-ry*cos(a)
+        if cos(a)>.90 and 1.69<=z<=1.735:y-=.009
+        vv.append((rx*sin(a),y,z))
+for j in range(len(internal_levels)-1):
+    for k in range(nhead):a=j*nhead+k;b=j*nhead+(k+1)%nhead;ff.append((a,b,b+nhead,a+nhead))
+ff.extend([tuple(reversed(range(nhead))),tuple((len(internal_levels)-1)*nhead+k for k in range(nhead))])
+inside=mesh('Inside helmet • closed head and neck',vv,ff,internal_skin,True);inside['bone']='Head'
+
 # Larger hands: length and palm breadth grow away from the fitted wrist cuff.
 for ob in parts:
     if ob.name.startswith(('Gloved palm','Shaped glove finger','Curved glove thumb','Glove knuckle seam')):
@@ -328,6 +342,7 @@ for name,head,tail,parent in spec:
 bpy.ops.object.mode_set(mode='OBJECT');rig.select_set(False)
 def smooth(v):v=max(0,min(1,v));return v*v*(3-2*v)
 def weights(p,ob):
+    if ob.get('bone'):return {ob['bone']:1}
     if ob.get('bind_garment',False):
         hit,normal,index,distance=garment_bvh.find_nearest(p)
         tri=surface_triangles[index]
@@ -390,6 +405,7 @@ for ob in parts:
         if OUTFIT=='tshirt' and original==skin:role='skin'
         if original==panel:role='ivory'
         if original==denim:role='pants'
+        if original==internal_skin:role='rider_face' if poly.center.y<0 and poly.center.z>1.64 else 'skin'
         if original==shell:role='shell'
         if original==glass:role='visor'
         if original==chrome:role='silver'
@@ -406,6 +422,7 @@ for ob in parts:
             elif role=='pants':
                 center=.092+.040*max(0,min(1,(.60-z)/.50));xx=ax-center
                 u=(math.atan2(xx,-y)+pi)/(2*pi);v=(z-.10)/.97
+            elif role=='rider_face':u=(x+.114)/.228;v=(z-1.64)/.245
             elif role=='shell':u=(math.atan2(x,-y)+pi)/(2*pi);v=(z-1.60)/.35
             elif role=='visor':u=(x+.17)/.34;v=(z-1.70)/.14
             elif role=='shoe':u=(y+.20)/.28;v=(z-.045)/.17
@@ -418,7 +435,7 @@ for ob in parts:
             if cross:u=(1 if high else u) if u<.5 else (u if high else 0)
             uv.data[li].uv=v3_uv(role,u,v)
         poly.material_index=0
-        poly.use_smooth=role in ('cloth','pants','skin','shoe','shell','visor')
+        poly.use_smooth=role in ('cloth','pants','skin','rider_face','shoe','shell','visor')
     ob.data.materials.clear();ob.data.materials.append(atlas)
     for v in ob.data.vertices:v.co=reference_warp(v.co)
     ob['asset_role']='V3 original painted streetwear'

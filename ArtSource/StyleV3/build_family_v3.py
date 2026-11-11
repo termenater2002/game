@@ -95,6 +95,8 @@ for j,(z,rx,ry) in enumerate(levels):
             opening=min(rx*.75,max(.008,.35*(z-1.31)))
             x=sign*(opening if k in (1,23) else min(rx*.9,opening+.04))
             y=-ry*math.sqrt(max(0,1-(x/rx)**2))
+        if not FATHER and y<0:
+            y-=.061*exp(-((abs(x)-.086)/.067)**2-((z-1.385)/.089)**2)*max(0,min(1,-y/.075))
         vs.append((x,y,z))
 for j in range(len(levels)-1):
     for k in range(N):
@@ -248,6 +250,22 @@ if not FATHER:
     v3_mesh(collection,parts,'Tailored black bob',vv,ff,atlas,'hair',uu,bone='Head')
     v3_ribbon(collection,parts,'Swept bob fringe',[(-.045,-.09,1.892,.070),(.014,-.126,1.866,.080),(.073,-.139,1.819,.070),(.111,-.139,1.755,.050),(.129,-.113,1.657,.038),(.129,-.102,1.595,0)],atlas)
     v3_ribbon(collection,parts,'Tucked left bob',[(-.10,-.10,1.83,.035),(-.127,-.115,1.76,.035),(-.13,-.103,1.66,.035),(-.122,-.096,1.59,.024)],atlas)
+
+    # Keep the bob silhouette, but curve the front strands along the actual scalp.
+    # Projection preserves X/Z, so the fringe does not collapse into narrow strips.
+    scalp=BVHTree.FromPolygons([v.co for v in head.data.vertices],[tuple(p.vertices) for p in head.data.polygons],all_triangles=False)
+    for ob in parts:
+        if not ob.name.startswith(('Swept bob fringe','Tucked left bob')):continue
+        for vertex in ob.data.vertices:
+            co=vertex.co
+            if co.z<1.69:continue
+            hit,normal,index,distance=scalp.ray_cast(Vector((co.x,-1,co.z)),Vector((0,1,0)))
+            if hit is None:hit,normal,index,distance=scalp.find_nearest(co)
+            if hit is not None:
+                influence=max(0,min(1,(co.z-1.69)/.035))
+                layer_offset=.002 if vertex.index>=len(ob.data.vertices)//2 else 0
+                co.y=co.y*(1-influence)+(hit.y-.008+layer_offset)*influence
+        ob.data.update()
 
 # Humanoid skeleton; same naming convention as the existing protagonist.
 rig_name=NAME+'_Rig';previous=bpy.data.objects.get(rig_name)

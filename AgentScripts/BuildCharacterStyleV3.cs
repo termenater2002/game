@@ -91,6 +91,11 @@ public static class BuildCharacterStyleV3
         if(Application.isPlaying)throw new Exception("Use Edit Mode.");
         return Names.Select(Import).ToArray();
     }
+    public static object ImportCorrections()
+    {
+        if(Application.isPlaying)throw new Exception("Use Edit Mode.");
+        return new[]{"LilacV3","RiderV3","RiderTShirtV3","FamilyMotherV3"}.Select(Import).ToArray();
+    }
     public static object ImportSalute()
     {
         string path=Folder("LilacV3")+"LilacV3_Salute.fbx";AssetDatabase.ImportAsset(path,ImportAssetOptions.ForceSynchronousImport);

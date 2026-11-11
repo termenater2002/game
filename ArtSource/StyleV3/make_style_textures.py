@@ -8,12 +8,12 @@ RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pant
 
 def face(role,skin):
  im=Image.new('RGB',(256,256),skin);d=ImageDraw.Draw(im)
- dad='Father' in role;mom='Mother' in role
+ dad='Father' in role;mom='Mother' in role;rider=role.startswith('Rider')
  ink=(27,25,34);shadow=(173,144,142) if not dad else (173,140,120)
  # Broad, quiet painted planes instead of dark polygonal contour rings.
  d.polygon([(0,35),(16,90),(24,192),(75,242),(23,224),(0,165)],fill=tuple(max(0,c-9) for c in skin))
  d.polygon([(256,35),(240,90),(232,192),(181,242),(233,224),(256,165)],fill=tuple(max(0,c-9) for c in skin))
- eye_y=124;eye_h=13 if dad else 16 if mom else 22
+ eye_y=124;eye_h=13 if dad else 16 if (mom or rider) else 22
  for side in [-1,1]:
   cx=128+side*57;w=38 if not dad else 35;h=eye_h
   # Curved almond outline, strong upper lid, delicate lower lid: no glasses-like boxes.
@@ -28,7 +28,7 @@ def face(role,skin):
   d.line(upper,fill=ink,width=4 if not dad else 3)
   d.line([(cx-w*.69,eye_y+h*.53),(cx-w*.30,eye_y+h*.81),(cx+w*.23,eye_y+h*.89),(cx+w*.80,eye_y+h*.50)],fill=ink,width=1)
   outer=cx+side*w
-  if not dad:
+  if not dad and not rider:
    d.polygon([(outer-side*5,eye_y-4),(outer+side*10,eye_y-13),(outer+side*4,eye_y+5)],fill=ink)
    if not mom:
     for offset in [-19,1,22]:d.line([(cx+offset,eye_y+h*.77),(cx+offset+side*3,eye_y+h+7)],fill=ink,width=2)
@@ -104,11 +104,11 @@ def atlas(role):
  im=Image.new('RGB',(512,512),(35,35,42));im.paste(face(role,skin),(0,0));im.paste(cloth(role),(256,0))
  if role.startswith('Rider'):
   helmet=Image.new('RGB',(256,256),(42,48,59));d=ImageDraw.Draw(helmet)
-  # Symmetric angular livery follows the shell's own UV island; dark lower tile is the visor.
-  for side in [-1,1]:
-   cx=128+side*64
-   d.polygon([(cx-side*17,0),(cx+side*6,0),(cx+side*33,106),(cx+side*9,121),(cx-side*1,69)],fill=(185,188,175))
-   d.line([(cx-side*7,4),(cx+side*15,74),(cx+side*24,111)],fill=(174,124,57),width=3)
+  # Subtle irregular abrasion replaces the wide white side graphics.
+  for cx,cy in [(47,35),(74,83),(188,47),(210,99),(135,18)]:
+   d.line([(cx-5,cy-2),(cx,cy),(cx+7,cy+1)],fill=(72,77,84),width=1)
+   d.line([(cx-2,cy+2),(cx+4,cy+3)],fill=(56,62,71),width=1)
+   d.point((cx+9,cy+1),fill=(87,90,95))
   d.rectangle((0,128,255,255),fill=(17,28,41))
   d.polygon([(0,144),(119,134),(255,144),(255,157),(110,146),(0,158)],fill=(42,60,73))
   d.line([(8,175),(114,164),(244,176)],fill=(28,43,58),width=2)
@@ -136,6 +136,7 @@ def atlas(role):
  tile=Image.new('RGB',(128,128),skin);d=ImageDraw.Draw(tile)
  d.polygon([(2,0),(17,48),(8,122),(0,128)],fill=tuple(max(0,c-10) for c in skin));d.polygon([(126,0),(111,48),(120,122),(128,128)],fill=tuple(max(0,c-10) for c in skin))
  d.line([(61,66),(65,68),(63,72)],fill=tuple(max(0,c-65) for c in skin),width=2)
+ if role.startswith('Rider'):tile=face(role,skin).resize((128,128),Image.Resampling.NEAREST)
  im.paste(tile,(256,256))
  shoe=Image.new('RGB',(128,128),(32,34,40));d=ImageDraw.Draw(shoe);d.rectangle((0,94,127,110),fill=(199,198,186));d.line((0,92,127,92),fill=(76,78,84),width=2)
  for y in [22,34,46,58]:d.line((36,y,92,y+9),fill=(182,183,176),width=3);d.line((92,y,36,y+9),fill=(182,183,176),width=2)

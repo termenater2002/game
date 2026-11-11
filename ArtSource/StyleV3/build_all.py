@@ -5,7 +5,7 @@ P=Path(__file__).resolve().parent
 core=runpy.run_path(str(P/'style_core.py'));core['V3_OUTPUT']=str(P)+'/'
 reports=[]
 for name,script,option in [('LilacV3','build_lilac_v3.py',None),('RiderV3','build_rider_v3.py','jacket'),('RiderTShirtV3','build_rider_v3.py','tshirt'),('FamilyFatherV3','build_family_v3.py','father'),('FamilyMotherV3','build_family_v3.py','mother')]:
-    if '--only' in sys.argv and name!=sys.argv[sys.argv.index('--only')+1]:continue
+    if '--only' in sys.argv and name not in sys.argv[sys.argv.index('--only')+1].split(','):continue
     # The authoring scripts expose one outfit/person constant. Write a reviewed local variant,
     # preserving the canonical sources and all user projects.
     source=(P/script).read_text()

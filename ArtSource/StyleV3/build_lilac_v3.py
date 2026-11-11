@@ -6,8 +6,27 @@ collection=bpy.data.collections.new('LILAC_V3');scene.collection.children.link(c
 mat=v3_material(NAME,P+NAME+'_atlas.png')
 
 # Exposed waist and collarbones; hidden skin faces under the knit are omitted.
-for label,levels in [('Bare waist',[(0,0,1.055,.164,.098),(0,0,1.10,.122,.078),(0,0,1.155,.127,.081)]),('Collarbones and neck base',[(0,0,1.425,.170,.079),(0,0,1.485,.171,.077),(0,0,1.515,.112,.064),(0,0,1.545,.054,.049)])]:
+for label,levels in [('Bare waist',[(0,0,1.055,.164,.098),(0,0,1.10,.122,.078),(0,0,1.155,.127,.081)])]:
     ob=v3_rings(collection,parts,label,levels,mat,'midriff' if label=='Bare waist' else 'skin',16,caps=False)
+
+# Continuous upper chest, deltoid sockets and upper arms beneath the dropped knit.
+shoulder_levels=[(1.425,.170,.079),(1.465,.183,.084),(1.495,.176,.080),(1.520,.145,.067),(1.545,.054,.049)]
+nskin=24;vv=[];ff=[]
+for z,rx,ry in shoulder_levels:
+    for k in range(nskin):a=2*pi*k/nskin;vv.append((rx*sin(a),-ry*cos(a),z))
+for j in range(4):
+    for k in range(nskin):
+        if 1<=j<3 and (4<=k<8 or 16<=k<20):continue
+        a=j*nskin+k;ff.append((a,j*nskin+(k+1)%nskin,(j+1)*nskin+(k+1)%nskin,a+nskin))
+for sign,lo,hi in [(1,4,8),(-1,16,20)]:
+    boundary=[nskin+k for k in range(lo,hi+1)]+[j*nskin+hi for j in (2,3)]+[3*nskin+k for k in range(hi-1,lo-1,-1)]+[2*nskin+lo]
+    order=[(math.atan2(vv[i][2]-1.493,-vv[i][1]),i) for i in boundary];order.sort();prev=[i for a,i in order];angles=[a for a,i in order]
+    for x,ry,rz in [(.210,.053,.055),(.242,.050,.052),(.275,.046,.048),(.305,.044,.046)]:
+        ring=[]
+        for a in angles:ring.append(len(vv));vv.append((sign*x,-ry*cos(a),1.495+rz*sin(a)))
+        for k in range(len(ring)):q=(k+1)%len(ring);ff.append((prev[k],prev[q],ring[q],ring[k]))
+        prev=ring
+shoulders=v3_mesh(collection,parts,'Connected shoulders and upper arms',vv,ff,mat,'skin');shoulders['kind']='shoulders'
 
 # Project the navel onto the front midriff; the back uses the clean skin swatch.
 waist=next(o for o in parts if o.name.startswith('Bare waist'))
@@ -30,7 +49,7 @@ for j in range(len(levels)-1):
 for sign,lo,hi in [(1,4,8),(-1,16,20)]:
     boundary=[3*(n+1)+k for k in range(lo,hi+1)]+[j*(n+1)+hi for j in range(4,6)]+[5*(n+1)+k for k in range(hi-1,lo-1,-1)]+[4*(n+1)+lo]
     ordered=[(math.atan2(vs[i][2]-1.3725,-vs[i][1]),i) for i in boundary];ordered.sort();prev=[i for a,i in ordered];angles=[a for a,i in ordered]
-    sleeve=[(.24,1.435,.061,.066),(.29,1.455,.058,.061),(.36,1.47,.056,.059),(.405,1.485,.060,.065),(.44,1.49,.066,.071),(.51,1.495,.081,.082),(.59,1.495,.096,.097),(.65,1.495,.102,.103)]
+    sleeve=[(.24,1.465,.061,.066),(.29,1.485,.058,.061),(.36,1.49,.056,.059),(.405,1.485,.060,.065),(.44,1.49,.066,.071),(.51,1.495,.081,.082),(.59,1.495,.096,.097),(.65,1.495,.102,.103)]
     for j,(x,z,ry,rz) in enumerate(sleeve):
         ring=[]
         for k,a in enumerate(angles):
@@ -126,6 +145,15 @@ for sign in [-1,1]:
 v3_ribbon(collection,parts,'Soft central fringe',[(-.033,-.093,1.925,.085),(-.016,-.121,1.882,.098),(-.004,-.143,1.827,.085),(-.016,-.151,1.77,.048),(-.031,-.15,1.728,0)],mat)
 v3_ribbon(collection,parts,'Asymmetric left fringe',[(-.080,-.083,1.903,.065),(-.098,-.12,1.855,.067),(-.093,-.145,1.792,.041),(-.073,-.149,1.751,0)],mat)
 v3_ribbon(collection,parts,'Asymmetric right fringe',[(.045,-.09,1.919,.075),(.073,-.12,1.87,.069),(.077,-.144,1.818,.050),(.048,-.153,1.771,0)],mat)
+
+# Shape the knit surface itself around the bust; no separate primitive volumes.
+for ob in parts:
+    if ob.name.startswith(('Connected floral','Off shoulder rib')):
+        for v in ob.data.vertices:
+            x,y,z=v.co
+            if y<0 and abs(x)<.182:
+                fullness=.038*exp(-((abs(x)-.069)/.052)**2-((z-1.355)/.074)**2)
+                v.co.y-=fullness*max(0,min(1,-y/.07))
 
 rig,spec=v3_skeleton(collection,NAME);v3_skin(parts,rig,spec)
 scene.frame_start=1;scene.frame_end=72;scene.render.fps=24

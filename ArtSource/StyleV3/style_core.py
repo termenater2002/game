@@ -2,7 +2,7 @@
 import bpy,bmesh,math,json
 from mathutils import Vector
 from math import sin,cos,pi,exp
-V3_RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pants':(128,256,256,512),'skin':(256,256,384,384),'midriff':(256,256,384,384),'shoe':(384,256,512,384),'trim':(256,384,384,512),'metal':(384,384,512,512),'shell':(0,0,256,128),'visor':(0,128,256,256)}
+V3_RECTS={'face':(0,0,256,256),'cloth':(256,0,512,256),'hair':(0,256,128,512),'pants':(128,256,256,512),'skin':(256,256,384,384),'midriff':(256,256,384,384),'shoe':(384,256,512,384),'trim':(256,384,384,512),'metal':(384,384,512,512),'rider_face':(256,256,384,384),'shell':(0,0,256,128),'visor':(0,128,256,256)}
 
 def v3_uv(role,u=.5,v=.5):
     if role in ('silver','gold','ruby','ivory'):
@@ -76,6 +76,8 @@ def v3_head(collection,parts,name,material,chin=1.59,height=.25,width=.12,neck_b
     vs=[];fs=[];n=32
     for t,rx,front,back in profile:
         z=chin+height*t
+        if age=='mother' and t>.68:
+            q=(t-.68)/.32;z+=.040*q*q*(3-2*q)
         if t<0:z=neck_base+(t+.24)/.24*(chin-neck_base)
         for k in range(n):
             a=2*pi*k/n;c=cos(a);x=rx*sin(a)
@@ -170,6 +172,8 @@ def v3_weight(p,ob):
         if z<.67:
             t=v3_smooth((z-.47)/.2);return {side+'LowerLeg':1-t,side+'UpperLeg':t}
         t=v3_smooth((z-.90)/.14);return {side+'UpperLeg':1-t,'Hips':t}
+    if kind=='shoulders':
+        t=v3_smooth((ax-.115)/.12);return {'UpperChest':1-t,side+'UpperArm':t}
     if kind=='arms' or (kind=='top' and ax>.205):
         if ax<.285:
             t=v3_smooth((ax-.17)/.115);return {'UpperChest':1-t,side+'UpperArm':t}
