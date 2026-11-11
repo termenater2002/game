@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody))]
 public class FunnyMovement : MonoBehaviour
@@ -9,6 +10,7 @@ public class FunnyMovement : MonoBehaviour
     [Min(.01f)] public float walkSpeed = 2f;
     [Min(.01f)] public float sprintSpeed = 5f;
     public bool matchAnimationSpeeds = true;
+    [Min(.1f)] public float speedMultiplier = 1f;
     [Range(.03f, .5f)] public float accelerationSeconds = .12f;
     [Range(.03f, .5f)] public float stoppingSeconds = .12f;
     public Transform groundCheck;
@@ -23,11 +25,14 @@ public class FunnyMovement : MonoBehaviour
     private PhysicsMaterial originalMaterial;
     private PhysicsMaterial locomotionMaterial;
     private readonly RaycastHit[] groundHits = new RaycastHit[16];
+    // A real supporting collision is valid even when its layer is not included
+    // in the optional predictive ray mask (the demo roads also use Default).
+    private readonly HashSet<Collider> supportingColliders = new HashSet<Collider>();
     private readonly JumpRequest jump = new JumpRequest();
     public bool IsGrounded { get; private set; }
     private PlayerAnimationDriver AnimationDriver => animationDriver != null ? animationDriver : (animationDriver = GetComponent<PlayerAnimationDriver>());
-    public float WalkSpeed => matchAnimationSpeeds && AnimationDriver != null ? AnimationDriver.walkReferenceSpeed : walkSpeed;
-    public float SprintSpeed => matchAnimationSpeeds && AnimationDriver != null ? AnimationDriver.runReferenceSpeed : sprintSpeed;
+    public float WalkSpeed => (matchAnimationSpeeds && AnimationDriver != null ? AnimationDriver.walkReferenceSpeed : walkSpeed) * Mathf.Max(.1f,speedMultiplier);
+    public float SprintSpeed => (matchAnimationSpeeds && AnimationDriver != null ? AnimationDriver.runReferenceSpeed : sprintSpeed) * Mathf.Max(.1f,speedMultiplier);
 
     private void Awake()
     {
@@ -44,6 +49,7 @@ public class FunnyMovement : MonoBehaviour
         }
         body.constraints |= RigidbodyConstraints.FreezeRotation;
         body.interpolation = RigidbodyInterpolation.Interpolate;
+        body.WakeUp();
         var alternative = GetComponent<PlayerMovement>();
         if (alternative != null && alternative.enabled)
         {
@@ -67,6 +73,16 @@ public class FunnyMovement : MonoBehaviour
         IsGrounded = ProbeGround();
         Vector3 direction = transform.right * movement.x + transform.forward * movement.y;
         Vector3 horizontal = Vector3.ProjectOnPlane(body.linearVelocity, Vector3.up);
+        // Once braking has finished, static friction holds a resting player on
+        // the road's slight slope. Movement and airborne wall contacts stay frictionless.
+        float restThreshold = capsule != null ? Mathf.Max(.002f,capsule.bounds.size.y*.03f) : .01f;
+        bool resting = IsGrounded && Mathf.Abs(body.linearVelocity.y)<.2f && direction.sqrMagnitude<.0001f && horizontal.sqrMagnitude<restThreshold*restThreshold;
+        if (locomotionMaterial != null)
+        {
+            float friction = resting ? .6f : 0f;
+            if (locomotionMaterial.staticFriction != friction) locomotionMaterial.staticFriction = friction;
+            if (locomotionMaterial.dynamicFriction != friction) locomotionMaterial.dynamicFriction = friction;
+        }
         float speed = Mathf.Min(Mathf.Max(.01f, maxSpeed), Mathf.Max(.01f, sprinting ? SprintSpeed : WalkSpeed));
         if (IsGrounded && body.linearVelocity.y <= .2f)
         {
@@ -103,7 +119,27 @@ public class FunnyMovement : MonoBehaviour
         var start = new Vector3(bounds.center.x, bounds.min.y + skin, bounds.center.z);
         int count = Physics.RaycastNonAlloc(start, Vector3.down, groundHits, skin * 2f, groundMask, QueryTriggerInteraction.Ignore);
         for (int i=0;i<count;i++) if (!groundHits[i].transform.IsChildOf(transform) && groundHits[i].normal.y>.5f) return true;
+        supportingColliders.RemoveWhere(c => c == null || !c.enabled || !c.gameObject.activeInHierarchy);
+        Vector3 foot = new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
+        float tolerance = skin + capsule.contactOffset;
+        foreach (var support in supportingColliders)
+            if (support.bounds.SqrDistance(foot) <= tolerance * tolerance) return true;
         return false;
+    }
+    private void OnCollisionEnter(Collision collision) { UpdateSupport(collision); }
+    private void OnCollisionStay(Collision collision) { UpdateSupport(collision); }
+    private void OnCollisionExit(Collision collision) { supportingColliders.Remove(collision.collider); }
+    private void UpdateSupport(Collision collision)
+    {
+        if (capsule == null) return;
+        bool supported = false;
+        for (int i=0;i<collision.contactCount;i++)
+        {
+            var contact = collision.GetContact(i);
+            if (contact.thisCollider == capsule && contact.normal.y > .5f) { supported = true; break; }
+        }
+        if (supported) supportingColliders.Add(collision.collider);
+        else supportingColliders.Remove(collision.collider);
     }
     private void OnDisable() { movement = Vector2.zero; jump.Clear(); }
     private void OnDestroy()

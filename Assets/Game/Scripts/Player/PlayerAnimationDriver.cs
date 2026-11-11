@@ -17,6 +17,7 @@ public class PlayerAnimationDriver : MonoBehaviour
     private Animator animator;
     private Rigidbody body;
     private CapsuleCollider capsule;
+    private FunnyMovement movement;
     private float airborneTime;
     private bool wasGrounded;
     private float holdingWeight;
@@ -36,7 +37,7 @@ public class PlayerAnimationDriver : MonoBehaviour
 
     private void Awake()
     {
-        animator = characterAnimator != null ? characterAnimator : GetComponent<Animator>(); body = GetComponent<Rigidbody>(); capsule = GetComponent<CapsuleCollider>();
+        animator = characterAnimator != null ? characterAnimator : GetComponent<Animator>(); body = GetComponent<Rigidbody>(); capsule = GetComponent<CapsuleCollider>(); movement = GetComponent<FunnyMovement>();
         if (grabber == null) grabber = GetComponentInChildren<ObjectGrabber>();
         previousYaw = transform.eulerAngles.y;
         if (animator == null) { Debug.LogError("Assign the visual Humanoid Animator.", this); enabled = false; return; }
@@ -69,7 +70,9 @@ public class PlayerAnimationDriver : MonoBehaviour
             airborneTime = 0f;
         }
         wasGrounded = Grounded;
-        var direction = Vector2.ClampMagnitude(new Vector2(LocalVelocity.x, LocalVelocity.z), runReferenceSpeed) * blendSpaceScale;
+        float gaitScale = movement != null ? Mathf.Max(.1f,movement.speedMultiplier) : 1f;
+        float gaitSpeed = speed / gaitScale;
+        var direction = Vector2.ClampMagnitude(new Vector2(LocalVelocity.x, LocalVelocity.z) / gaitScale, runReferenceSpeed) * blendSpaceScale;
         animator.SetFloat(X, direction.x, damping, Time.deltaTime); animator.SetFloat(Z, direction.y, damping, Time.deltaTime);
         animator.SetFloat(Speed, speed, damping, Time.deltaTime);
         animator.SetFloat(Vertical, body.linearVelocity.y); animator.SetBool(Ground, Grounded);
@@ -78,8 +81,8 @@ public class PlayerAnimationDriver : MonoBehaviour
         holdingWeight = Mathf.MoveTowards(holdingWeight, holding ? 1f : 0f, Time.deltaTime * 6f);
         // Backwards has only a walk clip. Match its cadence, without unbounded toy-scale strides.
         float reference = LocalVelocity.z < -.03f ? walkReferenceSpeed
-            : Mathf.Clamp(speed, walkReferenceSpeed, Mathf.Max(walkReferenceSpeed, runReferenceSpeed));
-        float rate = speed < .03f ? 1f : Mathf.Clamp(speed / Mathf.Max(.01f, reference), .4f, maximumPlaybackRate);
+            : Mathf.Clamp(gaitSpeed, walkReferenceSpeed, Mathf.Max(walkReferenceSpeed, runReferenceSpeed));
+        float rate = gaitSpeed < .03f ? 1f : Mathf.Clamp(gaitSpeed / Mathf.Max(.01f, reference), .4f, maximumPlaybackRate);
         animator.SetFloat(Rate, rate, damping, Time.deltaTime);
         float yaw = transform.eulerAngles.y;
         animator.SetFloat(Turn, Mathf.DeltaAngle(previousYaw, yaw) / Mathf.Max(.001f, Time.deltaTime), damping, Time.deltaTime); previousYaw = yaw;

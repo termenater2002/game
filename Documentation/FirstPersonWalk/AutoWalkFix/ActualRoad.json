@@ -1,0 +1,82 @@
+{
+  "road": {
+    "frame": 631,
+    "position": "(-0.815789, 0.058969, 1.165015)",
+    "velocity": "(0.000000, 0.000000, 0.000000)",
+    "speed": 0.0,
+    "IsGrounded": true,
+    "animationGrounded": true,
+    "groundMask": 64,
+    "storedInput": "(0.000, 0.000)",
+    "rawInput": [
+      0.0,
+      0.0
+    ],
+    "shift": false,
+    "focused": false,
+    "hits": [
+      {
+        "name": "road_straight (3)",
+        "layer": 0,
+        "layerName": "Default",
+        "distance": 0.0281244181,
+        "normal": "(-0.008, 1.000, -0.005)",
+        "selectedByGroundMask": false
+      },
+      {
+        "name": "road_straight (3)",
+        "layer": 0,
+        "layerName": "Default",
+        "distance": 0.0281244181,
+        "normal": "(-0.008, 1.000, -0.005)",
+        "selectedByGroundMask": false
+      }
+    ]
+  },
+  "startFrame": 613,
+  "lastFrame": 813,
+  "framesAdvanced": 200,
+  "stages": [
+    {
+      "stage": "Sprint",
+      "speed": 0.955562234,
+      "expected": 0.9574725,
+      "travel": 0.524962,
+      "playbackRate": 0.999646246,
+      "speedMultiplier": 2.0,
+      "IsGrounded": true,
+      "frame": 669
+    },
+    {
+      "stage": "ReleaseShift_WStillHeld",
+      "speed": 0.3810866,
+      "expected": 0.382989,
+      "travel": 0.227405041,
+      "playbackRate": 0.9970737,
+      "speedMultiplier": 2.0,
+      "IsGrounded": true,
+      "frame": 693
+    },
+    {
+      "stage": "ReleaseAllKeys",
+      "speed": 5.09729671E-06,
+      "expected": 0.0,
+      "travel": 0.009920738,
+      "playbackRate": 0.9999996,
+      "speedMultiplier": 2.0,
+      "IsGrounded": true,
+      "frame": 765
+    },
+    {
+      "stage": "RemainIdle",
+      "speed": 5.09729671E-06,
+      "expected": 0.0,
+      "travel": 1.932634E-05,
+      "playbackRate": 0.9999999,
+      "speedMultiplier": 2.0,
+      "IsGrounded": true,
+      "frame": 813
+    }
+  ],
+  "stopped": true
+}

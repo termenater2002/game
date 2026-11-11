@@ -83,6 +83,59 @@ public class FirstPersonGaitTests
         Assert.That(body.linearVelocity.z,Is.EqualTo(1f).Within(.01f),"Airborne external momentum must not receive ground braking.");
         Assert.That(body.linearVelocity.y,Is.EqualTo(-1f).Within(.01f));
     }
+    [UnityTest]public IEnumerator ReleasingSprintAndAllMovementStopsOnRoadOutsideTheProbeMask()
+    {
+        Create();motor.groundMask=1<<6; // The real road is on Default; the saved mask selects Ground.
+        yield return Drive(Vector2.zero,false,.25f);
+        yield return Drive(Vector2.up,true,.5f);
+        yield return Drive(Vector2.up,false,.3f);float afterShift=Vector3.ProjectOnPlane(body.linearVelocity,Vector3.up).magnitude;
+        yield return Drive(Vector2.zero,false,1f);
+        Assert.That(Vector3.ProjectOnPlane(body.linearVelocity,Vector3.up).magnitude,Is.LessThan(.01f),"No keys held: contact with a Default-layer road must brake the player.");
+        Assert.That(afterShift,Is.EqualTo(.2f).Within(.025f),"Releasing only Shift while holding W must return to a walk.");
+        Assert.That(motor.IsGrounded,Is.True,"Actual supporting contacts must work independently of the predictive ray mask.");
+    }
+    [UnityTest]public IEnumerator SleepingOnRoadStillAllowsJumpWithANarrowProbeMask()
+    {
+        Create();motor.groundMask=1<<6;yield return Drive(Vector2.zero,false,.3f);
+        body.Sleep();yield return new WaitForFixedUpdate();yield return new WaitForFixedUpdate();
+        var request=(JumpRequest)typeof(FunnyMovement).GetField("jump",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).GetValue(motor);
+        request.Queue(Time.time,.2f);motor.SendMessage("FixedUpdate");yield return new WaitForFixedUpdate();
+        Assert.That(body.linearVelocity.y,Is.GreaterThan(4f),"Sleeping bodies keep a valid supporting contact until it is exited.");
+    }
+    [UnityTest]public IEnumerator SideContactDoesNotCountAsSupportOrBrakeAnAirbornePlayer()
+    {
+        Create();motor.groundMask=1<<6;body.useGravity=false;body.position+=Vector3.up*2;
+        var wall=GameObject.CreatePrimitive(PrimitiveType.Cube);created.Add(wall);
+        wall.transform.position=new Vector3(1000.08f,2,1000);wall.transform.localScale=new Vector3(.1f,4,6);
+        Physics.SyncTransforms();body.linearVelocity=new Vector3(0,0,.3f);
+        yield return Drive(Vector2.zero,false,.4f);
+        Assert.That(motor.IsGrounded,Is.False,"A vertical wall must not enable ground braking.");
+        Assert.That(body.linearVelocity.z,Is.EqualTo(.3f).Within(.02f));
+    }
+    [UnityTest]public IEnumerator DoubleSpeedKeepsWalkAndSprintClipsAtNormalCadenceAndStillStops()
+    {
+        Create();motor.speedMultiplier=2;driver.maximumPlaybackRate=1;
+        yield return Drive(Vector2.up,false,.6f);
+        Assert.That(body.linearVelocity.z,Is.EqualTo(.4f).Within(.025f));
+        Assert.That(driver.CharacterAnimator.GetFloat("MoveZ"),Is.EqualTo(.16f).Within(.015f));
+        Assert.That(driver.CharacterAnimator.GetFloat("PlaybackRate"),Is.EqualTo(1f).Within(.1f));
+        yield return Drive(Vector2.up,true,.6f);
+        Assert.That(body.linearVelocity.z,Is.EqualTo(1f).Within(.025f));
+        Assert.That(driver.CharacterAnimator.GetFloat("MoveZ"),Is.EqualTo(.4f).Within(.015f));
+        Assert.That(driver.CharacterAnimator.GetFloat("PlaybackRate"),Is.EqualTo(1f).Within(.1f));
+        yield return Drive(Vector2.down,true,.6f);
+        Assert.That(driver.CharacterAnimator.GetFloat("PlaybackRate"),Is.LessThanOrEqualTo(1f));
+        yield return Drive(Vector2.zero,false,.5f);
+        Assert.That(Vector3.ProjectOnPlane(body.linearVelocity,Vector3.up).magnitude,Is.LessThan(.001f));
+    }
+    [UnityTest]public IEnumerator ReleasedPlayerDoesNotCreepDownASlightRoadSlope()
+    {
+        Create();motor.groundMask=1<<6;created[0].transform.rotation=Quaternion.Euler(2,0,0);Physics.SyncTransforms();
+        yield return Drive(Vector2.up,true,.5f);yield return Drive(Vector2.zero,false,.7f);
+        var stopped=body.position;yield return Drive(Vector2.zero,false,1f);
+        Assert.That(Vector3.ProjectOnPlane(body.linearVelocity,Vector3.up).magnitude,Is.LessThan(.0001f));
+        Assert.That(Vector3.Distance(stopped,body.position),Is.LessThan(.0005f),"No persistent slope drift with all keys released.");
+    }
     [UnityTest]public IEnumerator FPSActuallyDrawsTheAnimatedBodyWithoutHeadAndRestoresOtherCameras()
     {
         Create();yield return Drive(Vector2.zero,false,.3f);look.SetLookAngles(80,0);
