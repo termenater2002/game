@@ -27,12 +27,13 @@ public static class BuildLowPolyLook
             var n = Color.HSVToRGB(h, s, v);
             n = Color.Lerp(n, Hex("ADBCC1"), 0.055f); n.a = c.a; colors[i] = n;
         }
+        bool small = input.width <= 8;
         var result = new Texture2D(input.width, input.height, TextureFormat.RGBA32, false); result.SetPixels(colors); result.Apply();
         string p = Root + "/" + name + ".png"; File.WriteAllBytes(p, result.EncodeToPNG());
         UnityEngine.Object.DestroyImmediate(input); UnityEngine.Object.DestroyImmediate(result);
         AssetDatabase.ImportAsset(p, ImportAssetOptions.ForceSynchronousImport);
         var importer = (TextureImporter)AssetImporter.GetAtPath(p); importer.textureCompression = TextureImporterCompression.Uncompressed;
-        importer.mipmapEnabled = true; importer.filterMode = FilterMode.Bilinear; importer.wrapMode = TextureWrapMode.Clamp; importer.SaveAndReimport();
+        importer.mipmapEnabled = !small; importer.filterMode = small ? FilterMode.Point : FilterMode.Bilinear; importer.wrapMode = TextureWrapMode.Clamp; importer.SaveAndReimport();
         return AssetDatabase.LoadAssetAtPath<Texture2D>(p);
     }
     public static Material Matte(string name, string color, Texture texture = null)
@@ -40,12 +41,22 @@ public static class BuildLowPolyLook
         string p = Root + "/" + name + ".mat";
         var m = AssetDatabase.LoadAssetAtPath<Material>(p);
         if (m == null) { m = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(m, p); }
-        m.SetColor("_BaseColor", Hex(color)); m.SetTexture("_BaseMap", texture);
+        m.name = name; m.SetColor("_BaseColor", Hex(color)); m.SetTexture("_BaseMap", texture);
         m.SetFloat("_Smoothness", 0.08f); m.SetFloat("_Metallic", 0f); m.SetFloat("_SpecularHighlights", 0f); m.SetFloat("_EnvironmentReflections", 0f);
         m.EnableKeyword("_SPECULARHIGHLIGHTS_OFF"); m.EnableKeyword("_ENVIRONMENTREFLECTIONS_OFF");
         EditorUtility.SetDirty(m); return m;
     }
     static void Assign(Renderer r, Material m) { r.sharedMaterials = Enumerable.Repeat(m, r.sharedMaterials.Length).ToArray(); PrefabUtility.RecordPrefabInstancePropertyModifications(r); }
+    public static object PolishAssetNames()
+    {
+        foreach (var id in AssetDatabase.FindAssets("t:Material", new[] { Root })) {
+            var path = AssetDatabase.GUIDToAssetPath(id); var material = AssetDatabase.LoadAssetAtPath<Material>(path);
+            material.name = Path.GetFileNameWithoutExtension(path); EditorUtility.SetDirty(material);
+        }
+        var palette = (TextureImporter)AssetImporter.GetAtPath(Root + "/CharacterPalette.png");
+        palette.filterMode = FilterMode.Point; palette.mipmapEnabled = false; palette.SaveAndReimport();
+        AssetDatabase.SaveAssets(); return "Named authored materials; preserved discrete 6x6 character swatches with Point/no mipmaps.";
+    }
     static void Prop(Transform parent, string model, Vector3 position, float yaw, Material material, float scale = 1f)
     {
         if (parent.Find(model + " " + position.ToString()) != null) return;
