@@ -13,7 +13,25 @@
 
 `PlayerMovement` — сохранённая выключенная альтернатива для CharacterController.
 Взаимная проверка компонентов предотвращает параллельное управление.
-Риг, FBX-анимации и исходный AnimatorController сохранены; контроллер анимаций не заменялся.
+Риг и исходные FBX сохранены. В Visual & Animation Update существующий AnimatorController
+перестроен с сохранением GUID; его направляет отдельный PlayerAnimationDriver.
+
+## Визуальное представление
+
+`PlayerAnimationDriver` читает скорость Rigidbody, проверяет землю у капсулы и задаёт
+параметры 2D Blend Tree и переходов Jump/Fall/Landing. Humanoid IK корректирует
+стопы и добавляет реакцию рук на `ObjectGrabber.IsHolding`. Этот компонент не пишет
+в Rigidbody или transform корня. Root Motion выключен.
+
+`FirstPersonBodyVisibility` временно выключает рендереры только для FPS-камеры и
+восстанавливает их после рендера. Полное тело видно в Scene View и внешних камерах.
+`AnimationPreviewDriver` используется только отдельной сценой AnimationPreview:
+задаёт физическое движение демонстрационного тела, не участвует в SampleScene.
+
+Собственные материалы и варианты UV-палитр лежат в Art/LowPoly, оригиналы — в ThirdParty.
+Скрипты AgentScripts строят ресурсы через Editor API, но не попадают в runtime-сборку.
+Редакторская Foundation.Editor содержит только команды меню. Подробности —
+Documentation/PLAYER_ANIMATIONS.md и Documentation/LOW_POLY_STYLE.md.
 
 ## Захват
 
@@ -56,6 +74,6 @@ Canvas строится в Play Mode, поэтому сцена не завис�
 
 ## Границы
 
-Одна runtime-сборка `Foundation.Runtime`, две тестовые сборки. Нет DI-контейнера,
+Одна runtime-сборка `Foundation.Runtime`, редакторская `Foundation.Editor`, две тестовые сборки. Нет DI-контейнера,
 глобальной шины событий, сетевого слоя и системы сохранений. Новую механику следует
 добавлять отдельным компонентом только при появлении конкретной ответственности.

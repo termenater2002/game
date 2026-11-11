@@ -1,0 +1,1226 @@
+{
+  "asset-results": {
+    "status": "completed",
+    "duration": 0.29,
+    "summary": {
+      "total": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FoundationStateTests.EarningsAccumulateAndResetWithoutNegativeRewards",
+        "Status": "Passed",
+        "Duration": 0.010936,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.ExpiredJumpDoesNotTriggerOnLaterLanding",
+        "Status": "Passed",
+        "Duration": 0.0005317,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.ImpactPreservesOriginalThresholdAndMultiplier",
+        "Status": "Passed",
+        "Duration": 0.0007367,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(-10.0f)",
+        "Status": "Passed",
+        "Duration": 0.000947,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(0.0f)",
+        "Status": "Passed",
+        "Duration": 9.38e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(float.NaN)",
+        "Status": "Passed",
+        "Duration": 6.36e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(float.PositiveInfinity)",
+        "Status": "Passed",
+        "Duration": 6.24e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.JumpPressIsBufferedAndConsumedOnce",
+        "Status": "Passed",
+        "Duration": 0.0002967,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.OverkillPaysOnlyRemainingValue",
+        "Status": "Passed",
+        "Duration": 0.0010006,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.SmallHitsCannotFarmRoundingRewards",
+        "Status": "Passed",
+        "Duration": 0.0003155,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.AuthoredMaterialsAreMatteAndDoNotPointToErrorShader",
+        "Status": "Passed",
+        "Duration": 0.0339133,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.LocomotionHasEightValidMotionsAndAirStates",
+        "Status": "Passed",
+        "Duration": 0.0353889,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.PackKeepsOriginalAvatarAndBakesRootTransforms",
+        "Status": "Passed",
+        "Duration": 0.005868,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  },
+  "physics-results": {
+    "status": "completed",
+    "duration": 6.71,
+    "summary": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FoundationPhysicsTests.DamagePaysSessionOnceAndActuallyDestroysObject",
+        "Status": "Passed",
+        "Duration": 0.0679094,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.FallingDoesNotDisableHorizontalAcceleration",
+        "Status": "Passed",
+        "Duration": 0.0710533,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.GrabForceIsBoundedAndDestroyedBodyReleasesSafely",
+        "Status": "Passed",
+        "Duration": 0.2747298,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.OneQueuedJumpProducesOnePhysicsImpulse",
+        "Status": "Passed",
+        "Duration": 0.0663542,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.RealCollisionDamagesObjectAndPaysWallet",
+        "Status": "Passed",
+        "Duration": 0.8166382,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.ActualImpulsePassesThroughJumpFallLandingAndGroundedLocomotion",
+        "Status": "Passed",
+        "Duration": 2.5838775,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.FallingWithoutJumpDoesNotPlayTakeoff",
+        "Status": "Passed",
+        "Duration": 0.3330721,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.MeasuredVelocitySelectsForwardBackwardAndStrafeWithoutMovingTheRoot",
+        "Status": "Passed",
+        "Duration": 2.435113,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  },
+  "audit-native-forward": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.44807887,
+      0.09721649,
+      0.0137683954
+    ],
+    "velocity": [
+      -0.0237461962,
+      0.0,
+      0.464383066
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 0.00551413652,
+      "MoveZ": 0.301846951,
+      "Speed": 0.32489264,
+      "VerticalSpeed": 0.0,
+      "PlaybackRate": 1.39002025,
+      "TurnRate": -17.0110626,
+      "Grounded": true,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "weight": 0.408971071,
+        "isLooping": true
+      },
+      {
+        "name": "mixamo.com",
+        "weight": 0.591029,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.4279, 0.1323, 0.0305)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.4709, 0.1086, -0.0279)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.3885, 0.2499, 0.0013)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.4883, 0.2675, 0.1067)"
+      }
+    ],
+    "frame": 7361,
+    "time": 125.116013,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-native-back": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.46366024,
+      0.0972165,
+      0.139516652
+    ],
+    "velocity": [
+      0.238373592,
+      0.0,
+      -0.3993459
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 0.000362728024,
+      "MoveZ": -0.294209182,
+      "Speed": 0.315024763,
+      "VerticalSpeed": 0.0,
+      "PlaybackRate": 1.94676816,
+      "TurnRate": -2.29526472,
+      "Grounded": true,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "Backward Walk",
+        "weight": 1.0,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.3343, 0.1302, 0.3193)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.3365, 0.1087, 0.3937)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.2611, 0.2437, 0.3809)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.3828, 0.2372, 0.4063)"
+      }
+    ],
+    "frame": 7396,
+    "time": 125.832962,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-native-left": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.49355626,
+      0.0972165,
+      -0.019455092
+    ],
+    "velocity": [
+      -0.399346054,
+      -2.98023224e-07,
+      -0.2383736
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": -0.299651861,
+      "MoveZ": -0.00249154167,
+      "Speed": 0.317860246,
+      "VerticalSpeed": -2.98023224e-07,
+      "PlaybackRate": 1.519949,
+      "TurnRate": -0.001277931,
+      "Grounded": true,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "weight": 0.418117285,
+        "isLooping": true
+      },
+      {
+        "name": "mixamo.com",
+        "weight": 0.5818828,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.5234, 0.1502, -0.0208)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.5012, 0.1086, 0.0035)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.4648, 0.2345, -0.0778)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.4718, 0.2414, 0.0507)"
+      }
+    ],
+    "frame": 7433,
+    "time": 126.534279,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-native-right": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.36043358,
+      0.0972165,
+      -0.101936758
+    ],
+    "velocity": [
+      0.454251766,
+      0.0,
+      0.224821031
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 0.3041479,
+      "MoveZ": 0.0136115514,
+      "Speed": 0.341968864,
+      "VerticalSpeed": 0.0,
+      "PlaybackRate": 1.4181869,
+      "TurnRate": 49.73818,
+      "Grounded": true,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "weight": 0.399383783,
+        "isLooping": true
+      },
+      {
+        "name": "mixamo.com",
+        "weight": 0.6006163,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.4154, 0.1093, -0.0841)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.2977, 0.1223, -0.1657)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.2908, 0.2524, -0.1177)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.4562, 0.2525, -0.0751)"
+      }
+    ],
+    "frame": 7469,
+    "time": 127.302628,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-native-jump": {
+    "state": "Jump",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.51069164,
+      0.6766361,
+      -0.0369954072
+    ],
+    "velocity": [
+      8.00422451e-25,
+      2.43419981,
+      7.39696162e-08
+    ],
+    "Grounded": false,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 0.004858653,
+      "MoveZ": 0.00141291763,
+      "Speed": 0.0071190563,
+      "VerticalSpeed": 2.43419981,
+      "PlaybackRate": 1.00872946,
+      "TurnRate": 13.9079866,
+      "Grounded": false,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "Jump Takeoff",
+        "weight": 1.0,
+        "isLooping": false
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.4772, 0.6780, -0.0146)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.5285, 0.6740, -0.0511)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.5019, 0.7835, 0.0603)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.6037, 0.8014, 0.0166)"
+      }
+    ],
+    "frame": 7502,
+    "time": 127.9532,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-native-fall": {
+    "state": "Fall",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.51069164,
+      0.7133447,
+      -0.0369954072
+    ],
+    "velocity": [
+      8.00422451e-25,
+      -2.078398,
+      7.39696162e-08
+    ],
+    "Grounded": false,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 3.939536e-05,
+      "MoveZ": 1.1532e-05,
+      "Speed": 5.781232e-05,
+      "VerticalSpeed": -2.078398,
+      "PlaybackRate": 1.00007081,
+      "TurnRate": -18.90544,
+      "Grounded": false,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "Fall Pose",
+        "weight": 1.0,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.4842, 0.8624, -0.0211)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.5398, 0.7917, -0.0308)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.4375, 0.9950, 0.1073)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.6211, 1.0229, 0.0545)"
+      }
+    ],
+    "frame": 7524,
+    "time": 128.419144,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-native-landed": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.51069164,
+      0.09721647,
+      -0.0369954444
+    ],
+    "velocity": [
+      0.0,
+      -2.98023224e-07,
+      7.281953e-13
+    ],
+    "Grounded": true,
+    "LandingCount": 2,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 1.23703914e-09,
+      "MoveZ": -6.936886e-09,
+      "Speed": 1.31926123e-08,
+      "VerticalSpeed": -2.98023224e-07,
+      "PlaybackRate": 1.00000024,
+      "TurnRate": -25.5179749,
+      "Grounded": true,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "weight": 1.0,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.4751, 0.1085, -0.0292)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.5322, 0.1085, -0.0466)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.4556, 0.2459, -0.0262)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.5614, 0.2420, -0.0280)"
+      }
+    ],
+    "frame": 7575,
+    "time": 129.432861,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "grab-original": {
+    "success": true,
+    "holding": true,
+    "target": "Scrap Bin B",
+    "position": "(3.2226, 0.3942, -0.5870)",
+    "mass": 1.0,
+    "gravity": true,
+    "rayOrigin": "(3.24, 0.42, -1.23)",
+    "rayDirection": "(0.00, -0.28, 0.96)",
+    "mask": -1
+  },
+  "grab-held": {
+    "holding": true,
+    "target": "Scrap Bin B",
+    "position": "(3.2226, 0.3941, -0.5863)",
+    "mass": 1.0,
+    "gravity": true
+  },
+  "grab-released": {
+    "holding": false,
+    "target": null,
+    "position": null,
+    "mass": null,
+    "gravity": null
+  },
+  "audit-holding": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      3.242422,
+      0.09721652,
+      -1.28492332
+    ],
+    "velocity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 1.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 3.52008529e-18,
+      "MoveZ": 1.60695427e-15,
+      "Speed": 1.6087106e-15,
+      "VerticalSpeed": 0.0,
+      "PlaybackRate": 1.0,
+      "TurnRate": 0.0268008783,
+      "Grounded": true,
+      "Holding": true
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "path": "Assets/Game/Animations/Pack/idle.fbx",
+        "weight": 1.0,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(3.2071, 0.1086, -1.2762)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(3.2638, 0.1084, -1.2951)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(3.2050, 0.3337, -1.1815)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(3.2797, 0.3331, -1.1836)"
+      }
+    ],
+    "frame": 4326,
+    "time": 74.35849,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "economy-regression": {
+    "target": "Scrap Bin B",
+    "damage": 10.0,
+    "reward": 10.0,
+    "before": 6278.396,
+    "after": 6288.396,
+    "destructionReward": 3721.604,
+    "debris": "Impact Debris",
+    "debrisActive": true,
+    "finalBalance": 10010.0,
+    "hud": "$ 10,010.00",
+    "frame": 5071,
+    "time": 87.34879
+  },
+  "preview-evidence-final": [
+    {
+      "mode": 0,
+      "state": "Locomotion",
+      "time": 29.798275,
+      "frame": 1771,
+      "velocity": "(0.000, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 0.9647099
+        },
+        {
+          "path": "Assets/Game/Animations/Pack/walking.fbx",
+          "weight": 0.03529012
+        }
+      ]
+    },
+    {
+      "mode": 1,
+      "state": "Locomotion",
+      "time": 31.3652611,
+      "frame": 1862,
+      "velocity": "(0.000, 0.000, 0.682)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 0.153510928
+        },
+        {
+          "path": "Assets/Game/Animations/Pack/walking.fbx",
+          "weight": 0.8464891
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "state": "Locomotion",
+      "time": 32.9989624,
+      "frame": 1958,
+      "velocity": "(0.000, 0.000, 1.882)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/walking.fbx",
+          "weight": 0.112137035
+        },
+        {
+          "path": "Assets/Game/Animations/Pack/running.fbx",
+          "weight": 0.88786304
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "state": "Locomotion",
+      "time": 34.5653038,
+      "frame": 2049,
+      "velocity": "(0.000, 0.000, -0.682)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 0.185259938
+        },
+        {
+          "path": "Assets/Game/Animations/Backward Walk.anim",
+          "weight": 0.8147401
+        }
+      ]
+    },
+    {
+      "mode": 4,
+      "state": "Locomotion",
+      "time": 36.1322975,
+      "frame": 2140,
+      "velocity": "(-0.682, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 0.154722869
+        },
+        {
+          "path": "Assets/Game/Animations/Backward Walk.anim",
+          "weight": 0.004969277
+        },
+        {
+          "path": "Assets/Game/Animations/Pack/left strafe walking.fbx",
+          "weight": 0.8403078
+        }
+      ]
+    },
+    {
+      "mode": 5,
+      "state": "Locomotion",
+      "time": 37.7649841,
+      "frame": 2235,
+      "velocity": "(0.682, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 0.161527216
+        },
+        {
+          "path": "Assets/Game/Animations/Pack/right strafe walking.fbx",
+          "weight": 0.838472843
+        }
+      ]
+    },
+    {
+      "mode": 6,
+      "state": "Jump",
+      "time": 38.99843,
+      "frame": 2306,
+      "velocity": "(0.000, 2.630, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Jump Takeoff.anim",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "mode": 6,
+      "state": "Fall",
+      "time": 39.382267,
+      "frame": 2326,
+      "velocity": "(0.000, -1.294, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Fall Pose.anim",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "mode": 6,
+      "state": "Landing",
+      "time": 39.848,
+      "frame": 2352,
+      "velocity": "(0.000, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Landing.anim",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "mode": 6,
+      "state": "Locomotion",
+      "time": 39.9812737,
+      "frame": 2358,
+      "velocity": "(0.000, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 0.999995768
+        },
+        {
+          "path": "Assets/Game/Animations/Pack/right strafe walking.fbx",
+          "weight": 4.29153442e-06
+        }
+      ]
+    },
+    {
+      "mode": 7,
+      "state": "Fall",
+      "time": 40.5313873,
+      "frame": 2388,
+      "velocity": "(0.000, -0.981, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Fall Pose.anim",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "mode": 7,
+      "state": "Landing",
+      "time": 41.0814323,
+      "frame": 2418,
+      "velocity": "(0.000, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Landing.anim",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "mode": 7,
+      "state": "Locomotion",
+      "time": 41.31556,
+      "frame": 2429,
+      "velocity": "(0.000, 0.000, 0.000)",
+      "clips": [
+        {
+          "path": "Assets/Game/Animations/Pack/idle.fbx",
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "video-render-final": {
+    "directory": "/var/home/deck/Desktop/tests/visual-work/frames-final",
+    "count": 201,
+    "duration": 13.5331688,
+    "startFrame": {
+      "time": 0.1998825,
+      "frame": 2474,
+      "mode": 0
+    },
+    "endFrame": 3274
+  },
+  "frames-main-final": {
+    "state": "met",
+    "met": true,
+    "timedOut": false,
+    "member": "UnityEngine.Time.frameCount",
+    "op": "changed",
+    "value": 1659,
+    "initialValue": 1652,
+    "elapsedMs": 118,
+    "framesObserved": 2
+  },
+  "console-play-final": {
+    "entries": [],
+    "cursor": 12,
+    "session": "d993700e003241e489eff9a5d8bc8dde",
+    "returned": 0,
+    "dropped": false,
+    "reset": false,
+    "counts": {
+      "error": 0,
+      "warn": 1,
+      "log": 11
+    },
+    "groundTruth": {
+      "sampledUtc": "2026-11-11T12:48:28.187893Z",
+      "ageMs": 202,
+      "compilationFailed": false,
+      "compiling": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "consoleLogs": 0,
+      "seeded": true
+    }
+  },
+  "environment": {
+    "date": "2026-11-11",
+    "editor": "6000.6.8f1",
+    "sourceEditor": "6000.0.43f1",
+    "cli": "1.0.0-beta.17",
+    "pipeline": "0.10.0-exp.1"
+  },
+  "audit-final": {
+    "scene": "Assets/Game/Scenes/SampleScene.unity",
+    "sceneDirty": false,
+    "objectCount": 137,
+    "missingScripts": [],
+    "activeListeners": 1,
+    "invalidDynamicColliders": [],
+    "player": "Player",
+    "mass": 1.0,
+    "movement": {
+      "moveForce": 8.0,
+      "jumpForce": 4.2,
+      "maxSpeed": 5.0
+    },
+    "grab": {
+      "grabDistance": 1.0,
+      "grabForce": 10.0
+    },
+    "targets": [
+      {
+        "name": "Scrap Bin B",
+        "maxHP": 100.0,
+        "impactThreshold": 5.0,
+        "objectValue": 100.0,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Police Car - Standard",
+        "maxHP": 100.0,
+        "impactThreshold": 3.0,
+        "objectValue": 10000.0,
+        "brokenTemplate": "Debris Template (inactive)"
+      },
+      {
+        "name": "Scrap Bin A",
+        "maxHP": 100.0,
+        "impactThreshold": 5.0,
+        "objectValue": 100.0,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Police Car - High Value",
+        "maxHP": 100.0,
+        "impactThreshold": 3.0,
+        "objectValue": 100000.0,
+        "brokenTemplate": "Debris Template (inactive)"
+      }
+    ],
+    "prefabCount": 7,
+    "runtime": false,
+    "frame": 1,
+    "version": "6000.6.8f1"
+  },
+  "editor-final": {
+    "status": "ready",
+    "compiling": false,
+    "domainReloadInProgress": false,
+    "codeLoadCount": 10,
+    "autoRefresh": "enabled",
+    "playMode": "stopped",
+    "runInBackground": false,
+    "lastHeartbeat": "2026-11-11T12:48:44.730857Z",
+    "projectPath": "/var/home/deck/Desktop/tests/foundation-work/validation",
+    "unityVersion": "6000.6.8f1",
+    "role": "main",
+    "instanceName": "Main Editor"
+  },
+  "assetGuids": {
+    "original": 372,
+    "current": 468,
+    "missing": 0,
+    "duplicates": 0
+  },
+  "grab-final-original": {
+    "success": true,
+    "holding": true,
+    "target": "Scrap Bin A",
+    "position": "(4.2717, 0.1000, -0.2340)",
+    "mass": 1.0,
+    "gravity": true,
+    "rayOrigin": "(4.27, 0.42, -0.88)",
+    "rayDirection": "(0.00, -0.25, 0.97)",
+    "mask": -1
+  },
+  "grab-final-held": {
+    "holding": true,
+    "target": "Scrap Bin A",
+    "position": "(4.2717, 0.1001, -0.2339)",
+    "mass": 1.0,
+    "gravity": true
+  },
+  "audit-final-holding": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      4.27170324,
+      0.09721652,
+      -0.9339675
+    ],
+    "velocity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 1.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 2.85249264e-18,
+      "MoveZ": -5.453127e-16,
+      "Speed": 5.493864e-16,
+      "VerticalSpeed": 0.0,
+      "PlaybackRate": 1.0,
+      "TurnRate": 0.003641372,
+      "Grounded": true,
+      "Holding": true
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "path": "Assets/Game/Animations/Pack/idle.fbx",
+        "weight": 1.0,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(4.2362, 0.1087, -0.9253)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(4.2931, 0.1084, -0.9441)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(4.2343, 0.3337, -0.8312)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(4.3090, 0.3330, -0.8324)"
+      }
+    ],
+    "frame": 1180,
+    "time": 20.1002216,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "delivery-console": {
+    "entries": [],
+    "cursor": 13,
+    "session": "d993700e003241e489eff9a5d8bc8dde",
+    "returned": 0,
+    "dropped": false,
+    "reset": false,
+    "counts": {
+      "error": 0,
+      "warn": 1,
+      "log": 11
+    },
+    "groundTruth": {
+      "sampledUtc": "2026-11-11T12:50:09.329739Z",
+      "ageMs": 118,
+      "compilationFailed": false,
+      "compiling": false,
+      "consoleErrors": 2,
+      "consoleWarnings": 0,
+      "consoleLogs": 0,
+      "seeded": true
+    }
+  },
+  "delivery-editor": {
+    "status": "ready",
+    "compiling": false,
+    "domainReloadInProgress": false,
+    "codeLoadCount": 11,
+    "autoRefresh": "enabled",
+    "playMode": "stopped",
+    "runInBackground": false,
+    "lastHeartbeat": "2026-11-11T12:50:09.516804Z",
+    "projectPath": "/var/home/deck/Desktop/tests/foundation-work/validation",
+    "unityVersion": "6000.6.8f1",
+    "role": "main",
+    "instanceName": "Main Editor"
+  },
+  "native-console-content": [
+    "Failed to handle /api/exec request: Cannot access a disposed object.\nObject name: 'System.Net.HttpListenerResponse'.\nUnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__160:MoveNext () (at /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.pipeline@303cb578aa66/Runtime/Common/BasePipelineServer.cs:2618)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+    "Pipeline: unhandled error serving POST /api/exec: System.ObjectDisposedException: Cannot access a disposed object.\nObject name: 'System.Net.HttpListenerResponse'.\n  at System.Net.HttpListenerResponse.set_StatusCode (System.Int32 value) [0x00013] in <18c915719ace4f6baeb6733f1f3b1db2>:0 \n  at Unity.Pipeline.BasePipelineServer.SendExecResponse (System.Net.HttpListenerResponse response, System.Int32 statusCode, Unity.Pipeline.Models.BaseResponse body, System.String requestJson, System.Boolean verbose, System.Boolean omitNulls, Unity.Pipeline.Models.CommandExecutionRequest request) [0x00014] in /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.pipeline@303cb578aa66/Runtime/Common/BasePipelineServer.cs:2695 \n  at Unity.Pipeline.BasePipelineServer.HandleExecRequest (System.Net.HttpListenerRequest request, System.Net.HttpListenerResponse response) [0x018fe] in /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.pipeline@303cb578aa66/Runtime/Common/BasePipelineServer.cs:2619 \n  at Unity.Pipeline.BasePipelineServer.ProcessRequest (System.Net.HttpListenerContext context) [0x00678] in /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.pipeline@303cb578aa66/Runtime/Common/BasePipelineServer.cs:834 \nUnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<ProcessRequest>d__106:MoveNext () (at /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.pipeline@303cb578aa66/Runtime/Common/BasePipelineServer.cs:867)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__160:MoveNext () (at /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.pipeline@303cb578aa66/Runtime/Common/BasePipelineServer.cs:2619)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n"
+  ],
+  "delivery-console-clean": {
+    "entries": [],
+    "cursor": 13,
+    "session": "d993700e003241e489eff9a5d8bc8dde",
+    "returned": 0,
+    "dropped": false,
+    "reset": false,
+    "counts": {
+      "error": 0,
+      "warn": 0,
+      "log": 0
+    },
+    "groundTruth": {
+      "sampledUtc": "2026-11-11T12:52:14.289901Z",
+      "ageMs": 140,
+      "compilationFailed": false,
+      "compiling": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "consoleLogs": 0,
+      "seeded": true
+    }
+  },
+  "native-count-final": 0,
+  "audit-delivery-final": {
+    "scene": "Assets/Game/Scenes/SampleScene.unity",
+    "sceneDirty": false,
+    "objectCount": 137,
+    "missingScripts": [],
+    "activeListeners": 1,
+    "invalidDynamicColliders": [],
+    "player": "Player",
+    "mass": 1.0,
+    "movement": {
+      "moveForce": 8.0,
+      "jumpForce": 4.2,
+      "maxSpeed": 5.0
+    },
+    "grab": {
+      "grabDistance": 1.0,
+      "grabForce": 10.0
+    },
+    "targets": [
+      {
+        "name": "Scrap Bin A",
+        "maxHP": 100.0,
+        "impactThreshold": 5.0,
+        "objectValue": 100.0,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Police Car - Standard",
+        "maxHP": 100.0,
+        "impactThreshold": 3.0,
+        "objectValue": 10000.0,
+        "brokenTemplate": "Debris Template (inactive)"
+      },
+      {
+        "name": "Police Car - High Value",
+        "maxHP": 100.0,
+        "impactThreshold": 3.0,
+        "objectValue": 100000.0,
+        "brokenTemplate": "Debris Template (inactive)"
+      },
+      {
+        "name": "Scrap Bin B",
+        "maxHP": 100.0,
+        "impactThreshold": 5.0,
+        "objectValue": 100.0,
+        "brokenTemplate": null
+      }
+    ],
+    "prefabCount": 7,
+    "runtime": false,
+    "frame": 5,
+    "version": "6000.6.8f1"
+  }
+}
