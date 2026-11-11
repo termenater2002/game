@@ -21,7 +21,7 @@ public class PlayerAnimationPhysicsTests
 #if UNITY_EDITOR
         var floor = GameObject.CreatePrimitive(PrimitiveType.Cube); created.Add(floor);
         floor.transform.position = new Vector3(1000, -.1f, 1000); floor.transform.localScale = new Vector3(30, .2f, 30);
-        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/Rider/Rider.prefab");
+        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/RiderV2/RiderV2.prefab");
         actor = new GameObject("Rider Physics Test Actor"); created.Add(actor); actor.SetActive(false);
         actor.transform.position = new Vector3(1000, .025f, 1000); actor.transform.localScale = Vector3.one * .5f;
         var visual = Object.Instantiate(model,actor.transform,false);

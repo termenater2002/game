@@ -48,16 +48,28 @@ public class PlayerAnimationAssetTests
     }
     [Test] public void RiderHasAValidWeightedHumanoidAndLongLeggedSlimProportions()
     {
-        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/Rider/Rider.prefab");
+        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/RiderV2/RiderV2.prefab");
         Assert.That(prefab,Is.Not.Null);var animator=prefab.GetComponent<Animator>();
         Assert.That(animator.avatar.isValid&&animator.avatar.isHuman,Is.True);Assert.That(animator.applyRootMotion,Is.False);
         var skin=prefab.GetComponentInChildren<SkinnedMeshRenderer>();var mesh=skin.sharedMesh;
-        Assert.That(mesh.triangles.Length/3,Is.GreaterThan(2000));Assert.That(skin.bones.Length,Is.GreaterThanOrEqualTo(22));
+        Assert.That(mesh.triangles.Length/3,Is.InRange(2000,10000));Assert.That(skin.bones.Length,Is.GreaterThanOrEqualTo(22));
         Assert.That(mesh.boneWeights.All(w=>Mathf.Abs(w.weight0+w.weight1+w.weight2+w.weight3-1)<.0001f),Is.True);
-        var bones=prefab.GetComponentsInChildren<Transform>();float height=mesh.bounds.size.y;
+        var points=mesh.vertices.Select(v=>prefab.transform.InverseTransformPoint(skin.transform.TransformPoint(v))).ToArray();
+        var bones=prefab.GetComponentsInChildren<Transform>();float height=points.Max(p=>p.y)-points.Min(p=>p.y);
         float hipHeight=bones.Single(t=>t.name=="MD_Hips").position.y;
         float shoulderWidth=Vector3.Distance(bones.Single(t=>t.name=="MD_LeftUpperArm").position,bones.Single(t=>t.name=="MD_RightUpperArm").position);
         Assert.That(hipHeight/height,Is.InRange(.49f,.55f));Assert.That(shoulderWidth/height,Is.InRange(.17f,.22f));
         Assert.That(skin.sharedMaterials.All(m=>m!=null&&m.shader.name=="Universal Render Pipeline/Lit"),Is.True);
+        Assert.That(bones.Single(t=>t.name=="MD_LeftUpperArm").position.x,Is.LessThan(0),"Humanoid left must match the forward-facing mesh.");
+        Assert.That(bones.Single(t=>t.name=="MD_LeftToes").position.z,Is.GreaterThan(bones.Single(t=>t.name=="MD_LeftFoot").position.z));
+        // A wide hem that crosses the centre line must not attach to the opposite leg.
+        var triangles=mesh.triangles;var weights=mesh.boneWeights;
+        for(int i=0;i<triangles.Length;i+=3)
+        {
+            var indices=triangles.Skip(i).Take(3).ToArray();
+            if(!indices.All(k=>points[k].y<height*.2f))continue;
+            var names=indices.Select(k=>skin.bones[weights[k].boneIndex0].name).ToArray();
+            Assert.That(names.Any(n=>n.Contains("Left"))&&names.Any(n=>n.Contains("Right")),Is.False,"A lower trouser / shoe triangle spans both leg weights.");
+        }
     }
 }
