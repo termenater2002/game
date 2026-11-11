@@ -20,6 +20,9 @@ public class FunnyMovement : MonoBehaviour
     private Rigidbody body;
     private Vector2 movement;
     private bool sprinting;
+    [SerializeField, Tooltip("Use walking for story sequences; normal gameplay runs without Shift.")]
+    private bool storyWalking;
+    public bool StoryWalking => storyWalking;
     private PlayerAnimationDriver animationDriver;
     private CapsuleCollider capsule;
     private PhysicsMaterial originalMaterial;
@@ -65,7 +68,7 @@ public class FunnyMovement : MonoBehaviour
             jump.Clear();
             return;
         }
-        SetMoveInput(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")), Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
+        SetMoveInput(new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")));
         if (Input.GetButtonDown("Jump")) jump.Queue(Time.time, jumpBufferSeconds);
     }
     private void FixedUpdate()
@@ -104,7 +107,9 @@ public class FunnyMovement : MonoBehaviour
         if (jump.TryConsume(IsGrounded && body.linearVelocity.y <= 0.1f, Time.time))
             body.AddForce(Vector3.up * Mathf.Max(0f, jumpForce), ForceMode.Impulse);
     }
-    public void SetMoveInput(Vector2 input, bool sprint = false)
+    public void SetStoryWalking(bool walking) { storyWalking = walking; }
+    public void SetMoveInput(Vector2 input) { SetMoveInput(input, !storyWalking); }
+    public void SetMoveInput(Vector2 input, bool sprint)
     {
         movement = Vector2.ClampMagnitude(input, 1f); sprinting = sprint;
     }
