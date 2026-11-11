@@ -1,0 +1,1415 @@
+{
+  "rider-mesh-refresh": {
+    "isValid": true,
+    "isHuman": true,
+    "bones": 22,
+    "vertices": 4716,
+    "triangles": 2536,
+    "height": 3.42825,
+    "humanScale": 1.89528167,
+    "prefab": "Assets/Game/Characters/Rider/Rider.prefab"
+  },
+  "root-regression-edit-results": {
+    "status": "completed",
+    "duration": 0.15,
+    "summary": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FoundationStateTests.EarningsAccumulateAndResetWithoutNegativeRewards",
+        "Status": "Passed",
+        "Duration": 0.010235,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.ExpiredJumpDoesNotTriggerOnLaterLanding",
+        "Status": "Passed",
+        "Duration": 0.0003454,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.ImpactPreservesOriginalThresholdAndMultiplier",
+        "Status": "Passed",
+        "Duration": 0.0005784,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(-10.0f)",
+        "Status": "Passed",
+        "Duration": 0.0006177,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(0.0f)",
+        "Status": "Passed",
+        "Duration": 3.39e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(float.NaN)",
+        "Status": "Passed",
+        "Duration": 2.88e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.InvalidDamageDoesNotChangeHealth(float.PositiveInfinity)",
+        "Status": "Passed",
+        "Duration": 3.22e-05,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.JumpPressIsBufferedAndConsumedOnce",
+        "Status": "Passed",
+        "Duration": 0.0002697,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.OverkillPaysOnlyRemainingValue",
+        "Status": "Passed",
+        "Duration": 0.0009105,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationStateTests.SmallHitsCannotFarmRoundingRewards",
+        "Status": "Passed",
+        "Duration": 0.0002785,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.AuthoredMaterialsAreMatteAndDoNotPointToErrorShader",
+        "Status": "Passed",
+        "Duration": 0.0247579,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.LocomotionHasEightValidMotionsAndAirStates",
+        "Status": "Passed",
+        "Duration": 0.0303251,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.PackKeepsOriginalAvatarAndExtractsLocomotionRootTranslation",
+        "Status": "Passed",
+        "Duration": 0.0050115,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationAssetTests.RiderHasAValidWeightedHumanoidAndLongLeggedSlimProportions",
+        "Status": "Passed",
+        "Duration": 0.0081888,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  },
+  "root-final-test-state": {
+    "status": "completed",
+    "duration": 12.41,
+    "summary": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "results": [
+      {
+        "FullName": "FoundationPhysicsTests.DamagePaysSessionOnceAndActuallyDestroysObject",
+        "Status": "Passed",
+        "Duration": 0.0675367,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.FallingDoesNotDisableHorizontalAcceleration",
+        "Status": "Passed",
+        "Duration": 0.0619506,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.GrabForceIsBoundedAndDestroyedBodyReleasesSafely",
+        "Status": "Passed",
+        "Duration": 0.2664157,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.OneQueuedJumpProducesOnePhysicsImpulse",
+        "Status": "Passed",
+        "Duration": 0.0833319,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "FoundationPhysicsTests.RealCollisionDamagesObjectAndPaysWallet",
+        "Status": "Passed",
+        "Duration": 0.8160278,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.ActualImpulsePassesThroughJumpFallLandingAndGroundedLocomotion",
+        "Status": "Passed",
+        "Duration": 2.5993568,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.BackwardLoopsAndDirectionChangesKeepBodyAtRigidbody",
+        "Status": "Passed",
+        "Duration": 5.468522,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.FallingWithoutJumpDoesNotPlayTakeoff",
+        "Status": "Passed",
+        "Duration": 0.3318197,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.FPSKeepsShadowPassAndSideViewRestoresTheOriginalCamera",
+        "Status": "Passed",
+        "Duration": 0.2058651,
+        "Message": null,
+        "StackTrace": null
+      },
+      {
+        "FullName": "PlayerAnimationPhysicsTests.MeasuredVelocitySelectsForwardBackwardAndStrafeWithoutMovingTheRoot",
+        "Status": "Passed",
+        "Duration": 2.4443662,
+        "Message": null,
+        "StackTrace": null
+      }
+    ]
+  },
+  "audit-root-before": [
+    {
+      "path": "Assets/Game/Animations/Pack/walking.fbx",
+      "loopBlendPositionXZ": true,
+      "keepOriginalPositionXZ": true,
+      "maximumHipOffset": 0.2850806,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": 0.003540039,
+          "z": 0.0125732422
+        },
+        {
+          "u": 0.01,
+          "x": 0.002319336,
+          "z": 0.0121459961
+        },
+        {
+          "u": 0.1,
+          "x": 0.00146484375,
+          "z": 0.01586914
+        },
+        {
+          "u": 0.25,
+          "x": 0.0433959961,
+          "z": 0.021484375
+        },
+        {
+          "u": 0.5,
+          "x": -0.08544922,
+          "z": 0.0298461914
+        },
+        {
+          "u": 0.75,
+          "x": -0.276428223,
+          "z": 0.06970215
+        },
+        {
+          "u": 0.99,
+          "x": -0.008300781,
+          "z": 0.0159912109
+        },
+        {
+          "u": 1.01,
+          "x": 0.002319336,
+          "z": 0.0121459961
+        },
+        {
+          "u": 1.5,
+          "x": -0.08544922,
+          "z": 0.0298461914
+        },
+        {
+          "u": 1.99,
+          "x": -0.008300781,
+          "z": 0.0159912109
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Animations/Backward Walk.anim",
+      "loopBlendPositionXZ": true,
+      "keepOriginalPositionXZ": true,
+      "maximumHipOffset": 3.06535387,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": 0.003540039,
+          "z": 3.02844238
+        },
+        {
+          "u": 0.01,
+          "x": 0.00604248047,
+          "z": 3.03192139
+        },
+        {
+          "u": 0.1,
+          "x": 0.044921875,
+          "z": 3.05322266
+        },
+        {
+          "u": 0.25,
+          "x": 0.07678223,
+          "z": 3.064392
+        },
+        {
+          "u": 0.5,
+          "x": -0.06439209,
+          "z": 3.03955078
+        },
+        {
+          "u": 0.75,
+          "x": -0.327514648,
+          "z": 3.01422119
+        },
+        {
+          "u": 0.99,
+          "x": -0.01763916,
+          "z": 3.02801514
+        },
+        {
+          "u": 1.01,
+          "x": 0.00604248047,
+          "z": 3.03192139
+        },
+        {
+          "u": 1.5,
+          "x": -0.06439209,
+          "z": 3.03955078
+        },
+        {
+          "u": 1.99,
+          "x": -0.01763916,
+          "z": 3.02801514
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Animations/Pack/running.fbx",
+      "loopBlendPositionXZ": true,
+      "keepOriginalPositionXZ": true,
+      "maximumHipOffset": 1.74095356,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": -0.0161743164,
+          "z": 0.0319213867
+        },
+        {
+          "u": 0.01,
+          "x": -0.0158081055,
+          "z": 0.030456543
+        },
+        {
+          "u": 0.1,
+          "x": 0.09625244,
+          "z": 0.0124511719
+        },
+        {
+          "u": 0.25,
+          "x": 0.4642334,
+          "z": 0.109985352
+        },
+        {
+          "u": 0.5,
+          "x": -0.0474243164,
+          "z": 0.0437011719
+        },
+        {
+          "u": 0.75,
+          "x": -1.68676758,
+          "z": 0.430969238
+        },
+        {
+          "u": 0.99,
+          "x": -0.171508789,
+          "z": 0.0310668945
+        },
+        {
+          "u": 1.01,
+          "x": -0.0158081055,
+          "z": 0.030456543
+        },
+        {
+          "u": 1.5,
+          "x": -0.0474243164,
+          "z": 0.0437011719
+        },
+        {
+          "u": 1.99,
+          "x": -0.171508789,
+          "z": 0.0310668945
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Animations/Pack/left strafe walking.fbx",
+      "loopBlendPositionXZ": true,
+      "keepOriginalPositionXZ": true,
+      "maximumHipOffset": 0.207189143,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": -0.0261230469,
+          "z": 0.02520752
+        },
+        {
+          "u": 0.01,
+          "x": -0.0241088867,
+          "z": 0.0270385742
+        },
+        {
+          "u": 0.1,
+          "x": -0.0160522461,
+          "z": 0.0499267578
+        },
+        {
+          "u": 0.25,
+          "x": -0.00646972656,
+          "z": 0.09289551
+        },
+        {
+          "u": 0.5,
+          "x": -0.0197143555,
+          "z": 0.053527832
+        },
+        {
+          "u": 0.75,
+          "x": -0.0490722656,
+          "z": 0.201293945
+        },
+        {
+          "u": 0.99,
+          "x": -0.02758789,
+          "z": 0.013671875
+        },
+        {
+          "u": 1.01,
+          "x": -0.0241088867,
+          "z": 0.0270385742
+        },
+        {
+          "u": 1.5,
+          "x": -0.0197143555,
+          "z": 0.053527832
+        },
+        {
+          "u": 1.99,
+          "x": -0.02758789,
+          "z": 0.013671875
+        }
+      ]
+    }
+  ],
+  "audit-root-after": [
+    {
+      "path": "Assets/Game/Animations/Pack/walking.fbx",
+      "loopBlendPositionXZ": false,
+      "keepOriginalPositionXZ": false,
+      "maximumHipOffset": 0.09906036,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": 0.00244140625,
+          "z": -0.08538818
+        },
+        {
+          "u": 0.01,
+          "x": 0.00256347656,
+          "z": -0.08642578
+        },
+        {
+          "u": 0.1,
+          "x": 0.000244140625,
+          "z": -0.09906006
+        },
+        {
+          "u": 0.25,
+          "x": 0.00537109375,
+          "z": -0.0618286133
+        },
+        {
+          "u": 0.5,
+          "x": -0.010559082,
+          "z": -0.06616211
+        },
+        {
+          "u": 0.75,
+          "x": -0.0147705078,
+          "z": -0.05529785
+        },
+        {
+          "u": 0.99,
+          "x": 0.002319336,
+          "z": -0.0836181641
+        },
+        {
+          "u": 1.01,
+          "x": 0.00256347656,
+          "z": -0.08642578
+        },
+        {
+          "u": 1.5,
+          "x": -0.010559082,
+          "z": -0.06616211
+        },
+        {
+          "u": 1.99,
+          "x": 0.002319336,
+          "z": -0.0836181641
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Animations/Backward Walk.anim",
+      "loopBlendPositionXZ": false,
+      "keepOriginalPositionXZ": false,
+      "maximumHipOffset": 0.0864637941,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": 0.00244140625,
+          "z": -0.08538818
+        },
+        {
+          "u": 0.01,
+          "x": 0.002319336,
+          "z": -0.0836181641
+        },
+        {
+          "u": 0.1,
+          "x": 0.000305175781,
+          "z": -0.06317139
+        },
+        {
+          "u": 0.25,
+          "x": -0.0149536133,
+          "z": -0.0546264648
+        },
+        {
+          "u": 0.5,
+          "x": -0.0103149414,
+          "z": -0.0657959
+        },
+        {
+          "u": 0.75,
+          "x": 0.00561523438,
+          "z": -0.06109619
+        },
+        {
+          "u": 0.99,
+          "x": 0.00256347656,
+          "z": -0.08642578
+        },
+        {
+          "u": 1.01,
+          "x": 0.002319336,
+          "z": -0.0836181641
+        },
+        {
+          "u": 1.5,
+          "x": -0.0103149414,
+          "z": -0.0657959
+        },
+        {
+          "u": 1.99,
+          "x": 0.00256347656,
+          "z": -0.08642578
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Animations/Pack/running.fbx",
+      "loopBlendPositionXZ": false,
+      "keepOriginalPositionXZ": false,
+      "maximumHipOffset": 0.163575351,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": -0.00189208984,
+          "z": -0.152771
+        },
+        {
+          "u": 0.01,
+          "x": -0.0008544922,
+          "z": -0.15057373
+        },
+        {
+          "u": 0.1,
+          "x": 0.00341796875,
+          "z": -0.1461792
+        },
+        {
+          "u": 0.25,
+          "x": -0.00146484375,
+          "z": -0.110717773
+        },
+        {
+          "u": 0.5,
+          "x": 0.000610351563,
+          "z": -0.163574219
+        },
+        {
+          "u": 0.75,
+          "x": -0.007507324,
+          "z": -0.104492188
+        },
+        {
+          "u": 0.99,
+          "x": -0.00415039063,
+          "z": -0.147949219
+        },
+        {
+          "u": 1.01,
+          "x": -0.0008544922,
+          "z": -0.15057373
+        },
+        {
+          "u": 1.5,
+          "x": 0.000610351563,
+          "z": -0.163574219
+        },
+        {
+          "u": 1.99,
+          "x": -0.00415039063,
+          "z": -0.147949219
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Animations/Pack/left strafe walking.fbx",
+      "loopBlendPositionXZ": false,
+      "keepOriginalPositionXZ": false,
+      "maximumHipOffset": 0.141037986,
+      "samples": [
+        {
+          "u": 0.0,
+          "x": 0.110839844,
+          "z": -0.05645752
+        },
+        {
+          "u": 0.01,
+          "x": 0.11328125,
+          "z": -0.0560302734
+        },
+        {
+          "u": 0.1,
+          "x": 0.131835938,
+          "z": -0.0501098633
+        },
+        {
+          "u": 0.25,
+          "x": 0.110473633,
+          "z": -0.0441894531
+        },
+        {
+          "u": 0.5,
+          "x": 0.09185791,
+          "z": -0.06866455
+        },
+        {
+          "u": 0.75,
+          "x": 0.08666992,
+          "z": -0.05291748
+        },
+        {
+          "u": 0.99,
+          "x": 0.107299805,
+          "z": -0.0560302734
+        },
+        {
+          "u": 1.01,
+          "x": 0.11328125,
+          "z": -0.0560302734
+        },
+        {
+          "u": 1.5,
+          "x": 0.09185791,
+          "z": -0.06866455
+        },
+        {
+          "u": 1.99,
+          "x": 0.107299805,
+          "z": -0.0560302734
+        }
+      ]
+    }
+  ],
+  "audit-side-on-final": {
+    "playing": true,
+    "model": "RiderVisual",
+    "avatar": "Rider Humanoid Avatar",
+    "isHuman": true,
+    "isValid": true,
+    "applyRootMotion": false,
+    "mesh": "Rider Faceted Skinned Geometry",
+    "sideActive": true,
+    "firstPersonEnabled": false,
+    "sideEnabled": true,
+    "shadows": [
+      {
+        "name": "Rider Skinned Geometry",
+        "mode": "On",
+        "forceRenderingOff": false,
+        "enabled": true
+      }
+    ],
+    "mass": 1.0,
+    "useGravity": true,
+    "position": "(2.4500, 0.0972, -0.0420)",
+    "velocity": "(0.0000, 0.0000, 0.0000)",
+    "frame": 89,
+    "time": 1.90585351,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-side-movement-final": {
+    "state": "Locomotion",
+    "next": null,
+    "transition": false,
+    "position": [
+      2.35484838,
+      0.09721649,
+      -0.0513803
+    ],
+    "velocity": [
+      -0.7448168,
+      0.0,
+      0.6236127
+    ],
+    "Grounded": true,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 0.0140371295,
+      "MoveZ": 0.3899455,
+      "Speed": 0.7887247,
+      "VerticalSpeed": 0.0,
+      "PlaybackRate": 1.77011657,
+      "TurnRate": -23.8105335,
+      "Grounded": true,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "mixamo.com",
+        "path": "Assets/Game/Animations/Pack/walking.fbx",
+        "weight": 0.04189372,
+        "isLooping": true
+      },
+      {
+        "name": "mixamo.com",
+        "path": "Assets/Game/Animations/Pack/running.fbx",
+        "weight": 0.9581063,
+        "isLooping": true
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(2.3193, 0.1190, 0.0038)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(2.4698, 0.1241, -0.0611)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(2.3800, 0.2706, -0.0813)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(2.3280, 0.2905, 0.0433)"
+      }
+    ],
+    "frame": 3617,
+    "time": 61.3021965,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-side-jump-final": {
+    "state": "Jump",
+    "next": null,
+    "transition": false,
+    "position": [
+      1.81234574,
+      0.886336446,
+      0.3770491
+    ],
+    "velocity": [
+      -1.0374862,
+      1.2570014,
+      0.8133244
+    ],
+    "Grounded": false,
+    "LandingCount": 1,
+    "HoldingWeight": 0.0,
+    "applyRootMotion": false,
+    "isHuman": true,
+    "parameters": {
+      "MoveX": 0.00421600044,
+      "MoveZ": 0.399917543,
+      "Speed": 1.31692183,
+      "VerticalSpeed": 1.2570014,
+      "PlaybackRate": 2.49557376,
+      "TurnRate": -0.144395933,
+      "Grounded": false,
+      "Holding": false
+    },
+    "clips": [
+      {
+        "name": "Jump Takeoff",
+        "path": "Assets/Game/Animations/Jump Takeoff.anim",
+        "weight": 1.0,
+        "isLooping": false
+      }
+    ],
+    "bones": [
+      {
+        "bone": "LeftFoot",
+        "position": "(1.7665, 0.9782, 0.3550)"
+      },
+      {
+        "bone": "RightFoot",
+        "position": "(1.8400, 0.9157, 0.3951)"
+      },
+      {
+        "bone": "LeftHand",
+        "position": "(1.7077, 1.1164, 0.3674)"
+      },
+      {
+        "bone": "RightHand",
+        "position": "(1.7881, 1.1549, 0.4607)"
+      }
+    ],
+    "frame": 3639,
+    "time": 61.85251,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-side-off-final": {
+    "playing": true,
+    "model": "RiderVisual",
+    "avatar": "Rider Humanoid Avatar",
+    "isHuman": true,
+    "isValid": true,
+    "applyRootMotion": false,
+    "mesh": "Rider Faceted Skinned Geometry",
+    "sideActive": false,
+    "firstPersonEnabled": true,
+    "sideEnabled": false,
+    "shadows": [
+      {
+        "name": "Rider Skinned Geometry",
+        "mode": "On",
+        "forceRenderingOff": false,
+        "enabled": true
+      }
+    ],
+    "mass": 1.0,
+    "useGravity": true,
+    "position": "(1.1501, 0.0972, 0.8962)",
+    "velocity": "(0.0000, 0.0000, 0.0000)",
+    "frame": 3682,
+    "time": 62.6860771,
+    "focused": true,
+    "cursor": "Locked"
+  },
+  "audit-backward-live-fixed": {
+    "maximumLocalHipOffset": 0.319919229,
+    "largestLocalStep": 0.08444646,
+    "worldScale": 0.100000009,
+    "applyRootMotion": false,
+    "samples": [
+      {
+        "frame": 4590,
+        "time": 77.62124,
+        "localHipX": -0.01391747,
+        "localHipZ": -0.08200607,
+        "localVelocityZ": -0.6341998,
+        "physicalPosition": "(2.5454, 0.0972, -0.0767)"
+      },
+      {
+        "frame": 4591,
+        "time": 77.63867,
+        "localHipX": -0.0131522287,
+        "localHipZ": -0.07507754,
+        "localVelocityZ": -0.6341998,
+        "physicalPosition": "(2.5454, 0.0972, -0.0767)"
+      },
+      {
+        "frame": 4592,
+        "time": 77.65542,
+        "localHipX": -0.0110575277,
+        "localHipZ": -0.06747231,
+        "localVelocityZ": -0.6764798,
+        "physicalPosition": "(2.5581, 0.0972, -0.0813)"
+      },
+      {
+        "frame": 4593,
+        "time": 77.67199,
+        "localHipX": -0.0100190658,
+        "localHipZ": -0.06250455,
+        "localVelocityZ": -0.718759656,
+        "physicalPosition": "(2.5716, 0.0972, -0.0862)"
+      },
+      {
+        "frame": 4595,
+        "time": 77.70498,
+        "localHipX": -0.00506402459,
+        "localHipZ": -0.0499788672,
+        "localVelocityZ": -0.8033196,
+        "physicalPosition": "(2.6010, 0.0972, -0.0970)"
+      },
+      {
+        "frame": 4596,
+        "time": 77.72129,
+        "localHipX": -6.02274667e-05,
+        "localHipZ": -0.0426366925,
+        "localVelocityZ": -0.8455996,
+        "physicalPosition": "(2.6169, 0.0972, -0.1027)"
+      },
+      {
+        "frame": 4597,
+        "time": 77.7388,
+        "localHipX": 0.00387416966,
+        "localHipZ": -0.04000713,
+        "localVelocityZ": -0.8455996,
+        "physicalPosition": "(2.6169, 0.0972, -0.1027)"
+      },
+      {
+        "frame": 4598,
+        "time": 77.7553558,
+        "localHipX": 0.006481535,
+        "localHipZ": -0.0447845832,
+        "localVelocityZ": -0.8878796,
+        "physicalPosition": "(2.6336, 0.0972, -0.1088)"
+      },
+      {
+        "frame": 4599,
+        "time": 77.7720947,
+        "localHipX": 0.00551446574,
+        "localHipZ": -0.06248085,
+        "localVelocityZ": -0.930159569,
+        "physicalPosition": "(2.6510, 0.0972, -0.1152)"
+      },
+      {
+        "frame": 4601,
+        "time": 77.80505,
+        "localHipX": 0.002491544,
+        "localHipZ": -0.09946469,
+        "localVelocityZ": -0.746187449,
+        "physicalPosition": "(2.6831, 0.0977, -0.1276)"
+      },
+      {
+        "frame": 4602,
+        "time": 77.82206,
+        "localHipX": 0.0006937771,
+        "localHipZ": -0.102158926,
+        "localVelocityZ": -0.649858654,
+        "physicalPosition": "(2.6950, 0.0990, -0.1330)"
+      },
+      {
+        "frame": 4603,
+        "time": 77.83859,
+        "localHipX": 0.002713236,
+        "localHipZ": -0.149628118,
+        "localVelocityZ": -0.649858654,
+        "physicalPosition": "(2.6950, 0.0990, -0.1330)"
+      },
+      {
+        "frame": 4604,
+        "time": 77.85473,
+        "localHipX": 0.00892071053,
+        "localHipZ": -0.192754149,
+        "localVelocityZ": -0.7300194,
+        "physicalPosition": "(2.7084, 0.0985, -0.1388)"
+      },
+      {
+        "frame": 4605,
+        "time": 77.87284,
+        "localHipX": 0.0172983762,
+        "localHipZ": -0.235643461,
+        "localVelocityZ": -0.791605532,
+        "physicalPosition": "(2.7230, 0.0975, -0.1451)"
+      },
+      {
+        "frame": 4607,
+        "time": 77.90545,
+        "localHipX": 0.036895372,
+        "localHipZ": -0.317784578,
+        "localVelocityZ": -0.845702052,
+        "physicalPosition": "(2.7536, 0.0972, -0.1576)"
+      },
+      {
+        "frame": 4609,
+        "time": 77.93888,
+        "localHipX": 0.05204805,
+        "localHipZ": -0.298769,
+        "localVelocityZ": -0.8870173,
+        "physicalPosition": "(2.7701, 0.0972, -0.1642)"
+      },
+      {
+        "frame": 4610,
+        "time": 77.95566,
+        "localHipX": 0.06970851,
+        "localHipZ": -0.279107124,
+        "localVelocityZ": -0.92913413,
+        "physicalPosition": "(2.7874, 0.0972, -0.1711)"
+      },
+      {
+        "frame": 4612,
+        "time": 77.98901,
+        "localHipX": 0.0739209056,
+        "localHipZ": -0.220438778,
+        "localVelocityZ": -1.01369715,
+        "physicalPosition": "(2.8244, 0.0972, -0.1854)"
+      },
+      {
+        "frame": 4613,
+        "time": 78.00529,
+        "localHipX": 0.06252861,
+        "localHipZ": -0.177154854,
+        "localVelocityZ": -1.05599236,
+        "physicalPosition": "(2.8441, 0.0972, -0.1930)"
+      },
+      {
+        "frame": 4614,
+        "time": 78.0219345,
+        "localHipX": 0.0519892052,
+        "localHipZ": -0.120851688,
+        "localVelocityZ": -1.09828424,
+        "physicalPosition": "(2.8646, 0.0972, -0.2008)"
+      },
+      {
+        "frame": 4615,
+        "time": 78.0393,
+        "localHipX": 0.0432200953,
+        "localHipZ": -0.09803965,
+        "localVelocityZ": -1.09828424,
+        "physicalPosition": "(2.8646, 0.0972, -0.2008)"
+      },
+      {
+        "frame": 4616,
+        "time": 78.0558,
+        "localHipX": 0.0344317555,
+        "localHipZ": -0.0822119042,
+        "localVelocityZ": -1.14057386,
+        "physicalPosition": "(2.8860, 0.0972, -0.2089)"
+      },
+      {
+        "frame": 4617,
+        "time": 78.07216,
+        "localHipX": 0.0271779262,
+        "localHipZ": -0.0681141838,
+        "localVelocityZ": -1.18286121,
+        "physicalPosition": "(2.9081, 0.0972, -0.2172)"
+      },
+      {
+        "frame": 4619,
+        "time": 78.1065,
+        "localHipX": 0.0200031213,
+        "localHipZ": -0.04345834,
+        "localVelocityZ": -1.2674315,
+        "physicalPosition": "(2.9548, 0.0972, -0.2347)"
+      },
+      {
+        "frame": 4621,
+        "time": 78.13978,
+        "localHipX": 0.0135450028,
+        "localHipZ": -0.0328286,
+        "localVelocityZ": -1.309715,
+        "physicalPosition": "(2.9793, 0.0972, -0.2438)"
+      },
+      {
+        "frame": 4622,
+        "time": 78.15642,
+        "localHipX": 0.0108382748,
+        "localHipZ": -0.03475253,
+        "localVelocityZ": -1.35199785,
+        "physicalPosition": "(3.0047, 0.0972, -0.2533)"
+      },
+      {
+        "frame": 4623,
+        "time": 78.1730652,
+        "localHipX": 0.007507935,
+        "localHipZ": -0.0349853151,
+        "localVelocityZ": -1.39428008,
+        "physicalPosition": "(3.0308, 0.0972, -0.2630)"
+      },
+      {
+        "frame": 4624,
+        "time": 78.18929,
+        "localHipX": 0.00222238363,
+        "localHipZ": -0.03203768,
+        "localVelocityZ": -1.43656206,
+        "physicalPosition": "(3.0578, 0.0972, -0.2729)"
+      },
+      {
+        "frame": 4625,
+        "time": 78.20647,
+        "localHipX": -0.005684727,
+        "localHipZ": -0.03269051,
+        "localVelocityZ": -1.47884345,
+        "physicalPosition": "(3.0855, 0.0972, -0.2832)"
+      },
+      {
+        "frame": 4626,
+        "time": 78.2230148,
+        "localHipX": -0.0135673564,
+        "localHipZ": -0.0486768633,
+        "localVelocityZ": -1.5211246,
+        "physicalPosition": "(3.1141, 0.0972, -0.2937)"
+      },
+      {
+        "frame": 4627,
+        "time": 78.2399445,
+        "localHipX": -0.0151889818,
+        "localHipZ": -0.06253663,
+        "localVelocityZ": -1.5211246,
+        "physicalPosition": "(3.1141, 0.0972, -0.2937)"
+      },
+      {
+        "frame": 4629,
+        "time": 78.27312,
+        "localHipX": -0.0128510175,
+        "localHipZ": -0.0819172859,
+        "localVelocityZ": -1.60568655,
+        "physicalPosition": "(3.1735, 0.0972, -0.3156)"
+      },
+      {
+        "frame": 4631,
+        "time": 78.30651,
+        "localHipX": -0.0138583966,
+        "localHipZ": -0.07929766,
+        "localVelocityZ": -1.69024777,
+        "physicalPosition": "(3.2362, 0.0972, -0.3387)"
+      },
+      {
+        "frame": 4632,
+        "time": 78.32314,
+        "localHipX": -0.011637127,
+        "localHipZ": -0.0687793344,
+        "localVelocityZ": -1.57252836,
+        "physicalPosition": "(3.2657, 0.0972, -0.3495)"
+      },
+      {
+        "frame": 4633,
+        "time": 78.33952,
+        "localHipX": -0.0101150665,
+        "localHipZ": -0.0634249747,
+        "localVelocityZ": -1.57252836,
+        "physicalPosition": "(3.2657, 0.0972, -0.3495)"
+      },
+      {
+        "frame": 4634,
+        "time": 78.35555,
+        "localHipX": -0.008928582,
+        "localHipZ": -0.05759651,
+        "localVelocityZ": -1.45480907,
+        "physicalPosition": "(3.2930, 0.0972, -0.3595)"
+      },
+      {
+        "frame": 4635,
+        "time": 78.37289,
+        "localHipX": -0.005161129,
+        "localHipZ": -0.0501359962,
+        "localVelocityZ": -1.33708954,
+        "physicalPosition": "(3.3181, 0.0972, -0.3688)"
+      },
+      {
+        "frame": 4636,
+        "time": 78.38897,
+        "localHipX": 0.000221214723,
+        "localHipZ": -0.04233382,
+        "localVelocityZ": -1.21937013,
+        "physicalPosition": "(3.3410, 0.0972, -0.3772)"
+      },
+      {
+        "frame": 4637,
+        "time": 78.40626,
+        "localHipX": 0.00420229463,
+        "localHipZ": -0.040062774,
+        "localVelocityZ": -1.101651,
+        "physicalPosition": "(3.3617, 0.0972, -0.3848)"
+      },
+      {
+        "frame": 4639,
+        "time": 78.43943,
+        "localHipX": 0.00530097866,
+        "localHipZ": -0.0656513944,
+        "localVelocityZ": -0.9839314,
+        "physicalPosition": "(3.3802, 0.0972, -0.3916)"
+      },
+      {
+        "frame": 4640,
+        "time": 78.45554,
+        "localHipX": 0.00365374843,
+        "localHipZ": -0.09008538,
+        "localVelocityZ": -0.86621207,
+        "physicalPosition": "(3.3964, 0.0972, -0.3975)"
+      },
+      {
+        "frame": 4641,
+        "time": 78.47265,
+        "localHipX": 0.00208809739,
+        "localHipZ": -0.101052664,
+        "localVelocityZ": -0.748492658,
+        "physicalPosition": "(3.4105, 0.0972, -0.4027)"
+      },
+      {
+        "frame": 4642,
+        "time": 78.48998,
+        "localHipX": 0.0004962273,
+        "localHipZ": -0.101667576,
+        "localVelocityZ": -0.630773246,
+        "physicalPosition": "(3.4223, 0.0972, -0.4070)"
+      },
+      {
+        "frame": 4643,
+        "time": 78.50627,
+        "localHipX": 0.000929806847,
+        "localHipZ": -0.09471768,
+        "localVelocityZ": -0.5130538,
+        "physicalPosition": "(3.4320, 0.0972, -0.4106)"
+      },
+      {
+        "frame": 4645,
+        "time": 78.53946,
+        "localHipX": 0.00245280331,
+        "localHipZ": -0.08564345,
+        "localVelocityZ": -0.395334363,
+        "physicalPosition": "(3.4394, 0.0972, -0.4133)"
+      },
+      {
+        "frame": 4646,
+        "time": 78.5555649,
+        "localHipX": 0.002146035,
+        "localHipZ": -0.0787219852,
+        "localVelocityZ": -0.277614951,
+        "physicalPosition": "(3.4446, 0.0972, -0.4152)"
+      },
+      {
+        "frame": 4647,
+        "time": 78.57305,
+        "localHipX": 0.0015502586,
+        "localHipZ": -0.0707842857,
+        "localVelocityZ": -0.159895554,
+        "physicalPosition": "(3.4476, 0.0972, -0.4163)"
+      },
+      {
+        "frame": 4649,
+        "time": 78.60645,
+        "localHipX": -0.002566072,
+        "localHipZ": -0.0534641072,
+        "localVelocityZ": -6.748509e-05,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      },
+      {
+        "frame": 4651,
+        "time": 78.63896,
+        "localHipX": -0.009541023,
+        "localHipZ": -0.0450497046,
+        "localVelocityZ": -1.07977328e-07,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      },
+      {
+        "frame": 4652,
+        "time": 78.65649,
+        "localHipX": -0.009897542,
+        "localHipZ": -0.04244944,
+        "localVelocityZ": -1.725142e-10,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      },
+      {
+        "frame": 4654,
+        "time": 78.68973,
+        "localHipX": -0.00040511135,
+        "localHipZ": -0.0287162922,
+        "localVelocityZ": 2.48676839e-13,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      },
+      {
+        "frame": 4655,
+        "time": 78.70602,
+        "localHipX": 0.003863381,
+        "localHipZ": -0.0259296112,
+        "localVelocityZ": 2.49104231e-13,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      },
+      {
+        "frame": 4656,
+        "time": 78.72239,
+        "localHipX": 0.007585151,
+        "localHipZ": -0.023895029,
+        "localVelocityZ": 2.49123855e-13,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      },
+      {
+        "frame": 4657,
+        "time": 78.73937,
+        "localHipX": 0.0106711145,
+        "localHipZ": -0.0220436566,
+        "localVelocityZ": 2.49123855e-13,
+        "physicalPosition": "(3.4484, 0.0972, -0.4166)"
+      }
+    ]
+  },
+  "delivery-shadow-final": {
+    "darkenedPixels": 68356,
+    "averageDarkening": 0.06602026988970779,
+    "width": 1200,
+    "height": 900,
+    "firstPersonOnly": true,
+    "bodyInvisibleButCasts": true,
+    "frame": 6855,
+    "forceRenderingOff": [
+      false
+    ]
+  },
+  "rider-delivery-audit": {
+    "scene": "Assets/Game/Scenes/SampleScene.unity",
+    "sceneDirty": false,
+    "objectCount": 162,
+    "missingScripts": [],
+    "activeListeners": 1,
+    "invalidDynamicColliders": [],
+    "player": "Player",
+    "mass": 1.0,
+    "movement": {
+      "moveForce": 8.0,
+      "jumpForce": 4.2,
+      "maxSpeed": 5.0
+    },
+    "grab": {
+      "grabDistance": 1.0,
+      "grabForce": 10.0
+    },
+    "targets": [
+      {
+        "name": "Scrap Bin A",
+        "maxHP": 100.0,
+        "impactThreshold": 5.0,
+        "objectValue": 100.0,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Scrap Bin B",
+        "maxHP": 100.0,
+        "impactThreshold": 5.0,
+        "objectValue": 100.0,
+        "brokenTemplate": null
+      },
+      {
+        "name": "Police Car - Standard",
+        "maxHP": 100.0,
+        "impactThreshold": 3.0,
+        "objectValue": 10000.0,
+        "brokenTemplate": "Debris Template (inactive)"
+      },
+      {
+        "name": "Police Car - High Value",
+        "maxHP": 100.0,
+        "impactThreshold": 3.0,
+        "objectValue": 100000.0,
+        "brokenTemplate": "Debris Template (inactive)"
+      }
+    ],
+    "prefabCount": 8,
+    "runtime": false,
+    "frame": 24,
+    "version": "6000.6.8f1"
+  },
+  "delivery-game-console": {
+    "entries": [],
+    "cursor": 73,
+    "session": "d993700e003241e489eff9a5d8bc8dde",
+    "returned": 0,
+    "dropped": false,
+    "reset": false,
+    "counts": {
+      "error": 10,
+      "warn": 4,
+      "log": 46
+    },
+    "groundTruth": {
+      "sampledUtc": "2026-11-11T13:59:31.172592Z",
+      "ageMs": 32,
+      "compilationFailed": false,
+      "compiling": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "consoleLogs": 0,
+      "seeded": true
+    }
+  },
+  "rider-console-final": {
+    "entries": [],
+    "cursor": 73,
+    "session": "d993700e003241e489eff9a5d8bc8dde",
+    "returned": 0,
+    "dropped": false,
+    "reset": false,
+    "counts": {
+      "error": 10,
+      "warn": 4,
+      "log": 46
+    },
+    "groundTruth": {
+      "sampledUtc": "2026-11-11T13:59:48.007225Z",
+      "ageMs": 267,
+      "compilationFailed": false,
+      "compiling": false,
+      "consoleErrors": 0,
+      "consoleWarnings": 0,
+      "consoleLogs": 0,
+      "seeded": true
+    }
+  },
+  "sourceEditor": "6000.0.43f1",
+  "testedEditor": "6000.6.8f1",
+  "assetGuids": {
+    "original": 372,
+    "current": 483,
+    "missing": 0,
+    "duplicates": 0
+  }
+}

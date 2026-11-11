@@ -9,7 +9,7 @@ public static class VisualAnimationAudit
     static string PathOf(Transform t) => t.parent == null ? t.name : PathOf(t.parent) + "/" + t.name;
     public static object RuntimeSnapshot()
     {
-        var d = UnityEngine.Object.FindAnyObjectByType<PlayerAnimationDriver>(); var a = d.GetComponent<Animator>(); var b = d.GetComponent<Rigidbody>();
+        var d = UnityEngine.Object.FindAnyObjectByType<PlayerAnimationDriver>(); var a = d.CharacterAnimator; var b = d.GetComponent<Rigidbody>();
         var current = a.GetCurrentAnimatorStateInfo(0); var next = a.GetNextAnimatorStateInfo(0);
         var names = new[] { "Locomotion", "Jump", "Fall", "Landing" };
         return Newtonsoft.Json.JsonConvert.SerializeObject(new {
@@ -51,7 +51,8 @@ public static class VisualAnimationAudit
     public static object PlayerDetails()
     {
         var p = UnityEngine.Object.FindAnyObjectByType<FunnyMovement>();
-        var a = p.GetComponent<Animator>();
+        var animationDriver = p.GetComponent<PlayerAnimationDriver>();
+        var a = animationDriver != null && animationDriver.CharacterAnimator != null ? animationDriver.CharacterAnimator : p.GetComponent<Animator>();
         return Newtonsoft.Json.JsonConvert.SerializeObject(new {
             player = p.transform.position.ToString(), scale = p.transform.lossyScale.ToString(), a.humanScale,
             bones = Enum.GetValues(typeof(HumanBodyBones)).Cast<HumanBodyBones>().Where(b => b != HumanBodyBones.LastBone)

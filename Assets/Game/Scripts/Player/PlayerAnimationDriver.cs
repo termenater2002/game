@@ -1,9 +1,10 @@
 using UnityEngine;
 
 /// <summary>Presentation only: samples physics, never writes the Rigidbody or the player root.</summary>
-[RequireComponent(typeof(Animator), typeof(Rigidbody), typeof(CapsuleCollider))]
+[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerAnimationDriver : MonoBehaviour
 {
+    public Animator characterAnimator;
     public ObjectGrabber grabber;
     public float walkReferenceSpeed = .16f;
     public float runReferenceSpeed = .4f;
@@ -11,6 +12,8 @@ public class PlayerAnimationDriver : MonoBehaviour
     [Range(.01f, .3f)] public float damping = .08f;
     [Range(1f, 4f)] public float maximumPlaybackRate = 2.5f;
     public LayerMask groundMask = ~0;
+    [Range(.01f, .12f)] public float footSoleFraction = .025f;
+    [Range(.1f, .4f)] public float holdingReachFraction = .33f;
     private Animator animator;
     private Rigidbody body;
     private CapsuleCollider capsule;
@@ -23,6 +26,7 @@ public class PlayerAnimationDriver : MonoBehaviour
     public Vector3 LocalVelocity { get; private set; }
     public float HoldingWeight => holdingWeight;
     public int LandingCount { get; private set; }
+    public Animator CharacterAnimator => animator != null ? animator : characterAnimator;
     public const string LocomotionState = "Base Layer.Locomotion";
     static readonly int X = Animator.StringToHash("MoveX"), Z = Animator.StringToHash("MoveZ"),
         Speed = Animator.StringToHash("Speed"), Vertical = Animator.StringToHash("VerticalSpeed"),
@@ -32,9 +36,10 @@ public class PlayerAnimationDriver : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>(); body = GetComponent<Rigidbody>(); capsule = GetComponent<CapsuleCollider>();
+        animator = characterAnimator != null ? characterAnimator : GetComponent<Animator>(); body = GetComponent<Rigidbody>(); capsule = GetComponent<CapsuleCollider>();
         if (grabber == null) grabber = GetComponentInChildren<ObjectGrabber>();
         previousYaw = transform.eulerAngles.y;
+        if (animator == null) { Debug.LogError("Assign the visual Humanoid Animator.", this); enabled = false; return; }
         animator.applyRootMotion = false;
         animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
         ready = animator.avatar != null && animator.avatar.isValid && animator.isHuman && animator.runtimeAnimatorController != null;
@@ -78,7 +83,8 @@ public class PlayerAnimationDriver : MonoBehaviour
         float yaw = transform.eulerAngles.y;
         animator.SetFloat(Turn, Mathf.DeltaAngle(previousYaw, yaw) / Mathf.Max(.001f, Time.deltaTime), damping, Time.deltaTime); previousYaw = yaw;
     }
-    private void OnAnimatorIK(int layer)
+    private void OnAnimatorIK(int layer) { if (animator != null && animator.gameObject == gameObject) ApplyIK(layer); }
+    public void ApplyIK(int layer)
     {
         if (!ready || layer != 0) return;
         float height = capsule.bounds.size.y;
@@ -90,7 +96,7 @@ public class PlayerAnimationDriver : MonoBehaviour
     }
     private void Hand(AvatarIKGoal goal, float side, float height)
     {
-        var point = transform.position + transform.up * (height * .67f) + transform.forward * (height * .33f) + transform.right * (height * side);
+        var point = transform.position + transform.up * (height * .67f) + transform.forward * (height * holdingReachFraction) + transform.right * (height * side);
         animator.SetIKPositionWeight(goal, holdingWeight * .85f); animator.SetIKPosition(goal, point);
         animator.SetIKRotationWeight(goal, holdingWeight * .35f); animator.SetIKRotation(goal, transform.rotation * Quaternion.Euler(0, 0, goal == AvatarIKGoal.LeftHand ? 80 : -80));
     }
@@ -101,9 +107,9 @@ public class PlayerAnimationDriver : MonoBehaviour
         if (Physics.Raycast(foot.position + Vector3.up * distance, Vector3.down, out var hit, distance * 1.5f, groundMask, QueryTriggerInteraction.Ignore)
             && !hit.transform.IsChildOf(transform) && hit.normal.y > .5f)
         {
-            float lift = Mathf.Max(0, foot.position.y - hit.point.y - height * .025f);
+            float lift = Mathf.Max(0, foot.position.y - hit.point.y - height * footSoleFraction);
             float weight = 1f - Mathf.Clamp01(lift / Mathf.Max(.01f, height * .1f));
-            animator.SetIKPositionWeight(goal, weight * .65f); animator.SetIKPosition(goal, hit.point + Vector3.up * height * .025f);
+            animator.SetIKPositionWeight(goal, weight * .65f); animator.SetIKPosition(goal, hit.point + Vector3.up * height * footSoleFraction);
         }
         else animator.SetIKPositionWeight(goal, 0);
     }

@@ -21,7 +21,9 @@ public static class BuildPlayerAnimations
             // Keep existing take name and local IDs; only override playback/root settings.
             original.loopTime = Path.GetFileName(p) != "jump.fbx"; original.loopPose = original.loopTime;
             original.lockRootRotation = true; original.keepOriginalOrientation = true;
-            original.lockRootPositionXZ = true; original.keepOriginalPositionXZ = true;
+            // Moving clips extract XZ into root motion, which the Rigidbody-driven Animator does not apply.
+            // Baking travel into the pose instead moves the skin away from its capsule.
+            original.lockRootPositionXZ = Path.GetFileName(p) == "idle.fbx"; original.keepOriginalPositionXZ = false;
             original.lockRootHeightY = true; original.keepOriginalPositionY = true;
             importer.clipAnimations = new[] { original }; importer.SaveAndReimport();
         }
@@ -52,7 +54,7 @@ public static class BuildPlayerAnimations
         }
         var settings = AnimationUtility.GetAnimationClipSettings(source);
         settings.startTime = 0; settings.stopTime = duration; settings.loopTime = loop; settings.loopBlend = loop;
-        settings.loopBlendOrientation = true; settings.loopBlendPositionXZ = true; settings.loopBlendPositionY = true;
+        settings.loopBlendOrientation = true; settings.loopBlendPositionXZ = false; settings.keepOriginalPositionXZ = false; settings.loopBlendPositionY = true;
         AnimationUtility.SetAnimationClipSettings(clip, settings); EditorUtility.SetDirty(clip); return clip;
     }
     static AnimatorState State(AnimatorStateMachine sm, string name, Motion motion, float x, float y)
@@ -101,7 +103,8 @@ public static class BuildPlayerAnimations
         Transition(rising, fall).AddCondition(AnimatorConditionMode.Less, .05f, "VerticalSpeed");
         Transition(rising, land).AddCondition(AnimatorConditionMode.If, 0, "Grounded"); Transition(fall, land).AddCondition(AnimatorConditionMode.If, 0, "Grounded");
         var recover = Transition(land, locomotion, .1f); recover.hasExitTime = true; recover.exitTime = .85f;
-        var player = UnityEngine.Object.FindAnyObjectByType<FunnyMovement>(); var animator = player.GetComponent<Animator>();
+        var player = UnityEngine.Object.FindAnyObjectByType<FunnyMovement>(); var existingDriver = player.GetComponent<PlayerAnimationDriver>();
+        var animator = existingDriver != null && existingDriver.characterAnimator != null ? existingDriver.characterAnimator : player.GetComponent<Animator>();
         if (!animator.isHuman || !animator.avatar.isValid) throw new Exception("Invalid player avatar.");
         animator.runtimeAnimatorController = controller; animator.applyRootMotion = false; animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
         var driver = player.GetComponent<PlayerAnimationDriver>() ?? player.gameObject.AddComponent<PlayerAnimationDriver>(); driver.grabber = player.GetComponentInChildren<ObjectGrabber>();
@@ -125,7 +128,8 @@ public static class BuildPlayerAnimations
         foreach (var cam in clone.GetComponentsInChildren<Camera>()) cam.enabled = false;
         foreach (var listener in clone.GetComponentsInChildren<AudioListener>()) listener.enabled = false;
         clone.GetComponentInChildren<FirstPersonCamera>().enabled = false; clone.GetComponentInChildren<ObjectGrabber>().enabled = false;
-        var animation = clone.GetComponent<PlayerAnimationDriver>(); animation.walkReferenceSpeed = .8f; animation.runReferenceSpeed = 2f; animation.blendSpaceScale = .2f;
+        var animation = clone.GetComponent<PlayerAnimationDriver>(); animation.walkReferenceSpeed *= 5f; animation.runReferenceSpeed *= 5f; animation.blendSpaceScale /= 5f;
+        var side = clone.GetComponent<SideViewTestCamera>(); if (side != null) side.enabled = false;
         // Keep the same blend space when demonstrating the original toy-scale model at 5x size.
         var show = clone.AddComponent<AnimationPreviewDriver>();
         var floor = GameObject.CreatePrimitive(PrimitiveType.Plane); floor.name = "Preview Floor"; floor.transform.localScale = Vector3.one * 3f;

@@ -4,6 +4,7 @@ using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEngine.Rendering;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -20,13 +21,14 @@ public class PlayerAnimationPhysicsTests
 #if UNITY_EDITOR
         var floor = GameObject.CreatePrimitive(PrimitiveType.Cube); created.Add(floor);
         floor.transform.position = new Vector3(1000, -.1f, 1000); floor.transform.localScale = new Vector3(30, .2f, 30);
-        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/ThirdParty/CharacterPack Lowpoly (FREE)/Models/character2.fbx");
-        actor = Object.Instantiate(model); created.Add(actor); actor.SetActive(false);
+        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Game/Characters/Rider/Rider.prefab");
+        actor = new GameObject("Rider Physics Test Actor"); created.Add(actor); actor.SetActive(false);
         actor.transform.position = new Vector3(1000, .025f, 1000); actor.transform.localScale = Vector3.one * .5f;
-        animator = actor.GetComponent<Animator>(); animator.runtimeAnimatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Game/Animations/PlayerMoveAnimation.controller");
+        var visual = Object.Instantiate(model,actor.transform,false);
+        animator = visual.GetComponent<Animator>(); animator.runtimeAnimatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Game/Animations/PlayerMoveAnimation.controller");
         body = actor.AddComponent<Rigidbody>(); body.constraints = RigidbodyConstraints.FreezeRotation;
         var capsule = actor.AddComponent<CapsuleCollider>(); capsule.height = 3.5f; capsule.radius = .5f; capsule.center = new Vector3(0, 1.8f, 0);
-        driver = actor.AddComponent<PlayerAnimationDriver>(); driver.walkReferenceSpeed = .8f; driver.runReferenceSpeed = 2f; driver.blendSpaceScale = .2f;
+        driver = actor.AddComponent<PlayerAnimationDriver>(); driver.characterAnimator=animator; driver.walkReferenceSpeed = .8f; driver.runReferenceSpeed = 2f; driver.blendSpaceScale = .2f;
         actor.SetActive(true); Physics.SyncTransforms();
 #else
         Assert.Ignore("Requires Editor assets; exercise built-player animation separately.");
@@ -83,5 +85,51 @@ public class PlayerAnimationPhysicsTests
         yield return new WaitForSeconds(.25f);
         Assert.That(driver.Grounded, Is.False); Assert.That(body.linearVelocity.y, Is.LessThan(-1f));
         Assert.That(animator.GetCurrentAnimatorStateInfo(0).IsName("Fall"), Is.True);
+    }
+    [UnityTest] public IEnumerator BackwardLoopsAndDirectionChangesKeepBodyAtRigidbody()
+    {
+        CreateActor();body.useGravity=false;
+        var hips=animator.GetBoneTransform(HumanBodyBones.Hips);
+        var directions=new[]{Vector3.forward*.8f,Vector3.back*.8f,Vector3.forward*2f,Vector3.back*.8f};
+        float largestOffset=0,largestStep=0;Vector2 previous=Vector2.zero;bool sampled=false;
+        foreach(var velocity in directions) {
+            body.linearVelocity=velocity;float until=Time.time+1.35f;
+            while(Time.time<until) {
+                yield return null;
+                var relative=actor.transform.InverseTransformPoint(hips.position);var horizontal=new Vector2(relative.x,relative.z);
+                largestOffset=Mathf.Max(largestOffset,horizontal.magnitude);
+                if(sampled) largestStep=Mathf.Max(largestStep,Vector2.Distance(horizontal,previous));previous=horizontal;sampled=true;
+            }
+        }
+        // The regression put the pelvis ~3 local units forward at backward-state entry.
+        // Allow normal gait sway, while checking multiple loops and both direction changes.
+        float allowedOffset=actor.GetComponent<CapsuleCollider>().radius*.85f;
+        Assert.That(largestOffset,Is.LessThan(allowedOffset),$"Pelvis must stay within the capsule radius; maximum single-frame step={largestStep:F4}.");
+        Assert.That(largestStep,Is.LessThan(.12f),$"The body jumped at an animation loop / blend boundary; maximum offset={largestOffset:F4}.");
+        Assert.That(animator.applyRootMotion,Is.False);
+    }
+    [UnityTest] public IEnumerator FPSKeepsShadowPassAndSideViewRestoresTheOriginalCamera()
+    {
+        CreateActor(); actor.SetActive(false);
+        var fpsObject = new GameObject("Test FPS"); fpsObject.transform.SetParent(actor.transform,false); var fps = fpsObject.AddComponent<Camera>();
+        var sideObject = new GameObject("Test Side"); sideObject.transform.SetParent(actor.transform,false); var side = sideObject.AddComponent<Camera>(); side.enabled = false;
+        var renderers = actor.GetComponentsInChildren<SkinnedMeshRenderer>(true);Assert.That(renderers.Length,Is.GreaterThan(0));
+        var visibility = actor.AddComponent<FirstPersonBodyVisibility>(); visibility.firstPersonCamera = fps; visibility.bodyRenderers = renderers;
+        var cameraControl = actor.AddComponent<SideViewTestCamera>(); cameraControl.firstPersonCamera = fps; cameraControl.sideCamera = side;
+        actor.SetActive(true); yield return null;
+        bool sawShadowsOnly = false;
+        void InspectPass(ScriptableRenderContext context, Camera camera) {
+            if(camera==fps) sawShadowsOnly |= renderers.All(r=>r.shadowCastingMode==ShadowCastingMode.ShadowsOnly && !r.forceRenderingOff);
+        }
+        var rt = RenderTexture.GetTemporary(64,64,24);
+        RenderPipelineManager.beginCameraRendering += InspectPass;
+        try { fps.targetTexture = rt; fps.Render(); }
+        finally { fps.targetTexture = null; RenderTexture.ReleaseTemporary(rt); RenderPipelineManager.beginCameraRendering -= InspectPass; }
+        Assert.That(sawShadowsOnly, Is.True, "The actual FPS render must retain shadow casters.");
+        Assert.That(renderers.All(r=>r.shadowCastingMode==ShadowCastingMode.On && !r.forceRenderingOff), Is.True, "Other cameras must see the body after the FPS pass.");
+        cameraControl.SetSideView(true); Assert.That(side.enabled, Is.True); Assert.That(fps.enabled, Is.False);
+        Assert.That(cameraControl.SideViewActive, Is.True);
+        cameraControl.SetSideView(false); Assert.That(side.enabled, Is.False); Assert.That(fps.enabled, Is.True);
+        Assert.That(cameraControl.SideViewActive, Is.False);
     }
 }

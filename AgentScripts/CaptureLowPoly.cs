@@ -29,7 +29,7 @@ public static class CaptureLowPoly
         preview.Restart(); var start = Time.time;
         var seen = new System.Collections.Generic.HashSet<string>();
         var evidence = new System.Collections.Generic.List<object>();
-        var animator = preview.GetComponent<Animator>();
+        var animator = preview.GetComponent<PlayerAnimationDriver>().CharacterAnimator;
         while (Time.time - start < 12.7f)
         {
             await Task.Delay(70);

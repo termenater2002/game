@@ -10,7 +10,13 @@ Rigidbody-анимации Idle/Walk/Run/Strafe/Jump/Fall/Landing и реакц�
 Камера игры остаётся от первого лица. Для полного тела: **Tools → Major Damage →
 Open Animation Preview**, затем Play; **1–8** выбирают режим, **P** — автоцикл.
 
-[Видео предпросмотра](Documentation/VisualAnimation/AnimationPreview.mp4) ·
+В основной сцене **F6** включает боковую тестовую камеру, повторное нажатие
+возвращает FPS; **F7** меняет сторону. Тело отбрасывает анимированную тень и в FPS.
+Герой обновлён: парень в мотоциклетном шлеме, стройные пропорции по модели Lilac,
+подробная одежда и расширенные книзу брюки, без Z.
+[Модель и проверка камеры/тени](Documentation/RIDER_UPDATE.md).
+
+[Архивное видео первой версии](Documentation/VisualAnimation/AnimationPreview.mp4) ·
 [Настройки анимаций](Documentation/PLAYER_ANIMATIONS.md) ·
 [Настройки материалов](Documentation/LOW_POLY_STYLE.md) ·
 [Результаты проверки](Documentation/VISUAL_ANIMATION_VALIDATION.md)

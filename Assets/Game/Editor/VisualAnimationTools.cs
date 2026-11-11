@@ -5,6 +5,13 @@ using UnityEngine;
 public static class VisualAnimationTools
 {
     private static bool follow;
+    [MenuItem("Tools/Major Damage/Toggle Side Test Camera (F6)")]
+    public static void ToggleSideCamera()
+    {
+        if (!EditorApplication.isPlaying) return;
+        var view = Object.FindAnyObjectByType<SideViewTestCamera>();
+        if (view != null && view.enabled) view.SetSideView(!view.SideViewActive);
+    }
     [MenuItem("Tools/Major Damage/Open Animation Preview")]
     public static void OpenPreview()
     {
