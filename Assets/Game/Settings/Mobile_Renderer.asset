@@ -26,7 +26,8 @@ MonoBehaviour:
     probeSamplingDebugMesh: {fileID: 0}
     probeSamplingDebugTexture: {fileID: 0}
     probeVolumeBlendStatesCS: {fileID: 0}
-  m_RendererFeatures: []
+  m_RendererFeatures:
+  - {fileID: 5956493552543122262}
   m_RendererFeatureMap: 
   m_UseNativeRenderPass: 1
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -50,3 +51,18 @@ MonoBehaviour:
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 0
+
+--- !u!114 &5956493552543122262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d159b675f5442aa2baede8affbdc5d, type: 3}
+  m_Name: MAJOR DAMAGE Pixelation
+  m_EditorClassIdentifier: MajorDamage.Rendering::PixelationRendererFeature
+  m_Active: 1
+  pixelationShader: {fileID: 4800000, guid: a4622df90f8b4e15ab8eaf67a15d06d6, type: 3}
