@@ -11,6 +11,8 @@ public static class InstallPixelation
  public static object Apply()
  {
   if(Application.isPlaying)throw new Exception("Install in Edit Mode");
+  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+  if(scene.path!="Assets/Game/Scenes/MansionPrototype.unity"||scene.isDirty)throw new Exception("Open the clean saved MansionPrototype before installing camera settings");
   var shader=AssetDatabase.LoadAssetAtPath<Shader>("Assets/Game/Shaders/Pixelation.shader");if(shader==null||!shader.isSupported)throw new Exception("Pixelation shader is missing or unsupported");
   foreach(string name in new[]{"PC_Renderer","Mobile_Renderer"})
   {
@@ -19,8 +21,6 @@ public static class InstallPixelation
    if(feature==null){feature=ScriptableObject.CreateInstance<PixelationRendererFeature>();feature.name="MAJOR DAMAGE Pixelation";AssetDatabase.AddObjectToAsset(feature,data);data.rendererFeatures.Add(feature);}
    feature.pixelationShader=shader;feature.SetActive(true);feature.Create();EditorUtility.SetDirty(feature);data.SetDirty();EditorUtility.SetDirty(data);
   }
-  var scene=UnityEngine.SceneManagement.SceneManager.GetActiveScene();
-  if(scene.path!="Assets/Game/Scenes/MansionPrototype.unity"||scene.isDirty)throw new Exception("Open the clean saved MansionPrototype before installing camera settings");
   var cameras=UnityEngine.Object.FindObjectsByType<Camera>(FindObjectsSortMode.None).Where(c=>c.name=="Main Camera"||c.name=="Side Test Camera (F6)").ToArray();
   foreach(var camera in cameras)
   {
