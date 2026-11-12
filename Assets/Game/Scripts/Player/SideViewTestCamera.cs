@@ -8,6 +8,7 @@ public class SideViewTestCamera : MonoBehaviour
     public Camera sideCamera;
     public bool SideViewActive { get; private set; }
     public bool viewFromLeft;
+    [Min(.5f)] public float distanceInHeights = 3f;
     private bool originalFirstPersonEnabled;
     private string originalSideTag = "Untagged";
     private bool initialized;
@@ -40,7 +41,7 @@ public class SideViewTestCamera : MonoBehaviour
         if (sideCamera == null || capsule == null) return;
         float height = Mathf.Max(.1f, capsule.bounds.size.y);
         Vector3 center = capsule.bounds.center;
-        sideCamera.transform.position = center + transform.right * height * (viewFromLeft ? -3f : 3f) + Vector3.up * height * .12f;
+        sideCamera.transform.position = center + transform.right * height * Mathf.Max(.5f, distanceInHeights) * (viewFromLeft ? -1f : 1f) + Vector3.up * height * .12f;
         sideCamera.transform.LookAt(center);
         sideCamera.orthographic = true; sideCamera.orthographicSize = height * .72f;
         sideCamera.nearClipPlane = Mathf.Max(.003f, height * .015f);

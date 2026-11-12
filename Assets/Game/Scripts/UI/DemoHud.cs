@@ -7,6 +7,9 @@ public class DemoHud : MonoBehaviour
     public SessionWallet wallet;
     public FirstPersonCamera look;
     public ObjectGrabber grabber;
+    public string sessionTitle = "FOUNDATION v1  /  SESSION EARNINGS";
+    [TextArea] public string controlHints = "WASD / arrows: move    SPACE: jump\nMOUSE: look    LMB: grab / release    ESC: unlock cursor";
+    public bool mansionControls;
     private Canvas canvas;
     private TextMeshProUGUI balance;
     private TextMeshProUGUI status;
@@ -34,11 +37,12 @@ public class DemoHud : MonoBehaviour
         var image = panel.GetComponent<UnityEngine.UI.Image>();
         image.color = new Color(0.025f, 0.035f, 0.055f, 0.88f);
         image.raycastTarget = false;
-        Label(panel.transform, "Heading", "FOUNDATION v1  /  SESSION EARNINGS", new Vector2(0, 1), new Vector2(14, -10), new Vector2(346, 25), 17);
+        Label(panel.transform, "Heading", sessionTitle, new Vector2(0, 1), new Vector2(14, -10), new Vector2(346, 25), 17);
         balance = Label(panel.transform, "Balance", "$ 0.00", new Vector2(0, 1), new Vector2(14, -36), new Vector2(346, 40), 30);
         gain = Label(panel.transform, "Damage Reward", "", new Vector2(0, 1), new Vector2(14, -80), new Vector2(346, 24), 17);
         gain.color = new Color(0.5f, 1f, 0.7f);
-        Label(go.transform, "Controls", "WASD / arrows: move    SPACE: jump\nMOUSE: look    LMB: grab / release    ESC: unlock cursor", Vector2.zero, new Vector2(24, 22), new Vector2(920, 65), 20);
+        Label(go.transform, "Controls", controlHints, Vector2.zero, new Vector2(24, 22),
+            mansionControls ? new Vector2(1060, 84) : new Vector2(920, 65), mansionControls ? 18 : 20);
         var crosshair = Label(go.transform, "Crosshair", "+", new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(32, 32), 28);
         crosshair.alignment = TextAlignmentOptions.Center;
         status = Label(go.transform, "Interaction", "", new Vector2(0.5f, 0.5f), new Vector2(0, -44), new Vector2(640, 30), 20);
@@ -89,7 +93,7 @@ public class DemoHud : MonoBehaviour
     {
         if (Time.unscaledTime > gainUntil) gain.text = "";
         if (Cursor.lockState != CursorLockMode.Locked) status.text = "Click to resume";
-        else if (grabber != null && grabber.IsHolding) status.text = "LMB: release";
+        else if (grabber != null && grabber.IsHolding) status.text = mansionControls ? "LMB: drop   /   RMB: throw" : "LMB: release";
         else if (grabber != null && grabber.TryGetTarget(out var target, out _)) status.text = "LMB: grab " + target.name;
         else status.text = "";
     }

@@ -31,8 +31,16 @@ public class DamageFeedback : MonoBehaviour
             target.SetPropertyBlock(properties);
         }
         if (!receipt.Destroyed || owner.brokenPrefab == null) return;
+        // Prevent the newly spawned pieces colliding with the intact body before Destroy is flushed.
+        foreach (var shape in GetComponentsInChildren<Collider>()) shape.enabled = false;
         var debris = Instantiate(owner.brokenPrefab, transform.position, transform.rotation);
         debris.name = "Impact Debris";
+        var mansionProp = GetComponent<MansionProp>();
+        if (mansionProp != null)
+        {
+            debris.transform.localScale = transform.lossyScale;
+            mansionProp.PrepareFracture(debris);
+        }
         debris.SetActive(true);
         var velocity = GetComponent<Rigidbody>();
         foreach (var piece in debris.GetComponentsInChildren<Rigidbody>())

@@ -11,10 +11,12 @@ public class ObjectGrabber : MonoBehaviour
     private Rigidbody heldBody;
     private Vector3 localPoint;
     private Vector3 previousTarget;
+    private float heldDistance;
     private FirstPersonCamera look;
     private Rigidbody playerBody;
     public Rigidbody HeldBody => heldBody;
     public bool IsHolding => heldBody != null;
+    public float HeldDistance => heldDistance;
     private void Awake()
     {
         look = GetComponent<FirstPersonCamera>();
@@ -45,17 +47,27 @@ public class ObjectGrabber : MonoBehaviour
         if (IsHolding || !TryGetTarget(out var target, out var point)) return false;
         heldBody = target;
         localPoint = heldBody.transform.InverseTransformPoint(point);
-        previousTarget = transform.position + transform.forward * grabDistance;
+        heldDistance = Mathf.Clamp(Vector3.Distance(transform.position, point), .35f, Mathf.Max(.35f, grabDistance));
+        previousTarget = transform.position + transform.forward * heldDistance;
         heldBody.WakeUp();
         return true;
     }
-    public void Release() { heldBody = null; localPoint = Vector3.zero; }
+    public void Release() { heldBody = null; localPoint = Vector3.zero; heldDistance = 0f; }
+    public bool Throw(float speed)
+    {
+        if (heldBody == null) return false;
+        var thrown = heldBody;
+        Release();
+        thrown.WakeUp();
+        thrown.AddForce(transform.forward * Mathf.Clamp(speed, 0f, 20f), ForceMode.VelocityChange);
+        return true;
+    }
     private void FixedUpdate()
     {
         if (heldBody == null) { Release(); return; }
         if (heldBody.isKinematic || !heldBody.gameObject.activeInHierarchy) { Release(); return; }
         Vector3 point = heldBody.transform.TransformPoint(localPoint);
-        Vector3 target = transform.position + transform.forward * grabDistance;
+        Vector3 target = transform.position + transform.forward * heldDistance;
         if (Vector3.Distance(point, target) > Mathf.Max(breakDistance, grabDistance)) { Release(); return; }
         Vector3 targetVelocity = Vector3.ClampMagnitude((target - previousTarget) / Time.fixedDeltaTime, 10f);
         previousTarget = target;
