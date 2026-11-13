@@ -33,6 +33,7 @@ public class FunnyMovement : MonoBehaviour
     private readonly HashSet<Collider> supportingColliders = new HashSet<Collider>();
     private readonly JumpRequest jump = new JumpRequest();
     public bool IsGrounded { get; private set; }
+    public float LastJumpTime { get; private set; } = float.NegativeInfinity;
     private PlayerAnimationDriver AnimationDriver => animationDriver != null ? animationDriver : (animationDriver = GetComponent<PlayerAnimationDriver>());
     public float WalkSpeed => (matchAnimationSpeeds && AnimationDriver != null ? AnimationDriver.walkReferenceSpeed : walkSpeed) * Mathf.Max(.1f,speedMultiplier);
     public float SprintSpeed => (matchAnimationSpeeds && AnimationDriver != null ? AnimationDriver.runReferenceSpeed : sprintSpeed) * Mathf.Max(.1f,speedMultiplier);
@@ -105,7 +106,10 @@ public class FunnyMovement : MonoBehaviour
             body.AddForce(axis * change / Time.fixedDeltaTime, ForceMode.Acceleration);
         }
         if (jump.TryConsume(IsGrounded && body.linearVelocity.y <= 0.1f, Time.time))
+        {
+            LastJumpTime = Time.time;
             body.AddForce(Vector3.up * Mathf.Max(0f, jumpForce), ForceMode.Impulse);
+        }
     }
     public void SetStoryWalking(bool walking) { storyWalking = walking; }
     public void SetMoveInput(Vector2 input) { SetMoveInput(input, !storyWalking); }

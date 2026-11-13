@@ -14,12 +14,16 @@ public class PlayerAnimationDriver : MonoBehaviour
     public LayerMask groundMask = ~0;
     [Range(.01f, .12f)] public float footSoleFraction = .025f;
     [Range(.1f, .4f)] public float holdingReachFraction = .33f;
+    [Range(0f, .15f), Tooltip("Ignore brief loss of foot support at floor seams. Real upward takeoff bypasses this delay.")]
+    public float supportGraceSeconds = .08f;
     private Animator animator;
     private Rigidbody body;
     private CapsuleCollider capsule;
     private FunnyMovement movement;
     private float airborneTime;
     private bool wasGrounded;
+    private float lastSupportTime = float.NegativeInfinity;
+    private float lastSupportHeight;
     private float holdingWeight;
     private float previousYaw;
     private bool ready;
@@ -48,21 +52,49 @@ public class PlayerAnimationDriver : MonoBehaviour
     }
     private bool ProbeGround()
     {
-        if (body.linearVelocity.y > .2f) return false;
+        if (IsTakingOff()) return false;
+        // The movement controller also sees actual supporting collision contacts.
+        // A disabled motor may retain its last grounded value after a teleport.
+        if (movement != null && movement.enabled && movement.IsGrounded) return true;
         var bounds = capsule.bounds;
         float skin = Mathf.Max(.006f, bounds.size.y * .08f);
-        Vector3 start = new Vector3(bounds.center.x, bounds.min.y + skin, bounds.center.z);
-        int count = Physics.RaycastNonAlloc(start, Vector3.down, groundHits, skin * 2f, groundMask, QueryTriggerInteraction.Ignore);
+        float radius = Mathf.Min(bounds.extents.x, bounds.extents.z) * .9f;
+        Vector3 start = new Vector3(bounds.center.x, bounds.min.y + radius + skin, bounds.center.z);
+        // Sweep the foot's area, rather than a single ray that can fall between floor tiles.
+        int count = Physics.SphereCastNonAlloc(start, radius, Vector3.down, groundHits, skin * 2f, groundMask, QueryTriggerInteraction.Ignore);
         for (int i = 0; i < count; i++)
             if (!groundHits[i].transform.IsChildOf(transform) && groundHits[i].normal.y > .5f) return true;
         return false;
+    }
+    private bool IsTakingOff()
+    {
+        if (body.linearVelocity.y <= .2f) return false;
+        bool requestedJump = movement != null && Time.time - movement.LastJumpTime <= .12f;
+        // A capsule running across a seam can get a small upward collision impulse.
+        // Only treat it as takeoff if it could lift the body by more than 5% of its height.
+        // An actual jump request always bypasses that threshold, even with a low jump force.
+        float stepRiseSpeed = Mathf.Sqrt(2f * Physics.gravity.magnitude * capsule.bounds.size.y * .05f);
+        return requestedJump || body.linearVelocity.y > stepRiseSpeed;
+    }
+    private bool StableGrounded()
+    {
+        if (ProbeGround())
+        {
+            lastSupportTime = Time.time; lastSupportHeight = body.position.y;
+            return true;
+        }
+        // Presentation-only grace. It grants no extra jumps and never changes physics.
+        // Bound both time and vertical travel so a real ledge drop cannot stay grounded.
+        return wasGrounded && !IsTakingOff()
+            && Time.time - lastSupportTime <= supportGraceSeconds
+            && Mathf.Abs(body.position.y - lastSupportHeight) <= capsule.bounds.size.y * .035f;
     }
     private void Update()
     {
         if (!ready) return;
         LocalVelocity = transform.InverseTransformDirection(body.linearVelocity);
         float speed = new Vector2(LocalVelocity.x, LocalVelocity.z).magnitude;
-        Grounded = ProbeGround();
+        Grounded = StableGrounded();
         if (!Grounded) airborneTime += Time.deltaTime;
         else
         {
