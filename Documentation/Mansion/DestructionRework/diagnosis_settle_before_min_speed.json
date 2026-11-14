@@ -1,0 +1,60 @@
+{
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'",
+      "line": 24,
+      "column": 102,
+      "id": "CS0618",
+      "source": "int startFrame=Time.frameCount;var original=UnityEngine.Object.FindObjectsByType<MansionProp>(FindObjectsSortMode.None).ToDictionary(p=>p.name,p=>p.transform.position);"
+    },
+    {
+      "severity": "warning",
+      "message": "'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'",
+      "line": 24,
+      "column": 52,
+      "id": "CS0618",
+      "source": "int startFrame=Time.frameCount;var original=UnityEngine.Object.FindObjectsByType<MansionProp>(FindObjectsSortMode.None).ToDictionary(p=>p.name,p=>p.transform.position);"
+    },
+    {
+      "severity": "warning",
+      "message": "'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'",
+      "line": 26,
+      "column": 68,
+      "id": "CS0618",
+      "source": "var props=UnityEngine.Object.FindObjectsByType<MansionProp>(FindObjectsSortMode.None);var body=UnityEngine.Object.FindAnyObjectByType<FunnyMovement>().GetComponent<Rigidbody>();"
+    },
+    {
+      "severity": "warning",
+      "message": "'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'",
+      "line": 26,
+      "column": 18,
+      "id": "CS0618",
+      "source": "var props=UnityEngine.Object.FindObjectsByType<MansionProp>(FindObjectsSortMode.None);var body=UnityEngine.Object.FindAnyObjectByType<FunnyMovement>().GetComponent<Rigidbody>();"
+    }
+  ],
+  "compileMs": 1200,
+  "executeMs": 6027,
+  "assemblyName": "PipelineRunScript_MansionRuntimeProof_5a663eec48ca4a718c8936b93f8d18df",
+  "success": true,
+  "result": {
+    "frames": 362,
+    "original": 143,
+    "remaining": 143,
+    "broken": 0,
+    "unfastened": 0,
+    "moving": [],
+    "damaged": [
+      {
+        "name": "Kitchen • MD_63_CookingPot #110",
+        "distance": 0.036504928,
+        "velocity": 0.0,
+        "damaged": 0.97260195
+      }
+    ],
+    "largeMoves": [],
+    "player": "(0.000, -0.014, -10.400)",
+    "foot": 0.0
+  },
+  "supersededBy": "healthy_start.json — no damage after minimum impact speed fix"
+}

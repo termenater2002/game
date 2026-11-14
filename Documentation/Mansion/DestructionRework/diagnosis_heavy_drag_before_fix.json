@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "duration": 1.53,
+  "summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "DestructionReworkTests.RealHeavyFurnitureCanBeDraggedWithoutBeingLifted",
+      "Status": "Failed",
+      "Duration": 1.4842289,
+      "Message": "  body=(1400.00, 0.00, 1400.00) velocity=(0.00, 0.00, 0.00) held=True kinematic=False hand=(1401.00, 1.64, 1398.20) target=(1400.00, 0.64, 1400.00) bottom=-8.046627E-07 constraints=None\n  Expected: greater than 0.150000006f\n  But was:  0.0f\n",
+      "StackTrace": "at DestructionReworkTests+<RealHeavyFurnitureCanBeDraggedWithoutBeingLifted>d__21.MoveNext () [0x002a7] in /var/home/deck/Desktop/tests/foundation-work/validation/Assets/Game/Tests/PlayMode/DestructionReworkTests.cs:162\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in /home/deck/MAJOR DAMAGE/Library/PackageCache/com.unity.test-framework@ba1d06c8c02f/UnityEngine.TestRunner/NUnitExtensions/Attributes/TestEnumerator.cs:52\n"
+    }
+  ],
+  "supersededBy": "tests_DestructionReworkTests.json \u2014 whole fixture passed after grab spring tuning"
+}
