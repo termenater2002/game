@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 424093300108099341}
   - component: {fileID: 1301414940521341382}
   - component: {fileID: 6030303897401689246}
+  - component: {fileID: 8532412158252304608}
+  - component: {fileID: 8148994481345391279}
   m_Layer: 0
   m_Name: MD_33_Chandelier_amber_bulb
   m_TagString: Untagged
@@ -41,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221852062278694403}
-  m_Mesh: {fileID: 4300000, guid: 2d65585959f087cfea46f7d4b48b73a0, type: 2}
+  m_Mesh: {fileID: 5865186856735559291, guid: ef060314c160f322faed65de70063114, type: 3}
 --- !u!23 &1301414940521341382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,6 +114,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.07000002, y: 0.07, z: 0.120000005}
   m_Center: {x: -0.000000014901161, y: 0, z: 0.060000002}
+--- !u!114 &8532412158252304608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221852062278694403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8965520983739082496}
+  contained: 0
+  partMass: 0.04
+  role: bulb
+--- !u!114 &8148994481345391279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221852062278694403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 12
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 2266903444499781739, guid: e0dd1d4058aabe853b0311e25076554e, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &262839430865758828
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +278,8 @@ GameObject:
   - component: {fileID: 3721118457180924928}
   - component: {fileID: 2631027835079099250}
   - component: {fileID: 4842804253340219269}
+  - component: {fileID: 2045695043234579567}
+  - component: {fileID: 2013435923788616872}
   m_Layer: 0
   m_Name: MD_33_Chandelier_amber_bulb.003
   m_TagString: Untagged
@@ -265,7 +309,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368269820141105225}
-  m_Mesh: {fileID: 4300000, guid: 2bdf6b5a18518dbec945643aef98c5ef, type: 2}
+  m_Mesh: {fileID: -7156865813909542946, guid: ef060314c160f322faed65de70063114, type: 3}
 --- !u!23 &2631027835079099250
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -336,6 +380,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.07000002, y: 0.07, z: 0.120000005}
   m_Center: {x: 0.000000014901161, y: 0, z: 0.060000002}
+--- !u!114 &2045695043234579567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368269820141105225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8965520983739082496}
+  contained: 0
+  partMass: 0.04
+  role: bulb
+--- !u!114 &2013435923788616872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368269820141105225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 12
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7651133196938426304, guid: eb8f07820edc089039ccf14fec41476d, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &489974491574531736
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +768,8 @@ GameObject:
   - component: {fileID: 3181532500338935975}
   - component: {fileID: 5207516824725137657}
   - component: {fileID: 3979096243001488771}
+  - component: {fileID: 5008813670887208998}
+  - component: {fileID: 3292843324984542581}
   m_Layer: 0
   m_Name: MD_33_Chandelier_amber_bulb.002
   m_TagString: Untagged
@@ -713,7 +799,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141938211502135304}
-  m_Mesh: {fileID: 4300000, guid: b146caee663eaa41bbf341a457813fef, type: 2}
+  m_Mesh: {fileID: 4429976511508445479, guid: ef060314c160f322faed65de70063114, type: 3}
 --- !u!23 &5207516824725137657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -784,6 +870,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06999999, y: 0.06999999, z: 0.120000005}
   m_Center: {x: 0, y: 0, z: 0.060000002}
+--- !u!114 &5008813670887208998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141938211502135304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8965520983739082496}
+  contained: 0
+  partMass: 0.04
+  role: bulb
+--- !u!114 &3292843324984542581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141938211502135304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 12
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5136238435387930402, guid: c708dc7ccb7f2122cb66bc37749c9531, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1277555491810906240
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,6 +922,8 @@ GameObject:
   - component: {fileID: 1786828722363153864}
   - component: {fileID: 1087527780582939639}
   - component: {fileID: 6705215572257490333}
+  - component: {fileID: 3085962850604126496}
+  - component: {fileID: 8588971565299306448}
   m_Layer: 0
   m_Name: MD_33_Chandelier_amber_bulb.005
   m_TagString: Untagged
@@ -825,7 +953,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277555491810906240}
-  m_Mesh: {fileID: 4300000, guid: ac188566cbbaecdcba1a12b4e8977c5b, type: 2}
+  m_Mesh: {fileID: 7308293894731385482, guid: ef060314c160f322faed65de70063114, type: 3}
 --- !u!23 &1087527780582939639
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -896,6 +1024,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06999999, y: 0.06999999, z: 0.120000005}
   m_Center: {x: 0, y: 0, z: 0.060000002}
+--- !u!114 &3085962850604126496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277555491810906240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8965520983739082496}
+  contained: 0
+  partMass: 0.04
+  role: bulb
+--- !u!114 &8588971565299306448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277555491810906240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 12
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7063631757668605091, guid: 1bafd5d7176b533589b733d997961f01, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1286361585377585947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2265,8 @@ GameObject:
   - component: {fileID: 775626069177340773}
   - component: {fileID: 7238891026124250956}
   - component: {fileID: 7290675851921513204}
+  - component: {fileID: 458872557545257803}
+  - component: {fileID: 2642716652501349987}
   m_Layer: 0
   m_Name: MD_33_Chandelier_amber_bulb.001
   m_TagString: Untagged
@@ -2126,7 +2296,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3658614582918459931}
-  m_Mesh: {fileID: 4300000, guid: 45450a99d333737b5af292fb5c939647, type: 2}
+  m_Mesh: {fileID: 7812510812867730329, guid: ef060314c160f322faed65de70063114, type: 3}
 --- !u!23 &7238891026124250956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2197,6 +2367,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06999999, y: 0.06999999, z: 0.120000005}
   m_Center: {x: 0, y: 0, z: 0.060000002}
+--- !u!114 &458872557545257803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658614582918459931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8965520983739082496}
+  contained: 0
+  partMass: 0.04
+  role: bulb
+--- !u!114 &2642716652501349987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658614582918459931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 12
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 6058179639020149013, guid: 4dbd804a2c8a03a8480296671c7af190, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &3787668172542781732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,6 +2979,8 @@ GameObject:
   - component: {fileID: 4240095707447571318}
   - component: {fileID: 1514909474828047343}
   - component: {fileID: 2119149494083297892}
+  - component: {fileID: 1560988907298649282}
+  - component: {fileID: 1726451435423095596}
   m_Layer: 0
   m_Name: MD_33_Chandelier_amber_bulb.004
   m_TagString: Untagged
@@ -2798,7 +3010,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6623315725469561619}
-  m_Mesh: {fileID: 4300000, guid: de3d9e35e8737bec3bdc8dc0af59259a, type: 2}
+  m_Mesh: {fileID: 555661245733314443, guid: ef060314c160f322faed65de70063114, type: 3}
 --- !u!23 &1514909474828047343
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2869,6 +3081,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.06999999, y: 0.06999999, z: 0.120000005}
   m_Center: {x: 0, y: 0, z: 0.060000002}
+--- !u!114 &1560988907298649282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623315725469561619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8965520983739082496}
+  contained: 0
+  partMass: 0.04
+  role: bulb
+--- !u!114 &1726451435423095596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623315725469561619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 12
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7969004286336616752, guid: 95e16f0096df201f1b13ab1d229c4267, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6782819768330588158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3805,7 @@ GameObject:
   - component: {fileID: 6089799972221302609}
   - component: {fileID: 8965520983739082496}
   - component: {fileID: 1792151338318199248}
+  - component: {fileID: 3967655075085854166}
   - component: {fileID: 5524575575332503550}
   m_Layer: 0
   m_Name: MD_33_Chandelier
@@ -3623,7 +3876,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 850
+  objectValue: 552.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   materialToughnessScale: 3.2047806
@@ -3648,6 +3901,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
   mountSupports: []
+--- !u!114 &3967655075085854166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7764626026039694346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!114 &5524575575332503550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3662,12 +3928,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
   profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   deformableSurfaces:
-  - {fileID: 424093300108099341}
-  - {fileID: 775626069177340773}
-  - {fileID: 3181532500338935975}
-  - {fileID: 3721118457180924928}
-  - {fileID: 4240095707447571318}
-  - {fileID: 1786828722363153864}
   - {fileID: 1420933114539019897}
   - {fileID: 6355847575865325448}
   - {fileID: 5580489906431875720}

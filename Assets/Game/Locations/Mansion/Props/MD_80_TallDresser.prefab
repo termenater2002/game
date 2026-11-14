@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353616005515086426}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: 0.026666522, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7860100220831351709}
+  m_Father: {fileID: 1759647637567414630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1115167212268308804
 MeshFilter:
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353616005515086426}
-  m_Mesh: {fileID: 1066508914620400498, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 785864665f4176519bb6cbb9f2ef7b81, type: 2}
 --- !u!23 &8731212462158905948
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -139,12 +139,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367825552538364727}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.060000002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: -0.013333321, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2734682792539521523}
+  m_Father: {fileID: 1418870942620935425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1933759984535260619
 MeshFilter:
@@ -153,7 +153,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367825552538364727}
-  m_Mesh: {fileID: 2931874765912786612, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 058ce1761175278758e6b0134b169a8a, type: 2}
 --- !u!23 &8492245672960972620
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -408,12 +408,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184227800164251739}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 0.026666522, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7860100220831351709}
+  m_Father: {fileID: 1759647637567414630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &640700554733712613
 MeshFilter:
@@ -422,7 +422,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184227800164251739}
-  m_Mesh: {fileID: 2898991685122599622, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e3f9846c53fccf450be3d88859c123c4, type: 2}
 --- !u!23 &8046258828874504976
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -620,6 +620,8 @@ GameObject:
   - component: {fileID: 4828467190421186916}
   - component: {fileID: 2232440363247152655}
   - component: {fileID: 7173602946516644099}
+  - component: {fileID: 1787236927036199130}
+  - component: {fileID: 420596622903332803}
   m_Layer: 0
   m_Name: MD_80_TallDresser_sliding_drawer
   m_TagString: Untagged
@@ -640,13 +642,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1786106189785150958}
-  - {fileID: 4064159257034782356}
-  - {fileID: 7934249823384651924}
   - {fileID: 7360813249014478668}
   - {fileID: 7680505395238516971}
   - {fileID: 6436764083739916810}
   - {fileID: 4056961478469907410}
+  - {fileID: 5994830321407137338}
   m_Father: {fileID: 5442218166934153141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1227892015853394629
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 0}
   drawer: {fileID: 7173602946516644099}
-  owner: {fileID: 5002072849826941039}
+  owner: {fileID: 420596622903332803}
   openAngle: 100
   travel: 0.28
 --- !u!153 &7173602946516644099
@@ -874,6 +874,46 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1787236927036199130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439368291131587375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 4
+  role: mechanism
+--- !u!114 &420596622903332803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439368291131587375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1058006827395452134, guid: 24b9d9db7206e688fa0038b3ce482e52, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 14.21875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1600475361085726381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,12 +1165,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097253431799753203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 0.026666641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2734682792539521523}
+  m_Father: {fileID: 1418870942620935425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1049540930000956666
 MeshFilter:
@@ -1139,7 +1179,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097253431799753203}
-  m_Mesh: {fileID: 1815730517971160203, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 9d0bf1c4422f4a2d9927c33e87b1bb06, type: 2}
 --- !u!23 &8656655547473070077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1237,12 +1277,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101083980647837251}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.060000002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: -0.01333335, z: 0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1853492972564510320}
+  m_Father: {fileID: 5994830321407137338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1500003849325810786
 MeshFilter:
@@ -1251,7 +1291,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101083980647837251}
-  m_Mesh: {fileID: 8867322602485125008, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 8aa90ef7f5340de478c281366a9a166e, type: 2}
 --- !u!23 &7810671153477559855
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1461,12 +1501,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2334463457384517649}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.060000002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: -0.01333344, z: -0.000000059604645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6371717082781310252}
+  m_Father: {fileID: 6611011699302623503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1373279777634294918
 MeshFilter:
@@ -1475,7 +1515,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2334463457384517649}
-  m_Mesh: {fileID: -5221345115660231436, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 832f7e7fce772a8b883c11569e111bf1, type: 2}
 --- !u!23 &8551776978651530087
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1797,12 +1837,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3178634218239645576}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: 0.026666641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1853492972564510320}
+  m_Father: {fileID: 5994830321407137338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8092225524992178859
 MeshFilter:
@@ -1811,7 +1851,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3178634218239645576}
-  m_Mesh: {fileID: -6581687796961267979, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d179b2b04985f615facf2b17c8672eff, type: 2}
 --- !u!23 &2140167666289228499
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1894,6 +1934,8 @@ GameObject:
   - component: {fileID: 1302584632067609395}
   - component: {fileID: 3154634002226843490}
   - component: {fileID: 3795145761182023963}
+  - component: {fileID: 5987596695212690359}
+  - component: {fileID: 5666854391521818607}
   m_Layer: 0
   m_Name: MD_80_TallDresser_turned_leg.002
   m_TagString: Untagged
@@ -1994,6 +2036,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.14000002, z: 0.13}
   m_Center: {x: -0.000000014901161, y: -0.0000000037252903, z: 0.065}
+--- !u!114 &5987596695212690359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569396839329956959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &5666854391521818607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3569396839329956959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8369968250338075048, guid: f20bf662d2d78872cb9d4e76799046f8, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21.875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &3670679672384117508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,6 +2427,8 @@ GameObject:
   - component: {fileID: 6894687963963846316}
   - component: {fileID: 142219147616858213}
   - component: {fileID: 297484199857890027}
+  - component: {fileID: 449754909026746761}
+  - component: {fileID: 2628390468091735862}
   m_Layer: 0
   m_Name: MD_80_TallDresser_sliding_drawer.002
   m_TagString: Untagged
@@ -2365,13 +2449,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7941023929485397351}
-  - {fileID: 5967099031657659171}
-  - {fileID: 4155509395996140918}
   - {fileID: 7573519025274933974}
   - {fileID: 3693695548955146933}
   - {fileID: 6724595875809502471}
   - {fileID: 1307971974224689130}
+  - {fileID: 1759647637567414630}
   m_Father: {fileID: 5442218166934153141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8598219750705389687
@@ -2494,7 +2576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 0}
   drawer: {fileID: 297484199857890027}
-  owner: {fileID: 5002072849826941039}
+  owner: {fileID: 2628390468091735862}
   openAngle: 100
   travel: 0.28
 --- !u!153 &297484199857890027
@@ -2599,6 +2681,46 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &449754909026746761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425482699101023957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 4
+  role: mechanism
+--- !u!114 &2628390468091735862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425482699101023957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5367951141854922819, guid: c4dc549627de3768fbdf7fe5f3e2168a, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 14.21875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4675694087466350818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,6 +2845,8 @@ GameObject:
   - component: {fileID: 8460215337458289946}
   - component: {fileID: 2131423424048529909}
   - component: {fileID: 597922606888601855}
+  - component: {fileID: 7688889692963826594}
+  - component: {fileID: 6429617508844693896}
   m_Layer: 0
   m_Name: MD_80_TallDresser_turned_leg.003
   m_TagString: Untagged
@@ -2823,6 +2947,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.14000002, z: 0.13}
   m_Center: {x: -0.000000014901161, y: 0.0000000037252903, z: 0.065}
+--- !u!114 &7688889692963826594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743013863560537149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &6429617508844693896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743013863560537149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1935122054825557967, guid: cb5c9ea0c11d8c9d88c7cd306075f7cd, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21.875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4911275373160578496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,6 +2999,7 @@ GameObject:
   - component: {fileID: 3711123443804542609}
   - component: {fileID: 5002072849826941039}
   - component: {fileID: 990818638425865210}
+  - component: {fileID: 4297950202956462797}
   m_Layer: 0
   m_Name: MD_80_TallDresser
   m_TagString: Untagged
@@ -2904,7 +3069,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 2.2575855
@@ -2929,6 +3094,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &4297950202956462797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4911275373160578496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &4935973970319086797
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,12 +3134,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4935973970319086797}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 0.026666641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1853492972564510320}
+  m_Father: {fileID: 5994830321407137338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1015960302154629233
 MeshFilter:
@@ -2970,7 +3148,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4935973970319086797}
-  m_Mesh: {fileID: -1287271833147897907, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 7edefaf781e22932090886686d6f7fbf, type: 2}
 --- !u!23 &2139448763671931546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3153,6 +3331,100 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1, y: 0.03999999, z: 0.98}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5538393872412478482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5994830321407137338}
+  - component: {fileID: 8852841141452187464}
+  - component: {fileID: 9045052962390517107}
+  - component: {fileID: 4322586645285702518}
+  m_Layer: 0
+  m_Name: Assembly_metal_hardware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5994830321407137338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538393872412478482}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000002483527, y: -0.046666592, z: -0.000000059604645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1786106189785150958}
+  - {fileID: 4064159257034782356}
+  - {fileID: 7934249823384651924}
+  m_Father: {fileID: 1853492972564510320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8852841141452187464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538393872412478482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 420596622903332803}
+  contained: 0
+  partMass: 0.15
+  role: hardware
+--- !u!114 &9045052962390517107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538393872412478482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 7.65625
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &4322586645285702518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538393872412478482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 1500003849325810786}
+  - {fileID: 8092225524992178859}
+  - {fileID: 1015960302154629233}
 --- !u!1 &5642490161133431869
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,12 +3452,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5642490161133431869}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: 0.026666582, z: -0.00000011920929}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6371717082781310252}
+  m_Father: {fileID: 6611011699302623503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7813421013110231031
 MeshFilter:
@@ -3194,7 +3466,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5642490161133431869}
-  m_Mesh: {fileID: -2809597001545935312, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a71a1ceb7696a305eb6a4bcb2f11465b, type: 2}
 --- !u!23 &3291460171204090695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3392,6 +3664,8 @@ GameObject:
   - component: {fileID: 2959150860558924649}
   - component: {fileID: 7946565633404830009}
   - component: {fileID: 7132580786078160874}
+  - component: {fileID: 1805082883754016874}
+  - component: {fileID: 1961707927719192964}
   m_Layer: 0
   m_Name: MD_80_TallDresser_sliding_drawer.001
   m_TagString: Untagged
@@ -3412,13 +3686,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2630608987604961234}
-  - {fileID: 3424245820768458644}
-  - {fileID: 3585293882139066976}
   - {fileID: 578968249655331752}
   - {fileID: 7176649787784341375}
   - {fileID: 1198795628804174104}
   - {fileID: 7741014675723541886}
+  - {fileID: 1418870942620935425}
   m_Father: {fileID: 5442218166934153141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3466139954992259376
@@ -3541,7 +3813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 0}
   drawer: {fileID: 7132580786078160874}
-  owner: {fileID: 5002072849826941039}
+  owner: {fileID: 1961707927719192964}
   openAngle: 100
   travel: 0.28
 --- !u!153 &7132580786078160874
@@ -3646,6 +3918,46 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1805082883754016874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261137348178338780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 4
+  role: mechanism
+--- !u!114 &1961707927719192964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6261137348178338780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 457638130584152511, guid: e6a228a97806e969f946fa9a44ef1553, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 14.21875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6347277649871109549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,6 +4406,100 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.024999976, y: 0.384, z: 0.16499996}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6652182328290447097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6611011699302623503}
+  - component: {fileID: 8106968209593655693}
+  - component: {fileID: 8172612989887009029}
+  - component: {fileID: 4173853433162573228}
+  m_Layer: 0
+  m_Name: Assembly_metal_hardware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6611011699302623503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652182328290447097}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000002483527, y: -0.046666563, z: -0.000000059604645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5248562169231396831}
+  - {fileID: 6466452309271956712}
+  - {fileID: 1583761388450206943}
+  m_Father: {fileID: 6371717082781310252}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8106968209593655693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652182328290447097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4194355903682791639}
+  contained: 0
+  partMass: 0.15
+  role: hardware
+--- !u!114 &8172612989887009029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652182328290447097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 7.65625
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &4173853433162573228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6652182328290447097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 1373279777634294918}
+  - {fileID: 7813421013110231031}
+  - {fileID: 6300671997198674360}
 --- !u!1 &7046767201505107936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4106,6 +4512,8 @@ GameObject:
   - component: {fileID: 703169799755304242}
   - component: {fileID: 6978732676768814456}
   - component: {fileID: 2099908235585129185}
+  - component: {fileID: 4567120812421234009}
+  - component: {fileID: 2082282481254066095}
   m_Layer: 0
   m_Name: MD_80_TallDresser_turned_leg.001
   m_TagString: Untagged
@@ -4206,6 +4614,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.14000002, z: 0.13}
   m_Center: {x: 0.000000014901161, y: 0.0000000037252903, z: 0.065}
+--- !u!114 &4567120812421234009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046767201505107936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &2082282481254066095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046767201505107936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1058721647659729933, guid: 5ff7b4f742e01b4b188bf78ef247e115, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21.875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &7088781583600208678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,6 +4893,8 @@ GameObject:
   - component: {fileID: 1941046413003002540}
   - component: {fileID: 3483922191166828865}
   - component: {fileID: 5785102474994105051}
+  - component: {fileID: 2141998525167057208}
+  - component: {fileID: 4194355903682791639}
   m_Layer: 0
   m_Name: MD_80_TallDresser_sliding_drawer.003
   m_TagString: Untagged
@@ -4465,13 +4915,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5248562169231396831}
-  - {fileID: 6466452309271956712}
-  - {fileID: 1583761388450206943}
   - {fileID: 3832967885656127597}
   - {fileID: 6039846258473050854}
   - {fileID: 8226624968872559789}
   - {fileID: 1303302422774209942}
+  - {fileID: 6611011699302623503}
   m_Father: {fileID: 5442218166934153141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5279420409106454073
@@ -4594,7 +5042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 0}
   drawer: {fileID: 5785102474994105051}
-  owner: {fileID: 5002072849826941039}
+  owner: {fileID: 4194355903682791639}
   openAngle: 100
   travel: 0.28
 --- !u!153 &5785102474994105051
@@ -4699,6 +5147,140 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2141998525167057208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126772277170459168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 4
+  role: mechanism
+--- !u!114 &4194355903682791639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126772277170459168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 4625577727348465226, guid: da9edfec5d4a8af31ad68e9c3ca7d316, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 14.21875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
+--- !u!1 &7596391537160189207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1759647637567414630}
+  - component: {fileID: 4052589069565355412}
+  - component: {fileID: 5515933745195652322}
+  - component: {fileID: 7750787923082031663}
+  m_Layer: 0
+  m_Name: Assembly_metal_hardware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1759647637567414630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596391537160189207}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000002483527, y: -0.046666503, z: -0.00000011920929}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7941023929485397351}
+  - {fileID: 5967099031657659171}
+  - {fileID: 4155509395996140918}
+  m_Father: {fileID: 7860100220831351709}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4052589069565355412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596391537160189207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2628390468091735862}
+  contained: 0
+  partMass: 0.15
+  role: hardware
+--- !u!114 &5515933745195652322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596391537160189207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 7.65625
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &7750787923082031663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7596391537160189207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 6046207958197378832}
+  - {fileID: 1115167212268308804}
+  - {fileID: 640700554733712613}
 --- !u!1 &7834447638867402541
 GameObject:
   m_ObjectHideFlags: 0
@@ -4726,12 +5308,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834447638867402541}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 0.026666582, z: -0.00000011920929}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6371717082781310252}
+  m_Father: {fileID: 6611011699302623503}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6300671997198674360
 MeshFilter:
@@ -4740,7 +5322,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7834447638867402541}
-  m_Mesh: {fileID: 2014016041554260459, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bca77b74850c94106bf609b9015db894, type: 2}
 --- !u!23 &5713353622452692675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4950,12 +5532,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8177669434082957399}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.060000002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: -0.01333338, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7860100220831351709}
+  m_Father: {fileID: 1759647637567414630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6046207958197378832
 MeshFilter:
@@ -4964,7 +5546,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8177669434082957399}
-  m_Mesh: {fileID: -8549721018645914718, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 2f9521f28e2788fa58755283a06f75d8, type: 2}
 --- !u!23 &6736382016500822205
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5286,12 +5868,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8672099818671718694}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: 0.026666641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2734682792539521523}
+  m_Father: {fileID: 1418870942620935425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5262856243327185576
 MeshFilter:
@@ -5300,7 +5882,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8672099818671718694}
-  m_Mesh: {fileID: -5596732281332315196, guid: 1d1b513f80d113856a42dc55d486e8cf, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 0e6f33a47509226359e98bea15c39b13, type: 2}
 --- !u!23 &1341477875730509685
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5383,6 +5965,8 @@ GameObject:
   - component: {fileID: 139798581725616315}
   - component: {fileID: 4235443868098999771}
   - component: {fileID: 8971496930559535559}
+  - component: {fileID: 1601658151012001692}
+  - component: {fileID: 2759457154732699207}
   m_Layer: 0
   m_Name: MD_80_TallDresser_turned_leg
   m_TagString: Untagged
@@ -5483,3 +6067,137 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.14000002, z: 0.13}
   m_Center: {x: 0.000000014901161, y: -0.0000000037252903, z: 0.065}
+--- !u!114 &1601658151012001692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902442545367610271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5002072849826941039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &2759457154732699207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902442545367610271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5467747409253228771, guid: 26107ce84cbd77c2ab6ac62e786d598f, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21.875
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
+--- !u!1 &9054430240267330996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418870942620935425}
+  - component: {fileID: 1625190992486439992}
+  - component: {fileID: 4776222776558476138}
+  - component: {fileID: 3757406684995061656}
+  m_Layer: 0
+  m_Name: Assembly_metal_hardware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1418870942620935425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054430240267330996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000002483527, y: -0.046666622, z: -0.00000011920929}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2630608987604961234}
+  - {fileID: 3424245820768458644}
+  - {fileID: 3585293882139066976}
+  m_Father: {fileID: 2734682792539521523}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625190992486439992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054430240267330996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1961707927719192964}
+  contained: 0
+  partMass: 0.15
+  role: hardware
+--- !u!114 &4776222776558476138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054430240267330996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 7.65625
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &3757406684995061656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9054430240267330996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 1933759984535260619}
+  - {fileID: 5262856243327185576}
+  - {fileID: 1049540930000956666}

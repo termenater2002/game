@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7975674412723364688}
   - component: {fileID: 2499814496330848646}
   - component: {fileID: 2763888480176581781}
+  - component: {fileID: 5461841154494869587}
   m_Layer: 0
   m_Name: MD_11_WindowFrame
   m_TagString: Untagged
@@ -74,17 +75,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 32
-  damageMultiplier: 1.5
-  impactThreshold: 3.8
+  maxHP: 100
+  damageMultiplier: 0.9
+  impactThreshold: 6
   brokenPrefab: {fileID: 8161949463323529818, guid: 72f6df3b6a27e36fbaf5f1b90eeaa56e, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 450
+  objectValue: 292.5
   wallet: {fileID: 0}
-  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
-  materialToughnessScale: 7.4571815
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 3.0285568
   retainOnDestruction: 0
 --- !u!114 &2763888480176581781
 MonoBehaviour:
@@ -101,11 +102,24 @@ MonoBehaviour:
   assetId: 11
   displayName: "\u041E\u043A\u043E\u043D\u043D\u0430\u044F \u0440\u0430\u043C\u0430"
   room: 
-  substance: glass
+  substance: plastic
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: 45425becfda3c42ecaa43fe8261053db, type: 3}
-  breakSound: {fileID: 8300000, guid: df7ddf15f8aa18125879f601fb758417, type: 3}
+  hitSound: {fileID: 8300000, guid: 4f263405438e1f62d86f340d37d34f76, type: 3}
+  breakSound: {fileID: 8300000, guid: ce655120c8420e779b695fa5729e948f, type: 3}
   mountSupports: []
+--- !u!114 &5461841154494869587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828738236833357046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &1783096330505996074
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +395,8 @@ GameObject:
   - component: {fileID: 4521261501562594065}
   - component: {fileID: 1402514062145070106}
   - component: {fileID: 1813627494385726855}
+  - component: {fileID: 4024398672184908179}
+  - component: {fileID: 5872910905803965365}
   m_Layer: 0
   m_Name: MD_11_WindowFrame_glass_pane.001
   m_TagString: Untagged
@@ -481,6 +497,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7, y: 0.022, z: 1.26}
   m_Center: {x: 0, y: 0, z: -0.000000029802322}
+--- !u!114 &4024398672184908179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866853930860002300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2499814496330848646}
+  contained: 0
+  partMass: 0.8
+  role: pane
+--- !u!114 &5872910905803965365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4866853930860002300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5454350589354440379, guid: f39d717d099017eabbf1e995d88ba668, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 78.75
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4924799891657845075
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +773,8 @@ GameObject:
   - component: {fileID: 7614859331644574070}
   - component: {fileID: 9108459548874610294}
   - component: {fileID: 8633882237132285011}
+  - component: {fileID: 5453460168247351517}
+  - component: {fileID: 3790315704090170085}
   m_Layer: 0
   m_Name: MD_11_WindowFrame_glass_pane
   m_TagString: Untagged
@@ -817,6 +875,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7, y: 0.022, z: 1.26}
   m_Center: {x: 0, y: 0, z: -0.000000029802322}
+--- !u!114 &5453460168247351517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541671752431987125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2499814496330848646}
+  contained: 0
+  partMass: 0.8
+  role: pane
+--- !u!114 &3790315704090170085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541671752431987125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 2258171635783709707, guid: 2ce33534c3a81c70a8b57711fadc6b64, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 78.75
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &8692782463691272483
 GameObject:
   m_ObjectHideFlags: 0

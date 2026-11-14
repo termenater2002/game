@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 3240799907997849914}
   - component: {fileID: 67599466150650689}
   - component: {fileID: 6296292478849987129}
+  - component: {fileID: 6636794904743482276}
   m_Layer: 0
   m_Name: MD_90_AlarmClock
   m_TagString: Untagged
@@ -155,7 +156,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5057808960480048986}
   serializedVersion: 5
-  m_Mass: 2.5
+  m_Mass: 2
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -186,17 +187,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 100
+  maxHP: 80
   damageMultiplier: 0.9
-  impactThreshold: 6
+  impactThreshold: 7
   brokenPrefab: {fileID: 631767257782670666, guid: 7c430417b71e6e69a97a582dbf97cebf, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 450
+  objectValue: 292.5
   wallet: {fileID: 0}
-  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
-  materialToughnessScale: 1.1560897
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
   retainOnDestruction: 0
 --- !u!114 &6296292478849987129
 MonoBehaviour:
@@ -213,11 +214,24 @@ MonoBehaviour:
   assetId: 90
   displayName: "\u041D\u0430\u0441\u0442\u043E\u043B\u044C\u043D\u044B\u0435 \u0447\u0430\u0441\u044B"
   room: 
-  substance: plastic
+  substance: wood
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: 4f263405438e1f62d86f340d37d34f76, type: 3}
-  breakSound: {fileID: 8300000, guid: ce655120c8420e779b695fa5729e948f, type: 3}
+  hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
+  breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &6636794904743482276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057808960480048986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &6532465702094177330
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +244,8 @@ GameObject:
   - component: {fileID: 5894061851951360665}
   - component: {fileID: 2176551535110592779}
   - component: {fileID: 5984232103887475390}
+  - component: {fileID: 5888570661872326991}
+  - component: {fileID: 7940418706391195759}
   m_Layer: 0
   m_Name: MD_90_AlarmClock_clock_face
   m_TagString: Untagged
@@ -330,6 +346,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.306, y: 0.016, z: 0.306}
   m_Center: {x: 0, y: -0.0040000007, z: 0.000000007450581}
+--- !u!114 &5888570661872326991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532465702094177330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 67599466150650689}
+  contained: 0
+  partMass: 0.12
+  role: clockface
+--- !u!114 &7940418706391195759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6532465702094177330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8419991934216576079, guid: e524c9f9c15419517ae6072e2c003891, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 157.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &7186431223241201054
 GameObject:
   m_ObjectHideFlags: 0

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 719646696216734179}
   - component: {fileID: 373084815725765424}
   - component: {fileID: 2624255583508142291}
+  - component: {fileID: 2126263645778166458}
   m_Layer: 0
   m_Name: MD_62_DecorativeBottle
   m_TagString: Untagged
@@ -193,7 +194,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 162.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
   materialToughnessScale: 1.3
@@ -218,6 +219,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
   breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
   mountSupports: []
+--- !u!114 &2126263645778166458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685626894564987979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &6396601062000271911
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +278,9 @@ GameObject:
   - component: {fileID: 8624410011169974501}
   - component: {fileID: 2154834041934829458}
   - component: {fileID: 310677412080067545}
+  - component: {fileID: 194347403188601611}
+  - component: {fileID: 8579423145749503279}
+  - component: {fileID: 2676760238610716469}
   m_Layer: 0
   m_Name: MD_62_DecorativeBottle_bottle_cap
   m_TagString: Untagged
@@ -293,7 +310,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8115536688663884825}
-  m_Mesh: {fileID: 8723632103178927634, guid: e32b1cfc7d7d99b858e74520e2c5fcc7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 43de8e5ace410725ba9199ab2fe4f5f7, type: 2}
 --- !u!23 &2154834041934829458
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -364,6 +381,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.05, y: 0.047552824, z: 0.021999985}
   m_Center: {x: 0, y: 0, z: 0.0109999925}
+--- !u!114 &194347403188601611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115536688663884825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 373084815725765424}
+  contained: 0
+  partMass: 0.02
+  role: cap
+--- !u!114 &8579423145749503279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115536688663884825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 25
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 87.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &2676760238610716469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8115536688663884825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 8624410011169974501}
 --- !u!1 &8327838538030836128
 GameObject:
   m_ObjectHideFlags: 0

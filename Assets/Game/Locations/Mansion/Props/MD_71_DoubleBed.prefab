@@ -124,6 +124,9 @@ GameObject:
   - component: {fileID: 1964227939185481814}
   - component: {fileID: 4564934501957193302}
   - component: {fileID: 6731156712408539726}
+  - component: {fileID: 7000638088970399419}
+  - component: {fileID: 123656652271165686}
+  - component: {fileID: 3160050168242647188}
   m_Layer: 0
   m_Name: MD_71_DoubleBed_separate_mattress
   m_TagString: Untagged
@@ -153,7 +156,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429388285184505164}
-  m_Mesh: {fileID: -182722423188251892, guid: c7bc4798600dc044bac9408077ff21ad, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6283744546406d246b618e3f9afe4ced, type: 2}
 --- !u!23 &4564934501957193302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -224,6 +227,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7, y: 2.05, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7000638088970399419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429388285184505164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4419075766700274902}
+  contained: 0
+  partMass: 8
+  role: mattress
+--- !u!114 &123656652271165686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429388285184505164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 95
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &3160050168242647188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429388285184505164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 1964227939185481814}
 --- !u!1 &616976118082906406
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +294,8 @@ GameObject:
   - component: {fileID: 8463568635941537604}
   - component: {fileID: 4893773414590683788}
   - component: {fileID: 6007786710411271142}
+  - component: {fileID: 6868095992974786999}
+  - component: {fileID: 4546765878573527534}
   m_Layer: 0
   m_Name: MD_71_DoubleBed_headboard
   m_TagString: Untagged
@@ -337,6 +397,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.92, y: 0.13000005, z: 1.32}
   m_Center: {x: 0, y: 0.000000029802322, z: 0}
+--- !u!114 &6868095992974786999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616976118082906406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4419075766700274902}
+  contained: 0
+  partMass: 4
+  role: bedboard
+--- !u!114 &4546765878573527534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616976118082906406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 85
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 157268172006650797, guid: 419d87d3856dcfe17893d7d43e1bf2ec, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1075645940236825582
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +561,9 @@ GameObject:
   - component: {fileID: 3183481253908063091}
   - component: {fileID: 4212063398600722557}
   - component: {fileID: 8543837427148336837}
+  - component: {fileID: 2089884133796768458}
+  - component: {fileID: 8434792324273928264}
+  - component: {fileID: 7603853220464922615}
   m_Layer: 0
   m_Name: MD_71_DoubleBed_stitched_quilt
   m_TagString: Untagged
@@ -490,7 +593,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300570200606053981}
-  m_Mesh: {fileID: 7741997105599949088, guid: c7bc4798600dc044bac9408077ff21ad, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c43f1aac6bd68d54789c202e92dc8214, type: 2}
 --- !u!23 &4212063398600722557
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -561,6 +664,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.68, y: 1.3, z: 0.05954981}
   m_Center: {x: 0, y: -0.35, z: 0.6024047}
+--- !u!114 &2089884133796768458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300570200606053981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4419075766700274902}
+  contained: 0
+  partMass: 1
+  role: quilt
+--- !u!114 &8434792324273928264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300570200606053981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 50
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &7603853220464922615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300570200606053981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 3183481253908063091}
 --- !u!1 &2510503312723432387
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +843,8 @@ GameObject:
   - component: {fileID: 8893465040929806691}
   - component: {fileID: 4642362652950451552}
   - component: {fileID: 3103985673202656326}
+  - component: {fileID: 1469280177976352289}
+  - component: {fileID: 2185152662239759196}
   m_Layer: 0
   m_Name: MD_71_DoubleBed_footboard
   m_TagString: Untagged
@@ -785,6 +945,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.86, y: 0.099999964, z: 0.5}
   m_Center: {x: 0, y: 0.000000029802322, z: 0}
+--- !u!114 &1469280177976352289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649410970651525841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4419075766700274902}
+  contained: 0
+  partMass: 4
+  role: bedboard
+--- !u!114 &2185152662239759196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649410970651525841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 85
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7566660593290105804, guid: 02cbb1884998a34faa54e379c3781e5d, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &3098227816801094625
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +997,10 @@ GameObject:
   - component: {fileID: 75735050438583715}
   - component: {fileID: 4571680606192964174}
   - component: {fileID: 8596537346090559324}
+  - component: {fileID: 5888060221386289771}
+  - component: {fileID: 4783171764457899587}
+  - component: {fileID: 4998458858304135219}
+  - component: {fileID: 747280179293176651}
   m_Layer: 0
   m_Name: MD_71_DoubleBed_plump_pillow
   m_TagString: Untagged
@@ -826,7 +1030,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3098227816801094625}
-  m_Mesh: {fileID: 1709021109864734073, guid: c7bc4798600dc044bac9408077ff21ad, type: 3}
+  m_Mesh: {fileID: 4300000, guid: fc048e2d460b0fc1385772ffdc22164c, type: 2}
 --- !u!23 &4571680606192964174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -897,6 +1101,88 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7559999, y: 0.46000004, z: 0.15999997}
   m_Center: {x: -0.000000014901161, y: 0, z: 0}
+--- !u!114 &5888060221386289771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098227816801094625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4419075766700274902}
+  contained: 1
+  partMass: 0.4
+  role: pillow
+--- !u!54 &4783171764457899587
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098227816801094625}
+  serializedVersion: 5
+  m_Mass: 0.4
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &4998458858304135219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098227816801094625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 35
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &747280179293176651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098227816801094625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 75735050438583715}
 --- !u!1 &3139041255130879816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1349,10 @@ GameObject:
   - component: {fileID: 5296133146289940493}
   - component: {fileID: 917962719171356708}
   - component: {fileID: 8440039172038679681}
+  - component: {fileID: 1702633353825786940}
+  - component: {fileID: 5898619190805259277}
+  - component: {fileID: 5570811216741498784}
+  - component: {fileID: 8437871003616730074}
   m_Layer: 0
   m_Name: MD_71_DoubleBed_plump_pillow.001
   m_TagString: Untagged
@@ -1092,7 +1382,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5557842277153745170}
-  m_Mesh: {fileID: -5370052720008781522, guid: c7bc4798600dc044bac9408077ff21ad, type: 3}
+  m_Mesh: {fileID: 4300000, guid: bc05913da4ce44622baa542f4f869091, type: 2}
 --- !u!23 &917962719171356708
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1163,6 +1453,88 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7559999, y: 0.46000004, z: 0.15999997}
   m_Center: {x: 0.000000014901161, y: 0, z: 0}
+--- !u!114 &1702633353825786940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557842277153745170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4419075766700274902}
+  contained: 1
+  partMass: 0.4
+  role: pillow
+--- !u!54 &5898619190805259277
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557842277153745170}
+  serializedVersion: 5
+  m_Mass: 0.4
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &5570811216741498784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557842277153745170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 35
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &8437871003616730074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557842277153745170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 5296133146289940493}
 --- !u!1 &6133742487888556191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1547,7 @@ GameObject:
   - component: {fileID: 5947220352766612000}
   - component: {fileID: 4419075766700274902}
   - component: {fileID: 649540839048545121}
+  - component: {fileID: 7236788312256417127}
   m_Layer: 0
   m_Name: MD_71_DoubleBed
   m_TagString: Untagged
@@ -1244,7 +1617,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 3.8637452
@@ -1269,6 +1642,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &7236788312256417127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6133742487888556191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &8788995506054835981
 GameObject:
   m_ObjectHideFlags: 0

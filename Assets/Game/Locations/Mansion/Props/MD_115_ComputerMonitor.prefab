@@ -209,6 +209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
   owner: {fileID: 3016503327021232023}
   contained: 0
+  partMass: 1.2
+  role: stand
 --- !u!114 &9151227247507228720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,6 +797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
   owner: {fileID: 3016503327021232023}
   contained: 0
+  partMass: 0.65
+  role: display
 --- !u!114 &5135404468755971908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &8675886988783363955
 GameObject:
   m_ObjectHideFlags: 0

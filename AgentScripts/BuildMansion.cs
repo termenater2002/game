@@ -22,9 +22,18 @@ public static class BuildMansion
     static Dictionary<int,GameObject> prefabs=new Dictionary<int,GameObject>();
     static List<object> placed=new List<object>();
     static Scene scene;static Transform architecture,contents,ceilings;
-    static int instances;static bool reuseAssets;
+    static int instances;static bool reuseAssets;static bool allPropTypes;
     static Profile Substance(int id)
     {
+        if(new[]{65,66,68,87,102}.Contains(id))return new Profile("fabric",.4f,45,5,80);
+        if(new[]{86,101,103,104}.Contains(id))return new Profile("plastic",id==86?4:.3f,70,6,180);
+        if(id==123)return new Profile("fabric",2,70,7,350);
+        if(id==99||id==127)return new Profile("wood",id==99?2:.5f,80,6,350);
+        if(new[]{36,90,130,69,126}.Contains(id))return new Profile("wood",id==69?3:2,80,7,450);
+        if(new[]{82,96,129}.Contains(id))return new Profile("metal",2,90,8,450);
+        if(new[]{11,12,107,108,118}.Contains(id))return new Profile("plastic",id<=12?11:2.5f,100,6,450);
+        if(id==40||id==128)return new Profile("metal",5,110,8,650);
+        if(id==20)return new Profile("ceramic",95,210,8,850);
         if(new[]{27,56,90,99,115,116,117,119,123,129,130}.Contains(id))return new Profile("plastic",id==27?15:2.5f,100,6,450);
         if(new[]{11,12,36,61,82,96,127}.Contains(id))return new Profile("glass",id==27?15:id==11?11:id==61?.18f:id==62?.65f:2,32,3.8f,450);
         if(new[]{34,35,39,40,59,60,62,63,69,91,93,94,101,104,105,126}.Contains(id))return new Profile("ceramic",id==91?115:id==93?36:id==34?7:id==35?8:id==59?.4f:id==60?.18f:id==62?.65f:id==104?.2f:id==105?.15f:3, id==91?210:id==93?120:id==59?19:id==60?17:42,3.8f,250);
@@ -109,10 +118,11 @@ public static class BuildMansion
             }
             else
             {
-                var j=moving.gameObject.AddComponent<HingeJoint>();j.connectedBody=body;j.autoConfigureConnectedAnchor=false;j.anchor=Vector3.zero;j.connectedAnchor=go.transform.InverseTransformPoint(moving.position);bool horizontal=name.Contains("oven_door")||name.Contains("dishwasher")||name.Contains("toilet_lid")||name.Contains("bin_lid")||name.Contains("pot_lid");j.axis=moving.InverseTransformDirection(horizontal?go.transform.right:go.transform.up);j.useLimits=true;j.limits=new JointLimits{min=-105,max=105};j.breakForce=1600;j.breakTorque=1200;j.enableCollision=false;mechanism.hinge=j;mechanism.openAngle=name.EndsWith(".001")?-95:95;
+                var j=moving.gameObject.AddComponent<HingeJoint>();j.connectedBody=body;j.autoConfigureConnectedAnchor=false;j.anchor=Vector3.zero;j.connectedAnchor=go.transform.InverseTransformPoint(moving.position);bool horizontal=name.Contains("oven_door")||name.Contains("dishwasher")||name.Contains("toilet_lid")||name.Contains("bin_lid")||name.Contains("pot_lid")||name.Contains("hinged_screen")||name.Contains("hinged_lid")||name.Contains("lift_off_lid");j.axis=moving.InverseTransformDirection(horizontal?go.transform.right:go.transform.up);j.useLimits=true;j.limits=new JointLimits{min=-105,max=105};j.breakForce=1600;j.breakTorque=1200;j.enableCollision=false;mechanism.hinge=j;mechanism.openAngle=name.EndsWith(".001")?-95:95;
             }
         }
-        if(!damage.retainOnDestruction)
+        MansionCompositeFactory.Configure(go,id,e.moving_parts);
+        if(!damage.retainOnDestruction&&go.GetComponentsInChildren<MeshFilter>().Any(f=>f.GetComponentInParent<IndependentPart>()==null))
         {
             var broken=MansionFracture.Build(go,Folder+"/FragmentMeshes/"+id,profile.mass,Interior(profile.kind),e.moving_parts,id,profile.kind);damage.brokenPrefab=PrefabUtility.SaveAsPrefabAsset(broken,Folder+"/Fragments/"+e.name+"_Broken.prefab");UnityEngine.Object.DestroyImmediate(broken);
         }
@@ -227,6 +237,7 @@ public static class BuildMansion
     }
     public static object All() { return Build(true); }
     public static object Rebuild() { return Build(false); }
+    public static object RebuildCompositeLibrary() { allPropTypes=true;reuseAssets=false;return Build(false); }
     static void AuditInitialContacts()
     {
         Physics.SyncTransforms();var colliders=scene.GetRootGameObjects().SelectMany(o=>o.GetComponentsInChildren<Collider>()).ToArray();var found=new List<object>();
@@ -254,6 +265,14 @@ public static class BuildMansion
         reuseAssets=false;prefabs.Clear();foreach(int id in new[]{21,26,27,29,31,32,71,79,115})Prop(id);
         reuseAssets=true;return PrepareTest();
     }
+    public static object RefreshCompositeMechanisms()
+    {
+        if(Application.isPlaying)throw new Exception("Use Edit Mode");
+        specs=JsonConvert.DeserializeObject<List<AssetSpec>>(File.ReadAllText(Folder+"/Art/Data/assets.json")).ToDictionary(x=>x.id);
+        materials=JsonConvert.DeserializeObject<List<MaterialSpec>>(File.ReadAllText(Folder+"/Art/Data/materials.json")).ToDictionary(x=>x.name,x=>AssetDatabase.LoadAssetAtPath<Material>(Folder+"/Materials/"+x.name+".mat"));
+        reuseAssets=false;prefabs.Clear();foreach(var spec in specs.Values.Where(s=>s.moving_parts.Length>0||new[]{20,40,128,69,110,120}.Contains(s.id)))Prop(spec.id);
+        reuseAssets=true;return Build(false);
+    }
     public static object SceneOnly() { reuseAssets=true; return Build(false); }
     public static object SceneTest() { reuseAssets=true; return PrepareTest(); }
     public static object PrepareTest()
@@ -269,6 +288,7 @@ public static class BuildMansion
         scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);scene.name="MansionPrototype";SceneManager.SetActiveScene(scene);
         architecture=new GameObject("Mansion shell — structural surfaces").transform;contents=new GameObject("Mansion contents — physical and breakable").transform;ceilings=new GameObject("Ceilings — hide in editor for plan view").transform;ceilings.SetParent(architecture);
         MansionArchitecture.Build(architecture,ceilings,materials,(id,room,p,yaw,mount)=>Place(id,room,p,yaw,mount));
+        if(allPropTypes)foreach(int id in specs.Keys.Where(id=>id>=8&&(id<13||id>19)).OrderBy(id=>id))Prop(id);
         // Exterior apron catches thrown objects; the structural boundary remains intact.
         var outside=GameObject.CreatePrimitive(PrimitiveType.Cube);outside.name="Stone courtyard apron";outside.transform.SetParent(architecture);outside.transform.localScale=new Vector3(34,.3f,34);outside.transform.position=new Vector3(0,-.36f,0);outside.GetComponent<Renderer>().sharedMaterial=materials["MD_012_cream_marble"];
         foreach(var kind in new[]{"wood","glass","ceramic","metal","plastic","fabric"})MansionPropFactory.Profile(kind);

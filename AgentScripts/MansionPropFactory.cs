@@ -42,7 +42,7 @@ public static class MansionPropFactory
         }
         var mesh=new Mesh();mesh.SetVertices(v);mesh.SetNormals(n);mesh.SetUVs(0,u);mesh.subMeshCount=groups.Count;for(int i=0;i<groups.Count;i++)mesh.SetTriangles(groups[i],i);mesh.RecalculateBounds();return mesh;
     }
-    static void Response(GameObject go,DestructionProfile profile,MeshFilter[] surfaces,int id)
+    public static void Response(GameObject go,DestructionProfile profile,MeshFilter[] surfaces,int id)
     {
         if(profile.failure==DestructionFailure.Fracture)return;
         var response=go.AddComponent<MansionMaterialResponse>();response.profile=profile;response.deformableSurfaces=surfaces;
@@ -71,11 +71,6 @@ public static class MansionPropFactory
         foreach(var shape in go.GetComponentsInChildren<Collider>())shape.sharedMaterial=contact;
         var root=go.GetComponent<Rigidbody>();var damage=go.GetComponent<DamageOnImpact>();var profile=Profile(kind);damage.materialProfile=profile;float referenceMass=kind=="ceramic"||kind=="glass"?.5f:kind=="metal"?3:kind=="plastic"?2:10;damage.materialToughnessScale=Mathf.Max(1,Mathf.Pow(root.mass/referenceMass,kind=="ceramic"?1:.65f));damage.retainOnDestruction=profile.failure!=DestructionFailure.Fracture;
         var meta=go.GetComponent<MansionProp>();meta.hitSound=profile.impactSound;meta.breakSound=profile.breakSound;
-        if(kind=="metal"||kind=="fabric")
-        {
-            var targets=go.GetComponentsInChildren<MeshFilter>().Where(f=>kind!="fabric"||id==26||f.name.Contains("cushion")||f.name.Contains("upholstered")||f.name.Contains("rolled_arm")||id>=73).ToArray();
-            if(id!=26)Response(go,profile,targets,id);
-        }
         if(id==29)Books(go,damage);
         if(id==27||id==115)Television(go,damage,id);
         if(id==26)
@@ -97,7 +92,7 @@ public static class MansionPropFactory
         foreach(var f in go.GetComponentsInChildren<MeshFilter>().Where(f=>f.name.Contains("individual_book")))
         {
             var rb=f.gameObject.AddComponent<Rigidbody>();rb.mass=.45f;rb.isKinematic=true;rb.collisionDetectionMode=CollisionDetectionMode.ContinuousSpeculative;rb.maxAngularVelocity=10;rb.maxDepenetrationVelocity=1;
-            var part=f.gameObject.AddComponent<IndependentPart>();part.owner=owner;part.contained=true;
+            var part=f.gameObject.AddComponent<IndependentPart>();part.owner=owner;part.contained=true;part.partMass=.45f;part.role="book";
             var damage=f.gameObject.AddComponent<DamageOnImpact>();damage.materialProfile=Profile("fabric");damage.maxHP=25;damage.objectValue=5;damage.retainOnDestruction=true;
             var response=f.gameObject.AddComponent<MansionMaterialResponse>();response.profile=damage.materialProfile;response.deformableSurfaces=new[]{f};i++;
         }
@@ -114,7 +109,7 @@ public static class MansionPropFactory
         {
             var body=child.AddComponent<Rigidbody>();body.mass=mass;body.interpolation=RigidbodyInterpolation.Interpolate;body.collisionDetectionMode=CollisionDetectionMode.ContinuousSpeculative;body.maxDepenetrationVelocity=1.5f;
             var joint=child.AddComponent<FixedJoint>();joint.connectedBody=root;joint.autoConfigureConnectedAnchor=false;joint.anchor=Vector3.zero;joint.connectedAnchor=go.transform.InverseTransformPoint(child.transform.position);joint.enableCollision=false;joint.breakForce=700;joint.breakTorque=400;
-            var independent=child.AddComponent<IndependentPart>();independent.owner=owner;
+            var independent=child.AddComponent<IndependentPart>();independent.owner=owner;independent.partMass=mass;independent.role=fracture?"display":"stand";
             var damage=child.AddComponent<DamageOnImpact>();damage.materialProfile=profile;damage.maxHP=hp;damage.objectValue=value;damage.retainOnDestruction=!fracture;damage.explosionForce=.15f;damage.explosionRadius=.5f;damage.debrisLifetime=70;
             if(fracture)
             {

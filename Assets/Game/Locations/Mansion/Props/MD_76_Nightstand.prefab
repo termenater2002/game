@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228155045128875341}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 0.026666611, z: 0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7725947657654531581}
+  m_Father: {fileID: 3140909179489384161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7272379743514629069
 MeshFilter:
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228155045128875341}
-  m_Mesh: {fileID: 2422766759950420343, guid: c7b895cbbc96a5693959aa7fbfa65268, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 367e8524e0a356798846a9d5a5788651, type: 2}
 --- !u!23 &1704723899865356790
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 5612732494199594755}
   - component: {fileID: 8963338371977843330}
   - component: {fileID: 119168129063497464}
+  - component: {fileID: 1968021086853846519}
   m_Layer: 0
   m_Name: MD_76_Nightstand
   m_TagString: Untagged
@@ -193,7 +194,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 1.1258171
@@ -218,6 +219,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &1968021086853846519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573254086348793438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &741478434713085193
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,12 +371,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838169821950378473}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: 0.026666611, z: 0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7725947657654531581}
+  m_Father: {fileID: 3140909179489384161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6795343042998860567
 MeshFilter:
@@ -371,7 +385,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838169821950378473}
-  m_Mesh: {fileID: -7105810542745598966, guid: c7b895cbbc96a5693959aa7fbfa65268, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 7d4535b1eba99bf118e012827aba8751, type: 2}
 --- !u!23 &41495295401058815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -581,12 +595,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231570347850211772}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.085, y: 0.026666641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1430966077838378632}
+  m_Father: {fileID: 1427222663023027502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6871524757653675210
 MeshFilter:
@@ -595,7 +609,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231570347850211772}
-  m_Mesh: {fileID: 6695660418236927225, guid: c7b895cbbc96a5693959aa7fbfa65268, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 78ceec371a682b5269f31d6c6188372d, type: 2}
 --- !u!23 &2612324981797618319
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -890,6 +904,100 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.4, z: 0.06999999}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1956591359260362105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427222663023027502}
+  - component: {fileID: 7381853000333076043}
+  - component: {fileID: 735183515825379198}
+  - component: {fileID: 6558390548528579361}
+  m_Layer: 0
+  m_Name: Assembly_metal_hardware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1427222663023027502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956591359260362105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000002483527, y: -0.046666652, z: -0.000000059604645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 216736279208195815}
+  - {fileID: 1403276985248853236}
+  - {fileID: 3168074757609625988}
+  m_Father: {fileID: 1430966077838378632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7381853000333076043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956591359260362105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5482449144642811801}
+  contained: 0
+  partMass: 0.15
+  role: hardware
+--- !u!114 &735183515825379198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956591359260362105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 10.208333
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &6558390548528579361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956591359260362105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 6445488891842903697}
+  - {fileID: 5819340940122971029}
+  - {fileID: 6871524757653675210}
 --- !u!1 &2025699744903652591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1237,8 @@ GameObject:
   - component: {fileID: 1854573708375892629}
   - component: {fileID: 1890119079801468846}
   - component: {fileID: 1271640121988341727}
+  - component: {fileID: 5316282316326333631}
+  - component: {fileID: 5482449144642811801}
   m_Layer: 0
   m_Name: MD_76_Nightstand_sliding_drawer.001
   m_TagString: Untagged
@@ -1149,13 +1259,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 216736279208195815}
-  - {fileID: 1403276985248853236}
-  - {fileID: 3168074757609625988}
   - {fileID: 8271267661199344396}
   - {fileID: 4549849952681497200}
   - {fileID: 5873283118098072752}
   - {fileID: 3068877337047761086}
+  - {fileID: 1427222663023027502}
   m_Father: {fileID: 7340317205386038177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6058955999119681351
@@ -1278,7 +1386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 0}
   drawer: {fileID: 1271640121988341727}
-  owner: {fileID: 8963338371977843330}
+  owner: {fileID: 5482449144642811801}
   openAngle: 100
   travel: 0.28
 --- !u!153 &1271640121988341727
@@ -1383,6 +1491,140 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5316282316326333631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094446185256860945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8963338371977843330}
+  contained: 0
+  partMass: 2.16
+  role: mechanism
+--- !u!114 &5482449144642811801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094446185256860945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1174273184833853606, guid: f0286649b84da564591949b5c0ce234f, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 18.958332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
+--- !u!1 &3112805111717977330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3140909179489384161}
+  - component: {fileID: 6271975689145893239}
+  - component: {fileID: 3667064876604452304}
+  - component: {fileID: 692846234783638855}
+  m_Layer: 0
+  m_Name: Assembly_metal_hardware
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3140909179489384161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3112805111717977330}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000000002483527, y: -0.046666622, z: -0.000000059604645}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7228652194929782010}
+  - {fileID: 378619081119606216}
+  - {fileID: 5348533965112212868}
+  m_Father: {fileID: 7725947657654531581}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6271975689145893239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3112805111717977330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 6220186783729923260}
+  contained: 0
+  partMass: 0.15
+  role: hardware
+--- !u!114 &3667064876604452304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3112805111717977330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 10.208333
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &692846234783638855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3112805111717977330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 8085295325532981033}
+  - {fileID: 6795343042998860567}
+  - {fileID: 7272379743514629069}
 --- !u!1 &3129763043820429774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1749,8 @@ GameObject:
   - component: {fileID: 6522162047911010627}
   - component: {fileID: 7713045702179775065}
   - component: {fileID: 2196300405581657632}
+  - component: {fileID: 4305827712129931548}
+  - component: {fileID: 1525234693547714906}
   m_Layer: 0
   m_Name: MD_76_Nightstand_turned_leg.003
   m_TagString: Untagged
@@ -1607,6 +1851,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.13999999, z: 0.13}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.065}
+--- !u!114 &4305827712129931548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952631355279218712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8963338371977843330}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1525234693547714906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3952631355279218712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 4827152821395192342, guid: 337cdbdc9fa1107da95a73dc122df5df, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4099014847228971119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1903,8 @@ GameObject:
   - component: {fileID: 8557302887964621540}
   - component: {fileID: 5578646541396790536}
   - component: {fileID: 647817388914233498}
+  - component: {fileID: 685950994888404742}
+  - component: {fileID: 3900617954887048099}
   m_Layer: 0
   m_Name: MD_76_Nightstand_turned_leg.002
   m_TagString: Untagged
@@ -1719,6 +2005,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.13999999, z: 0.13}
   m_Center: {x: 0, y: 0.0000000037252903, z: 0.065}
+--- !u!114 &685950994888404742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099014847228971119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8963338371977843330}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &3900617954887048099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4099014847228971119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8308728371853065819, guid: c56a71645e7ed22f8af72abd9a88f1c9, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4626433797729224749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,12 +2072,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4626433797729224749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.02000001, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: 0.026666641, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1430966077838378632}
+  m_Father: {fileID: 1427222663023027502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5819340940122971029
 MeshFilter:
@@ -1760,7 +2086,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4626433797729224749}
-  m_Mesh: {fileID: -8845582811636971771, guid: c7b895cbbc96a5693959aa7fbfa65268, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 623faa20fbc13501ebbc32126340dbe9, type: 2}
 --- !u!23 &7119235102429429946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1955,6 +2281,8 @@ GameObject:
   - component: {fileID: 7836512317720534979}
   - component: {fileID: 3610988515021319978}
   - component: {fileID: 5108255626877075189}
+  - component: {fileID: 6158622191133748165}
+  - component: {fileID: 2935219644834200774}
   m_Layer: 0
   m_Name: MD_76_Nightstand_turned_leg
   m_TagString: Untagged
@@ -2055,6 +2383,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.13999999, z: 0.13}
   m_Center: {x: 0, y: 0.0000000037252903, z: 0.065}
+--- !u!114 &6158622191133748165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052535473806640930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8963338371977843330}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &2935219644834200774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052535473806640930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1192309666465006067, guid: e27bc6b1a9c9686c9a64b8cd756d0c02, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &5366356442413630741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2547,8 @@ GameObject:
   - component: {fileID: 6510935611663813916}
   - component: {fileID: 8815231436751394263}
   - component: {fileID: 7015794988551285764}
+  - component: {fileID: 5159171162105267875}
+  - component: {fileID: 1405196499878722943}
   m_Layer: 0
   m_Name: MD_76_Nightstand_turned_leg.001
   m_TagString: Untagged
@@ -2279,6 +2649,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14000002, y: 0.13999999, z: 0.13}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.065}
+--- !u!114 &5159171162105267875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438504846549170997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8963338371977843330}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1405196499878722943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438504846549170997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1595532116524640060, guid: 47955b21b3d9c793ea53f63eb7f4570a, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6569846909890459768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,12 +2716,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6569846909890459768}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.060000002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: -0.013333291, z: -0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1430966077838378632}
+  m_Father: {fileID: 1427222663023027502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6445488891842903697
 MeshFilter:
@@ -2320,7 +2730,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6569846909890459768}
-  m_Mesh: {fileID: 7150883581258891943, guid: c7b895cbbc96a5693959aa7fbfa65268, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 580270b65835ff288b194d0be8d836a7, type: 2}
 --- !u!23 &5302791020822857805
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2642,12 +3052,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209124976607708126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.085, y: -0.060000002, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.085, y: -0.013333321, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7725947657654531581}
+  m_Father: {fileID: 3140909179489384161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8085295325532981033
 MeshFilter:
@@ -2656,7 +3066,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209124976607708126}
-  m_Mesh: {fileID: -2846053811626139154, guid: c7b895cbbc96a5693959aa7fbfa65268, type: 3}
+  m_Mesh: {fileID: 4300000, guid: aea5ab1cac2a37226a337b3dc31d9806, type: 2}
 --- !u!23 &2890260424564566415
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3121,6 +3531,8 @@ GameObject:
   - component: {fileID: 1473254117044333666}
   - component: {fileID: 2629086405573345558}
   - component: {fileID: 869925122219280790}
+  - component: {fileID: 858029607134070147}
+  - component: {fileID: 6220186783729923260}
   m_Layer: 0
   m_Name: MD_76_Nightstand_sliding_drawer
   m_TagString: Untagged
@@ -3141,13 +3553,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7228652194929782010}
-  - {fileID: 378619081119606216}
-  - {fileID: 5348533965112212868}
   - {fileID: 4611598833275080833}
   - {fileID: 8111611877127627234}
   - {fileID: 6142866972245459501}
   - {fileID: 7394592687121224518}
+  - {fileID: 3140909179489384161}
   m_Father: {fileID: 7340317205386038177}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1674540071030200110
@@ -3270,7 +3680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 0}
   drawer: {fileID: 869925122219280790}
-  owner: {fileID: 8963338371977843330}
+  owner: {fileID: 6220186783729923260}
   openAngle: 100
   travel: 0.28
 --- !u!153 &869925122219280790
@@ -3375,3 +3785,43 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &858029607134070147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003695705047152891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8963338371977843330}
+  contained: 0
+  partMass: 2.16
+  role: mechanism
+--- !u!114 &6220186783729923260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003695705047152891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 548589842051095527, guid: 61a8dc9146be3bd9aa13ee7e217a70e4, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 18.958332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0

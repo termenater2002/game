@@ -393,6 +393,8 @@ GameObject:
   - component: {fileID: 3061852997913633457}
   - component: {fileID: 8547493073973910055}
   - component: {fileID: 5761156406541631647}
+  - component: {fileID: 3399982424520771113}
+  - component: {fileID: 1545474959012380552}
   m_Layer: 0
   m_Name: MD_43_BarStool_turned_leg
   m_TagString: Untagged
@@ -422,7 +424,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997867770354640741}
-  m_Mesh: {fileID: 4300000, guid: 177c8aeae08d81779b6246e6b9cc7be0, type: 2}
+  m_Mesh: {fileID: 4233090372844362367, guid: 26fa3a7aff53f389c91fb2d9fafc73ca, type: 3}
 --- !u!23 &8547493073973910055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -493,6 +495,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.78}
   m_Center: {x: 0, y: 0, z: 0.39}
+--- !u!114 &3399982424520771113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997867770354640741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 7955615550779803451}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1545474959012380552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997867770354640741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 2465481626601591176, guid: 144d18c675ccd8509b651c281db309cf, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 59.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &2447285116237107114
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +547,9 @@ GameObject:
   - component: {fileID: 4719794914543245170}
   - component: {fileID: 6211640514704016432}
   - component: {fileID: 7942394814967559346}
+  - component: {fileID: 6124980501364312351}
+  - component: {fileID: 2455601027977787476}
+  - component: {fileID: 3534906929616371536}
   m_Layer: 0
   m_Name: MD_43_BarStool_seat_pad
   m_TagString: Untagged
@@ -605,6 +650,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.45, y: 0.43, z: 0.08000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6124980501364312351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447285116237107114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 7955615550779803451}
+  contained: 0
+  partMass: 0.4
+  role: cushion
+--- !u!114 &2455601027977787476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447285116237107114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 40
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 59.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &3534906929616371536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447285116237107114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 4719794914543245170}
 --- !u!1 &3360531170374544645
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +829,8 @@ GameObject:
   - component: {fileID: 2385108303497064165}
   - component: {fileID: 6843344844579523212}
   - component: {fileID: 362372334175977524}
+  - component: {fileID: 7009625750167483373}
+  - component: {fileID: 2669489379657090134}
   m_Layer: 0
   m_Name: MD_43_BarStool_turned_leg.002
   m_TagString: Untagged
@@ -758,7 +860,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3443986343911072760}
-  m_Mesh: {fileID: 4300000, guid: 2625437d527dde9dbbf0dc74e870755d, type: 2}
+  m_Mesh: {fileID: -342162066706515288, guid: 26fa3a7aff53f389c91fb2d9fafc73ca, type: 3}
 --- !u!23 &6843344844579523212
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -829,6 +931,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.78}
   m_Center: {x: 0, y: 0, z: 0.39}
+--- !u!114 &7009625750167483373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443986343911072760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 7955615550779803451}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &2669489379657090134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443986343911072760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5374660469117158796, guid: 3ab5bf0253111c2d983e33e2aee1757a, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 59.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &3536051864470505552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1319,8 @@ GameObject:
   - component: {fileID: 474357927447047643}
   - component: {fileID: 2294295244023161930}
   - component: {fileID: 5293849000236993182}
+  - component: {fileID: 2753861015520253872}
+  - component: {fileID: 4351472711957003150}
   m_Layer: 0
   m_Name: MD_43_BarStool_turned_leg.003
   m_TagString: Untagged
@@ -1206,7 +1350,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6023317637454123566}
-  m_Mesh: {fileID: 4300000, guid: 97a53c8c11049940cb34633bf47a50a0, type: 2}
+  m_Mesh: {fileID: 6728306929943858144, guid: 26fa3a7aff53f389c91fb2d9fafc73ca, type: 3}
 --- !u!23 &2294295244023161930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1277,6 +1421,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.78}
   m_Center: {x: 0, y: 0, z: 0.39}
+--- !u!114 &2753861015520253872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023317637454123566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 7955615550779803451}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &4351472711957003150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023317637454123566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 2210300882728712153, guid: 130fddd2fc8c80e808b25dec66684fae, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 59.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6026399879125153843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,6 +1473,8 @@ GameObject:
   - component: {fileID: 987896985404469559}
   - component: {fileID: 2059245727926399044}
   - component: {fileID: 7378605621715921034}
+  - component: {fileID: 2529021898702356160}
+  - component: {fileID: 9056423058970758408}
   m_Layer: 0
   m_Name: MD_43_BarStool_turned_leg.001
   m_TagString: Untagged
@@ -1318,7 +1504,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6026399879125153843}
-  m_Mesh: {fileID: 4300000, guid: b737f3850eec64cdba8106871776588a, type: 2}
+  m_Mesh: {fileID: -4400839250125754832, guid: 26fa3a7aff53f389c91fb2d9fafc73ca, type: 3}
 --- !u!23 &2059245727926399044
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1389,6 +1575,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.78}
   m_Center: {x: 0, y: 0, z: 0.39}
+--- !u!114 &2529021898702356160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026399879125153843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 7955615550779803451}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &9056423058970758408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026399879125153843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5058340339674945290, guid: 1a17b3f3954c29e918b033ca0448b645, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 59.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6576753739378759980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,6 +1627,7 @@ GameObject:
   - component: {fileID: 8252675279156461300}
   - component: {fileID: 7955615550779803451}
   - component: {fileID: 1162074522986916721}
+  - component: {fileID: 266873599874925402}
   - component: {fileID: 5272302917465695458}
   m_Layer: 0
   m_Name: MD_43_BarStool
@@ -1471,7 +1698,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 850
+  objectValue: 552.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   materialToughnessScale: 1.5691682
@@ -1496,6 +1723,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
   mountSupports: []
+--- !u!114 &266873599874925402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576753739378759980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!114 &5272302917465695458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,11 +1759,6 @@ MonoBehaviour:
   - {fileID: 1506708106728410614}
   - {fileID: 4767355295246293792}
   - {fileID: 2567763989122662308}
-  - {fileID: 4719794914543245170}
-  - {fileID: 3061852997913633457}
-  - {fileID: 987896985404469559}
-  - {fileID: 2385108303497064165}
-  - {fileID: 474357927447047643}
 --- !u!1 &7482951723370048147
 GameObject:
   m_ObjectHideFlags: 0

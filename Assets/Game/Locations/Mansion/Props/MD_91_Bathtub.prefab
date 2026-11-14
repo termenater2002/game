@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63728488634576448}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.11, z: 0.92}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00999999, y: 0.0703572, z: 0.11678572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1684988667604694022
 MeshFilter:
@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63728488634576448}
-  m_Mesh: {fileID: 365502689200878025, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 2d41c949b74ea1d71b126fb9b66ab4c2, type: 2}
 --- !u!23 &7554043906200668226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -124,6 +124,9 @@ GameObject:
   - component: {fileID: 5629368036696347823}
   - component: {fileID: 2544229551520942903}
   - component: {fileID: 2854126912921682238}
+  - component: {fileID: 4420731809240801475}
+  - component: {fileID: 8130930217291936356}
+  - component: {fileID: 1028418791107248898}
   m_Layer: 0
   m_Name: MD_91_Bathtub_claw_foot.002
   m_TagString: Untagged
@@ -153,7 +156,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215435171474087151}
-  m_Mesh: {fileID: 6754439489072453327, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 97e9b097ef548f41a8b7974cecfc7202, type: 2}
 --- !u!23 &2544229551520942903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -224,6 +227,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.11999999, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0.1}
+--- !u!114 &4420731809240801475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215435171474087151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 676527930292084067}
+  contained: 0
+  partMass: 1
+  role: foot
+--- !u!114 &8130930217291936356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215435171474087151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 65
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 17.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &1028418791107248898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215435171474087151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 5629368036696347823}
 --- !u!1 &561621347932220351
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +294,7 @@ GameObject:
   - component: {fileID: 562787016850060250}
   - component: {fileID: 676527930292084067}
   - component: {fileID: 710743049565991307}
+  - component: {fileID: 2081917690558543445}
   m_Layer: 0
   m_Name: MD_91_Bathtub
   m_TagString: Untagged
@@ -257,6 +316,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7933449277012510418}
+  - {fileID: 8956219252461115600}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &562787016850060250
@@ -305,7 +365,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 162.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
   materialToughnessScale: 230
@@ -330,6 +390,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
   breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
   mountSupports: []
+--- !u!114 &2081917690558543445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561621347932220351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &701584718326896504
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,12 +542,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323754141126398549}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.29, z: 0.88}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00999999, y: 0.030357122, z: -0.06321429}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5914749403610874131
 MeshFilter:
@@ -483,7 +556,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323754141126398549}
-  m_Mesh: {fileID: -6195654319548762130, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 92adffef70fa87562b28c79e335ba0ee, type: 2}
 --- !u!23 &9001060290071009723
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -581,12 +654,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542532591877797608}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.29, z: 0.71}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00999999, y: -0.13964283, z: -0.06321423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6539613254697374685
 MeshFilter:
@@ -595,7 +668,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542532591877797608}
-  m_Mesh: {fileID: 7800700821997597482, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: a6eda46c483a156d6bf99f34c3f316fc, type: 2}
 --- !u!23 &669832669732858420
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -666,6 +739,108 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.036000013, y: 0.036000013, z: 0.17000002}
   m_Center: {x: 0, y: 0, z: 0.08500001}
+--- !u!1 &2303868317973565391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8956219252461115600}
+  - component: {fileID: 1852470648710365683}
+  - component: {fileID: 6221163133852492778}
+  - component: {fileID: 643948854221568869}
+  m_Layer: 0
+  m_Name: Assembly_tap_faucet_mount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8956219252461115600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303868317973565391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.65, y: 0.84964275, z: -0.2267858}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1962193847451942272}
+  - {fileID: 1853442434736108172}
+  - {fileID: 3421696320622399819}
+  - {fileID: 2681344621570940370}
+  - {fileID: 5072846742532073602}
+  - {fileID: 2389676630564294599}
+  - {fileID: 5176823123569870589}
+  m_Father: {fileID: 6115971003679295855}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1852470648710365683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303868317973565391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 676527930292084067}
+  contained: 0
+  partMass: 0.6
+  role: tap
+--- !u!114 &6221163133852492778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303868317973565391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 65
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 17.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &643948854221568869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303868317973565391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 3084050394820961884}
+  - {fileID: 6539613254697374685}
+  - {fileID: 5914749403610874131}
+  - {fileID: 1974960279389551716}
+  - {fileID: 6869331750237744128}
+  - {fileID: 1684988667604694022}
+  - {fileID: 8836644111695314943}
 --- !u!1 &2780720356136964186
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +853,9 @@ GameObject:
   - component: {fileID: 3473026586388992539}
   - component: {fileID: 8210628844247613742}
   - component: {fileID: 4483730920078311570}
+  - component: {fileID: 6583699183399124019}
+  - component: {fileID: 4754484352674226528}
+  - component: {fileID: 2871481543921747116}
   m_Layer: 0
   m_Name: MD_91_Bathtub_claw_foot
   m_TagString: Untagged
@@ -707,7 +885,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2780720356136964186}
-  m_Mesh: {fileID: -6369863379569513958, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 843049f2b40894db384536e69bbb0e0f, type: 2}
 --- !u!23 &8210628844247613742
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -778,6 +956,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.11999999, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0.1}
+--- !u!114 &6583699183399124019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780720356136964186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 676527930292084067}
+  contained: 0
+  partMass: 1
+  role: foot
+--- !u!114 &4754484352674226528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780720356136964186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 65
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 17.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &2871481543921747116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2780720356136964186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 3473026586388992539}
 --- !u!1 &4286607442939882137
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,12 +1038,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4286607442939882137}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.29, z: 0.68}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00999999, y: -0.1696428, z: -0.06321423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3084050394820961884
 MeshFilter:
@@ -819,7 +1052,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4286607442939882137}
-  m_Mesh: {fileID: 191500707559890749, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 94fe0b6dc6056c3888bdb433f229bdfe, type: 2}
 --- !u!23 &4551847842129980262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -902,6 +1135,9 @@ GameObject:
   - component: {fileID: 8455188492874103455}
   - component: {fileID: 4923936372000956596}
   - component: {fileID: 1027458317262716784}
+  - component: {fileID: 5924411907909933773}
+  - component: {fileID: 7574430994369828393}
+  - component: {fileID: 6066007995905783000}
   m_Layer: 0
   m_Name: MD_91_Bathtub_claw_foot.003
   m_TagString: Untagged
@@ -931,7 +1167,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6977439680489147381}
-  m_Mesh: {fileID: 1305290873414336332, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: cc1e78804af361bdba529cbf13a28da5, type: 2}
 --- !u!23 &4923936372000956596
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1002,6 +1238,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.11999999, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0.1}
+--- !u!114 &5924411907909933773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977439680489147381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 676527930292084067}
+  contained: 0
+  partMass: 1
+  role: foot
+--- !u!114 &7574430994369828393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977439680489147381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 65
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 17.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &6066007995905783000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977439680489147381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 8455188492874103455}
 --- !u!1 &7030355972480680476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,12 +1320,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030355972480680476}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.17, z: 0.96}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00999999, y: 0.110357165, z: 0.056785658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6869331750237744128
 MeshFilter:
@@ -1043,7 +1334,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7030355972480680476}
-  m_Mesh: {fileID: -75540125402104605, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: cab476b55286521a486c4e921b533140, type: 2}
 --- !u!23 &1571915305423888804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1141,12 +1432,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8019927534541619315}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 0.29, z: 0.71}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.030000031, y: -0.13964283, z: -0.06321423}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8836644111695314943
 MeshFilter:
@@ -1155,7 +1446,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8019927534541619315}
-  m_Mesh: {fileID: -6349225521905034121, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b9ea1898b9eb83154a3fc8b1eccbcc0f, type: 2}
 --- !u!23 &4405316572261217186
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1259,14 +1550,7 @@ Transform:
   - {fileID: 4359114535428790302}
   - {fileID: 5225954015585645051}
   - {fileID: 2705665595881770168}
-  - {fileID: 1962193847451942272}
-  - {fileID: 1853442434736108172}
-  - {fileID: 3421696320622399819}
-  - {fileID: 2681344621570940370}
-  - {fileID: 5072846742532073602}
-  - {fileID: 2389676630564294599}
   - {fileID: 2749965279433480401}
-  - {fileID: 5176823123569870589}
   m_Father: {fileID: 6115971003679295855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8254562654293464148
@@ -1296,12 +1580,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8254562654293464148}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.64, y: 0.255, z: 0.95}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00999999, y: 0.100357175, z: -0.028214261}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7933449277012510418}
+  m_Father: {fileID: 8956219252461115600}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1974960279389551716
 MeshFilter:
@@ -1310,7 +1594,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8254562654293464148}
-  m_Mesh: {fileID: 1890634070165162443, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6c53ee0fe6a3816a89e29846e56e4231, type: 2}
 --- !u!23 &2288869101294661941
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1393,6 +1677,9 @@ GameObject:
   - component: {fileID: 1807129102680103561}
   - component: {fileID: 7912731901414176626}
   - component: {fileID: 1310321587332817556}
+  - component: {fileID: 538563455318944501}
+  - component: {fileID: 1734671257258869595}
+  - component: {fileID: 1670502428708408393}
   m_Layer: 0
   m_Name: MD_91_Bathtub_claw_foot.001
   m_TagString: Untagged
@@ -1422,7 +1709,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8519852241778023009}
-  m_Mesh: {fileID: 3653830660588700839, guid: 4ab0c1062292bb30fb80a6848d908de5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 58e4c1af48519dee399743f1d267cc39, type: 2}
 --- !u!23 &7912731901414176626
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1493,3 +1780,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.11999999, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0.1}
+--- !u!114 &538563455318944501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8519852241778023009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 676527930292084067}
+  contained: 0
+  partMass: 1
+  role: foot
+--- !u!114 &1734671257258869595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8519852241778023009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 65
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 17.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &1670502428708408393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8519852241778023009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 1807129102680103561}

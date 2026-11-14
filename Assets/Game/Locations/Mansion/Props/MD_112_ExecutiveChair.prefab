@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3579244432829458098}
   - component: {fileID: 1359968372874135176}
   - component: {fileID: 5453446572531849906}
+  - component: {fileID: 1967157890000420546}
+  - component: {fileID: 634789578780993995}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_caster.003
   m_TagString: Untagged
@@ -41,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137679504969956731}
-  m_Mesh: {fileID: 4300000, guid: 3676449aa27f4ad6fbd438da3eb25b43, type: 2}
+  m_Mesh: {fileID: 2598124747479953064, guid: 69e84ebb7489745c5b7135fda499a76d, type: 3}
 --- !u!23 &1359968372874135176
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,6 +114,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.11, y: 0.060000002, z: 0.10461621}
   m_Center: {x: 0.000000007450581, y: 0.030000001, z: 0.0000000018626451}
+--- !u!114 &1967157890000420546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137679504969956731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.1
+  role: caster
+--- !u!114 &634789578780993995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137679504969956731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7414866615391758967, guid: 5a6bfa20b4dd0084d9a6ae3695a32c9b, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1599898985774272816
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +278,9 @@ GameObject:
   - component: {fileID: 3146626167878212134}
   - component: {fileID: 353515582179414270}
   - component: {fileID: 8753022741639994285}
+  - component: {fileID: 2980001907929823409}
+  - component: {fileID: 6431537817511017363}
+  - component: {fileID: 5596091293106014037}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_padded_seat
   m_TagString: Untagged
@@ -336,6 +381,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.59, y: 0.56, z: 0.13999999}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2980001907929823409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704827548346189202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.8
+  role: upholstery
+--- !u!114 &6431537817511017363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704827548346189202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &5596091293106014037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704827548346189202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 3146626167878212134}
 --- !u!1 &2038932073284421414
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +560,9 @@ GameObject:
   - component: {fileID: 960368915032147936}
   - component: {fileID: 4307493930235471039}
   - component: {fileID: 6720575021326480784}
+  - component: {fileID: 6268785521198759593}
+  - component: {fileID: 5834541219817217916}
+  - component: {fileID: 963109043840929062}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_backrest
   m_TagString: Untagged
@@ -560,6 +663,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.54, y: 0.23557988, z: 0.73687553}
   m_Center: {x: 0, y: 0.000000007450581, z: 0}
+--- !u!114 &6268785521198759593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160763279935111800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.8
+  role: upholstery
+--- !u!114 &5834541219817217916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160763279935111800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &963109043840929062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160763279935111800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 960368915032147936}
 --- !u!1 &2475252141839231721
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +730,9 @@ GameObject:
   - component: {fileID: 4707209136011262565}
   - component: {fileID: 1739895109179303147}
   - component: {fileID: 8247394321714483913}
+  - component: {fileID: 2019231291748020234}
+  - component: {fileID: 699042124641469394}
+  - component: {fileID: 6952596002245629727}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_arm_pad.001
   m_TagString: Untagged
@@ -672,6 +833,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.08499998, y: 0.38, z: 0.07000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2019231291748020234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475252141839231721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.8
+  role: upholstery
+--- !u!114 &699042124641469394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475252141839231721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &6952596002245629727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2475252141839231721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 4707209136011262565}
 --- !u!1 &2770757740086119215
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +900,8 @@ GameObject:
   - component: {fileID: 8182803084311470880}
   - component: {fileID: 4066274970224702234}
   - component: {fileID: 2236510824347847772}
+  - component: {fileID: 3664929409257474981}
+  - component: {fileID: 1109751254110604412}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_caster.002
   m_TagString: Untagged
@@ -713,7 +931,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2770757740086119215}
-  m_Mesh: {fileID: 4300000, guid: 02a51e7118274437eaba40739e628221, type: 2}
+  m_Mesh: {fileID: -5222860368600577578, guid: 69e84ebb7489745c5b7135fda499a76d, type: 3}
 --- !u!23 &4066274970224702234
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -784,6 +1002,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.11, y: 0.060000002, z: 0.10461621}
   m_Center: {x: 0.000000007450581, y: 0.030000001, z: 0.0000000018626451}
+--- !u!114 &3664929409257474981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770757740086119215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.1
+  role: caster
+--- !u!114 &1109751254110604412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770757740086119215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 3153086823601826956, guid: 7f55a73cec51f266e9708dba5353803d, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &3025924409749807201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1278,9 @@ GameObject:
   - component: {fileID: 855089015653322966}
   - component: {fileID: 1874291485546322103}
   - component: {fileID: 2137318526338660579}
+  - component: {fileID: 1003831638222038120}
+  - component: {fileID: 4333638211469116320}
+  - component: {fileID: 6638400926318808880}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_arm_pad
   m_TagString: Untagged
@@ -1120,6 +1381,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.08499998, y: 0.38, z: 0.07000005}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1003831638222038120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432594154865396250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.8
+  role: upholstery
+--- !u!114 &4333638211469116320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432594154865396250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &6638400926318808880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4432594154865396250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 855089015653322966}
 --- !u!1 &4857303858025845049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1944,8 @@ GameObject:
   - component: {fileID: 5732606897906347610}
   - component: {fileID: 8732303590416507093}
   - component: {fileID: 3777258943854802838}
+  - component: {fileID: 4287919488131957628}
+  - component: {fileID: 1286457572029124786}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_caster.001
   m_TagString: Untagged
@@ -1657,7 +1975,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7888773427092773544}
-  m_Mesh: {fileID: 4300000, guid: 7fd6ca86eb4ea45ea9f38aff3909b67c, type: 2}
+  m_Mesh: {fileID: -3957757412727440719, guid: 69e84ebb7489745c5b7135fda499a76d, type: 3}
 --- !u!23 &8732303590416507093
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1728,6 +2046,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.109999985, y: 0.060000002, z: 0.10461621}
   m_Center: {x: 0.0000000018626451, y: 0.030000001, z: 0.0000000018626451}
+--- !u!114 &4287919488131957628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888773427092773544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.1
+  role: caster
+--- !u!114 &1286457572029124786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888773427092773544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7670509988975006541, guid: cb63306c583638951802699cfc918e65, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &7951983041756508877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +2098,7 @@ GameObject:
   - component: {fileID: 9063081115298892014}
   - component: {fileID: 3111899551855232072}
   - component: {fileID: 7803141841254848310}
+  - component: {fileID: 7558396351778754292}
   - component: {fileID: 7838270724947519429}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair
@@ -1810,7 +2169,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 850
+  objectValue: 552.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   materialToughnessScale: 1.1053897
@@ -1835,6 +2194,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
   mountSupports: []
+--- !u!114 &7558396351778754292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7951983041756508877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!114 &7838270724947519429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,23 +2221,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
   profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   deformableSurfaces:
-  - {fileID: 855089015653322966}
-  - {fileID: 4707209136011262565}
   - {fileID: 7813818737050572823}
   - {fileID: 8602288881494649876}
-  - {fileID: 960368915032147936}
-  - {fileID: 9016624243423077989}
-  - {fileID: 5732606897906347610}
-  - {fileID: 8182803084311470880}
-  - {fileID: 3579244432829458098}
-  - {fileID: 6363370857572836347}
   - {fileID: 7392060471869838431}
   - {fileID: 8591211489512493145}
   - {fileID: 8355065226603193361}
   - {fileID: 6625252032113695943}
   - {fileID: 793271480442567708}
   - {fileID: 6032315144788004863}
-  - {fileID: 3146626167878212134}
 --- !u!1 &8184924409666703411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +2241,8 @@ GameObject:
   - component: {fileID: 9016624243423077989}
   - component: {fileID: 923581834323210676}
   - component: {fileID: 387022182706380575}
+  - component: {fileID: 383766230759942451}
+  - component: {fileID: 7329017063077733469}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_caster
   m_TagString: Untagged
@@ -1907,7 +2272,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8184924409666703411}
-  m_Mesh: {fileID: 4300000, guid: 258393ce29bb417d0a6d6d6470e50436, type: 2}
+  m_Mesh: {fileID: 545288179596645541, guid: 69e84ebb7489745c5b7135fda499a76d, type: 3}
 --- !u!23 &923581834323210676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1978,6 +2343,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.110000014, y: 0.059999995, z: 0.10461621}
   m_Center: {x: 0, y: 0.029999997, z: 0.0000000018626451}
+--- !u!114 &383766230759942451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184924409666703411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.1
+  role: caster
+--- !u!114 &7329017063077733469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184924409666703411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8805542595968019030, guid: 1f80fc18a5e574c239af4c1356fa88a1, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &8306004075236400085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,6 +2395,8 @@ GameObject:
   - component: {fileID: 6363370857572836347}
   - component: {fileID: 6690571535653147468}
   - component: {fileID: 3457675012173914981}
+  - component: {fileID: 5193505218593332308}
+  - component: {fileID: 3212384934544247163}
   m_Layer: 0
   m_Name: MD_112_ExecutiveChair_caster.004
   m_TagString: Untagged
@@ -2019,7 +2426,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8306004075236400085}
-  m_Mesh: {fileID: 4300000, guid: 0a90035ed6070df8382d2437a09ad4d6, type: 2}
+  m_Mesh: {fileID: 1610412708163748876, guid: 69e84ebb7489745c5b7135fda499a76d, type: 3}
 --- !u!23 &6690571535653147468
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2090,3 +2497,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.109999985, y: 0.060000002, z: 0.10461621}
   m_Center: {x: 0.0000000018626451, y: 0.030000001, z: 0.0000000018626451}
+--- !u!114 &5193505218593332308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306004075236400085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 3111899551855232072}
+  contained: 0
+  partMass: 0.1
+  role: caster
+--- !u!114 &3212384934544247163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8306004075236400085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 3482854358351881271, guid: dd096db6c464d493b8ea71c486054567, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 33.055557
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0

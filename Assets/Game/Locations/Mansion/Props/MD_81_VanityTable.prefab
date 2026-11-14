@@ -236,6 +236,8 @@ GameObject:
   - component: {fileID: 1795920448130557401}
   - component: {fileID: 5479465379896009802}
   - component: {fileID: 4356685081253832645}
+  - component: {fileID: 6549302215488403110}
+  - component: {fileID: 9004395633221806527}
   m_Layer: 0
   m_Name: MD_81_VanityTable_turned_leg.001
   m_TagString: Untagged
@@ -265,7 +267,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176225940647545758}
-  m_Mesh: {fileID: 4300000, guid: 49177f633e64c4ce6a6f7d6cc1e577f9, type: 2}
+  m_Mesh: {fileID: 2458789852984255923, guid: 435db42a82542427293b29e4dc671d1c, type: 3}
 --- !u!23 &5479465379896009802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -336,6 +338,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.66}
   m_Center: {x: 0, y: 0.0000000037252903, z: 0.33}
+--- !u!114 &6549302215488403110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176225940647545758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4677787984834319866}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &9004395633221806527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176225940647545758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 4652508406872920061, guid: f9edc7fd274bb4e1cbe319fc15844d0a, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1922315957223371960
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +390,8 @@ GameObject:
   - component: {fileID: 5070654300631302591}
   - component: {fileID: 5625325781162348814}
   - component: {fileID: 6251840585948425981}
+  - component: {fileID: 2541393898936711058}
+  - component: {fileID: 6180366294107814046}
   m_Layer: 0
   m_Name: MD_81_VanityTable_thick_inlaid_top
   m_TagString: Untagged
@@ -377,7 +421,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922315957223371960}
-  m_Mesh: {fileID: 4300000, guid: 87b1fc4ad50738fd183848f1dad1b9b2, type: 2}
+  m_Mesh: {fileID: -5989364232642952858, guid: 435db42a82542427293b29e4dc671d1c, type: 3}
 --- !u!23 &5625325781162348814
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -449,6 +493,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1, y: 0.48, z: 0.100000024}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2541393898936711058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922315957223371960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4677787984834319866}
+  contained: 0
+  partMass: 4
+  role: tabletop
+--- !u!114 &6180366294107814046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922315957223371960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 90
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 2753407181013160334, guid: 10ea7cb49c00d8ce7a4308ee0614cf49, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1972615895816874151
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +545,8 @@ GameObject:
   - component: {fileID: 5042340719811745571}
   - component: {fileID: 482869343988571606}
   - component: {fileID: 2585055672517609959}
+  - component: {fileID: 6465397124813103114}
+  - component: {fileID: 5128095493830660157}
   m_Layer: 0
   m_Name: MD_81_VanityTable_turned_leg.003
   m_TagString: Untagged
@@ -490,7 +576,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972615895816874151}
-  m_Mesh: {fileID: 4300000, guid: 853ce5860546136a9abc190b252cb702, type: 2}
+  m_Mesh: {fileID: -1499834476540168855, guid: 435db42a82542427293b29e4dc671d1c, type: 3}
 --- !u!23 &482869343988571606
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -561,6 +647,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.66}
   m_Center: {x: 0, y: 0.0000000037252903, z: 0.33}
+--- !u!114 &6465397124813103114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972615895816874151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4677787984834319866}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &5128095493830660157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972615895816874151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 4763023692431719441, guid: 5228759c396a786d99f416c2c6fb14f1, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1999979796602531342
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +699,7 @@ GameObject:
   - component: {fileID: 3578170471480356080}
   - component: {fileID: 4677787984834319866}
   - component: {fileID: 1352019029773598688}
+  - component: {fileID: 1499890490270165345}
   - component: {fileID: 7120215754858035563}
   m_Layer: 0
   m_Name: MD_81_VanityTable
@@ -643,7 +770,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 850
+  objectValue: 552.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   materialToughnessScale: 1.1053897
@@ -668,6 +795,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
   mountSupports: []
+--- !u!114 &1499890490270165345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999979796602531342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!114 &7120215754858035563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,14 +826,8 @@ MonoBehaviour:
   - {fileID: 1341864280146949338}
   - {fileID: 2410461319903219778}
   - {fileID: 3287785754799352202}
-  - {fileID: 5070654300631302591}
-  - {fileID: 8537113667131210642}
-  - {fileID: 1795920448130557401}
-  - {fileID: 4881685225053390713}
-  - {fileID: 5042340719811745571}
   - {fileID: 3807622598556040723}
   - {fileID: 7818614973965736482}
-  - {fileID: 2702069478074176916}
   - {fileID: 299141632115748002}
   - {fileID: 5660108122411735680}
 --- !u!1 &2526609813767813759
@@ -932,6 +1066,8 @@ GameObject:
   - component: {fileID: 4881685225053390713}
   - component: {fileID: 6924993500968764252}
   - component: {fileID: 1977744700864053003}
+  - component: {fileID: 4267604190369069793}
+  - component: {fileID: 5476647730609434742}
   m_Layer: 0
   m_Name: MD_81_VanityTable_turned_leg.002
   m_TagString: Untagged
@@ -961,7 +1097,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3545490771733122442}
-  m_Mesh: {fileID: 4300000, guid: f583656ffcae240fc959336e0c0a1e5e, type: 2}
+  m_Mesh: {fileID: 265651234952582242, guid: 435db42a82542427293b29e4dc671d1c, type: 3}
 --- !u!23 &6924993500968764252
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1032,6 +1168,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.66}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.33}
+--- !u!114 &4267604190369069793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545490771733122442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4677787984834319866}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &5476647730609434742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545490771733122442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1045757134026989565, guid: 5ac6b5792a91023348ff37ad97e7dc36, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &3945985090140506252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1220,8 @@ GameObject:
   - component: {fileID: 2702069478074176916}
   - component: {fileID: 9082591155254676338}
   - component: {fileID: 7045345991329727616}
+  - component: {fileID: 1729416436760456556}
+  - component: {fileID: 1103925821034481728}
   m_Layer: 0
   m_Name: MD_81_VanityTable_vanity_mirror_inset
   m_TagString: Untagged
@@ -1073,7 +1251,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3945985090140506252}
-  m_Mesh: {fileID: 4300000, guid: bf6ebf20753694c688511a2f06f0f3d2, type: 2}
+  m_Mesh: {fileID: 2766710012410009985, guid: 435db42a82542427293b29e4dc671d1c, type: 3}
 --- !u!23 &9082591155254676338
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1145,6 +1323,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6351, y: 0.018000007, z: 0.7451}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1729416436760456556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945985090140506252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4677787984834319866}
+  contained: 0
+  partMass: 0.7
+  role: mirror
+--- !u!114 &1103925821034481728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945985090140506252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1013324450859468637, guid: 7f24a184abcdcd7b9958bfc2d776d650, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4128394901307904662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1756,8 @@ GameObject:
   - component: {fileID: 8537113667131210642}
   - component: {fileID: 5894651191360951012}
   - component: {fileID: 5114666843271668035}
+  - component: {fileID: 4869770559130829378}
+  - component: {fileID: 5155884154275471925}
   m_Layer: 0
   m_Name: MD_81_VanityTable_turned_leg
   m_TagString: Untagged
@@ -1567,7 +1787,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7123268967980555542}
-  m_Mesh: {fileID: 4300000, guid: 30168b56f427d0171953cb7f90b1f037, type: 2}
+  m_Mesh: {fileID: -1281864253250071055, guid: 435db42a82542427293b29e4dc671d1c, type: 3}
 --- !u!23 &5894651191360951012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1638,6 +1858,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.66}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.33}
+--- !u!114 &4869770559130829378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123268967980555542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4677787984834319866}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &5155884154275471925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7123268967980555542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5356056463236441074, guid: 82a959d7cfe07caaa83da236382fc37e, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 49.583332
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &8790670965392456299
 GameObject:
   m_ObjectHideFlags: 0

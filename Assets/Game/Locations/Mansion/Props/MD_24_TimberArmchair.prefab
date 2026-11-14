@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 4184534203294761819}
   - component: {fileID: 1287332180929594086}
   - component: {fileID: 7033020927112649142}
+  - component: {fileID: 6696135586552975146}
+  - component: {fileID: 1675871043758674390}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair_turned_leg.003
   m_TagString: Untagged
@@ -224,6 +226,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0.225}
+--- !u!114 &6696135586552975146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584025397040659731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1660471750990507198}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1675871043758674390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584025397040659731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 2629670468238437186, guid: 12490d7877fb493ce8078e72686994d8, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1084509963258232550
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +502,8 @@ GameObject:
   - component: {fileID: 3032569833684666433}
   - component: {fileID: 2417948735250244742}
   - component: {fileID: 6769651070929121079}
+  - component: {fileID: 724577441967038081}
+  - component: {fileID: 1845287920129864279}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair_turned_leg
   m_TagString: Untagged
@@ -560,6 +604,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0.225}
+--- !u!114 &724577441967038081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914762499988646595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1660471750990507198}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1845287920129864279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914762499988646595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 3334645015029584800, guid: 37c8ec972e06cbb9aaf05a14b33028cc, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4151185967156747722
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +656,7 @@ GameObject:
   - component: {fileID: 7355454310451596092}
   - component: {fileID: 1660471750990507198}
   - component: {fileID: 8440486457515985029}
+  - component: {fileID: 7884702643887282906}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair
   m_TagString: Untagged
@@ -641,7 +726,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 1
@@ -666,6 +751,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &7884702643887282906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4151185967156747722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &4707525450756996980
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +776,8 @@ GameObject:
   - component: {fileID: 5515981440327787935}
   - component: {fileID: 3172454834365519423}
   - component: {fileID: 2695791177744009380}
+  - component: {fileID: 47712378553499004}
+  - component: {fileID: 4704390890630247256}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair_turned_leg.002
   m_TagString: Untagged
@@ -778,6 +878,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0.225}
+--- !u!114 &47712378553499004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707525450756996980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1660471750990507198}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &4704390890630247256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707525450756996980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8602181867845518223, guid: b9e8d35690fe292a1aab6d517b191839, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4766029658114238202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1199,9 @@ GameObject:
   - component: {fileID: 1399443813825021923}
   - component: {fileID: 7908984389795565799}
   - component: {fileID: 5939165636752156060}
+  - component: {fileID: 3329589755057749767}
+  - component: {fileID: 5198524857795913668}
+  - component: {fileID: 3955525082907926471}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair_back_upholstery
   m_TagString: Untagged
@@ -1088,7 +1231,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5900679695471479260}
-  m_Mesh: {fileID: 258591401251496945, guid: 4fccd94a1e4d741f4b9eac8625557c03, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d784ece3f64814947b38f580b161572b, type: 2}
 --- !u!23 &7908984389795565799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1160,6 +1303,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.69, y: 0.2435417, z: 0.61897326}
   m_Center: {x: 0, y: 0.000000007450581, z: 0.000000014901161}
+--- !u!114 &3329589755057749767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900679695471479260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1660471750990507198}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &5198524857795913668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900679695471479260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &3955525082907926471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900679695471479260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 1399443813825021923}
 --- !u!1 &6646463234772216590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,6 +1594,9 @@ GameObject:
   - component: {fileID: 848875535472903443}
   - component: {fileID: 8213715546256245684}
   - component: {fileID: 6465216644069203761}
+  - component: {fileID: 7269744464546890189}
+  - component: {fileID: 8147628491903854832}
+  - component: {fileID: 8884011726106464085}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair_seat_cushion
   m_TagString: Untagged
@@ -1425,7 +1626,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8792786008675813598}
-  m_Mesh: {fileID: 4007364749072241179, guid: 4fccd94a1e4d741f4b9eac8625557c03, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 47207e7bec2048623bb63e61c2a0b165, type: 2}
 --- !u!23 &8213715546256245684
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1496,6 +1697,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75, y: 0.72, z: 0.20000002}
   m_Center: {x: 0, y: 0, z: 0.000000014901161}
+--- !u!114 &7269744464546890189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792786008675813598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1660471750990507198}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &8147628491903854832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792786008675813598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &8884011726106464085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792786008675813598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 848875535472903443}
 --- !u!1 &8931728101020095118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,6 +1764,8 @@ GameObject:
   - component: {fileID: 2531856306491554349}
   - component: {fileID: 5414711511631285033}
   - component: {fileID: 4627753807521483817}
+  - component: {fileID: 5793797966652319958}
+  - component: {fileID: 95104328100446422}
   m_Layer: 0
   m_Name: MD_24_TimberArmchair_turned_leg.001
   m_TagString: Untagged
@@ -1608,6 +1866,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0.225}
+--- !u!114 &5793797966652319958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8931728101020095118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 1660471750990507198}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &95104328100446422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8931728101020095118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8999949626598629338, guid: 2ac9e5eee9e870763a8659535cf675b0, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &9064147240659038658
 GameObject:
   m_ObjectHideFlags: 0

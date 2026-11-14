@@ -125,6 +125,8 @@ GameObject:
   - component: {fileID: 5085091642206142216}
   - component: {fileID: 5524214377007235592}
   - component: {fileID: 6645538355785313308}
+  - component: {fileID: 2779124350046926216}
+  - component: {fileID: 4572355534578535181}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_turned_leg.001
   m_TagString: Untagged
@@ -225,6 +227,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1400001, y: 0.13999999, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0.11}
+--- !u!114 &2779124350046926216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943792288530335252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &4572355534578535181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943792288530335252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1514238759786512247, guid: 4d013917382153c86b5a66e5770c64fa, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &2083834206767088460
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +279,9 @@ GameObject:
   - component: {fileID: 9124337985552803573}
   - component: {fileID: 3829223281887957465}
   - component: {fileID: 1549781277300259927}
+  - component: {fileID: 6553370616552650502}
+  - component: {fileID: 6910163769355493185}
+  - component: {fileID: 7490253583418540109}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_back_cushion_1
   m_TagString: Untagged
@@ -338,6 +383,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7133333, y: 0.3183376, z: 0.7723477}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6553370616552650502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083834206767088460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &6910163769355493185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083834206767088460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &7490253583418540109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083834206767088460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 9124337985552803573}
 --- !u!1 &2279509099641509953
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +479,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2279509099641509953}
-  m_Mesh: {fileID: 2203297177634004216, guid: 8ad8e16dbc4d9ab559fd59b59516db29, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 28a56e381bd8c4de7ade9438a67c5423, type: 2}
 --- !u!23 &1049354555348301545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -491,7 +591,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2567339324398645600}
-  m_Mesh: {fileID: -7637979059965708109, guid: 8ad8e16dbc4d9ab559fd59b59516db29, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 7f72e11e1699e61528d34c5d6b3faca6, type: 2}
 --- !u!23 &5492936658617309417
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -603,7 +703,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2927615842898358112}
-  m_Mesh: {fileID: 8371004126619962870, guid: 8ad8e16dbc4d9ab559fd59b59516db29, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 471c9b91acf9824c3aa0c265e480ddf7, type: 2}
 --- !u!23 &1446963106253522031
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -686,6 +786,9 @@ GameObject:
   - component: {fileID: 1446195250931203339}
   - component: {fileID: 539908539627483222}
   - component: {fileID: 5832123554973849162}
+  - component: {fileID: 8827478167180704057}
+  - component: {fileID: 8490430202700695067}
+  - component: {fileID: 597540843083255738}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_seat_cushion_0
   m_TagString: Untagged
@@ -787,6 +890,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7016666, y: 0.73, z: 0.18999997}
   m_Center: {x: -0.000000014901161, y: 0, z: -0.000000014901161}
+--- !u!114 &8827478167180704057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770478707191942113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &8490430202700695067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770478707191942113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &597540843083255738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3770478707191942113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 1446195250931203339}
 --- !u!1 &3868333231652721191
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +957,7 @@ GameObject:
   - component: {fileID: 7045648379608970026}
   - component: {fileID: 4977469562040188293}
   - component: {fileID: 4465366576406212808}
+  - component: {fileID: 4703392311385032401}
   - component: {fileID: 1336978950526025965}
   m_Layer: 0
   m_Name: MD_21_GrandSofa
@@ -869,7 +1028,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 600
+  objectValue: 390
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
   materialToughnessScale: 3.3759317
@@ -894,6 +1053,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 8c2f0ef263bc55edc9609e973bc13a97, type: 3}
   breakSound: {fileID: 8300000, guid: 08b707d3a78a70ccda5a4320d0732f19, type: 3}
   mountSupports: []
+--- !u!114 &4703392311385032401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3868333231652721191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!114 &1336978950526025965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,14 +1080,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
   profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
   deformableSurfaces:
-  - {fileID: 2989557846913874293}
-  - {fileID: 9124337985552803573}
-  - {fileID: 111187869773873381}
+  - {fileID: 5164570377188511937}
+  - {fileID: 7836050271545927154}
+  - {fileID: 927255364233931777}
+  - {fileID: 1125042115761734348}
   - {fileID: 2704647661551030237}
   - {fileID: 8609101568757598972}
-  - {fileID: 1446195250931203339}
-  - {fileID: 7444958822823365595}
-  - {fileID: 3857463325090165767}
+  - {fileID: 1948008535077626719}
   - {fileID: 411667508994872623}
 --- !u!1 &3917618162203802081
 GameObject:
@@ -1041,6 +1212,9 @@ GameObject:
   - component: {fileID: 111187869773873381}
   - component: {fileID: 3801164175454829205}
   - component: {fileID: 4834746361104579549}
+  - component: {fileID: 323261735772748879}
+  - component: {fileID: 8105046470595284664}
+  - component: {fileID: 8097615415978151830}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_back_cushion_2
   m_TagString: Untagged
@@ -1142,6 +1316,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.71333337, y: 0.3183376, z: 0.7723477}
   m_Center: {x: -0.000000014901161, y: 0, z: 0}
+--- !u!114 &323261735772748879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019871279711957920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &8105046470595284664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019871279711957920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &8097615415978151830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019871279711957920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 111187869773873381}
 --- !u!1 &5361219121052171709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1412,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5361219121052171709}
-  m_Mesh: {fileID: -3607422431201541811, guid: 8ad8e16dbc4d9ab559fd59b59516db29, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 21c77c0586bac727d85e11d0efa41109, type: 2}
 --- !u!23 &2864735996494480904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1266,6 +1495,8 @@ GameObject:
   - component: {fileID: 656952354694769196}
   - component: {fileID: 2560648594675064204}
   - component: {fileID: 2232647055708003346}
+  - component: {fileID: 869826327733967184}
+  - component: {fileID: 6709669913847308721}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_turned_leg.002
   m_TagString: Untagged
@@ -1366,6 +1597,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1400001, y: 0.13999999, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0.11}
+--- !u!114 &869826327733967184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5685330845431746206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &6709669913847308721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5685330845431746206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 133022176076594121, guid: 2f59fac11ea9516cfaad9910eca82e95, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6516833665830013481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1649,9 @@ GameObject:
   - component: {fileID: 7444958822823365595}
   - component: {fileID: 1841581163056148319}
   - component: {fileID: 6975800926393878762}
+  - component: {fileID: 5713031614309010903}
+  - component: {fileID: 2757124356839174291}
+  - component: {fileID: 3109638976441352490}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_seat_cushion_1
   m_TagString: Untagged
@@ -1479,6 +1753,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.70166665, y: 0.73, z: 0.18999997}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!114 &5713031614309010903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516833665830013481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &2757124356839174291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516833665830013481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &3109638976441352490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6516833665830013481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 7444958822823365595}
 --- !u!1 &6633193606148813689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1820,9 @@ GameObject:
   - component: {fileID: 3857463325090165767}
   - component: {fileID: 7821700083075686629}
   - component: {fileID: 4112723985227347717}
+  - component: {fileID: 6246445604881291776}
+  - component: {fileID: 3300966535957008721}
+  - component: {fileID: 1695030489241309717}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_seat_cushion_2
   m_TagString: Untagged
@@ -1592,6 +1924,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7016666, y: 0.73, z: 0.18999997}
   m_Center: {x: 0.000000014901161, y: 0, z: -0.000000014901161}
+--- !u!114 &6246445604881291776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633193606148813689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &3300966535957008721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633193606148813689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &1695030489241309717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633193606148813689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 3857463325090165767}
 --- !u!1 &7002664965523967675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,6 +1991,8 @@ GameObject:
   - component: {fileID: 897133864862400924}
   - component: {fileID: 3635972379721040270}
   - component: {fileID: 7823126417187568680}
+  - component: {fileID: 2522597740324129646}
+  - component: {fileID: 4529539153043716767}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_turned_leg.003
   m_TagString: Untagged
@@ -1704,6 +2093,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1400001, y: 0.13999999, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0.11}
+--- !u!114 &2522597740324129646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002664965523967675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &4529539153043716767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7002664965523967675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 659398245158491089, guid: 846b0feef253533f4af8f7f9d978bfb6, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &7876021159776878253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,7 +2223,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7878140452922639891}
-  m_Mesh: {fileID: 6741505766064636180, guid: 8ad8e16dbc4d9ab559fd59b59516db29, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 78ba172e85094f69796f13bce9cc2668, type: 2}
 --- !u!23 &6143916236352112906
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1989,6 +2418,8 @@ GameObject:
   - component: {fileID: 552536322858233643}
   - component: {fileID: 664674727230959116}
   - component: {fileID: 5815707288768608701}
+  - component: {fileID: 336186848742086709}
+  - component: {fileID: 6483553069961178106}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_turned_leg
   m_TagString: Untagged
@@ -2089,6 +2520,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1400001, y: 0.13999999, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0.11}
+--- !u!114 &336186848742086709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780897462614513104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &6483553069961178106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8780897462614513104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 9101544923587889500, guid: c3464a6c7196005fd8d2aeffa51fd9ca, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &8927005980468188936
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,6 +2572,9 @@ GameObject:
   - component: {fileID: 2989557846913874293}
   - component: {fileID: 4518524560154375105}
   - component: {fileID: 8432184890840711039}
+  - component: {fileID: 4367647714830322979}
+  - component: {fileID: 6727247297009590450}
+  - component: {fileID: 8844114917745584841}
   m_Layer: 0
   m_Name: MD_21_GrandSofa_back_cushion_0
   m_TagString: Untagged
@@ -2202,3 +2676,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.71333337, y: 0.3183376, z: 0.7723477}
   m_Center: {x: 0.000000014901161, y: 0, z: 0}
+--- !u!114 &4367647714830322979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927005980468188936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4977469562040188293}
+  contained: 0
+  partMass: 1.2
+  role: cushion
+--- !u!114 &6727247297009590450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927005980468188936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 21
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &8844114917745584841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927005980468188936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 2989557846913874293}

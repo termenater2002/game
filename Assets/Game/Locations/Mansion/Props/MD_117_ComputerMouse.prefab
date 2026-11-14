@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4312655040299697919}
   - component: {fileID: 6158898154211338216}
   - component: {fileID: 557135540518376100}
+  - component: {fileID: 4524658351146630001}
+  - component: {fileID: 8070887192639106588}
   m_Layer: 0
   m_Name: MD_117_ComputerMouse_scroll_wheel
   m_TagString: Untagged
@@ -112,6 +114,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.016, y: 0.023999996, z: 0.022825357}
   m_Center: {x: 0, y: -4.656613e-10, z: 0.0000000018626451}
+--- !u!114 &4524658351146630001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600451374789524624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 9125596010107901229}
+  contained: 0
+  partMass: 0.01
+  role: wheel
+--- !u!114 &8070887192639106588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600451374789524624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 18
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 3748037467510159257, guid: b9135b89827c9069299ba5254b3199cb, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 157.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1434032588318048432
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +166,7 @@ GameObject:
   - component: {fileID: 3170126336500700500}
   - component: {fileID: 9125596010107901229}
   - component: {fileID: 2161110054951976571}
+  - component: {fileID: 1759736196229244888}
   m_Layer: 0
   m_Name: MD_117_ComputerMouse
   m_TagString: Untagged
@@ -193,7 +236,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 450
+  objectValue: 292.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
   materialToughnessScale: 1.1560897
@@ -218,6 +261,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 4f263405438e1f62d86f340d37d34f76, type: 3}
   breakSound: {fileID: 8300000, guid: ce655120c8420e779b695fa5729e948f, type: 3}
   mountSupports: []
+--- !u!114 &1759736196229244888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434032588318048432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &2211775258330155366
 GameObject:
   m_ObjectHideFlags: 0

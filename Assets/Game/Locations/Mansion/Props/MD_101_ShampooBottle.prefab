@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 4360161531340178158}
   - component: {fileID: 8421021504330727578}
   - component: {fileID: 4367543016307673588}
+  - component: {fileID: 4312891852353695008}
   m_Layer: 0
   m_Name: MD_101_ShampooBottle
   m_TagString: Untagged
@@ -267,7 +268,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4939109158292264993}
   serializedVersion: 5
-  m_Mass: 3
+  m_Mass: 0.3
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -298,17 +299,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 42
-  damageMultiplier: 1.5
-  impactThreshold: 3.8
+  maxHP: 70
+  damageMultiplier: 0.9
+  impactThreshold: 6
   brokenPrefab: {fileID: 7043935841746900232, guid: 66bf288fb7483bed28d1344782d56ff0, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 117
   wallet: {fileID: 0}
-  materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
-  materialToughnessScale: 6
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
   retainOnDestruction: 0
 --- !u!114 &4367543016307673588
 MonoBehaviour:
@@ -325,11 +326,24 @@ MonoBehaviour:
   assetId: 101
   displayName: "\u0424\u043B\u0430\u043A\u043E\u043D \u0448\u0430\u043C\u043F\u0443\u043D\u044F"
   room: 
-  substance: ceramic
+  substance: plastic
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
-  breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
+  hitSound: {fileID: 8300000, guid: 4f263405438e1f62d86f340d37d34f76, type: 3}
+  breakSound: {fileID: 8300000, guid: ce655120c8420e779b695fa5729e948f, type: 3}
   mountSupports: []
+--- !u!114 &4312891852353695008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939109158292264993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &5466610556402290917
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +390,8 @@ GameObject:
   - component: {fileID: 6123304646620242336}
   - component: {fileID: 6026682720087436879}
   - component: {fileID: 6232575327448966195}
+  - component: {fileID: 1972571325216752215}
+  - component: {fileID: 2691643617252279549}
   m_Layer: 0
   m_Name: MD_101_ShampooBottle_screw_cap
   m_TagString: Untagged
@@ -476,3 +492,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1133, y: 0.1133, z: 0.025000006}
   m_Center: {x: 0, y: 0, z: 0.012500003}
+--- !u!114 &1972571325216752215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6527888062771681764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8421021504330727578}
+  contained: 0
+  partMass: 0.02
+  role: cap
+--- !u!114 &2691643617252279549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6527888062771681764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7193391602804596174, guid: 779cf5bec3c18ed02923b0dd4b9531c5, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 63
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0

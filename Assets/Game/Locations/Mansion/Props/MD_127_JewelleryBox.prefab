@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 121365010248714830}
   - component: {fileID: 5469697960164262792}
   - component: {fileID: 5797359575385583787}
+  - component: {fileID: 7096437969233155952}
+  - component: {fileID: 7306518207996607781}
+  - component: {fileID: 193470565855156294}
   m_Layer: 0
   m_Name: MD_127_JewelleryBox_box_latch
   m_TagString: Untagged
@@ -41,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2934769965560987019}
-  m_Mesh: {fileID: -8734982577180074652, guid: c885f48e56c290eaeade94257fd7686f, type: 3}
+  m_Mesh: {fileID: 4300000, guid: ccc92d04e476af9cfa52642e516c4893, type: 2}
 --- !u!23 &5469697960164262792
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,6 +115,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.035, y: 0.019999996, z: 0.045}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7096437969233155952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934769965560987019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 76830230825131662}
+  contained: 0
+  partMass: 0.03
+  role: latch
+--- !u!114 &7306518207996607781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934769965560987019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 30
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 61.25
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &193470565855156294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2934769965560987019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 121365010248714830}
 --- !u!1 &5347828637800167514
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +182,7 @@ GameObject:
   - component: {fileID: 2364462497373065717}
   - component: {fileID: 76830230825131662}
   - component: {fileID: 4194460060556571065}
+  - component: {fileID: 3121368138299786603}
   m_Layer: 0
   m_Name: MD_127_JewelleryBox
   m_TagString: Untagged
@@ -155,7 +214,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5347828637800167514}
   serializedVersion: 5
-  m_Mass: 2
+  m_Mass: 0.5
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -186,17 +245,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 32
-  damageMultiplier: 1.5
-  impactThreshold: 3.8
+  maxHP: 80
+  damageMultiplier: 0.9
+  impactThreshold: 6
   brokenPrefab: {fileID: 7377438943344329257, guid: e1f7fec81cb8b26a68cf533de458326b, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 450
+  objectValue: 227.5
   wallet: {fileID: 0}
-  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
-  materialToughnessScale: 2.4622889
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
   retainOnDestruction: 0
 --- !u!114 &4194460060556571065
 MonoBehaviour:
@@ -213,11 +272,24 @@ MonoBehaviour:
   assetId: 127
   displayName: "\u0414\u0435\u043A\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u0448\u043A\u0430\u0442\u0443\u043B\u043A\u0430"
   room: 
-  substance: glass
+  substance: wood
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: 45425becfda3c42ecaa43fe8261053db, type: 3}
-  breakSound: {fileID: 8300000, guid: df7ddf15f8aa18125879f601fb758417, type: 3}
+  hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
+  breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &3121368138299786603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5347828637800167514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &7483358588711414988
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +305,8 @@ GameObject:
   - component: {fileID: 4275315640826685236}
   - component: {fileID: 990344055109391971}
   - component: {fileID: 6212720432021624165}
+  - component: {fileID: 679853044965510199}
+  - component: {fileID: 3264495619110925863}
   m_Layer: 0
   m_Name: MD_127_JewelleryBox_hinged_lid
   m_TagString: Untagged
@@ -342,7 +416,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483358588711414988}
   serializedVersion: 5
-  m_Mass: 0.36
+  m_Mass: 0.15
   m_LinearDamping: 0
   m_AngularDamping: 0.7
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -375,7 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 6212720432021624165}
   drawer: {fileID: 0}
-  owner: {fileID: 76830230825131662}
+  owner: {fileID: 3264495619110925863}
   openAngle: 95
   travel: 0.32
 --- !u!59 &6212720432021624165
@@ -389,7 +463,7 @@ HingeJoint:
   m_ConnectedBody: {fileID: 2364462497373065717}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: -0.00000011920929, z: 0.99999994}
+  m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 0
   m_ConnectedAnchor: {x: 0, y: 0.14999998, z: -0.10499999}
   m_UseSpring: 0
@@ -417,6 +491,46 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &679853044965510199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483358588711414988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 76830230825131662}
+  contained: 0
+  partMass: 0.15
+  role: mechanism
+--- !u!114 &3264495619110925863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483358588711414988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1051705874851904616, guid: 4b85eb112812c039c97c24dbbed73ea1, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 61.25
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &8316568112505809613
 GameObject:
   m_ObjectHideFlags: 0

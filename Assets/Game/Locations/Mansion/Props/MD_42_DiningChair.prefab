@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 1360445880858239990}
   - component: {fileID: 1332279326174743598}
   - component: {fileID: 1366007878625260566}
+  - component: {fileID: 3390760824986122436}
+  - component: {fileID: 7791759152231964317}
+  - component: {fileID: 4667159089201994034}
   m_Layer: 0
   m_Name: MD_42_DiningChair_seat_pad
   m_TagString: Untagged
@@ -41,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181020204003085830}
-  m_Mesh: {fileID: -7135251857177796549, guid: 001edf4144d09c772a6d0a30610bdac5, type: 3}
+  m_Mesh: {fileID: 4300000, guid: fc9f41ce6be2a42148b138bee32434c6, type: 2}
 --- !u!23 &1332279326174743598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,6 +115,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.45, y: 0.43, z: 0.08000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3390760824986122436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181020204003085830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8474050338359465295}
+  contained: 0
+  partMass: 0.4
+  role: cushion
+--- !u!114 &7791759152231964317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181020204003085830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 40
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &4667159089201994034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181020204003085830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 1360445880858239990}
 --- !u!1 &2432652475060528723
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +294,7 @@ GameObject:
   - component: {fileID: 1974695202412824445}
   - component: {fileID: 8474050338359465295}
   - component: {fileID: 380420977720241895}
+  - component: {fileID: 1001871972072535661}
   m_Layer: 0
   m_Name: MD_42_DiningChair
   m_TagString: Untagged
@@ -305,7 +364,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 1
@@ -330,6 +389,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &1001871972072535661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602458371912539438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &3826207574659234046
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +414,8 @@ GameObject:
   - component: {fileID: 6823493786469222226}
   - component: {fileID: 4640590294563569272}
   - component: {fileID: 7362727348232117699}
+  - component: {fileID: 3786644754967163714}
+  - component: {fileID: 3047160225436723296}
   m_Layer: 0
   m_Name: MD_42_DiningChair_turned_leg.001
   m_TagString: Untagged
@@ -442,6 +516,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.46}
   m_Center: {x: 0, y: 0, z: 0.23}
+--- !u!114 &3786644754967163714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826207574659234046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8474050338359465295}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &3047160225436723296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826207574659234046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 7732121150077455325, guid: 0797b69e2e15492b0a52b071f58d01be, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4364135325010681799
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +568,8 @@ GameObject:
   - component: {fileID: 1344829726491492087}
   - component: {fileID: 8830115956259564062}
   - component: {fileID: 9112207068637464499}
+  - component: {fileID: 301543274530786539}
+  - component: {fileID: 1569933667765104922}
   m_Layer: 0
   m_Name: MD_42_DiningChair_turned_leg.003
   m_TagString: Untagged
@@ -554,6 +670,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.46}
   m_Center: {x: 0, y: 0, z: 0.23}
+--- !u!114 &301543274530786539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364135325010681799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8474050338359465295}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1569933667765104922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364135325010681799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5823688898550929068, guid: c35691abfa290eb7dbd10293f3e36cc9, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4990327977847249815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1327,8 @@ GameObject:
   - component: {fileID: 6171562178370643177}
   - component: {fileID: 3015496610947182036}
   - component: {fileID: 2873384838162914224}
+  - component: {fileID: 2720542411535951739}
+  - component: {fileID: 3166872586161583827}
   m_Layer: 0
   m_Name: MD_42_DiningChair_turned_leg
   m_TagString: Untagged
@@ -1271,6 +1429,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.46}
   m_Center: {x: 0, y: 0, z: 0.23}
+--- !u!114 &2720542411535951739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383336635310792209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8474050338359465295}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &3166872586161583827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7383336635310792209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 9053716580566105137, guid: 4107c25debd9ac10c88b5036adea3999, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &8399151868467968295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1817,8 @@ GameObject:
   - component: {fileID: 933660926828634006}
   - component: {fileID: 5888967902885341576}
   - component: {fileID: 7909727567379081617}
+  - component: {fileID: 5219381738144588197}
+  - component: {fileID: 8532679212908041676}
   m_Layer: 0
   m_Name: MD_42_DiningChair_turned_leg.002
   m_TagString: Untagged
@@ -1719,3 +1919,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.14000002, z: 0.46}
   m_Center: {x: 0, y: 0, z: 0.23}
+--- !u!114 &5219381738144588197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970273668460397654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8474050338359465295}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &8532679212908041676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970273668460397654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8286886868380969273, guid: b1b27a2cbaaea8b91b3d7ec3d0fd5633, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0

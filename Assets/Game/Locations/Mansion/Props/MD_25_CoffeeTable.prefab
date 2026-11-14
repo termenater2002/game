@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2935474277816436396}
   - component: {fileID: 1882717437999797818}
   - component: {fileID: 2857617476852778827}
+  - component: {fileID: 1493130305922324992}
+  - component: {fileID: 7310840581580756769}
   m_Layer: 0
   m_Name: MD_25_CoffeeTable_turned_leg.002
   m_TagString: Untagged
@@ -112,6 +114,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &1493130305922324992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205729905181442708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5580047720021888039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &7310840581580756769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205729905181442708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 81255038255080528, guid: 64e6d702d3e4858ab8607d011df97f49, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1470162681537902852
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,6 +166,8 @@ GameObject:
   - component: {fileID: 6780685774933263639}
   - component: {fileID: 7528607213161521484}
   - component: {fileID: 5857075513519861158}
+  - component: {fileID: 5817764886836428706}
+  - component: {fileID: 6180034150811083379}
   m_Layer: 0
   m_Name: MD_25_CoffeeTable_turned_leg.001
   m_TagString: Untagged
@@ -224,6 +268,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &5817764886836428706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470162681537902852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5580047720021888039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &6180034150811083379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470162681537902852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 3317308934665847307, guid: 05c648e5d69f05e4ebd97e4f1269cde6, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &2634872499550211643
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +544,7 @@ GameObject:
   - component: {fileID: 6009992448340219624}
   - component: {fileID: 5580047720021888039}
   - component: {fileID: 2912343799887041714}
+  - component: {fileID: 3504928620009078028}
   m_Layer: 0
   m_Name: MD_25_CoffeeTable
   m_TagString: Untagged
@@ -529,7 +614,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 1.1859412
@@ -554,6 +639,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &3504928620009078028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3005795120339016701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &3987350989614291808
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +888,8 @@ GameObject:
   - component: {fileID: 603616485183176918}
   - component: {fileID: 5346504432421335179}
   - component: {fileID: 5161793041635268670}
+  - component: {fileID: 2427659483547783659}
+  - component: {fileID: 1463503268374120578}
   m_Layer: 0
   m_Name: MD_25_CoffeeTable_turned_leg
   m_TagString: Untagged
@@ -890,6 +990,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &2427659483547783659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5920709229505681998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5580047720021888039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &1463503268374120578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5920709229505681998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 6920269062150222517, guid: 66b82561a0f0d774aba9048933b17b06, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6277855480129398714
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +1042,8 @@ GameObject:
   - component: {fileID: 4916629547412744268}
   - component: {fileID: 1757359408139415169}
   - component: {fileID: 4609228944173052279}
+  - component: {fileID: 7475264007593259623}
+  - component: {fileID: 5692373649274293922}
   m_Layer: 0
   m_Name: MD_25_CoffeeTable_thick_inlaid_top
   m_TagString: Untagged
@@ -1003,6 +1145,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3, y: 0.8, z: 0.099999994}
   m_Center: {x: 0, y: 0, z: -0.000000014901161}
+--- !u!114 &7475264007593259623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277855480129398714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5580047720021888039}
+  contained: 0
+  partMass: 4
+  role: tabletop
+--- !u!114 &5692373649274293922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277855480129398714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 90
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8808820094438086819, guid: 3887904886ae1b5e4bb4f46084a4e6f2, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6940938995859882176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1237,8 @@ GameObject:
   - component: {fileID: 3578249540774525957}
   - component: {fileID: 4927542599270855398}
   - component: {fileID: 8613463298010812443}
+  - component: {fileID: 1411892868272868284}
+  - component: {fileID: 388228011464709187}
   m_Layer: 0
   m_Name: MD_25_CoffeeTable_turned_leg.003
   m_TagString: Untagged
@@ -1155,3 +1339,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13999999, y: 0.13999999, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &1411892868272868284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030661655862503272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 5580047720021888039}
+  contained: 0
+  partMass: 1
+  role: leg
+--- !u!114 &388228011464709187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030661655862503272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 6702031857452665643, guid: 122972b7d1fea62d7a982c45f81bf46e, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 35
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0

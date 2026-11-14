@@ -139,12 +139,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872514264713578400}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.38, z: 0.98}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: -0.5475, z: -0.05687496}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7534973924192443200}
+  m_Father: {fileID: 8212988877392791621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4734188949027124117
 MeshFilter:
@@ -336,6 +336,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.046000004, y: 0.046000004, z: 1.86}
   m_Center: {x: 0, y: 0, z: 0.93}
+--- !u!1 &1036234802807108165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8212988877392791621}
+  - component: {fileID: 2364212783177872774}
+  - component: {fileID: 2933942968684476838}
+  - component: {fileID: 962656579641041447}
+  m_Layer: 0
+  m_Name: Assembly_shower_rain_head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8212988877392791621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036234802807108165}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5274999, z: -0.32312515}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6425051461806334059}
+  - {fileID: 8990367361980851642}
+  - {fileID: 1391393993783401532}
+  - {fileID: 3450909629689931969}
+  m_Father: {fileID: 4779091326003797899}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2364212783177872774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036234802807108165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2367190629750376386}
+  contained: 0
+  partMass: 1
+  role: shower
+--- !u!114 &2933942968684476838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036234802807108165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 70
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 74.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &962656579641041447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036234802807108165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 2000445609802967105}
+  - {fileID: 4734188949027124117}
+  - {fileID: 4147466116704817879}
+  - {fileID: 1222140408354829537}
 --- !u!1 &2472709796745832506
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +444,8 @@ GameObject:
   - component: {fileID: 8684407599898687905}
   - component: {fileID: 5780988889509452113}
   - component: {fileID: 5211021537763051552}
+  - component: {fileID: 8896718648064967153}
+  - component: {fileID: 941259391939942515}
   m_Layer: 0
   m_Name: MD_92_ShowerCubicle_fixed_glass.001
   m_TagString: Untagged
@@ -377,7 +475,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2472709796745832506}
-  m_Mesh: {fileID: 4300000, guid: d4d40f41aa378631ab4bd29f369c230f, type: 2}
+  m_Mesh: {fileID: 5334402767384818598, guid: c88691ed458b1340d91600c1ccd38028, type: 3}
 --- !u!23 &5780988889509452113
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -448,6 +546,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.018000007, y: 0.84, z: 1.8199999}
   m_Center: {x: 0, y: 0, z: -0.000000029802322}
+--- !u!114 &8896718648064967153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472709796745832506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2367190629750376386}
+  contained: 0
+  partMass: 1
+  role: pane
+--- !u!114 &941259391939942515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2472709796745832506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 8491774941499774294, guid: 1f1a65dd7d9a71e83ada198a1c2e8590, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 74.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &2781347249255675420
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,14 +618,10 @@ Transform:
   - {fileID: 1376362157907210205}
   - {fileID: 4694346492412080672}
   - {fileID: 7439594246416661635}
-  - {fileID: 6425051461806334059}
   - {fileID: 1206432964970163997}
   - {fileID: 1515360703577646588}
   - {fileID: 1090368247706992077}
   - {fileID: 9132610884256637579}
-  - {fileID: 8990367361980851642}
-  - {fileID: 1391393993783401532}
-  - {fileID: 3450909629689931969}
   - {fileID: 949028518728857025}
   - {fileID: 6181335423600788521}
   m_Father: {fileID: 4779091326003797899}
@@ -519,12 +653,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3237383794974088897}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.22, z: 1.92}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0.39249992, z: 0.103125006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7534973924192443200}
+  m_Father: {fileID: 8212988877392791621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2000445609802967105
 MeshFilter:
@@ -619,6 +753,8 @@ GameObject:
   - component: {fileID: 1022094193419753081}
   - component: {fileID: 3117083248058166551}
   - component: {fileID: 9362995914864699}
+  - component: {fileID: 5967455316792452444}
+  - component: {fileID: 8016543718458893970}
   m_Layer: 0
   m_Name: MD_92_ShowerCubicle_hinged_shower_door
   m_TagString: Untagged
@@ -651,7 +787,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4245594405581249987}
-  m_Mesh: {fileID: 4300000, guid: 64dfce980fb920817b5fa0363b79f1fa, type: 2}
+  m_Mesh: {fileID: -1970844432480520955, guid: c88691ed458b1340d91600c1ccd38028, type: 3}
 --- !u!23 &5644600199114164436
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -763,7 +899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 9362995914864699}
   drawer: {fileID: 0}
-  owner: {fileID: 2367190629750376386}
+  owner: {fileID: 8016543718458893970}
   openAngle: 95
   travel: 0.32
 --- !u!59 &9362995914864699
@@ -805,6 +941,46 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5967455316792452444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245594405581249987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2367190629750376386}
+  contained: 0
+  partMass: 0.63
+  role: mechanism
+--- !u!114 &8016543718458893970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245594405581249987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 4806098077909633801, guid: 47f8379c47be590e2bb3ed702dfecf3c, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 74.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &4524364324066611491
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1246,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4967179985143467015}
-  m_Mesh: {fileID: 4300000, guid: 99a8aa1b4db9dfe5dbf522639d4c06e3, type: 2}
+  m_Mesh: {fileID: 1609070028996659281, guid: c88691ed458b1340d91600c1ccd38028, type: 3}
 --- !u!23 &4613608919892130149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1153,6 +1329,7 @@ GameObject:
   - component: {fileID: 3588378964444125403}
   - component: {fileID: 2367190629750376386}
   - component: {fileID: 3108831858835645541}
+  - component: {fileID: 5096869301594218134}
   - component: {fileID: 2584814671515893243}
   m_Layer: 0
   m_Name: MD_92_ShowerCubicle
@@ -1175,6 +1352,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7534973924192443200}
+  - {fileID: 8212988877392791621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &3588378964444125403
@@ -1223,7 +1401,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 850
+  objectValue: 552.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   materialToughnessScale: 1.1053897
@@ -1248,6 +1426,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
   mountSupports: []
+--- !u!114 &5096869301594218134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587958177649879703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!114 &2584814671515893243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1262,20 +1453,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
   profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
   deformableSurfaces:
-  - {fileID: 2039746717087914208}
-  - {fileID: 8684407599898687905}
-  - {fileID: 842762306885890858}
-  - {fileID: 6846306432710334229}
-  - {fileID: 390592403077073742}
-  - {fileID: 72259108884781909}
-  - {fileID: 2000445609802967105}
   - {fileID: 3624299262256426585}
   - {fileID: 2602875458491715256}
   - {fileID: 8647752337026034345}
   - {fileID: 3565631009100526445}
-  - {fileID: 4734188949027124117}
-  - {fileID: 4147466116704817879}
-  - {fileID: 1222140408354829537}
   - {fileID: 1774970436035417006}
   - {fileID: 8020610439572474552}
 --- !u!1 &6592402207161761755
@@ -1290,6 +1471,8 @@ GameObject:
   - component: {fileID: 2039746717087914208}
   - component: {fileID: 6530144023709155437}
   - component: {fileID: 6368745834954296108}
+  - component: {fileID: 8961398329161836855}
+  - component: {fileID: 2298481432818764971}
   m_Layer: 0
   m_Name: MD_92_ShowerCubicle_fixed_glass
   m_TagString: Untagged
@@ -1319,7 +1502,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6592402207161761755}
-  m_Mesh: {fileID: 4300000, guid: 001fe930760b2f948a89d4fdb6559996, type: 2}
+  m_Mesh: {fileID: -910267791711718437, guid: c88691ed458b1340d91600c1ccd38028, type: 3}
 --- !u!23 &6530144023709155437
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1390,6 +1573,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.018000007, y: 0.84, z: 1.8199999}
   m_Center: {x: 0, y: 0, z: -0.000000029802322}
+--- !u!114 &8961398329161836855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592402207161761755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 2367190629750376386}
+  contained: 0
+  partMass: 1
+  role: pane
+--- !u!114 &2298481432818764971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592402207161761755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 24
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 6427227266085086880, guid: 4c2ff71655c05e8c187c6c8242669910, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 74.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6785521916550078826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1654,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6785521916550078826}
-  m_Mesh: {fileID: 4300000, guid: ee2dac8da352a11efb365ea7c20206e3, type: 2}
+  m_Mesh: {fileID: 1177585512737552325, guid: c88691ed458b1340d91600c1ccd38028, type: 3}
 --- !u!23 &7140238861039394015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1529,12 +1752,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7192118391224716391}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.39, z: 0.85}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: -0.6775, z: -0.06687495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7534973924192443200}
+  m_Father: {fileID: 8212988877392791621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4147466116704817879
 MeshFilter:
@@ -1655,7 +1878,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7360551614529539124}
-  m_Mesh: {fileID: 4300000, guid: c59293aa9a6c213dfb6c47a219dff874, type: 2}
+  m_Mesh: {fileID: -7020236482918163534, guid: c88691ed458b1340d91600c1ccd38028, type: 3}
 --- !u!23 &7528961923211376716
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1865,12 +2088,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8643636949014551413}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.39, z: 1.8}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0.27249992, z: -0.06687495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7534973924192443200}
+  m_Father: {fileID: 8212988877392791621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1222140408354829537
 MeshFilter:

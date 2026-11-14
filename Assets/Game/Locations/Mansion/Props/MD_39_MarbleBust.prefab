@@ -160,6 +160,8 @@ GameObject:
   - component: {fileID: 2846182403084729914}
   - component: {fileID: 6375413632774394706}
   - component: {fileID: 8595203584916228130}
+  - component: {fileID: 8245537293676900580}
+  - component: {fileID: 3723577179250177082}
   m_Layer: 0
   m_Name: MD_39_MarbleBust_stone_plinth
   m_TagString: Untagged
@@ -260,6 +262,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.42, y: 0.34, z: 0.18}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8245537293676900580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249083366032204228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8863536649808128866}
+  contained: 0
+  partMass: 1
+  role: plinth
+--- !u!114 &3723577179250177082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249083366032204228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 6911936387234388795, guid: c1b23d5f255e0bb4cb022e16e41492f8, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 87.5
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6697174384443157469
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +650,7 @@ GameObject:
   - component: {fileID: 5948310881492629640}
   - component: {fileID: 8863536649808128866}
   - component: {fileID: 1038910992509103222}
+  - component: {fileID: 3263063001529387947}
   m_Layer: 0
   m_Name: MD_39_MarbleBust
   m_TagString: Untagged
@@ -677,7 +720,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 162.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
   materialToughnessScale: 6
@@ -702,3 +745,16 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
   breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
   mountSupports: []
+--- !u!114 &3263063001529387947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225568868592954558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0

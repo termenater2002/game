@@ -384,6 +384,9 @@ GameObject:
   - component: {fileID: 4362881871304485204}
   - component: {fileID: 6480761868327010157}
   - component: {fileID: 8635855072296774920}
+  - component: {fileID: 4423350790442952909}
+  - component: {fileID: 3905278697574691876}
+  - component: {fileID: 7435022677676081235}
   m_Layer: 0
   m_Name: MD_37_LargePainting_carved_frame_inset
   m_TagString: Untagged
@@ -413,7 +416,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6264395647036546984}
-  m_Mesh: {fileID: -5870758308678872069, guid: 3a3b6fbd8557af68dbb608ece629703a, type: 3}
+  m_Mesh: {fileID: 4300000, guid: f0ef2314ced4b56be95fabbae5dbbd9d, type: 2}
 --- !u!23 &6480761868327010157
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -485,6 +488,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.044, y: 0.018, z: 1.044}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4423350790442952909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264395647036546984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8339632669634385718}
+  contained: 0
+  partMass: 0.3
+  role: canvas
+--- !u!114 &3905278697574691876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264395647036546984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 45
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 175
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &7435022677676081235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264395647036546984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 4362881871304485204}
 --- !u!1 &6648362026842108880
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +667,7 @@ GameObject:
   - component: {fileID: 6641103110147452960}
   - component: {fileID: 8339632669634385718}
   - component: {fileID: 6770669118391779742}
+  - component: {fileID: 7813710909502858113}
   m_Layer: 0
   m_Name: MD_37_LargePainting
   m_TagString: Untagged
@@ -678,7 +737,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 325
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
   materialToughnessScale: 1
@@ -703,3 +762,16 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
   breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &7813710909502858113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8679308721725761469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0

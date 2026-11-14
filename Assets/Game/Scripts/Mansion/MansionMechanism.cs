@@ -28,6 +28,7 @@ public sealed class MansionMechanism : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (GetComponent<DamageOnImpact>() != null) return; // This part receives its own collision callback.
         if (owner == null || owner.State == null || owner.State.IsDestroyed) return;
         owner.ReceiveCollision(collision);
     }

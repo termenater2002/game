@@ -43,7 +43,11 @@ public sealed class MansionInteraction : MonoBehaviour
         if (damage == null) return false;
         readyAt = Time.time + cooldown; LastStruck = damage;
         if (hit.rigidbody != null && !hit.rigidbody.isKinematic)
-        { hit.rigidbody.WakeUp(); hit.rigidbody.AddForceAtPosition(transform.forward * strikeImpulse, hit.point, ForceMode.Impulse); }
+        {
+            float coupling = 1f;var part = damage.GetComponent<IndependentPart>();
+            if (part != null && part.GetComponent<Rigidbody>() == null) coupling = Mathf.Clamp(part.partMass / hit.rigidbody.mass, .04f, 1f);
+            hit.rigidbody.WakeUp();hit.rigidbody.AddForceAtPosition(transform.forward * strikeImpulse * coupling, hit.point, ForceMode.Impulse);
+        }
         damage.ApplyDamageAt(strikeDamage / Mathf.Sqrt(Mathf.Max(1, damage.materialToughnessScale)), hit.point, hit.normal);
         return true;
     }

@@ -92,7 +92,7 @@ public class DestructionReworkTests
     {
         var sofa=Prop(21,Origin+Vector3.up*2);sofa.GetComponent<Rigidbody>().isKinematic=true;
         var cushion=sofa.GetComponentsInChildren<MeshFilter>().First(f=>f.name.Contains("seat_cushion"));var before=cushion.sharedMesh.vertices;int triangles=cushion.sharedMesh.triangles.Length;
-        var b=cushion.GetComponent<Renderer>().bounds;var point=b.center+Vector3.up*b.extents.y;var damage=sofa.GetComponent<DamageOnImpact>();
+        var b=cushion.GetComponent<Renderer>().bounds;var point=b.center+Vector3.up*b.extents.y;var damage=cushion.GetComponent<DamageOnImpact>();
         damage.ApplyDamageAt(34,point,Vector3.up);Assert.That(cushion.sharedMesh.vertices.Where((v,i)=>(v-before[i]).sqrMagnitude>.000001f).Count(),Is.GreaterThan(3));
         damage.ApplyDamageAt(10000,point,Vector3.up);yield return null;
         Assert.That(sofa!=null,Is.True);Assert.That(cushion.sharedMesh.triangles.Length,Is.LessThan(triangles));Assert.That(damage.brokenPrefab,Is.Null);

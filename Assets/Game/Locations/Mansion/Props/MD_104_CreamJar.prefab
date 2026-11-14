@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 2930639313342678046}
   - component: {fileID: 8015845458833731963}
   - component: {fileID: 7579521617920803535}
+  - component: {fileID: 3155716163239704862}
+  - component: {fileID: 8314074770904520924}
   m_Layer: 0
   m_Name: MD_104_CreamJar_screw_cap
   m_TagString: Untagged
@@ -224,6 +226,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1339, y: 0.1339, z: 0.024999999}
   m_Center: {x: 0, y: 0, z: 0.012499999}
+--- !u!114 &3155716163239704862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062345672963629869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 7223085099689281732}
+  contained: 0
+  partMass: 0.02
+  role: cap
+--- !u!114 &8314074770904520924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062345672963629869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 6397410719624543111, guid: 9cda33423505afe828cc5ec0e6bbef5f, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 63
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1890824613680436165
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +278,7 @@ GameObject:
   - component: {fileID: 9217880802245667587}
   - component: {fileID: 7223085099689281732}
   - component: {fileID: 8177387750197420298}
+  - component: {fileID: 6128263943878476864}
   m_Layer: 0
   m_Name: MD_104_CreamJar
   m_TagString: Untagged
@@ -267,7 +310,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890824613680436165}
   serializedVersion: 5
-  m_Mass: 0.2
+  m_Mass: 0.3
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -298,16 +341,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 42
-  damageMultiplier: 1.5
-  impactThreshold: 3.8
+  maxHP: 70
+  damageMultiplier: 0.9
+  impactThreshold: 6
   brokenPrefab: {fileID: 4742201241336703983, guid: 16af4e370c194cb61b0ad5670809119f, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 117
   wallet: {fileID: 0}
-  materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
   materialToughnessScale: 1
   retainOnDestruction: 0
 --- !u!114 &8177387750197420298
@@ -325,11 +368,24 @@ MonoBehaviour:
   assetId: 104
   displayName: "\u0411\u0430\u043D\u043E\u0447\u043A\u0430 \u043A\u0440\u0435\u043C\u0430"
   room: 
-  substance: ceramic
+  substance: plastic
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
-  breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
+  hitSound: {fileID: 8300000, guid: 4f263405438e1f62d86f340d37d34f76, type: 3}
+  breakSound: {fileID: 8300000, guid: ce655120c8420e779b695fa5729e948f, type: 3}
   mountSupports: []
+--- !u!114 &6128263943878476864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890824613680436165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &4755015068576360016
 GameObject:
   m_ObjectHideFlags: 0

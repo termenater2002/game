@@ -54,7 +54,7 @@ public static class DestructionReworkLive
  }
  public static async Task<object> UpholsteryExample()
  {
-  Controlled();Grab.Release();var sofa=Prop(21,"Lounge");var damage=sofa.GetComponent<DamageOnImpact>();var response=sofa.GetComponent<MansionMaterialResponse>();
+  Controlled();Grab.Release();var sofa=Prop(21,"Lounge");var damage=sofa.GetComponentsInChildren<MeshFilter>().First(f=>f.name.Contains("seat_cushion")).GetComponent<DamageOnImpact>();var response=damage.GetComponent<MansionMaterialResponse>();
   var cushion=sofa.GetComponentsInChildren<MeshFilter>().First(f=>f.name.Contains("seat_cushion"));int before=cushion.sharedMesh.triangles.Length;int hits=0;
   for(int i=0;i<12&&!damage.State.IsDestroyed;i++)
   {
@@ -101,7 +101,7 @@ public static class DestructionReworkLive
  public static async Task<object> Routes()
  {
   Controlled();Grab.Release();var body=Player.GetComponent<Rigidbody>();body.isKinematic=false;
-  foreach(var mechanism in Object.FindObjectsByType<MansionMechanism>(FindObjectsSortMode.None).Where(m=>m.owner!=null&&m.owner.GetComponent<MansionProp>()!=null&&new[]{8,9}.Contains(m.owner.GetComponent<MansionProp>().assetId)))if(!mechanism.IsOpen)mechanism.Toggle();
+  foreach(var mechanism in Object.FindObjectsByType<MansionMechanism>(FindObjectsSortMode.None).Where(m=>m.GetComponentInParent<MansionProp>()!=null&&new[]{8,9}.Contains(m.GetComponentInParent<MansionProp>().assetId)))if(!mechanism.IsOpen)mechanism.Toggle();
   await Task.Delay(1400);var results=new List<object>();bool all=true;var driver=Player.GetComponent<PlayerAnimationDriver>();float y=Object.FindAnyObjectByType<MansionSession>().spawnPosition.y;
   foreach(float z in new[]{-8f,0,8})foreach(int sign in new[]{-1,1})
   {

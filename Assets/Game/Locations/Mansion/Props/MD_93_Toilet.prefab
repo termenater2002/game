@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 24239192674846139}
   - component: {fileID: 499903953987460991}
   - component: {fileID: 8048395151690276847}
+  - component: {fileID: 2416877260258476467}
+  - component: {fileID: 6253970997943778673}
   m_Layer: 0
   m_Name: MD_93_Toilet_separate_toilet_seat
   m_TagString: Untagged
@@ -224,6 +226,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44, y: 0.5632, z: 0.043301255}
   m_Center: {x: 0, y: -0.000000014901161, z: -0.000000014901161}
+--- !u!114 &2416877260258476467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559630500294655254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8902910702615791435}
+  contained: 0
+  partMass: 0.5
+  role: seat
+--- !u!114 &6253970997943778673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559630500294655254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 40
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 1153245004176876713, guid: 3c39ea5ea483f2d26b0b61b57071b225, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1653629842116474563
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +278,8 @@ GameObject:
   - component: {fileID: 8080180395232989675}
   - component: {fileID: 3288526309141898199}
   - component: {fileID: 6782928229840515119}
+  - component: {fileID: 634135299975980104}
+  - component: {fileID: 8582771011082526609}
   m_Layer: 0
   m_Name: MD_93_Toilet_cistern_lid
   m_TagString: Untagged
@@ -336,6 +380,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.46, y: 0.21000001, z: 0.044999957}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &634135299975980104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653629842116474563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8902910702615791435}
+  contained: 0
+  partMass: 1
+  role: cisternlid
+--- !u!114 &8582771011082526609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653629842116474563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 35
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 5655172099152787875, guid: 88b31939edcf4fff8a2d8f3aedf9c1e3, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &1802894254428675638
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +432,7 @@ GameObject:
   - component: {fileID: 8155203024210155532}
   - component: {fileID: 8902910702615791435}
   - component: {fileID: 5875927740843045792}
+  - component: {fileID: 787674889346271786}
   m_Layer: 0
   m_Name: MD_93_Toilet
   m_TagString: Untagged
@@ -417,7 +502,7 @@ MonoBehaviour:
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 162.5
   wallet: {fileID: 0}
   materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
   materialToughnessScale: 72
@@ -442,6 +527,19 @@ MonoBehaviour:
   hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
   breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
   mountSupports: []
+--- !u!114 &787674889346271786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802894254428675638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &2918882060899143256
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +667,8 @@ GameObject:
   - component: {fileID: 726797240463377595}
   - component: {fileID: 1008730126814929654}
   - component: {fileID: 681382028062454993}
+  - component: {fileID: 4003290322089918731}
+  - component: {fileID: 8818582866341235246}
   m_Layer: 0
   m_Name: MD_93_Toilet_hinged_toilet_lid
   m_TagString: Untagged
@@ -710,7 +810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Foundation.Runtime::MansionMechanism
   hinge: {fileID: 681382028062454993}
   drawer: {fileID: 0}
-  owner: {fileID: 8902910702615791435}
+  owner: {fileID: 8818582866341235246}
   openAngle: 95
   travel: 0.32
 --- !u!59 &681382028062454993
@@ -752,6 +852,46 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4003290322089918731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555522810650908926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 8902910702615791435}
+  contained: 0
+  partMass: 4
+  role: mechanism
+--- !u!114 &8818582866341235246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3555522810650908926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 60
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 224838483677782885, guid: 8b784df9471f74ad1a04497032b244ec, type: 3}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 29.166666
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!1 &6485645038524947015
 GameObject:
   m_ObjectHideFlags: 0

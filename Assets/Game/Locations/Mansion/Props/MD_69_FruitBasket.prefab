@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 4853390233017501425}
   - component: {fileID: 4105662852781715207}
   - component: {fileID: 3889958795699473642}
+  - component: {fileID: 6921031454265325649}
+  - component: {fileID: 3723660388836271921}
+  - component: {fileID: 1712233350022084913}
+  - component: {fileID: 2529318133593334988}
   m_Layer: 0
   m_Name: MD_69_FruitBasket_fruit.001
   m_TagString: Untagged
@@ -31,7 +35,8 @@ Transform:
   m_LocalPosition: {x: -0.08, y: 0, z: 0.135}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7534311083717197367}
   m_Father: {fileID: 9145995974475556884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4853390233017501425
@@ -41,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10132887181964234}
-  m_Mesh: {fileID: -3774757885423656660, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 64496273d5b3a3ae8bb0c04f14d51ccc, type: 2}
 --- !u!23 &4105662852781715207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -112,6 +117,89 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.11412677, y: 0.10854102, z: 0.12999998}
   m_Center: {x: 0.0000000018626451, y: 0, z: 0.06499999}
+--- !u!114 &6921031454265325649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10132887181964234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4136298766179697236}
+  contained: 1
+  partMass: 0.15
+  role: fruit
+--- !u!54 &3723660388836271921
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10132887181964234}
+  serializedVersion: 5
+  m_Mass: 0.15
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1712233350022084913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10132887181964234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 39.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &2529318133593334988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10132887181964234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 4853390233017501425}
+  - {fileID: 7530327102438819432}
 --- !u!1 &1340634296894671106
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,10 +235,6 @@ Transform:
   - {fileID: 2274205280937504097}
   - {fileID: 142960304247573738}
   - {fileID: 7774654870278874745}
-  - {fileID: 1007226084930489414}
-  - {fileID: 7534311083717197367}
-  - {fileID: 8259523737607040554}
-  - {fileID: 6603892608206124463}
   m_Father: {fileID: 3445143868534282850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2374157346177548399
@@ -165,6 +249,10 @@ GameObject:
   - component: {fileID: 3445889478621065428}
   - component: {fileID: 8984134922467000041}
   - component: {fileID: 1634210870725591153}
+  - component: {fileID: 7424248268293798715}
+  - component: {fileID: 2945226217492862720}
+  - component: {fileID: 5379861355154709803}
+  - component: {fileID: 4760039549154704854}
   m_Layer: 0
   m_Name: MD_69_FruitBasket_basket
   m_TagString: Untagged
@@ -263,8 +351,92 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.42, y: 0.42, z: 0.19}
-  m_Center: {x: 0, y: 0, z: 0.095}
+  m_Size: {x: 0.42, y: 0.42, z: 0.018}
+  m_Center: {x: 0, y: 0, z: 0.009}
+--- !u!65 &7424248268293798715
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374157346177548399}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017999992, y: 0.42, z: 0.19}
+  m_Center: {x: -0.201, y: 0, z: 0.095}
+--- !u!65 &2945226217492862720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374157346177548399}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.017999992, y: 0.42, z: 0.19}
+  m_Center: {x: 0.201, y: 0, z: 0.095}
+--- !u!65 &5379861355154709803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374157346177548399}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42, y: 0.017999992, z: 0.19}
+  m_Center: {x: 0, y: -0.201, z: 0.095}
+--- !u!65 &4760039549154704854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2374157346177548399}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42, y: 0.017999992, z: 0.19}
+  m_Center: {x: 0, y: 0.201, z: 0.095}
 --- !u!1 &4521242772793728754
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,12 +464,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4521242772793728754}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.07, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.000000007450581, z: 0.124999925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9145995974475556884}
+  m_Father: {fileID: 142960304247573738}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5944416310990606352
 MeshFilter:
@@ -306,7 +478,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4521242772793728754}
-  m_Mesh: {fileID: -2880496514590472538, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 5569a8a012d5d86c58f313b00fb2707c, type: 2}
 --- !u!23 &6555627700376103394
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -389,6 +561,7 @@ GameObject:
   - component: {fileID: 3217239166456396759}
   - component: {fileID: 4136298766179697236}
   - component: {fileID: 1175140335215115253}
+  - component: {fileID: 5811999140642440254}
   m_Layer: 0
   m_Name: MD_69_FruitBasket
   m_TagString: Untagged
@@ -451,17 +624,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 42
-  damageMultiplier: 1.5
-  impactThreshold: 3.8
+  maxHP: 80
+  damageMultiplier: 0.9
+  impactThreshold: 7
   brokenPrefab: {fileID: 7334665263279643004, guid: a23ab4c6e3c19b372bb31686eafa887c, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 250
+  objectValue: 292.5
   wallet: {fileID: 0}
-  materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
-  materialToughnessScale: 6
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
   retainOnDestruction: 0
 --- !u!114 &1175140335215115253
 MonoBehaviour:
@@ -478,11 +651,24 @@ MonoBehaviour:
   assetId: 69
   displayName: "\u041A\u043E\u0440\u0437\u0438\u043D\u0430 \u0441 \u0444\u0440\u0443\u043A\u0442\u0430\u043C\u0438"
   room: 
-  substance: ceramic
+  substance: wood
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
-  breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
+  hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
+  breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
   mountSupports: []
+--- !u!114 &5811999140642440254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597884224595719105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83572a389904f028d89015a6a9e1480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::CompositeContents
+  removeWhenEmpty: 0
 --- !u!1 &6446087831771020420
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,6 +681,10 @@ GameObject:
   - component: {fileID: 6231278119386643960}
   - component: {fileID: 917710611810377297}
   - component: {fileID: 8530718497188731855}
+  - component: {fileID: 224595240339480653}
+  - component: {fileID: 3662341913387089026}
+  - component: {fileID: 1542134458838857271}
+  - component: {fileID: 1010413496629664470}
   m_Layer: 0
   m_Name: MD_69_FruitBasket_fruit.002
   m_TagString: Untagged
@@ -514,7 +704,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0.07, z: 0.135}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8259523737607040554}
   m_Father: {fileID: 9145995974475556884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6231278119386643960
@@ -524,7 +715,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6446087831771020420}
-  m_Mesh: {fileID: -7670319138873281173, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 65c158ceb27b05aa38f47dd26f34459c, type: 2}
 --- !u!23 &917710611810377297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -595,6 +786,89 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.11412678, y: 0.10854103, z: 0.12999998}
   m_Center: {x: 0, y: 0.0000000018626451, z: 0.06499999}
+--- !u!114 &224595240339480653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446087831771020420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4136298766179697236}
+  contained: 1
+  partMass: 0.15
+  role: fruit
+--- !u!54 &3662341913387089026
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446087831771020420}
+  serializedVersion: 5
+  m_Mass: 0.15
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1542134458838857271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446087831771020420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 39.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &1010413496629664470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6446087831771020420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 6231278119386643960}
+  - {fileID: 5944416310990606352}
 --- !u!1 &7004013981326334886
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,12 +896,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004013981326334886}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.02, z: 0.35}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.000000011175871, z: 0.12499994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9145995974475556884}
+  m_Father: {fileID: 7774654870278874745}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7867930882517690648
 MeshFilter:
@@ -636,7 +910,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7004013981326334886}
-  m_Mesh: {fileID: -780875653340987405, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: dc7ba342055a1afb882976c1088df5da, type: 2}
 --- !u!23 &8030965396135584118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -734,12 +1008,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7454153331193614763}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08, y: 0, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.124999925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9145995974475556884}
+  m_Father: {fileID: 2274205280937504097}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7530327102438819432
 MeshFilter:
@@ -748,7 +1022,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7454153331193614763}
-  m_Mesh: {fileID: 4739004361908011759, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c51d95488950e3b7a89b10e30c6a994b, type: 2}
 --- !u!23 &4449860825341977745
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -831,6 +1105,8 @@ GameObject:
   - component: {fileID: 8903080574090132337}
   - component: {fileID: 2896338876411348009}
   - component: {fileID: 6838343273319959911}
+  - component: {fileID: 1719849324847960927}
+  - component: {fileID: 5379617336487122728}
   m_Layer: 0
   m_Name: MD_69_FruitBasket_basket_handle
   m_TagString: Untagged
@@ -929,8 +1205,50 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.027712861, y: 0.45199993, z: 0.44066733}
-  m_Center: {x: 0, y: 0, z: -0.000000007450581}
+  m_Size: {x: 0.027712861, y: 0.024000004, z: 0.44066733}
+  m_Center: {x: 0, y: -0.21399996, z: 0}
+--- !u!65 &1719849324847960927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598809761926523398}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027712861, y: 0.024000004, z: 0.44066733}
+  m_Center: {x: 0, y: 0.21399996, z: 0}
+--- !u!65 &5379617336487122728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7598809761926523398}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027712861, y: 0.45199993, z: 0.024000004}
+  m_Center: {x: 0, y: 0, z: 0.20833367}
 --- !u!1 &7637062742741083554
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +1261,10 @@ GameObject:
   - component: {fileID: 3002971555738750170}
   - component: {fileID: 8157219218442627992}
   - component: {fileID: 4807136969417272010}
+  - component: {fileID: 7278466947014592185}
+  - component: {fileID: 3833084123023830121}
+  - component: {fileID: 8938037113891559312}
+  - component: {fileID: 73233224194157655}
   m_Layer: 0
   m_Name: MD_69_FruitBasket_fruit.003
   m_TagString: Untagged
@@ -962,7 +1284,8 @@ Transform:
   m_LocalPosition: {x: -0, y: -0.02, z: 0.225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6603892608206124463}
   m_Father: {fileID: 9145995974475556884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3002971555738750170
@@ -972,7 +1295,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7637062742741083554}
-  m_Mesh: {fileID: -8991015029572507241, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 6700344163c26eea081802c10cdf78e0, type: 2}
 --- !u!23 &8157219218442627992
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1043,6 +1366,89 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.11412678, y: 0.10854102, z: 0.13}
   m_Center: {x: 0, y: 0, z: 0.065}
+--- !u!114 &7278466947014592185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637062742741083554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4136298766179697236}
+  contained: 1
+  partMass: 0.15
+  role: fruit
+--- !u!54 &3833084123023830121
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637062742741083554}
+  serializedVersion: 5
+  m_Mass: 0.15
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &8938037113891559312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637062742741083554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 39.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &73233224194157655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7637062742741083554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 3002971555738750170}
+  - {fileID: 7867930882517690648}
 --- !u!1 &7726381941199562340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,12 +1476,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7726381941199562340}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -0.04, z: 0.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000000007450581, z: 0.124999985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9145995974475556884}
+  m_Father: {fileID: 8798854582975985038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1130337746097439207
 MeshFilter:
@@ -1084,7 +1490,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7726381941199562340}
-  m_Mesh: {fileID: -227715202491362185, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 1b834282a998b106ea3c9f2f2c0bafec, type: 2}
 --- !u!23 &2767558796195186872
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1167,6 +1573,10 @@ GameObject:
   - component: {fileID: 6036710238125445622}
   - component: {fileID: 8047097127952688589}
   - component: {fileID: 4508248643975287684}
+  - component: {fileID: 9823241594768708}
+  - component: {fileID: 4289112601085649365}
+  - component: {fileID: 745415897815131501}
+  - component: {fileID: 6038135374316930436}
   m_Layer: 0
   m_Name: MD_69_FruitBasket_fruit
   m_TagString: Untagged
@@ -1186,7 +1596,8 @@ Transform:
   m_LocalPosition: {x: 0.08, y: -0.04, z: 0.125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1007226084930489414}
   m_Father: {fileID: 9145995974475556884}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6036710238125445622
@@ -1196,7 +1607,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8942739056562878508}
-  m_Mesh: {fileID: -8502989302369957232, guid: d04b2e1e450043fb688bca5541c42cb2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: f07b7c428319f93db9674827713a9fec, type: 2}
 --- !u!23 &8047097127952688589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1267,3 +1678,86 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.11412677, y: 0.10854103, z: 0.13}
   m_Center: {x: -0.0000000018626451, y: -0.0000000018626451, z: 0.065}
+--- !u!114 &9823241594768708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942739056562878508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d701fe6550e94941bd4324fe680b7fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::IndependentPart
+  owner: {fileID: 4136298766179697236}
+  contained: 1
+  partMass: 0.15
+  role: fruit
+--- !u!54 &4289112601085649365
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942739056562878508}
+  serializedVersion: 5
+  m_Mass: 0.15
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &745415897815131501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942739056562878508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
+  maxHP: 20
+  damageMultiplier: 1
+  impactThreshold: 5
+  brokenPrefab: {fileID: 0}
+  explosionForce: 0.15
+  explosionRadius: 0.5
+  debrisLifetime: 70
+  objectValue: 39.375
+  wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 1
+--- !u!114 &6038135374316930436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942739056562878508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: 90e44ac6f8c595a2abd41ccb2b1894a0, type: 2}
+  deformableSurfaces:
+  - {fileID: 6036710238125445622}
+  - {fileID: 1130337746097439207}

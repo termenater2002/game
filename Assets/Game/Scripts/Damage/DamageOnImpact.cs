@@ -36,7 +36,7 @@ public class DamageOnImpact : MonoBehaviour
     {
         if (collision.contactCount == 0) return;
         var contact = collision.GetContact(0);
-        var part = contact.thisCollider.GetComponent<DamageOnImpact>();
+        var part = contact.thisCollider.GetComponentInParent<DamageOnImpact>();
         if (part != null && part != this) { part.ReceiveCollision(collision); return; }
         ReceiveCollision(collision);
     }

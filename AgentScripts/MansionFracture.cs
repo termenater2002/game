@@ -61,13 +61,13 @@ public static class MansionFracture
         {
             var transform=f.transform;Transform moving=null;
             for(var parent=transform;parent!=null&&parent!=source.transform;parent=parent.parent)if(movingParts.Contains(parent.name)){moving=parent;break;}
-            string key=moving!=null?moving.name:substance=="wood"?f.name:"";if(!groups.ContainsKey(key))groups[key]=new Group{sourceName=moving!=null?moving.name:"",inverse=moving!=null?(source.transform.worldToLocalMatrix*moving.localToWorldMatrix).inverse:Matrix4x4.identity};
+            string key=moving!=null?moving.name:f.name;if(!groups.ContainsKey(key))groups[key]=new Group{sourceName=moving!=null?moving.name:"",inverse=moving!=null?(source.transform.worldToLocalMatrix*moving.localToWorldMatrix).inverse:Matrix4x4.identity};
             var g=groups[key];var mesh=f.sharedMesh;var coords=mesh.vertices;var normals=mesh.normals;var uv=mesh.uv;var matrix=source.transform.worldToLocalMatrix*f.transform.localToWorldMatrix;var mats=f.GetComponent<MeshRenderer>().sharedMaterials;
             Vertex At(int i)=>new Vertex{p=matrix.MultiplyPoint3x4(coords[i]),n=matrix.MultiplyVector(normals.Length==coords.Length?normals[i]:Vector3.up).normalized,uv=uv.Length==coords.Length?uv[i]:Vector2.zero};
             for(int m=0;m<mesh.subMeshCount;m++){int material=materials.IndexOf(mats[Mathf.Min(m,mats.Length-1)]);var tris=mesh.GetTriangles(m);for(int i=0;i<tris.Length;i+=3)g.faces.Add(new Triangle{a=At(tris[i]),b=At(tris[i+1]),c=At(tris[i+2]),m=material,surface=Array.IndexOf(filters,f)});}
         }
         var random=new System.Random(assetId*7919+17);
-        var tuning=MansionPropFactory.Profile(substance);float maxFragment=tuning.maximumFragmentSize;
+        var tuning=MansionPropFactory.Profile(substance);float maxFragment=assetId==20?.65f:tuning.maximumFragmentSize;
         var root=new GameObject("Debris "+source.name);root.SetActive(false);root.AddComponent<MansionDebris>();var pieces=new List<Rigidbody>();int index=0;
         foreach(var g in groups.Values)
         {

@@ -12,7 +12,9 @@ public class DamageFeedback : MonoBehaviour
     {
         if (owner != null) owner.Damaged -= OnDamaged;
         owner = source;
-        target = GetComponent<Renderer>() ?? GetComponentInChildren<Renderer>();
+        target = GetComponent<Renderer>();
+        if (target == null) foreach (var renderer in GetComponentsInChildren<Renderer>())
+            if (renderer.GetComponentInParent<DamageOnImpact>() == owner) { target = renderer; break; }
         if (target != null && target.sharedMaterial != null)
         {
             var material = target.sharedMaterial;
