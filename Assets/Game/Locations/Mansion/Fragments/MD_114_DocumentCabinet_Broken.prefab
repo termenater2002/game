@@ -1,5 +1,182 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &229056424868979354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464300925183919294}
+  - component: {fileID: 302036988231892452}
+  - component: {fileID: 7327287693402362282}
+  - component: {fileID: 7531084517803729310}
+  - component: {fileID: 3034436066419746030}
+  - component: {fileID: 1021071345831767280}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 44
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464300925183919294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229056424868979354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.36836177, y: 0.064999975, z: -0.14056952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &302036988231892452
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229056424868979354}
+  m_Mesh: {fileID: 4300000, guid: f4b62f15e59a1d4f8b31bc45198f8222, type: 2}
+--- !u!23 &7327287693402362282
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229056424868979354}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7531084517803729310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229056424868979354}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.097723514, y: 0.13, z: 0.13086095}
+  m_Center: {x: 0.000000014901161, y: 0.0000000037252903, z: -0.0000000037252903}
+--- !u!54 &3034436066419746030
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229056424868979354}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1021071345831767280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229056424868979354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.36836177, y: 0.064999975, z: -0.14056952}
 --- !u!1 &399013588257782813
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 399013588257782813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36222374, y: 1.345, z: 0.21499982}
+  m_LocalPosition: {x: 0.3019886, y: 0.49815592, z: 0.21499994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116,8 +293,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18755251, y: 0.33000004, z: 0.06500003}
-  m_Center: {x: 0, y: -0.000000059604645, z: 0}
+  m_Size: {x: 0.30802274, y: 0.6163118, z: 0.06500006}
+  m_Center: {x: 0.000000022351742, y: 0.000000014901161, z: -0.000000014901161}
 --- !u!54 &3092430267231179435
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,9 +303,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399013588257782813}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -157,12 +334,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: 0.435
+    e03: -0.435
     e10: -0
     e11: -0.00000011920932
     e12: -1.0000001
@@ -175,7 +353,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.36222374, y: 1.345, z: 0.21499982}
+  restCenter: {x: 0.3019886, y: 0.49815592, z: 0.21499994}
 --- !u!1 &514440627034397649
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 514440627034397649}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26579827, y: 0.22084804, z: -0.12723762}
+  m_LocalPosition: {x: 0.273113, y: 1.29709, z: -0.18000016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -292,8 +470,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41840354, y: 0.4416961, z: 0.15752476}
-  m_Center: {x: -0.000000044703484, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.4037741, y: 0.46581948, z: 0.040000036}
+  m_Center: {x: -0.000000074505806, y: 0.000000059604645, z: 0.000000007450581}
 --- !u!54 &6644471588774007378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -302,9 +480,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514440627034397649}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -333,6 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -351,7 +530,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.26579827, y: 0.22084804, z: -0.12723762}
+  restCenter: {x: 0.273113, y: 1.29709, z: -0.18000016}
 --- !u!1 &724939099946950347
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +561,7 @@ Transform:
   m_GameObject: {fileID: 724939099946950347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29483235, y: 1.4192399, z: 0.13867633}
+  m_LocalPosition: {x: 0.2527864, y: 1.0362102, z: -0.18000013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -468,8 +647,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4203353, y: 0.44151998, z: 0.17264691}
-  m_Center: {x: 0.000000007450581, y: 0, z: 0}
+  m_Size: {x: 0.4444272, y: 0.3504364, z: 0.04000002}
+  m_Center: {x: -0.000000007450581, y: 0.000000029802322, z: 0}
 --- !u!54 &3926538916013687823
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -478,9 +657,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724939099946950347}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -509,6 +688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -527,7 +707,538 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.29483235, y: 1.4192399, z: 0.13867633}
+  restCenter: {x: 0.2527864, y: 1.0362102, z: -0.18000013}
+--- !u!1 &976724462978451046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4623612778650017560}
+  - component: {fileID: 4592115949522909255}
+  - component: {fileID: 5797794654574063180}
+  - component: {fileID: 6779221752638344193}
+  - component: {fileID: 6641276974696014399}
+  - component: {fileID: 5242524827880706451}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 43
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4623612778650017560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976724462978451046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.41342598, y: 0.064999975, z: -0.13217488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4592115949522909255
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976724462978451046}
+  m_Mesh: {fileID: 4300000, guid: 54891b5db3471c6beaaaa5ea7dcb1d86, type: 2}
+--- !u!23 &5797794654574063180
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976724462978451046}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6779221752638344193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976724462978451046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.092147976, y: 0.13, z: 0.13234974}
+  m_Center: {x: -0.000000014901161, y: 0.0000000037252903, z: -0.000000007450581}
+--- !u!54 &6641276974696014399
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976724462978451046}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &5242524827880706451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976724462978451046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.41342598, y: 0.064999975, z: -0.13217488}
+--- !u!1 &1216143440013445592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2635530783827078687}
+  - component: {fileID: 5767477299303879515}
+  - component: {fileID: 7297195333343997087}
+  - component: {fileID: 6125060890644115037}
+  - component: {fileID: 6178467841601053304}
+  - component: {fileID: 805129150307593100}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 37
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2635530783827078687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216143440013445592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3736204, y: 0.06500001, z: 0.13599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5767477299303879515
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216143440013445592}
+  m_Mesh: {fileID: 4300000, guid: 89a1c1f64acc003e28f6cd1c392e1098, type: 2}
+--- !u!23 &7297195333343997087
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216143440013445592}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6125060890644115037
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216143440013445592}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10824078, y: 0.13, z: 0.13999999}
+  m_Center: {x: 0, y: 0, z: -0.0000000037252903}
+--- !u!54 &6178467841601053304
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216143440013445592}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &805129150307593100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216143440013445592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.3736204, y: 0.06500001, z: 0.13599998}
+--- !u!1 &1350123432329605156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4547547513206276662}
+  - component: {fileID: 9026688187473759304}
+  - component: {fileID: 2217539954471020426}
+  - component: {fileID: 4143886344424400152}
+  - component: {fileID: 7002609883075672142}
+  - component: {fileID: 8945221034669580122}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 35
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4547547513206276662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350123432329605156}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12544462, y: 0.77708375, z: 0.23824987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &9026688187473759304
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350123432329605156}
+  m_Mesh: {fileID: 4300000, guid: e520313ca2156990c91fecf0f39fb3c5, type: 2}
+--- !u!23 &2217539954471020426
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350123432329605156}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4143886344424400152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350123432329605156}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.23188923, y: 0.40894532, z: 0.11150001}
+  m_Center: {x: 0.000000007450581, y: 0.000000059604645, z: 0.000000007450581}
+--- !u!54 &7002609883075672142
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350123432329605156}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &8945221034669580122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350123432329605156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.435
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: 0.21500002
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: -0.15
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.12544462, y: 0.77708375, z: 0.23824987}
 --- !u!1 &1395476914879815931
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +1269,7 @@ Transform:
   m_GameObject: {fileID: 1395476914879815931}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14124875, y: 1.0150001, z: 0.21499985}
+  m_LocalPosition: {x: -0.23275, y: 0.40519807, z: 0.21499994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -644,8 +1355,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2634975, y: 0.33000022, z: 0.06500004}
-  m_Center: {x: 0, y: -0.000000029802322, z: 0.000000007450581}
+  m_Size: {x: 0.4465, y: 0.43039614, z: 0.06500004}
+  m_Center: {x: 0, y: 0.000000007450581, z: -0.000000007450581}
 --- !u!54 &5902433485645442077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -654,9 +1365,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395476914879815931}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -685,6 +1396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_114_DocumentCabinet_hinged_door.001
   sourceRestInverse:
     e00: 1
@@ -703,7 +1415,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.14124875, y: 1.0150001, z: 0.21499985}
+  restCenter: {x: -0.23275, y: 0.40519807, z: 0.21499994}
 --- !u!1 &1396368337150915163
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 1396368337150915163}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 0.58540255, z: 0.115457945}
+  m_LocalPosition: {x: 0.01152572, y: 1.3039652, z: -0.18000016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -820,8 +1532,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06999999, y: 0.39026842, z: 0.16908401}
-  m_Center: {x: 0, y: 0.000000014901161, z: -0.0000000037252903}
+  m_Size: {x: 0.41297585, y: 0.4520694, z: 0.040000036}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0.000000007450581}
 --- !u!54 &4153832490463182333
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -830,9 +1542,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396368337150915163}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -861,6 +1573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -879,7 +1592,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.44, y: 0.58540255, z: 0.115457945}
+  restCenter: {x: 0.01152572, y: 1.3039652, z: -0.18000016}
 --- !u!1 &1424844671308960957
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +1623,7 @@ Transform:
   m_GameObject: {fileID: 1424844671308960957}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12307626, y: 1.0150001, z: 0.21499985}
+  m_LocalPosition: {x: 0.44, y: 0.7849755, z: -0.00000008940697}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,8 +1709,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22715253, y: 0.33000022, z: 0.06500004}
-  m_Center: {x: 0, y: -0.000000029802322, z: 0.000000007450581}
+  m_Size: {x: 0.06999999, y: 0.62242115, z: 0.40000004}
+  m_Center: {x: 0, y: 0.000000074505806, z: 0.000000007450581}
 --- !u!54 &4019314317161528943
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1006,9 +1719,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424844671308960957}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1037,25 +1750,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.12307626, y: 1.0150001, z: 0.21499985}
+  restCenter: {x: 0.44, y: 0.7849755, z: -0.00000008940697}
 --- !u!1 &2093655312863965906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1800,7 @@ Transform:
   m_GameObject: {fileID: 2093655312863965906}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18922001, y: 0.21171553, z: -0.08164716}
+  m_LocalPosition: {x: -0.24791469, y: 0.44349512, z: -0.18000005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1172,8 +1886,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.57155997, y: 0.42343104, z: 0.24870569}
-  m_Center: {x: 0, y: -0.000000022351742, z: 0}
+  m_Size: {x: 0.4541706, y: 0.6269903, z: 0.04000005}
+  m_Center: {x: 0, y: 0.000000014901161, z: 0}
 --- !u!54 &1775076538534743640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1182,9 +1896,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093655312863965906}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1213,6 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1231,7 +1946,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.18922001, y: 0.21171553, z: -0.08164716}
+  restCenter: {x: -0.24791469, y: 0.44349512, z: -0.18000005}
 --- !u!1 &2265692522943586363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1977,7 @@ Transform:
   m_GameObject: {fileID: 2265692522943586363}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14287625, y: 0.68500006, z: 0.23824988}
+  m_LocalPosition: {x: 0.44, y: 0.37422678, z: -0.000000044703484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1348,8 +2063,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2667525, y: 0.33000004, z: 0.111499995}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.06999999, y: 0.4884537, z: 0.40000004}
+  m_Center: {x: 0, y: 0.000000007450581, z: 0}
 --- !u!54 &6759656536997606460
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1358,9 +2073,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2265692522943586363}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1389,25 +2104,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.14287625, y: 0.68500006, z: 0.23824988}
+  restCenter: {x: 0.44, y: 0.37422678, z: -0.000000044703484}
 --- !u!1 &2305928883525776764
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +2154,7 @@ Transform:
   m_GameObject: {fileID: 2305928883525776764}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26871148, y: 1.4234288, z: -0.053006172}
+  m_LocalPosition: {x: 0.3215292, y: 0.30563208, z: -0.18000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1524,8 +2240,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47257704, y: 0.43314207, z: 0.343988}
-  m_Center: {x: -0.000000007450581, y: 0.000000059604645, z: 0}
+  m_Size: {x: 0.3069415, y: 0.3512643, z: 0.040000007}
+  m_Center: {x: 0.000000022351742, y: 0.000000052154064, z: 0.000000007450581}
 --- !u!54 &1356075789400530912
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1534,9 +2250,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2305928883525776764}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1565,6 +2281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1583,7 +2300,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.26871148, y: 1.4234288, z: -0.053006172}
+  restCenter: {x: 0.3215292, y: 0.30563208, z: -0.18000004}
 --- !u!1 &2713342005324639889
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,7 +2331,7 @@ Transform:
   m_GameObject: {fileID: 2713342005324639889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 0.649713, z: 0.055144146}
+  m_LocalPosition: {x: -0.18858391, y: 0.15999998, z: -0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1700,8 +2417,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06999999, y: 0.43314198, z: 0.2897116}
-  m_Center: {x: 0, y: -0.000000014901161, z: 0}
+  m_Size: {x: 0.57283217, y: 0.07000003, z: 0.39999998}
+  m_Center: {x: 0, y: -0.0000000037252903, z: 0.000000007450581}
 --- !u!54 &2617611973332389233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1710,9 +2427,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2713342005324639889}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1741,6 +2458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1759,7 +2477,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.44, y: 0.649713, z: 0.055144146}
+  restCenter: {x: -0.18858391, y: 0.15999998, z: -0.000000029802322}
 --- !u!1 &2893312425553043756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +2508,7 @@ Transform:
   m_GameObject: {fileID: 2893312425553043756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.30324376, y: 0.35500008, z: 0.21499994}
+  m_LocalPosition: {x: 0.09379935, y: 0.37360805, z: 0.21499994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1876,7 +2594,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3055125, y: 0.33000016, z: 0.06500003}
+  m_Size: {x: 0.16859871, y: 0.3672161, z: 0.06500003}
   m_Center: {x: 0, y: 0.000000007450581, z: 0}
 --- !u!54 &1227543492136829090
 Rigidbody:
@@ -1886,9 +2604,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2893312425553043756}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1917,12 +2635,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: 0.435
+    e03: -0.435
     e10: -0
     e11: -0.00000011920932
     e12: -1.0000001
@@ -1935,7 +2654,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.30324376, y: 0.35500008, z: 0.21499994}
+  restCenter: {x: 0.09379935, y: 0.37360805, z: 0.21499994}
 --- !u!1 &3354322018500171320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,7 +2685,7 @@ Transform:
   m_GameObject: {fileID: 3354322018500171320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3242513, y: 1.0150001, z: 0.21499985}
+  m_LocalPosition: {x: -0.44, y: 0.40350568, z: -0.000000044703484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2052,8 +2771,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.26349747, y: 0.33000022, z: 0.06500004}
-  m_Center: {x: -0.000000037252903, y: -0.000000029802322, z: 0.000000007450581}
+  m_Size: {x: 0.06999999, y: 0.5470115, z: 0.40000004}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2266822868421996001
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2062,9 +2781,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3354322018500171320}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2093,25 +2812,203 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.3242513, y: 1.0150001, z: 0.21499985}
+  restCenter: {x: -0.44, y: 0.40350568, z: -0.000000044703484}
+--- !u!1 &3453429626872468518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2178333707346868052}
+  - component: {fileID: 7736721990840113345}
+  - component: {fileID: 3242257271255207123}
+  - component: {fileID: 4792567861548280786}
+  - component: {fileID: 3446311564120337830}
+  - component: {fileID: 7069180426664240846}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 41
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2178333707346868052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453429626872468518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.40664864, y: 0.065000005, z: 0.1316427}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7736721990840113345
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453429626872468518}
+  m_Mesh: {fileID: 4300000, guid: e6bdcf120818a1b0db55187c48151ab2, type: 2}
+--- !u!23 &3242257271255207123
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453429626872468518}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4792567861548280786
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453429626872468518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10570276, y: 0.13, z: 0.12953137}
+  m_Center: {x: 0.000000029802322, y: 0.0000000037252903, z: -0.000000007450581}
+--- !u!54 &3446311564120337830
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453429626872468518}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &7069180426664240846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453429626872468518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.40664864, y: 0.065000005, z: 0.1316427}
 --- !u!1 &3610120267516756593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,7 +3039,7 @@ Transform:
   m_GameObject: {fileID: 3610120267516756593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36385125, y: 0.35500008, z: 0.21499994}
+  m_LocalPosition: {x: -0.44, y: 0.99321485, z: -0.00000010430813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2228,8 +3125,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1842975, y: 0.33000016, z: 0.06500003}
-  m_Center: {x: 0, y: 0.000000007450581, z: 0}
+  m_Size: {x: 0.06999999, y: 0.43153405, z: 0.40000004}
+  m_Center: {x: 0, y: 0, z: -0.000000007450581}
 --- !u!54 &8376324515844186688
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2238,9 +3135,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3610120267516756593}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2269,25 +3166,203 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.36385125, y: 0.35500008, z: 0.21499994}
+  restCenter: {x: -0.44, y: 0.99321485, z: -0.00000010430813}
+--- !u!1 &3653359261518909909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7653045130791926131}
+  - component: {fileID: 2183926127604702808}
+  - component: {fileID: 4177862979451146067}
+  - component: {fileID: 8268413295622385220}
+  - component: {fileID: 8260928811809564076}
+  - component: {fileID: 7383019960322834765}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 40
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7653045130791926131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653359261518909909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41096896, y: 0.064999975, z: -0.14255562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2183926127604702808
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653359261518909909}
+  m_Mesh: {fileID: 4300000, guid: 665e79cd9c814adbe831a427958e9407, type: 2}
+--- !u!23 &4177862979451146067
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653359261518909909}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8268413295622385220
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653359261518909909}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09706208, y: 0.13, z: 0.12688874}
+  m_Center: {x: -0.000000014901161, y: 0.0000000037252903, z: -0.000000007450581}
+--- !u!54 &8260928811809564076
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653359261518909909}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &7383019960322834765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3653359261518909909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.41096896, y: 0.064999975, z: -0.14255562}
 --- !u!1 &3698773181671088585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +3393,7 @@ Transform:
   m_GameObject: {fileID: 3698773181671088585}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.44, y: 0.97772, z: 0.12716597}
+  m_LocalPosition: {x: 0.19347641, y: 0.6665324, z: -0.18000007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2404,8 +3479,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06999999, y: 0.44152027, z: 0.14566787}
-  m_Center: {x: 0, y: -0.000000029802322, z: -0.000000007450581}
+  m_Size: {x: 0.5630472, y: 0.560518, z: 0.040000036}
+  m_Center: {x: 0, y: 0.000000059604645, z: -0.000000007450581}
 --- !u!54 &5732993955092323124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2414,9 +3489,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3698773181671088585}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2445,6 +3520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -2463,7 +3539,184 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.44, y: 0.97772, z: 0.12716597}
+  restCenter: {x: 0.19347641, y: 0.6665324, z: -0.18000007}
+--- !u!1 &3732610127756096541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8022573762596701483}
+  - component: {fileID: 3693806025009843947}
+  - component: {fileID: 1531113144260431771}
+  - component: {fileID: 5274561591558209929}
+  - component: {fileID: 3689332511422683765}
+  - component: {fileID: 1750421421476763339}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 36
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8022573762596701483
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732610127756096541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.23032863, y: 1.2077365, z: 0.21499984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3693806025009843947
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732610127756096541}
+  m_Mesh: {fileID: 4300000, guid: 676a836f250e2bdadb4b3e9000fccd35, type: 2}
+--- !u!23 &1531113144260431771
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732610127756096541}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5274561591558209929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732610127756096541}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.44165727, y: 0.60452694, z: 0.06500007}
+  m_Center: {x: 0, y: 0.000000029802322, z: 0.000000007450581}
+--- !u!54 &3689332511422683765
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732610127756096541}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1750421421476763339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732610127756096541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.435
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: 0.21500002
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: -0.15
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.23032863, y: 1.2077365, z: 0.21499984}
 --- !u!1 &3949983887781762579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +3747,7 @@ Transform:
   m_GameObject: {fileID: 3949983887781762579}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.34405127, y: 0.68500006, z: 0.21499991}
+  m_LocalPosition: {x: -0.44, y: 1.3176448, z: -0.00000014901161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2580,8 +3833,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22389749, y: 0.33000004, z: 0.06500004}
-  m_Center: {x: -0.000000014901161, y: 0, z: -0.000000007450581}
+  m_Size: {x: 0.06999999, y: 0.42471015, z: 0.40000004}
+  m_Center: {x: 0, y: -0.000000059604645, z: -0.000000007450581}
 --- !u!54 &4581893822965453983
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2590,9 +3843,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3949983887781762579}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2621,25 +3874,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.34405127, y: 0.68500006, z: 0.21499991}
+  restCenter: {x: -0.44, y: 1.3176448, z: -0.00000014901161}
 --- !u!1 &4092597291873211490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,7 +3924,7 @@ Transform:
   m_GameObject: {fileID: 4092597291873211490}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16225624, y: 0.35500008, z: 0.21499994}
+  m_LocalPosition: {x: 0.44, y: 1.2872894, z: -0.00000014901161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2756,8 +4010,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3055125, y: 0.33000016, z: 0.06500003}
-  m_Center: {x: 0, y: 0.000000007450581, z: 0}
+  m_Size: {x: 0.06999999, y: 0.48542094, z: 0.40000004}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &958070615374076340
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2766,9 +4020,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4092597291873211490}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2797,25 +4051,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.16225624, y: 0.35500008, z: 0.21499994}
+  restCenter: {x: 0.44, y: 1.2872894, z: -0.00000014901161}
 --- !u!1 &4141795274074986352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2846,7 +4101,7 @@ Transform:
   m_GameObject: {fileID: 4141795274074986352}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.30487126, y: 1.345, z: 0.21499982}
+  m_LocalPosition: {x: -0.44, y: 0.97073853, z: -0.002979651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2932,8 +4187,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.30225748, y: 0.33000004, z: 0.06500003}
-  m_Center: {x: 0, y: -0.000000059604645, z: 0}
+  m_Size: {x: 0.06999999, y: 0.6438078, z: 0.39404097}
+  m_Center: {x: 0, y: 0.000000029802322, z: 0}
 --- !u!54 &941532186997973720
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2942,9 +4197,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4141795274074986352}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2973,25 +4228,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.30487126, y: 1.345, z: 0.21499982}
+  restCenter: {x: -0.44, y: 0.97073853, z: -0.002979651}
 --- !u!1 &4226938838409314242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3022,7 +4278,7 @@ Transform:
   m_GameObject: {fileID: 4226938838409314242}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 1.0305201, z: 0.068138376}
+  m_LocalPosition: {x: 0.22828798, y: 1.5299999, z: -0.0000001937151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3108,8 +4364,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.06999999, y: 0.40632033, z: 0.26372305}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.49342406, y: 0.06999993, z: 0.39999998}
+  m_Center: {x: -0.000000007450581, y: 0, z: 0.000000007450581}
 --- !u!54 &4653025928381106578
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3118,9 +4374,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4226938838409314242}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3149,6 +4405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3167,7 +4424,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.44, y: 1.0305201, z: 0.068138376}
+  restCenter: {x: 0.22828798, y: 1.5299999, z: -0.0000001937151}
 --- !u!1 &4242524598304000537
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,7 +4455,7 @@ Transform:
   m_GameObject: {fileID: 4242524598304000537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.101648755, y: 0.35500008, z: 0.21499994}
+  m_LocalPosition: {x: 0.32499236, y: 0.9827392, z: 0.21499985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3284,8 +4541,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18429752, y: 0.33000016, z: 0.06500003}
-  m_Center: {x: 0, y: 0.000000007450581, z: 0}
+  m_Size: {x: 0.26201528, y: 0.50302154, z: 0.06500006}
+  m_Center: {x: -0.000000007450581, y: -0.000000029802322, z: 0.000000014901161}
 --- !u!54 &489945751250589486
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3294,9 +4551,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4242524598304000537}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3325,12 +4582,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: 0.435
+    e03: -0.435
     e10: -0
     e11: -0.00000011920932
     e12: -1.0000001
@@ -3343,7 +4601,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.101648755, y: 0.35500008, z: 0.21499994}
+  restCenter: {x: 0.32499236, y: 0.9827392, z: 0.21499985}
 --- !u!1 &4323887741200221439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,7 +4632,7 @@ Transform:
   m_GameObject: {fileID: 4323887741200221439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.20107403, y: 1.4403722, z: -0.08070055}
+  m_LocalPosition: {x: -0.23965247, y: 1.5299999, z: -0.0000001937151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3460,8 +4718,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.607852, y: 0.39925516, z: 0.28859925}
-  m_Center: {x: -0.000000014901161, y: 0.000000059604645, z: 0}
+  m_Size: {x: 0.47069502, y: 0.06999993, z: 0.39999998}
+  m_Center: {x: -0.000000007450581, y: 0, z: 0.000000007450581}
 --- !u!54 &3549081636487512002
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3470,9 +4728,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4323887741200221439}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3501,6 +4759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3519,7 +4778,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.20107403, y: 1.4403722, z: -0.08070055}
+  restCenter: {x: -0.23965247, y: 1.5299999, z: -0.0000001937151}
 --- !u!1 &4539451190463697053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3582,6 +4841,18 @@ Transform:
   - {fileID: 5023432441630943641}
   - {fileID: 1661752181311494751}
   - {fileID: 2164389151278676314}
+  - {fileID: 235706661761915174}
+  - {fileID: 6660096821955000428}
+  - {fileID: 4547547513206276662}
+  - {fileID: 8022573762596701483}
+  - {fileID: 2635530783827078687}
+  - {fileID: 3383882091064050060}
+  - {fileID: 7234200781271018480}
+  - {fileID: 7653045130791926131}
+  - {fileID: 2178333707346868052}
+  - {fileID: 6647364743141155667}
+  - {fileID: 4623612778650017560}
+  - {fileID: 1464300925183919294}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &343458546824939847
@@ -3626,7 +4897,7 @@ Transform:
   m_GameObject: {fileID: 5086341763605047015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21785533, y: 1.0411174, z: -0.11572781}
+  m_LocalPosition: {x: 0.22615908, y: 0.15999998, z: -0.000000029802322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3712,8 +4983,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5142894, y: 0.39925545, z: 0.16854465}
-  m_Center: {x: -0.000000014901161, y: -0.00000008940697, z: -0.0000000037252903}
+  m_Size: {x: 0.49768186, y: 0.07000003, z: 0.39999998}
+  m_Center: {x: -0.000000007450581, y: -0.0000000037252903, z: 0.000000007450581}
 --- !u!54 &2733628999975450461
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3722,9 +4993,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5086341763605047015}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3753,6 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3771,7 +5043,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.21785533, y: 1.0411174, z: -0.11572781}
+  restCenter: {x: 0.22615908, y: 0.15999998, z: -0.000000029802322}
 --- !u!1 &5122437796390769725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3802,7 +5074,7 @@ Transform:
   m_GameObject: {fileID: 5122437796390769725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20670587, y: 0.6351465, z: -0.068138644}
+  m_LocalPosition: {x: -0.19101411, y: 0.8513453, z: -0.1800001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3888,8 +5160,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.53658825, y: 0.4234311, z: 0.2637229}
-  m_Center: {x: 0, y: 0.000000029802322, z: 0}
+  m_Size: {x: 0.5679717, y: 0.5353971, z: 0.040000036}
+  m_Center: {x: -0.000000014901161, y: -0.000000029802322, z: -0.000000007450581}
 --- !u!54 &6555319296093518744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3898,9 +5170,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5122437796390769725}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3929,6 +5201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3947,7 +5220,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.20670587, y: 0.6351465, z: -0.068138644}
+  restCenter: {x: -0.19101411, y: 0.8513453, z: -0.1800001}
 --- !u!1 &5800252795728639913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,7 +5251,7 @@ Transform:
   m_GameObject: {fileID: 5800252795728639913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.12144875, y: 0.68500006, z: 0.23824988}
+  m_LocalPosition: {x: 0.34260774, y: 1.3150704, z: 0.21499982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4064,8 +5337,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2238975, y: 0.33000004, z: 0.111499995}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.22678448, y: 0.38985932, z: 0.06500004}
+  m_Center: {x: 0.000000022351742, y: -0.000000059604645, z: 0.000000007450581}
 --- !u!54 &8891867879404709434
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4074,9 +5347,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5800252795728639913}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4105,12 +5378,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: 0.435
+    e03: -0.435
     e10: -0
     e11: -0.00000011920932
     e12: -1.0000001
@@ -4123,7 +5397,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.12144875, y: 0.68500006, z: 0.23824988}
+  restCenter: {x: 0.34260774, y: 1.3150704, z: 0.21499982}
 --- !u!1 &6177820459434156412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,7 +5428,7 @@ Transform:
   m_GameObject: {fileID: 6177820459434156412}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.32262373, y: 0.68500006, z: 0.21499991}
+  m_LocalPosition: {x: 0.113646366, y: 0.73993254, z: 0.23824987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4240,8 +5514,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.26675248, y: 0.33000004, z: 0.06500004}
-  m_Center: {x: -0.000000022351742, y: 0, z: -0.000000007450581}
+  m_Size: {x: 0.20829274, y: 0.46101618, z: 0.11150001}
+  m_Center: {x: 0, y: 0, z: 0.000000007450581}
 --- !u!54 &2756338775544692189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4250,9 +5524,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177820459434156412}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4281,12 +5555,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: 0.435
+    e03: -0.435
     e10: -0
     e11: -0.00000011920932
     e12: -1.0000001
@@ -4299,7 +5574,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.32262373, y: 0.68500006, z: 0.21499991}
+  restCenter: {x: 0.113646366, y: 0.73993254, z: 0.23824987}
 --- !u!1 &6193825337768797257
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,7 +5605,7 @@ Transform:
   m_GameObject: {fileID: 6193825337768797257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19391337, y: 0.19513421, z: 0.07604776}
+  m_LocalPosition: {x: -0.29549265, y: 1.2821074, z: -0.18000016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4416,8 +5691,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.56217325, y: 0.3902684, z: 0.25990438}
-  m_Center: {x: 0, y: -0.000000007450581, z: 0.000000007450581}
+  m_Size: {x: 0.3590147, y: 0.49578488, z: 0.040000036}
+  m_Center: {x: 0.000000007450581, y: 0.000000059604645, z: 0.000000007450581}
 --- !u!54 &3316908905525265111
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4426,9 +5701,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6193825337768797257}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4457,6 +5732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -4475,7 +5751,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.19391337, y: 0.19513421, z: 0.07604776}
+  restCenter: {x: -0.29549265, y: 1.2821074, z: -0.18000016}
 --- !u!1 &6589300171498454078
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,7 +5782,7 @@ Transform:
   m_GameObject: {fileID: 6589300171498454078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34242374, y: 1.0150001, z: 0.21499985}
+  m_LocalPosition: {x: 0.13657825, y: 1.2262584, z: 0.21499982}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4592,8 +5868,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22715251, y: 0.33000022, z: 0.06500004}
-  m_Center: {x: -0.000000007450581, y: -0.000000029802322, z: 0.000000007450581}
+  m_Size: {x: 0.2541565, y: 0.5674831, z: 0.06500006}
+  m_Center: {x: 0, y: 0.000000029802322, z: 0.000000014901161}
 --- !u!54 &5867992593898461210
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4602,9 +5878,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6589300171498454078}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4633,12 +5909,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: 0.435
+    e03: -0.435
     e10: -0
     e11: -0.00000011920932
     e12: -1.0000001
@@ -4651,7 +5928,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.34242374, y: 1.0150001, z: 0.21499985}
+  restCenter: {x: 0.13657825, y: 1.2262584, z: 0.21499982}
 --- !u!1 &7162196130340320392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4682,7 +5959,7 @@ Transform:
   m_GameObject: {fileID: 7162196130340320392}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19595699, y: 1.4368398, z: 0.0916602}
+  m_LocalPosition: {x: 0.44, y: 0.89630604, z: -0.00000010430813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4768,8 +6045,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.618086, y: 0.40631998, z: 0.26667917}
-  m_Center: {x: 0, y: 0.000000059604645, z: 0}
+  m_Size: {x: 0.06999999, y: 0.58568984, z: 0.40000004}
+  m_Center: {x: 0, y: -0.000000029802322, z: 0}
 --- !u!54 &3539038391889080767
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4778,9 +6055,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7162196130340320392}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4809,6 +6086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -4827,7 +6105,361 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.19595699, y: 1.4368398, z: 0.0916602}
+  restCenter: {x: 0.44, y: 0.89630604, z: -0.00000010430813}
+--- !u!1 &7567635899461136346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6647364743141155667}
+  - component: {fileID: 8864768322725706327}
+  - component: {fileID: 3591190678304124279}
+  - component: {fileID: 5263967367047374042}
+  - component: {fileID: 4325745565132069135}
+  - component: {fileID: 1528637282686227530}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 42
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6647364743141155667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567635899461136346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.37993938, y: 0.06500001, z: 0.13599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8864768322725706327
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567635899461136346}
+  m_Mesh: {fileID: 4300000, guid: e9d8d3695a5d4f32d9e695b1ded2bef8, type: 2}
+--- !u!23 &3591190678304124279
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567635899461136346}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5263967367047374042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567635899461136346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.120878756, y: 0.13, z: 0.13999999}
+  m_Center: {x: 0, y: 0, z: -0.0000000037252903}
+--- !u!54 &4325745565132069135
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567635899461136346}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1528637282686227530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7567635899461136346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.37993938, y: 0.06500001, z: 0.13599998}
+--- !u!1 &7667021735956816124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7234200781271018480}
+  - component: {fileID: 7414900767901530262}
+  - component: {fileID: 2880546621794660928}
+  - component: {fileID: 6420944371594271583}
+  - component: {fileID: 1041616530100040843}
+  - component: {fileID: 2585710665698679910}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 39
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7234200781271018480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667021735956816124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.37845707, y: 0.064999975, z: -0.13551988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7414900767901530262
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667021735956816124}
+  m_Mesh: {fileID: 4300000, guid: ceaad69a411b756bd84b94cc372f77cf, type: 2}
+--- !u!23 &2880546621794660928
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667021735956816124}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6420944371594271583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667021735956816124}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1179142, y: 0.13, z: 0.13903973}
+  m_Center: {x: 0.000000029802322, y: 0.0000000037252903, z: 0}
+--- !u!54 &1041616530100040843
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667021735956816124}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &2585710665698679910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667021735956816124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.37845707, y: 0.064999975, z: -0.13551988}
 --- !u!1 &7794521291977056233
 GameObject:
   m_ObjectHideFlags: 0
@@ -4858,7 +6490,7 @@ Transform:
   m_GameObject: {fileID: 7794521291977056233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26841998, y: 0.21657102, z: 0.04750506}
+  m_LocalPosition: {x: 0.21591166, y: 1.5999999, z: -0.00000017881393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4944,8 +6576,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.41316003, y: 0.43314207, z: 0.31698984}
-  m_Center: {x: 0, y: -0.000000007450581, z: 0.000000007450581}
+  m_Size: {x: 0.57817674, y: 0.07999992, z: 0.44999996}
+  m_Center: {x: -0.000000014901161, y: 0, z: -0.000000014901161}
 --- !u!54 &7728618795914025666
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4954,9 +6586,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7794521291977056233}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4985,6 +6617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -5003,7 +6636,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.26841998, y: 0.21657102, z: 0.04750506}
+  restCenter: {x: 0.21591166, y: 1.5999999, z: -0.00000017881393}
 --- !u!1 &7850673895887270878
 GameObject:
   m_ObjectHideFlags: 0
@@ -5034,7 +6667,7 @@ Transform:
   m_GameObject: {fileID: 7850673895887270878}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24181063, y: 0.6625439, z: -0.12716624}
+  m_LocalPosition: {x: -0.2462447, y: 1.5999999, z: -0.00000017881393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5120,8 +6753,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.46637875, y: 0.441696, z: 0.1456677}
-  m_Center: {x: -0.000000014901161, y: 0.000000029802322, z: 0}
+  m_Size: {x: 0.5175106, y: 0.07999992, z: 0.44999996}
+  m_Center: {x: 0, y: 0, z: -0.000000014901161}
 --- !u!54 &6151460175427407595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5130,9 +6763,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7850673895887270878}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5161,6 +6794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -5179,7 +6813,184 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.24181063, y: 0.6625439, z: -0.12716624}
+  restCenter: {x: -0.2462447, y: 1.5999999, z: -0.00000017881393}
+--- !u!1 &7881916686206763841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3383882091064050060}
+  - component: {fileID: 3690885195982973866}
+  - component: {fileID: 6093982223261902388}
+  - component: {fileID: 259173040523420195}
+  - component: {fileID: 1365217567470624200}
+  - component: {fileID: 3732625662046277539}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 38
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3383882091064050060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881916686206763841}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.41736257, y: 0.065000005, z: 0.13599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3690885195982973866
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881916686206763841}
+  m_Mesh: {fileID: 4300000, guid: 4833fd47bb1e4275793efc867b01dcb0, type: 2}
+--- !u!23 &6093982223261902388
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881916686206763841}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &259173040523420195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881916686206763841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08427477, y: 0.13, z: 0.13}
+  m_Center: {x: 0.000000029802322, y: 0.0000000037252903, z: 0.000000014901161}
+--- !u!54 &1365217567470624200
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881916686206763841}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &3732625662046277539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881916686206763841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.41736257, y: 0.065000005, z: 0.13599998}
 --- !u!1 &7904775275323545637
 GameObject:
   m_ObjectHideFlags: 0
@@ -5210,7 +7021,7 @@ Transform:
   m_GameObject: {fileID: 7904775275323545637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23211175, y: 0.99028695, z: -0.055144414}
+  m_LocalPosition: {x: -0.0086696, y: 0.3461727, z: -0.18000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5296,8 +7107,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.48577654, y: 0.43314195, z: 0.28971142}
-  m_Center: {x: 0.000000022351742, y: 0, z: -0.000000007450581}
+  m_Size: {x: 0.42203817, y: 0.4323454, z: 0.04000002}
+  m_Center: {x: -0.000000014901161, y: -0.000000007450581, z: 0}
 --- !u!54 &4399312706039845135
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5306,9 +7117,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7904775275323545637}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5337,6 +7148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -5355,7 +7167,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.23211175, y: 0.99028695, z: -0.055144414}
+  restCenter: {x: -0.0086696, y: 0.3461727, z: -0.18000004}
 --- !u!1 &7954022230263867446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,7 +7198,7 @@ Transform:
   m_GameObject: {fileID: 7954022230263867446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.10327626, y: 1.345, z: 0.21499982}
+  m_LocalPosition: {x: -0.44, y: 0.6299584, z: 0.0048909187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5472,8 +7284,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18755253, y: 0.33000004, z: 0.06500003}
-  m_Center: {x: 0, y: -0.000000059604645, z: 0}
+  m_Size: {x: 0.06999999, y: 0.5894308, z: 0.39021805}
+  m_Center: {x: 0, y: 0.000000059604645, z: 0}
 --- !u!54 &4726434688666693102
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5482,9 +7294,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7954022230263867446}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5513,25 +7325,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_114_DocumentCabinet_hinged_door
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.435
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: 0.21500002
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
-    e23: -0.15
+    e21: 0
+    e22: 1
+    e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.10327626, y: 1.345, z: 0.21499982}
+  restCenter: {x: -0.44, y: 0.6299584, z: 0.0048909187}
 --- !u!1 &7980808969970006584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,7 +7375,7 @@ Transform:
   m_GameObject: {fileID: 7980808969970006584}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16062875, y: 1.345, z: 0.21499982}
+  m_LocalPosition: {x: -0.27446228, y: 0.7617591, z: 0.21499988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5648,8 +7461,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3022575, y: 0.33000004, z: 0.06500003}
-  m_Center: {x: 0, y: -0.000000059604645, z: 0}
+  m_Size: {x: 0.36307544, y: 0.43601453, z: 0.06500006}
+  m_Center: {x: 0, y: 0, z: 0.000000014901161}
 --- !u!54 &5898228202958099829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5658,9 +7471,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7980808969970006584}
   serializedVersion: 5
-  m_Mass: 0.15625
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -5689,6 +7502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_114_DocumentCabinet_hinged_door.001
   sourceRestInverse:
     e00: 1
@@ -5707,4 +7521,358 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.16062875, y: 1.345, z: 0.21499982}
+  restCenter: {x: -0.27446228, y: 0.7617591, z: 0.21499988}
+--- !u!1 &8154228788422785729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6660096821955000428}
+  - component: {fileID: 7412782516292264516}
+  - component: {fileID: 4602620380945634262}
+  - component: {fileID: 6308972307970372052}
+  - component: {fileID: 257041922166616963}
+  - component: {fileID: 1688107018158970955}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 34
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6660096821955000428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154228788422785729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.064345285, y: 0.44356114, z: 0.21499994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7412782516292264516
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154228788422785729}
+  m_Mesh: {fileID: 4300000, guid: 039780b8cb5324b62b037b0520b12c6f, type: 2}
+--- !u!23 &4602620380945634262
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154228788422785729}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6308972307970372052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154228788422785729}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.10969057, y: 0.29586568, z: 0.06500001}
+  m_Center: {x: 0.0000000037252903, y: -0.000000014901161, z: -0.000000007450581}
+--- !u!54 &257041922166616963
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154228788422785729}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1688107018158970955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8154228788422785729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.435
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: 0.21500002
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: -0.15
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.064345285, y: 0.44356114, z: 0.21499994}
+--- !u!1 &8609326638172058498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 235706661761915174}
+  - component: {fileID: 6997033236445649578}
+  - component: {fileID: 3689432073680194437}
+  - component: {fileID: 6640995040524511336}
+  - component: {fileID: 7022496833008184353}
+  - component: {fileID: 4581739658383605507}
+  m_Layer: 0
+  m_Name: Shard MD_114_DocumentCabinet 33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235706661761915174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609326638172058498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.34105802, y: 1.2044196, z: 0.21499985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1184867581958883915}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6997033236445649578
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609326638172058498}
+  m_Mesh: {fileID: 4300000, guid: 2816922826f6bf38ab04615878ecec72, type: 2}
+--- !u!23 &3689432073680194437
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609326638172058498}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: db18c537c4184b127955939a6b900697, type: 2}
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: c013fcf2d33682d56afe3e58d77ec38b, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6640995040524511336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609326638172058498}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.22988397, y: 0.6065697, z: 0.06500007}
+  m_Center: {x: 0, y: -0.00000008940697, z: -0.000000007450581}
+--- !u!54 &7022496833008184353
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609326638172058498}
+  serializedVersion: 5
+  m_Mass: 0.11363637
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &4581739658383605507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609326638172058498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_114_DocumentCabinet_hinged_door.001
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.435
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: 0.21500002
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: -0.15
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.34105802, y: 1.2044196, z: 0.21499985}

@@ -98,7 +98,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2881869453175311162}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -210,7 +210,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3947910522052791305}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -322,7 +322,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4994552010160986546}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -471,7 +471,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6264395647036546984}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -583,7 +583,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6648362026842108880}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -640,7 +640,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8679308721725761469}
   serializedVersion: 5
-  m_Mass: 2
+  m_Mass: 5
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -671,15 +671,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 32
-  damageMultiplier: 1.5
-  impactThreshold: 3.8
+  maxHP: 88
+  damageMultiplier: 0.9
+  impactThreshold: 7
   brokenPrefab: {fileID: 850487597465825822, guid: 4cbe3fa5966a5452c9715c1bdd053935, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 450
+  objectValue: 500
   wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0979665f0a62bacab3a7014ccd5320f, type: 2}
+  materialToughnessScale: 1
+  retainOnDestruction: 0
 --- !u!114 &6770669118391779742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,7 +698,8 @@ MonoBehaviour:
   assetId: 37
   displayName: "\u0411\u043E\u043B\u044C\u0448\u0430\u044F \u043A\u0430\u0440\u0442\u0438\u043D\u0430"
   room: 
-  substance: glass
+  substance: wood
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: 45425becfda3c42ecaa43fe8261053db, type: 3}
-  breakSound: {fileID: 8300000, guid: df7ddf15f8aa18125879f601fb758417, type: 3}
+  hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
+  breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
+  mountSupports: []

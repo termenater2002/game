@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 131187640093826418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36597502, y: 2.0806735, z: -0.00000027567148}
+  m_LocalPosition: {x: 0.545, y: 0.13397853, z: -0.000000007450581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -115,8 +115,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.48804998, y: 0.6386523, z: 0.19}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.110000014, y: 0.3479571, z: 0.17000003}
+  m_Center: {x: 0, y: 0, z: -0.000000007450581}
 --- !u!54 &2737136552913180586
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,9 +125,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131187640093826418}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -174,7 +175,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.36597502, y: 2.0806735, z: -0.00000027567148}
+  restCenter: {x: 0.545, y: 0.13397853, z: -0.000000007450581}
 --- !u!1 &239167433674870098
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 239167433674870098}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53905183, y: 1.0931396, z: -0.075367846}
+  m_LocalPosition: {x: 0.55923164, y: 1.5105741, z: 0.001425989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -290,8 +291,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.09810364, y: 0.28894055, z: 0.019264594}
-  m_Center: {x: 0, y: -0.000000059604645, z: 0}
+  m_Size: {x: 0.08153671, y: 0.57914925, z: 0.16714773}
+  m_Center: {x: 0.000000029802322, y: 0, z: -0.0000000037252903}
 --- !u!54 &3676257007598037003
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -300,9 +301,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239167433674870098}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -331,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -349,7 +351,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.53905183, y: 1.0931396, z: -0.075367846}
+  restCenter: {x: 0.55923164, y: 1.5105741, z: 0.001425989}
+--- !u!1 &418017826703701358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8346647550650843417}
+  - component: {fileID: 8938089706823920849}
+  - component: {fileID: 2567751789402838145}
+  - component: {fileID: 8166906066187854099}
+  - component: {fileID: 4425687413984982705}
+  - component: {fileID: 8142795234615076501}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 27
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8346647550650843417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418017826703701358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.008991629, y: 1.8940676, z: 0.012249775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8938089706823920849
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418017826703701358}
+  m_Mesh: {fileID: 4300000, guid: 3abcc4ba9f5bf937bbc37f56991ecc7d, type: 2}
+--- !u!23 &2567751789402838145
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418017826703701358}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8166906066187854099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418017826703701358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42616165, y: 0.6118643, z: 0.094500065}
+  m_Center: {x: -0.000000007450581, y: 0, z: -0.0000000018626451}
+--- !u!54 &4425687413984982705
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418017826703701358}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &8142795234615076501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418017826703701358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.008991629, y: 1.8940676, z: 0.012249775}
 --- !u!1 &445035769903477941
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +558,7 @@ Transform:
   m_GameObject: {fileID: 445035769903477941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.038762555, y: 2.3199997, z: -0.00089484453}
+  m_LocalPosition: {x: -0.545, y: 1.7148061, z: -0.0000001937151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -465,8 +643,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.38082504, y: 0.15999985, z: 0.18821084}
-  m_Center: {x: -0.000000007450581, y: 0, z: -0.0000000037252903}
+  m_Size: {x: 0.110000014, y: 0.35569692, z: 0.17000003}
+  m_Center: {x: 0, y: 0, z: -0.000000007450581}
 --- !u!54 &1532376558327906554
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -475,9 +653,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445035769903477941}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -506,6 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -524,7 +703,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.038762555, y: 2.3199997, z: -0.00089484453}
+  restCenter: {x: -0.545, y: 1.7148061, z: -0.0000001937151}
+--- !u!1 &577268764902790272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3548737680478936376}
+  - component: {fileID: 5987165907518775517}
+  - component: {fileID: 2611846486262704488}
+  - component: {fileID: 7135924495746243504}
+  - component: {fileID: 3832837406548494263}
+  - component: {fileID: 4562407676321454810}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 34
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3548737680478936376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577268764902790272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.30724356, y: 0.5746398, z: 0.012249924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5987165907518775517
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577268764902790272}
+  m_Mesh: {fileID: 4300000, guid: 686f11ff96f201abdbca5b8fa9b011cf, type: 2}
+--- !u!23 &2611846486262704488
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577268764902790272}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7135924495746243504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577268764902790272}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4035129, y: 0.5041527, z: 0.094500035}
+  m_Center: {x: 0, y: -0.000000029802322, z: 0.0000000018626451}
+--- !u!54 &3832837406548494263
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577268764902790272}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &4562407676321454810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577268764902790272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.30724356, y: 0.5746398, z: 0.012249924}
 --- !u!1 &715291306438949715
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +910,7 @@ Transform:
   m_GameObject: {fileID: 715291306438949715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24669501, y: 0.8250001, z: 0.012249898}
+  m_LocalPosition: {x: -0.31494763, y: 1.2247753, z: 0.036999844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -640,8 +995,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.46161, y: 0.5500001, z: 0.09450006}
-  m_Center: {x: -0.000000014901161, y: 0, z: 0}
+  m_Size: {x: 0.32510465, y: 0.45666552, z: 0.14400002}
+  m_Center: {x: -0.000000007450581, y: 0, z: 0.0000000037252903}
 --- !u!54 &5261609617002164534
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -650,9 +1005,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715291306438949715}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -681,6 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -699,7 +1055,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.24669501, y: 0.8250001, z: 0.012249898}
+  restCenter: {x: -0.31494763, y: 1.2247753, z: 0.036999844}
 --- !u!1 &946488288876072970
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +1086,7 @@ Transform:
   m_GameObject: {fileID: 946488288876072970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.545, y: 0.27932617, z: -0.000000022351742}
+  m_LocalPosition: {x: 0.56921244, y: 2.0463572, z: 0.0083148405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -815,8 +1171,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.6386524, z: 0.17000008}
-  m_Center: {x: 0, y: 0, z: -0.000000011175871}
+  m_Size: {x: 0.061575174, y: 0.5072849, z: 0.15336989}
+  m_Center: {x: 0, y: 0.00000011920929, z: 0}
 --- !u!54 &3089983185232607891
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -825,9 +1181,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946488288876072970}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -856,6 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -874,7 +1231,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.545, y: 0.27932617, z: -0.000000022351742}
+  restCenter: {x: 0.56921244, y: 2.0463572, z: 0.0083148405}
 --- !u!1 &1045378956585719874
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +1262,7 @@ Transform:
   m_GameObject: {fileID: 1045378956585719874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22835496, y: 1.375, z: 0.012249824}
+  m_LocalPosition: {x: 0.2894449, y: 2.3199997, z: -0.00000027567148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -990,8 +1347,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49829, y: 0.5500002, z: 0.094500035}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6411102, y: 0.15999985, z: 0.19}
+  m_Center: {x: 0.000000014901161, y: 0, z: 0}
 --- !u!54 &7235437639821715300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1000,9 +1357,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045378956585719874}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1031,6 +1388,183 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.2894449, y: 2.3199997, z: -0.00000027567148}
+--- !u!1 &1080144239972683099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5415478027669369991}
+  - component: {fileID: 376577463263637916}
+  - component: {fileID: 6830275347233626671}
+  - component: {fileID: 2773197934053688913}
+  - component: {fileID: 8737863318761810881}
+  - component: {fileID: 8000992992899011458}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5415478027669369991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080144239972683099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.031171128, y: 0.89899373, z: 0.012249891}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &376577463263637916
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080144239972683099}
+  m_Mesh: {fileID: 4300000, guid: d0c4a8bdcb284bfcb94dbc5afd272725, type: 2}
+--- !u!23 &6830275347233626671
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080144239972683099}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2773197934053688913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080144239972683099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.31024587, y: 0.3865432, z: 0.094500035}
+  m_Center: {x: 0, y: 0.000000029802322, z: -0.0000000018626451}
+--- !u!54 &8737863318761810881
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080144239972683099}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &8000992992899011458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080144239972683099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -1049,7 +1583,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.22835496, y: 1.375, z: 0.012249824}
+  restCenter: {x: -0.031171128, y: 0.89899373, z: 0.012249891}
+--- !u!1 &2343824326766406259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6773264899711011353}
+  - component: {fileID: 3101549489965783796}
+  - component: {fileID: 3758617830150154974}
+  - component: {fileID: 6389667588686686922}
+  - component: {fileID: 1652853560442589140}
+  - component: {fileID: 7691110054837354815}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 36
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6773264899711011353
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343824326766406259}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.22698356, y: 1.0406836, z: -0.00000011920929}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3101549489965783796
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343824326766406259}
+  m_Mesh: {fileID: 4300000, guid: 0845e4fe2e86890b3b44f39c35d85350, type: 2}
+--- !u!23 &3758617830150154974
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343824326766406259}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6389667588686686922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343824326766406259}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5010328, y: 0.34276736, z: 0.07000003}
+  m_Center: {x: -0.000000014901161, y: 0.000000059604645, z: -0.0000000037252903}
+--- !u!54 &1652853560442589140
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343824326766406259}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &7691110054837354815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343824326766406259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.22698356, y: 1.0406836, z: -0.00000011920929}
 --- !u!1 &2541682666219309248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1790,7 @@ Transform:
   m_GameObject: {fileID: 2541682666219309248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.545, y: 0.9179783, z: -0.00000010430813}
+  m_LocalPosition: {x: -0.56867635, y: 0.9223369, z: -0.00000011175871}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1165,8 +1875,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.6386525, z: 0.17000005}
-  m_Center: {x: 0, y: 0.000000029802322, z: 0.0000000037252903}
+  m_Size: {x: 0.0626474, y: 0.5240005, z: 0.17000005}
+  m_Center: {x: 0.000000029802322, y: 0, z: -0.0000000037252903}
 --- !u!54 &6328755425536735924
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1175,9 +1885,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2541682666219309248}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1206,6 +1916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1224,7 +1935,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.545, y: 0.9179783, z: -0.00000010430813}
+  restCenter: {x: -0.56867635, y: 0.9223369, z: -0.00000011175871}
+--- !u!1 &3435771659472375951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918101687432012253}
+  - component: {fileID: 1036378777247661226}
+  - component: {fileID: 2648729933976615963}
+  - component: {fileID: 7338198280601405576}
+  - component: {fileID: 6573052164763495686}
+  - component: {fileID: 1978194097486191522}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 30
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918101687432012253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435771659472375951}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19553223, y: 0.2605854, z: 0.012249954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1036378777247661226
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435771659472375951}
+  m_Mesh: {fileID: 4300000, guid: 8ead06bbe1006ca73a82d7329ea236f1, type: 2}
+--- !u!23 &2648729933976615963
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435771659472375951}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7338198280601405576
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435771659472375951}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5597352, y: 0.5211708, z: 0.09450003}
+  m_Center: {x: -0.000000014901161, y: 0, z: 0}
+--- !u!54 &6573052164763495686
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435771659472375951}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1978194097486191522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435771659472375951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.19553223, y: 0.2605854, z: 0.012249954}
 --- !u!1 &3531156904179045171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +2142,7 @@ Transform:
   m_GameObject: {fileID: 3531156904179045171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19535497, y: 0.8250001, z: 0.036999866}
+  m_LocalPosition: {x: -0.30046973, y: 2.3199997, z: -0.00000027567148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1340,7 +2227,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.56429, y: 0.5500001, z: 0.144}
+  m_Size: {x: 0.6190606, y: 0.15999985, z: 0.19}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8049509331903745810
 Rigidbody:
@@ -1350,9 +2237,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3531156904179045171}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1381,25 +2268,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
-  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  wallImpactMultiplier: 0.5
+  sourceName: 
   sourceRestInverse:
     e00: 1
     e01: 0
     e02: 0
-    e03: -0.49
-    e10: -0
-    e11: -0.00000011920932
-    e12: -1.0000001
-    e13: -0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
     e20: 0
-    e21: 1.0000001
-    e22: -0.00000011920932
+    e21: 0
+    e22: 1
     e23: 0
     e30: 0
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.19535497, y: 0.8250001, z: 0.036999866}
+  restCenter: {x: -0.30046973, y: 2.3199997, z: -0.00000027567148}
 --- !u!1 &3984386189083190947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +2318,7 @@ Transform:
   m_GameObject: {fileID: 3984386189083190947}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4195875, y: 2.106936, z: -0.026942529}
+  m_LocalPosition: {x: -0.545, y: 2.048163, z: -0.00000024586916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1515,8 +2403,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.380825, y: 0.58612704, z: 0.13611549}
-  m_Center: {x: 0.000000014901161, y: 0.00000011920929, z: -0.0000000037252903}
+  m_Size: {x: 0.110000014, y: 0.5036733, z: 0.17000005}
+  m_Center: {x: 0, y: 0.00000011920929, z: 0}
 --- !u!54 &5559611942269341446
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1525,9 +2413,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3984386189083190947}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1556,6 +2444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1574,7 +2463,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.4195875, y: 2.106936, z: -0.026942529}
+  restCenter: {x: -0.545, y: 2.048163, z: -0.00000024586916}
+--- !u!1 &4219232865820449957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5396985714036146386}
+  - component: {fileID: 4714724704386656543}
+  - component: {fileID: 8590167792576203580}
+  - component: {fileID: 889287917941932898}
+  - component: {fileID: 1678461320718104083}
+  - component: {fileID: 1249663356083143080}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 38
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5396985714036146386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219232865820449957}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.34046575, y: 1.877244, z: 0.012249775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4714724704386656543
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219232865820449957}
+  m_Mesh: {fileID: 4300000, guid: ce3323621eb18e20ea3ab9cffbd160bd, type: 2}
+--- !u!23 &8590167792576203580
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219232865820449957}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &889287917941932898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219232865820449957}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3370685, y: 0.6455115, z: 0.094500065}
+  m_Center: {x: 0.000000007450581, y: 0.000000059604645, z: -0.0000000018626451}
+--- !u!54 &1678461320718104083
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219232865820449957}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &1249663356083143080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219232865820449957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.34046575, y: 1.877244, z: 0.012249775}
 --- !u!1 &4558640966756986260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +2670,7 @@ Transform:
   m_GameObject: {fileID: 4558640966756986260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17482504, y: 2.3148046, z: 0.088909835}
+  m_LocalPosition: {x: 0.5508988, y: 0.9502821, z: -0.00000010430813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1690,8 +2755,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08177845, y: 0.13396859, z: 0.014}
-  m_Center: {x: -0.000000007450581, y: -0.00000011920929, z: 0.0000000037252903}
+  m_Size: {x: 0.09820247, y: 0.5704863, z: 0.17000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4531339675488024731
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1700,9 +2765,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4558640966756986260}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1731,6 +2796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1749,7 +2815,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.17482504, y: 2.3148046, z: 0.088909835}
+  restCenter: {x: 0.5508988, y: 0.9502821, z: -0.00000010430813}
 --- !u!1 &4762086338828475847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +2846,7 @@ Transform:
   m_GameObject: {fileID: 4762086338828475847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.19686502, y: 1.9249998, z: 0.012249768}
+  m_LocalPosition: {x: -0.17036629, y: 1.5702658, z: 0.012249805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1865,8 +2931,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.62426996, y: 0.54999995, z: 0.09450005}
-  m_Center: {x: 0, y: 0, z: 0.0000000018626451}
+  m_Size: {x: 0.61426735, y: 0.47109163, z: 0.094500035}
+  m_Center: {x: 0.000000014901161, y: -0.000000059604645, z: 0.0000000018626451}
 --- !u!54 &3461649508177770557
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1875,9 +2941,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4762086338828475847}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1906,6 +2972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -1924,7 +2991,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.19686502, y: 1.9249998, z: 0.012249768}
+  restCenter: {x: -0.17036629, y: 1.5702658, z: 0.012249805}
 --- !u!1 &4942137103698074601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,7 +3022,7 @@ Transform:
   m_GameObject: {fileID: 4942137103698074601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.545, y: 1.5071924, z: 0.0030516833}
+  m_LocalPosition: {x: -0.545, y: 0.14621438, z: -0.000000007450581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2040,8 +3107,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.59520495, z: 0.16389635}
-  m_Center: {x: 0, y: -0.000000059604645, z: -0.000000011175871}
+  m_Size: {x: 0.110000014, y: 0.3724288, z: 0.17000005}
+  m_Center: {x: 0, y: 0, z: -0.000000011175871}
 --- !u!54 &5436958161612306597
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2050,9 +3117,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4942137103698074601}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2081,6 +3148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -2099,7 +3167,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.545, y: 1.5071924, z: 0.0030516833}
+  restCenter: {x: -0.545, y: 0.14621438, z: -0.000000007450581}
 --- !u!1 &5701464004730836942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,7 +3198,7 @@ Transform:
   m_GameObject: {fileID: 5701464004730836942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.545, y: 0.8528074, z: -0.0030520782}
+  m_LocalPosition: {x: 0.5272107, y: 0.43160722, z: -0.004429266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2215,8 +3283,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.595205, z: 0.16389611}
-  m_Center: {x: 0, y: 0.000000029802322, z: 0.0000000037252903}
+  m_Size: {x: 0.074421346, y: 0.35705632, z: 0.1611416}
+  m_Center: {x: -0.000000029802322, y: 0, z: 0}
 --- !u!54 &3615522803962620810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2225,9 +3293,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5701464004730836942}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2256,6 +3324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -2274,7 +3343,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.545, y: 0.8528074, z: -0.0030520782}
+  restCenter: {x: 0.5272107, y: 0.43160722, z: -0.004429266}
 --- !u!1 &5729670757107268619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,7 +3374,7 @@ Transform:
   m_GameObject: {fileID: 5729670757107268619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41981515, y: 2.102397, z: 0.024243563}
+  m_LocalPosition: {x: -0.545, y: 0.90772736, z: -0.00000010430813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2390,8 +3459,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.38036972, y: 0.5952052, z: 0.1415123}
-  m_Center: {x: 0, y: 0.000000059604645, z: 0.0000000037252903}
+  m_Size: {x: 0.110000014, y: 0.5733571, z: 0.17000008}
+  m_Center: {x: 0, y: 0, z: -0.0000000037252903}
 --- !u!54 &2583953529073815077
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2400,9 +3469,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5729670757107268619}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2431,6 +3500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -2449,7 +3519,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.41981515, y: 2.102397, z: 0.024243563}
+  restCenter: {x: -0.545, y: 0.90772736, z: -0.00000010430813}
+--- !u!1 &5867985287928281762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3650979255107887052}
+  - component: {fileID: 4967115069464290563}
+  - component: {fileID: 6644393696422181992}
+  - component: {fileID: 3904542059080696619}
+  - component: {fileID: 4274375625207627522}
+  - component: {fileID: 4805458759770895022}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 35
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3650979255107887052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867985287928281762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23378845, y: 0.88427216, z: 0.012249887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4967115069464290563
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867985287928281762}
+  m_Mesh: {fileID: 4300000, guid: aefbdad57788b8a5b88afcdd41a4862d, type: 2}
+--- !u!23 &6644393696422181992
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867985287928281762}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3904542059080696619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867985287928281762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.48742312, y: 0.40381873, z: 0.09450003}
+  m_Center: {x: -0.000000007450581, y: 0, z: 0}
+--- !u!54 &4274375625207627522
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867985287928281762}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &4805458759770895022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867985287928281762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.23378845, y: 0.88427216, z: 0.012249887}
 --- !u!1 &5974826889457846606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,7 +3726,7 @@ Transform:
   m_GameObject: {fileID: 5974826889457846606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03944546, y: 2.3199997, z: 0.0632256}
+  m_LocalPosition: {x: -0.545, y: 0.50475556, z: -0.000000059604645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2565,8 +3811,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.38036975, y: 0.15999985, z: 0.06354825}
-  m_Center: {x: 0, y: 0, z: 0.0000000018626451}
+  m_Size: {x: 0.110000014, y: 0.42415217, z: 0.17000005}
+  m_Center: {x: 0, y: -0.000000014901161, z: 0}
 --- !u!54 &8635328309580740494
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2575,9 +3821,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5974826889457846606}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2606,6 +3852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -2624,7 +3871,183 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.03944546, y: 2.3199997, z: 0.0632256}
+  restCenter: {x: -0.545, y: 0.50475556, z: -0.000000059604645}
+--- !u!1 &6005210953718763219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8691199148025963522}
+  - component: {fileID: 2858771266574364898}
+  - component: {fileID: 2085693801444104990}
+  - component: {fileID: 400011745195181539}
+  - component: {fileID: 598877252643692044}
+  - component: {fileID: 6847355176124817310}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8691199148025963522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005210953718763219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.027961075, y: 0.60370994, z: 0.012249928}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2858771266574364898
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005210953718763219}
+  m_Mesh: {fileID: 4300000, guid: fa81c660bcb0d36c8bf7d28b059ccff9, type: 2}
+--- !u!23 &2085693801444104990
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005210953718763219}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &400011745195181539
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005210953718763219}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.58392787, y: 0.47127372, z: 0.09450004}
+  m_Center: {x: 0, y: -0.000000029802322, z: 0}
+--- !u!54 &598877252643692044
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005210953718763219}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &6847355176124817310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005210953718763219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.027961075, y: 0.60370994, z: 0.012249928}
 --- !u!1 &6139173958184061207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +4078,7 @@ Transform:
   m_GameObject: {fileID: 6139173958184061207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.545, y: 0.8391907, z: 0.05778365}
+  m_LocalPosition: {x: 0.54262376, y: 1.4101107, z: -0.00000015646219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2740,8 +4163,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.5861272, z: 0.054432563}
-  m_Center: {x: 0, y: 0.000000029802322, z: 0.0000000027939677}
+  m_Size: {x: 0.1052475, y: 0.5964426, z: 0.17000006}
+  m_Center: {x: 0, y: 0.000000059604645, z: -0.000000007450581}
 --- !u!54 &550812230261032885
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2750,9 +4173,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6139173958184061207}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2781,6 +4204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -2799,7 +4223,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.545, y: 0.8391907, z: 0.05778365}
+  restCenter: {x: 0.54262376, y: 1.4101107, z: -0.00000015646219}
 --- !u!1 &6246629643741810480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,7 +4254,7 @@ Transform:
   m_GameObject: {fileID: 6246629643741810480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2945875, y: 0.27500007, z: 0.012249954}
+  m_LocalPosition: {x: -0.24318902, y: 0.7598283, z: 0.036999874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2915,8 +4339,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.42882502, y: 0.55000013, z: 0.094500035}
-  m_Center: {x: 0, y: 0, z: -0.0000000018626451}
+  m_Size: {x: 0.4686219, y: 0.62689173, z: 0.144}
+  m_Center: {x: 0.000000007450581, y: 0.000000044703484, z: -0.0000000037252903}
 --- !u!54 &6472252582485866254
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2925,9 +4349,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6246629643741810480}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2956,6 +4380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -2974,7 +4399,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.2945875, y: 0.27500007, z: 0.012249954}
+  restCenter: {x: -0.24318902, y: 0.7598283, z: 0.036999874}
 --- !u!1 &6721081891801840647
 GameObject:
   m_ObjectHideFlags: 0
@@ -3005,7 +4430,7 @@ Transform:
   m_GameObject: {fileID: 6721081891801840647}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.545, y: 0.25306362, z: 0.040739875}
+  m_LocalPosition: {x: 0.53660846, y: 0.8633766, z: -0.00000012665987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3090,8 +4515,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.5861273, z: 0.08852026}
-  m_Center: {x: 0, y: 0, z: -0.0000000055879354}
+  m_Size: {x: 0.093216896, y: 0.6119959, z: 0.17000002}
+  m_Center: {x: 0, y: 0.000000029802322, z: 0.0000000037252903}
 --- !u!54 &3063242582134708931
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3100,9 +4525,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6721081891801840647}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3131,6 +4556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3149,7 +4575,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.545, y: 0.25306362, z: 0.040739875}
+  restCenter: {x: 0.53660846, y: 0.8633766, z: -0.00000012665987}
 --- !u!1 &6790894906556579673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +4606,7 @@ Transform:
   m_GameObject: {fileID: 6790894906556579673}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.545, y: 1.5208092, z: -0.057784062}
+  m_LocalPosition: {x: -0.545806, y: 1.3395846, z: -0.00000015646219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3265,8 +4691,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.5861275, z: 0.054432303}
-  m_Center: {x: 0, y: 0, z: 0.0000000027939677}
+  m_Size: {x: 0.10838804, y: 0.4119177, z: 0.17000005}
+  m_Center: {x: -0.000000014901161, y: 0.00000011920929, z: -0.0000000037252903}
 --- !u!54 &1318908100027335463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3275,9 +4701,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6790894906556579673}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3306,6 +4732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3324,7 +4751,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.545, y: 1.5208092, z: -0.057784062}
+  restCenter: {x: -0.545806, y: 1.3395846, z: -0.00000015646219}
 --- !u!1 &7099566476083192885
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,6 +4807,19 @@ Transform:
   - {fileID: 7705957635629968642}
   - {fileID: 2905901080466078607}
   - {fileID: 5293475734415743704}
+  - {fileID: 7261310954164457237}
+  - {fileID: 8346647550650843417}
+  - {fileID: 6498138180174466785}
+  - {fileID: 1720608275806056945}
+  - {fileID: 918101687432012253}
+  - {fileID: 1162265317359208136}
+  - {fileID: 8691199148025963522}
+  - {fileID: 5415478027669369991}
+  - {fileID: 3548737680478936376}
+  - {fileID: 3650979255107887052}
+  - {fileID: 6773264899711011353}
+  - {fileID: 7951819151260807278}
+  - {fileID: 5396985714036146386}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3470347679133366447
@@ -3424,7 +4864,7 @@ Transform:
   m_GameObject: {fileID: 7417477732063988123}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21283755, y: 1.375, z: 0.012249824}
+  m_LocalPosition: {x: -0.04567772, y: 1.2875459, z: 0.012249827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3509,8 +4949,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.52932495, y: 0.5500001, z: 0.094500035}
-  m_Center: {x: -0.000000029802322, y: -0.000000059604645, z: 0}
+  m_Size: {x: 0.45627666, y: 0.5276216, z: 0.09450002}
+  m_Center: {x: -0.000000007450581, y: -0.000000059604645, z: 0.0000000018626451}
 --- !u!54 &6532567098858569264
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3519,9 +4959,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7417477732063988123}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3550,6 +4990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -3568,7 +5009,711 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.21283755, y: 1.375, z: 0.012249824}
+  restCenter: {x: -0.04567772, y: 1.2875459, z: 0.012249827}
+--- !u!1 &7436217926081740339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162265317359208136}
+  - component: {fileID: 2213061031786063179}
+  - component: {fileID: 6987194426116529951}
+  - component: {fileID: 4405538996547944690}
+  - component: {fileID: 7635303338954889960}
+  - component: {fileID: 5166693986930657370}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1162265317359208136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436217926081740339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.17856523, y: 0.21696734, z: 0.012249958}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2213061031786063179
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436217926081740339}
+  m_Mesh: {fileID: 4300000, guid: 6ef6332f7689cd8e3aaa90b4b2f57842, type: 2}
+--- !u!23 &6987194426116529951
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436217926081740339}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4405538996547944690
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436217926081740339}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.59786963, y: 0.4339347, z: 0.09450002}
+  m_Center: {x: -0.000000044703484, y: 0, z: 0}
+--- !u!54 &7635303338954889960
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436217926081740339}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &5166693986930657370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7436217926081740339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.17856523, y: 0.21696734, z: 0.012249958}
+--- !u!1 &7688781768742703364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7261310954164457237}
+  - component: {fileID: 8074008839999585271}
+  - component: {fileID: 6619167143097169339}
+  - component: {fileID: 8360347094489886807}
+  - component: {fileID: 1541835762660843471}
+  - component: {fileID: 6656657469643422240}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 26
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7261310954164457237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688781768742703364}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2741534, y: 1.9134886, z: 0.0122497715}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8074008839999585271
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688781768742703364}
+  m_Mesh: {fileID: 4300000, guid: ef37fbc7b23ada929b3e88ebde1e1543, type: 2}
+--- !u!23 &6619167143097169339
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688781768742703364}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8360347094489886807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688781768742703364}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.40669313, y: 0.5730225, z: 0.09450006}
+  m_Center: {x: 0.000000014901161, y: -0.000000059604645, z: 0}
+--- !u!54 &1541835762660843471
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688781768742703364}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &6656657469643422240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7688781768742703364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.2741534, y: 1.9134886, z: 0.0122497715}
+--- !u!1 &7858358846959438054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7951819151260807278}
+  - component: {fileID: 3161838017725214862}
+  - component: {fileID: 8177878342274656327}
+  - component: {fileID: 338157161183539837}
+  - component: {fileID: 7075385026821503776}
+  - component: {fileID: 7777681199732900429}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 37
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7951819151260807278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858358846959438054}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24925087, y: 1.3255055, z: 0.012249827}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3161838017725214862
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858358846959438054}
+  m_Mesh: {fileID: 4300000, guid: 8fe0fb0d25cbdcce3bf0fce507e060c6, type: 2}
+--- !u!23 &8177878342274656327
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858358846959438054}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &338157161183539837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858358846959438054}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.45649827, y: 0.48232496, z: 0.09450002}
+  m_Center: {x: -0.000000022351742, y: 0.000000059604645, z: 0.0000000018626451}
+--- !u!54 &7075385026821503776
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858358846959438054}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &7777681199732900429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858358846959438054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.24925087, y: 1.3255055, z: 0.012249827}
+--- !u!1 &7886883558383728607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720608275806056945}
+  - component: {fileID: 2752280121983344998}
+  - component: {fileID: 4683426316220085628}
+  - component: {fileID: 37858507521664507}
+  - component: {fileID: 1926892505014361336}
+  - component: {fileID: 399901945406484484}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 29
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1720608275806056945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886883558383728607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.2783476, y: 2.017068, z: 0.01224976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2752280121983344998
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886883558383728607}
+  m_Mesh: {fileID: 4300000, guid: 537b013fbca6ca54dbca73b59caf698e, type: 2}
+--- !u!23 &4683426316220085628
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886883558383728607}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &37858507521664507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886883558383728607}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.36664003, y: 0.36586404, z: 0.094500035}
+  m_Center: {x: -0.000000052154064, y: -0.00000011920929, z: -0.0000000018626451}
+--- !u!54 &1926892505014361336
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886883558383728607}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &399901945406484484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886883558383728607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: MD_8_TimberDoor_hinged_door_leaf
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.49
+    e10: -0
+    e11: -0.00000011920932
+    e12: -1.0000001
+    e13: -0
+    e20: 0
+    e21: 1.0000001
+    e22: -0.00000011920932
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: 0.2783476, y: 2.017068, z: 0.01224976}
 --- !u!1 &7967475110500192750
 GameObject:
   m_ObjectHideFlags: 0
@@ -3599,7 +5744,7 @@ Transform:
   m_GameObject: {fileID: 7967475110500192750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.545, y: 1.4420211, z: -0.00000017881393}
+  m_LocalPosition: {x: 0.545, y: 1.9773774, z: -0.00000023841858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3684,8 +5829,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.63865244, z: 0.17000006}
-  m_Center: {x: 0, y: 0.000000059604645, z: 0}
+  m_Size: {x: 0.110000014, y: 0.6452446, z: 0.17000006}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &542182001339188394
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3694,9 +5839,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7967475110500192750}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3725,6 +5870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3743,7 +5889,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.545, y: 1.4420211, z: -0.00000017881393}
+  restCenter: {x: 0.545, y: 1.9773774, z: -0.00000023841858}
 --- !u!1 &8214853067959187301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,7 +5920,7 @@ Transform:
   m_GameObject: {fileID: 8214853067959187301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.545, y: 0.25760254, z: -0.019244008}
+  m_LocalPosition: {x: 0.52129805, y: 0.118765816, z: -0.008211948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3859,8 +6005,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.110000014, y: 0.5952051, z: 0.1315121}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.06259614, y: 0.31753168, z: 0.15357617}
+  m_Center: {x: 0.000000029802322, y: 0, z: -0.0000000037252903}
 --- !u!54 &4103155893623943312
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3869,9 +6015,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8214853067959187301}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -3900,6 +6046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -3918,7 +6065,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.545, y: 0.25760254, z: -0.019244008}
+  restCenter: {x: 0.52129805, y: 0.118765816, z: -0.008211948}
 --- !u!1 &8246180256207348525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3949,7 +6096,7 @@ Transform:
   m_GameObject: {fileID: 8246180256207348525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26135495, y: 1.9249997, z: 0.012249768}
+  m_LocalPosition: {x: -0.3529308, y: 0.27615038, z: 0.012249947}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4034,8 +6181,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.43229002, y: 0.5500001, z: 0.09450005}
-  m_Center: {x: -0.000000007450581, y: 0.000000059604645, z: 0.0000000018626451}
+  m_Size: {x: 0.24913831, y: 0.55230075, z: 0.09450002}
+  m_Center: {x: 0.000000007450581, y: 0, z: -0.0000000018626451}
 --- !u!54 &4310414000252515968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4044,9 +6191,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8246180256207348525}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4075,6 +6222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -4093,7 +6241,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.26135495, y: 1.9249997, z: 0.012249768}
+  restCenter: {x: -0.3529308, y: 0.27615038, z: 0.012249947}
 --- !u!1 &8384451662747768853
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,7 +6272,7 @@ Transform:
   m_GameObject: {fileID: 8384451662747768853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16277498, y: 0.27500007, z: 0.012249954}
+  m_LocalPosition: {x: -0.5250462, y: 1.4522707, z: -0.00000016391277}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4209,8 +6357,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.62944996, y: 0.55000013, z: 0.094500035}
-  m_Center: {x: 0, y: 0, z: -0.0000000018626451}
+  m_Size: {x: 0.0700925, y: 0.5453707, z: 0.17000005}
+  m_Center: {x: -0.000000029802322, y: -0.000000059604645, z: -0.0000000037252903}
 --- !u!54 &8771139229224204413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4219,9 +6367,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8384451662747768853}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4250,6 +6398,183 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
+  sourceName: 
+  sourceRestInverse:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  restCenter: {x: -0.5250462, y: 1.4522707, z: -0.00000016391277}
+--- !u!1 &8749508158243657394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6498138180174466785}
+  - component: {fileID: 1206865848336202235}
+  - component: {fileID: 8040280547291094875}
+  - component: {fileID: 1596008601015858307}
+  - component: {fileID: 1431335362801575114}
+  - component: {fileID: 7635167698248962432}
+  m_Layer: 0
+  m_Name: Shard MD_8_TimberDoor 28
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6498138180174466785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749508158243657394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14432079, y: 1.7357721, z: 0.01224979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2715751779842659908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1206865848336202235
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749508158243657394}
+  m_Mesh: {fileID: 4300000, guid: 05ea0b08d27611f7782cb3e2886f38b5, type: 2}
+--- !u!23 &8040280547291094875
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749508158243657394}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
+  - {fileID: 2100000, guid: 702ffddc5e861beab95b25bf538d9f74, type: 2}
+  - {fileID: 2100000, guid: 73d0ef9bd775a20d1bb442e19ac2f64d, type: 2}
+  - {fileID: 2100000, guid: b601778260835423980e2663a6205f1e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1596008601015858307
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749508158243657394}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34820312, y: 0.45382786, z: 0.09450004}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1431335362801575114
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749508158243657394}
+  serializedVersion: 5
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 3
+--- !u!114 &7635167698248962432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8749508158243657394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: MD_8_TimberDoor_hinged_door_leaf
   sourceRestInverse:
     e00: 1
@@ -4268,7 +6593,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.16277498, y: 0.27500007, z: 0.012249954}
+  restCenter: {x: 0.14432079, y: 1.7357721, z: 0.01224979}
 --- !u!1 &8984782487276952042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,7 +6624,7 @@ Transform:
   m_GameObject: {fileID: 8984782487276952042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.53905195, y: 1.2668624, z: 0.075367436}
+  m_LocalPosition: {x: 0.54614973, y: 0.50712925, z: -0.000000059604645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4384,8 +6709,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.09810388, y: 0.28894508, z: 0.01926487}
-  m_Center: {x: 0, y: -0.000000059604645, z: -0.0000000037252903}
+  m_Size: {x: 0.107700646, y: 0.45057878, z: 0.17000005}
+  m_Center: {x: -0.000000029802322, y: 0.000000014901161, z: 0}
 --- !u!54 &5998830112946221138
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4394,9 +6719,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8984782487276952042}
   serializedVersion: 5
-  m_Mass: 0.72
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.47368422
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4425,6 +6750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -4443,4 +6769,4 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.53905195, y: 1.2668624, z: 0.075367436}
+  restCenter: {x: 0.54614973, y: 0.50712925, z: -0.000000059604645}

@@ -29,6 +29,6 @@ public sealed class MansionMechanism : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (owner == null || owner.State == null || owner.State.IsDestroyed) return;
-        owner.ApplyDamage(DamageState.ImpactDamage(collision.relativeVelocity.magnitude, owner.impactThreshold, owner.damageMultiplier));
+        owner.ReceiveCollision(collision);
     }
 }

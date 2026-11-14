@@ -62,7 +62,8 @@ public sealed class MansionProp : MonoBehaviour
     }
     private void PlayImpact(DamageReceipt receipt)
     {
-        var clip = receipt.Destroyed ? breakSound : hitSound;
+        var profile = damageSource != null ? damageSource.materialProfile : null;
+        var clip = receipt.Destroyed ? (profile != null ? profile.breakSound : breakSound) : (profile != null ? profile.impactSound : hitSound);
         if (clip != null) AudioSource.PlayClipAtPoint(clip, transform.position, receipt.Destroyed ? .45f : .22f);
     }
     private void OnDisable() { if (damageSource != null) damageSource.Damaged -= PlayImpact; }

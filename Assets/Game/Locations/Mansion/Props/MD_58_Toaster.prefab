@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3801291450203957740}
-  m_Mesh: {fileID: 2540863005435663289, guid: a264cc902ea3d63369480029c36d1606, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 0b8d57025988aba1d8786e80bb3381f4, type: 2}
 --- !u!23 &3034667613181834388
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3801291450203957740}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -189,7 +189,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4513355601393965845}
-  m_Mesh: {fileID: -2945383518122007007, guid: a264cc902ea3d63369480029c36d1606, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c3ccba911aab3f13286685265921f426, type: 2}
 --- !u!23 &1853234936948703320
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4513355601393965845}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -301,7 +301,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6840304796740883054}
-  m_Mesh: {fileID: -9079077404385613513, guid: a264cc902ea3d63369480029c36d1606, type: 3}
+  m_Mesh: {fileID: 4300000, guid: ce9fe6fccf08bf40cbc5e86a6c800d53, type: 2}
 --- !u!23 &3564439382074812236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -358,7 +358,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6840304796740883054}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -413,7 +413,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8503240813403983100}
-  m_Mesh: {fileID: 3362450386219873431, guid: a264cc902ea3d63369480029c36d1606, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 326e3c26ef27a77da8fd812c0053f63c, type: 2}
 --- !u!23 &7968782487418660565
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8503240813403983100}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -525,7 +525,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8806862932185539890}
-  m_Mesh: {fileID: 4174751979999397168, guid: a264cc902ea3d63369480029c36d1606, type: 3}
+  m_Mesh: {fileID: 4300000, guid: e07c7715e3a3d874dbfe98b3bb5a8bc5, type: 2}
 --- !u!23 &7332281207211376387
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -582,7 +582,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8806862932185539890}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 2318506103890917630}
   - component: {fileID: 332076352040683372}
   - component: {fileID: 1058987492566480739}
+  - component: {fileID: 9094503122269391406}
   m_Layer: 0
   m_Name: MD_58_Toaster
   m_TagString: Untagged
@@ -673,12 +674,15 @@ MonoBehaviour:
   maxHP: 110
   damageMultiplier: 0.9
   impactThreshold: 8
-  brokenPrefab: {fileID: 3509260065894867038, guid: c59572ed1dfd5f9a68b88da2836f1009, type: 3}
+  brokenPrefab: {fileID: 0}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
   objectValue: 850
   wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1.1053897
+  retainOnDestruction: 1
 --- !u!114 &1058987492566480739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,3 +702,23 @@ MonoBehaviour:
   wallMounted: 0
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
+  mountSupports: []
+--- !u!114 &9094503122269391406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874359213133455399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 4286435500341241859}
+  - {fileID: 6896193638138085173}
+  - {fileID: 835084147444491660}
+  - {fileID: 6132610438719095542}
+  - {fileID: 8300534608923510686}

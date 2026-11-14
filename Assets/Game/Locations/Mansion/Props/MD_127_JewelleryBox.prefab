@@ -98,7 +98,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2934769965560987019}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -155,7 +155,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5347828637800167514}
   serializedVersion: 5
-  m_Mass: 5
+  m_Mass: 2
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -186,15 +186,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 88
-  damageMultiplier: 0.9
-  impactThreshold: 7
+  maxHP: 32
+  damageMultiplier: 1.5
+  impactThreshold: 3.8
   brokenPrefab: {fileID: 7377438943344329257, guid: e1f7fec81cb8b26a68cf533de458326b, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 500
+  objectValue: 450
   wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: b8c0e2ca997feb7dea435f0fc0d00ef6, type: 2}
+  materialToughnessScale: 2.4622889
+  retainOnDestruction: 0
 --- !u!114 &4194460060556571065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,10 +213,11 @@ MonoBehaviour:
   assetId: 127
   displayName: "\u0414\u0435\u043A\u043E\u0440\u0430\u0442\u0438\u0432\u043D\u0430\u044F \u0448\u043A\u0430\u0442\u0443\u043B\u043A\u0430"
   room: 
-  substance: wood
+  substance: glass
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
-  breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}
+  hitSound: {fileID: 8300000, guid: 45425becfda3c42ecaa43fe8261053db, type: 3}
+  breakSound: {fileID: 8300000, guid: df7ddf15f8aa18125879f601fb758417, type: 3}
+  mountSupports: []
 --- !u!1 &7483358588711414988
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +320,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483358588711414988}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -338,7 +342,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483358588711414988}
   serializedVersion: 5
-  m_Mass: 0.90000004
+  m_Mass: 0.36
   m_LinearDamping: 0
   m_AngularDamping: 0.7
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -546,7 +550,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8750527132390034259}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

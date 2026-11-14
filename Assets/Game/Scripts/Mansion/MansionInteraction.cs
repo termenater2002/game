@@ -25,19 +25,26 @@ public sealed class MansionInteraction : MonoBehaviour
     public bool ThrowHeld()
     {
         if (!grabber.IsHolding) return false;
-        float speed = Mathf.Clamp(12f / Mathf.Sqrt(Mathf.Max(1f, grabber.HeldBody.mass / 4f)), 2.5f, 12f);
-        return grabber.Throw(speed);
+        return grabber.Throw(grabber.throwImpulse);
     }
     public bool Strike()
     {
         if (Time.time < readyAt) return false;
         if (!Physics.Raycast(transform.position, transform.forward, out var hit, strikeDistance, ~0, QueryTriggerInteraction.Ignore)) return false;
+        var wall = hit.collider.GetComponentInParent<VoxelWall>();
+        if (wall != null)
+        {
+            readyAt = Time.time + cooldown;
+            return wall.DamageAt(hit.point, hit.normal, 22f);
+        }
         var damage = hit.collider.GetComponentInParent<DamageOnImpact>();
+        if (damage == null && hit.rigidbody != null)
+        { var fabric = FlexibleFabric.ForBody(hit.rigidbody); if (fabric != null) damage = fabric.GetComponent<DamageOnImpact>(); }
         if (damage == null) return false;
         readyAt = Time.time + cooldown; LastStruck = damage;
         if (hit.rigidbody != null && !hit.rigidbody.isKinematic)
         { hit.rigidbody.WakeUp(); hit.rigidbody.AddForceAtPosition(transform.forward * strikeImpulse, hit.point, ForceMode.Impulse); }
-        damage.ApplyDamage(strikeDamage);
+        damage.ApplyDamageAt(strikeDamage / Mathf.Sqrt(Mathf.Max(1, damage.materialToughnessScale)), hit.point, hit.normal);
         return true;
     }
     public bool Use()

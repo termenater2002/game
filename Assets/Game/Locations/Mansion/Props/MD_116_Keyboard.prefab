@@ -131,7 +131,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2363052057886132911}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -188,7 +188,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4940146212582475575}
   serializedVersion: 5
-  m_Mass: 3.5
+  m_Mass: 2.5
   m_LinearDamping: 0.1
   m_AngularDamping: 0.55
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -219,15 +219,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d05c50f9d4beb65b6f960bb1ed121d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::DamageOnImpact
-  maxHP: 110
+  maxHP: 100
   damageMultiplier: 0.9
-  impactThreshold: 8
+  impactThreshold: 6
   brokenPrefab: {fileID: 3976979004187848173, guid: f54c71806f9948846820e96fe6f63002, type: 3}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
-  objectValue: 850
+  objectValue: 450
   wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: 13009220e667615a0a079dc76bb495ac, type: 2}
+  materialToughnessScale: 1.1560897
+  retainOnDestruction: 0
 --- !u!114 &1829365875073129926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +246,8 @@ MonoBehaviour:
   assetId: 116
   displayName: "\u041A\u043B\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u0430"
   room: 
-  substance: metal
+  substance: plastic
   wallMounted: 0
-  hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
-  breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
+  hitSound: {fileID: 8300000, guid: 4f263405438e1f62d86f340d37d34f76, type: 3}
+  breakSound: {fileID: 8300000, guid: ce655120c8420e779b695fa5729e948f, type: 3}
+  mountSupports: []

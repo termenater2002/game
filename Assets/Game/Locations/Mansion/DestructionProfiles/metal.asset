@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b38eb07d45f449ab01ac7b97dceaf03, type: 3}
+  m_Name: metal
+  m_EditorClassIdentifier: Foundation.Runtime::DestructionProfile
+  substance: 3
+  failure: 1
+  minimumEnergy: 4
+  fractureEnergy: 220
+  minimumImpactSpeed: 1.2
+  deformationRadius: 0.24
+  maximumDent: 0.09
+  maximumFragmentSize: 0.65
+  targetFragments: 14
+  wallImpactMultiplier: 1.2
+  impactSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
+  breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}

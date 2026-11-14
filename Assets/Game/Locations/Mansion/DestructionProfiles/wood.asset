@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b38eb07d45f449ab01ac7b97dceaf03, type: 3}
+  m_Name: wood
+  m_EditorClassIdentifier: Foundation.Runtime::DestructionProfile
+  substance: 0
+  failure: 0
+  minimumEnergy: 4
+  fractureEnergy: 130
+  minimumImpactSpeed: 1.2
+  deformationRadius: 0.24
+  maximumDent: 0.09
+  maximumFragmentSize: 0.65
+  targetFragments: 14
+  wallImpactMultiplier: 0.7
+  impactSound: {fileID: 8300000, guid: 5c107ccb411926a41ad5b1c5643fe852, type: 3}
+  breakSound: {fileID: 8300000, guid: 0e4df522d9c37bf43923bffcde123e06, type: 3}

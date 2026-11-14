@@ -53,28 +53,31 @@ public static class MansionFracture
         foreach(var t in faces){foreach(var v in new[]{t.a,t.b,t.c}){indices[t.m].Add(points.Count);points.Add(v.p-center);normals.Add(v.n);uv.Add(v.uv);}}
         var mesh=new Mesh{name="Textured cut fragment"};mesh.SetVertices(points);mesh.SetNormals(normals);mesh.SetUVs(0,uv);mesh.subMeshCount=materialCount;for(int i=0;i<materialCount;i++)mesh.SetTriangles(indices[i],i);mesh.RecalculateBounds();return mesh;
     }
-    public static GameObject Build(GameObject source,string path,float mass,Material interior,string[] movingParts,int assetId)
+    public static GameObject Build(GameObject source,string path,float mass,Material interior,string[] movingParts,int assetId,string substance="wood")
     {
-        var filters=source.GetComponentsInChildren<MeshFilter>();var materials=filters.SelectMany(f=>f.GetComponent<MeshRenderer>().sharedMaterials).Distinct().ToList();materials.Add(interior);int cutMaterial=materials.Count-1;
+        var filters=source.GetComponentsInChildren<MeshFilter>().Where(f=>{var part=f.GetComponentInParent<IndependentPart>();return part==null||part.gameObject==source;}).ToArray();var materials=filters.SelectMany(f=>f.GetComponent<MeshRenderer>().sharedMaterials).Distinct().ToList();materials.Add(interior);int cutMaterial=materials.Count-1;
         var groups=new Dictionary<string,Group>();groups[""]=new Group();
         foreach(var f in filters)
         {
             var transform=f.transform;Transform moving=null;
             for(var parent=transform;parent!=null&&parent!=source.transform;parent=parent.parent)if(movingParts.Contains(parent.name)){moving=parent;break;}
-            string key=moving!=null?moving.name:"";if(!groups.ContainsKey(key))groups[key]=new Group{sourceName=key,inverse=(source.transform.worldToLocalMatrix*moving.localToWorldMatrix).inverse};
+            string key=moving!=null?moving.name:substance=="wood"?f.name:"";if(!groups.ContainsKey(key))groups[key]=new Group{sourceName=moving!=null?moving.name:"",inverse=moving!=null?(source.transform.worldToLocalMatrix*moving.localToWorldMatrix).inverse:Matrix4x4.identity};
             var g=groups[key];var mesh=f.sharedMesh;var coords=mesh.vertices;var normals=mesh.normals;var uv=mesh.uv;var matrix=source.transform.worldToLocalMatrix*f.transform.localToWorldMatrix;var mats=f.GetComponent<MeshRenderer>().sharedMaterials;
             Vertex At(int i)=>new Vertex{p=matrix.MultiplyPoint3x4(coords[i]),n=matrix.MultiplyVector(normals.Length==coords.Length?normals[i]:Vector3.up).normalized,uv=uv.Length==coords.Length?uv[i]:Vector2.zero};
             for(int m=0;m<mesh.subMeshCount;m++){int material=materials.IndexOf(mats[Mathf.Min(m,mats.Length-1)]);var tris=mesh.GetTriangles(m);for(int i=0;i<tris.Length;i+=3)g.faces.Add(new Triangle{a=At(tris[i]),b=At(tris[i+1]),c=At(tris[i+2]),m=material,surface=Array.IndexOf(filters,f)});}
         }
+        var random=new System.Random(assetId*7919+17);
+        var tuning=MansionPropFactory.Profile(substance);float maxFragment=tuning.maximumFragmentSize;
         var root=new GameObject("Debris "+source.name);root.SetActive(false);root.AddComponent<MansionDebris>();var pieces=new List<Rigidbody>();int index=0;
         foreach(var g in groups.Values)
         {
             if(g.faces.Count==0)continue;var bb=new Bounds(g.faces[0].a.p,Vector3.zero);foreach(var t in g.faces){bb.Encapsulate(t.a.p);bb.Encapsulate(t.b.p);bb.Encapsulate(t.c.p);}
-            var chunks=new List<List<Triangle>>{g.faces};int planes=groups.Count>4?1:g.sourceName==""?3:1;
-            var normals=new[]{new Vector3(1,.12f,.07f).normalized,new Vector3(-.08f,1,.13f).normalized,new Vector3(.14f,-.06f,1).normalized};
+            var chunks=new List<List<Triangle>>{g.faces};int planes=groups.Count>4?1:substance=="wood"?1:3;
+            Vector3 RandomPlane(int axis){var n=new Vector3((float)random.NextDouble()*.9f-.45f,(float)random.NextDouble()*.9f-.45f,(float)random.NextDouble()*.9f-.45f);n[axis]=1;return n.normalized;}
+            var normals=new[]{RandomPlane(0),RandomPlane(1),RandomPlane(2)};
             for(int plane=0;plane<planes;plane++)
             {
-                var next=new List<List<Triangle>>();float offset=Vector3.Dot(normals[plane],bb.center);
+                var next=new List<List<Triangle>>();float offset=Vector3.Dot(normals[plane],bb.center)+bb.extents[plane]*((float)random.NextDouble()-.5f)*.4f;
                 foreach(var chunk in chunks)foreach(bool side in new[]{false,true}){var clipped=Clip(chunk,normals[plane],offset,side,cutMaterial);if(clipped.Count>=4)next.Add(clipped);}chunks=next;
             }
             // Split oversized components further, instead of retaining door-sized triangular sails.
@@ -85,10 +88,10 @@ public static class MansionFracture
                 {
                     var cb=new Bounds(chunk[0].a.p,Vector3.zero);foreach(var t in chunk){cb.Encapsulate(t.a.p);cb.Encapsulate(t.b.p);cb.Encapsulate(t.c.p);}
                     int axis=cb.size.x>cb.size.y?(cb.size.x>cb.size.z?0:2):(cb.size.y>cb.size.z?1:2);
-                    if(cb.size[axis]>.65f && refined.Count+chunks.Count<128)
+                    if(cb.size[axis]>maxFragment && refined.Count+chunks.Count<Mathf.Clamp(tuning.targetFragments*4,16,96))
                     {
-                        var normal=axis==0?Vector3.right:axis==1?Vector3.up:Vector3.forward;
-                        var left=Clip(chunk,normal,cb.center[axis],false,cutMaterial);var right=Clip(chunk,normal,cb.center[axis],true,cutMaterial);
+                        var normal=RandomPlane(axis);float split=Vector3.Dot(normal,cb.center)+cb.extents[axis]*((float)random.NextDouble()-.5f)*.36f;
+                        var left=Clip(chunk,normal,split,false,cutMaterial);var right=Clip(chunk,normal,split,true,cutMaterial);
                         if(left.Count>=4&&right.Count>=4){refined.Add(left);refined.Add(right);changed=true;}else refined.Add(chunk);
                     }
                     else refined.Add(chunk);
@@ -98,10 +101,10 @@ public static class MansionFracture
             foreach(var chunk in chunks)
             {
                 var mesh=ToMesh(chunk,materials.Count,out var center);if(mesh.bounds.size.sqrMagnitude<.00002f){UnityEngine.Object.DestroyImmediate(mesh);continue;}
-                string meshPath=path+"_"+(index++).ToString("D2")+".asset";var existing=AssetDatabase.LoadAssetAtPath<Mesh>(meshPath);if(existing==null)AssetDatabase.CreateAsset(mesh,meshPath);else{EditorUtility.CopySerialized(mesh,existing);UnityEngine.Object.DestroyImmediate(mesh);mesh=existing;}
+                string meshPath=path+"_"+(index++).ToString("D2")+".asset";mesh.name=System.IO.Path.GetFileNameWithoutExtension(meshPath);var existing=AssetDatabase.LoadAssetAtPath<Mesh>(meshPath);if(existing==null)AssetDatabase.CreateAsset(mesh,meshPath);else{EditorUtility.CopySerialized(mesh,existing);UnityEngine.Object.DestroyImmediate(mesh);mesh=existing;}
                 var piece=new GameObject("Shard "+source.name+" "+index);piece.transform.SetParent(root.transform,false);piece.transform.localPosition=center;piece.AddComponent<MeshFilter>().sharedMesh=mesh;piece.AddComponent<MeshRenderer>().sharedMaterials=materials.ToArray();var box=piece.AddComponent<BoxCollider>();box.size=Vector3.Max(mesh.bounds.size,Vector3.one*.014f);box.center=mesh.bounds.center;box.contactOffset=.002f;
-                var body=piece.AddComponent<Rigidbody>();body.isKinematic=true;body.mass=Mathf.Max(.04f,mass/Mathf.Max(4,groups.Count*4));body.maxDepenetrationVelocity=2;body.maxAngularVelocity=14;body.collisionDetectionMode=CollisionDetectionMode.ContinuousSpeculative;pieces.Add(body);
-                var meta=piece.AddComponent<MansionFragment>();meta.sourceName=g.sourceName;meta.sourceRestInverse=g.inverse;meta.restCenter=center;
+                var body=piece.AddComponent<Rigidbody>();body.isKinematic=true;body.mass=Mathf.Max(.04f,mass/Mathf.Max(4,groups.Count*4));body.maxDepenetrationVelocity=2;body.maxAngularVelocity=14;body.angularDamping=substance=="glass"?.18f:.65f;body.linearDamping=substance=="glass"?.03f:.08f;body.collisionDetectionMode=CollisionDetectionMode.ContinuousSpeculative;pieces.Add(body);
+                var meta=piece.AddComponent<MansionFragment>();meta.wallImpactMultiplier=substance=="glass"?.2f:substance=="ceramic"?.6f:.5f;meta.sourceName=g.sourceName;meta.sourceRestInverse=g.inverse;meta.restCenter=center;
             }
         }
         foreach(var body in pieces)body.mass=Mathf.Max(.025f,mass/Mathf.Max(1,pieces.Count));return root;

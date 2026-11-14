@@ -2,7 +2,7 @@
 from pathlib import Path
 import subprocess,sys,json
 GAME=Path(__file__).resolve().parents[2];PROJECT=GAME.parent/'foundation-work/validation'
-paths=[GAME/'AgentScripts/MansionFracture.cs',GAME/'AgentScripts/BuildMansion.cs'];usings=[];bodies=[]
+paths=[GAME/'AgentScripts/MansionFracture.cs',GAME/'AgentScripts/MansionArchitecture.cs',GAME/'AgentScripts/MansionPropFactory.cs',GAME/'AgentScripts/BuildMansion.cs'];usings=[];bodies=[]
 for p in paths:
  lines=p.read_text().splitlines();usings.extend(l for l in lines if l.startswith('using '));bodies.extend(l for l in lines if not l.startswith('using '))
 out=Path('/tmp/MansionBuilderCombined.cs');out.write_text('\n'.join(dict.fromkeys(usings))+'\n'+'\n'.join(bodies))

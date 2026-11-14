@@ -83,6 +83,9 @@ MonoBehaviour:
   debrisLifetime: 70
   objectValue: 250
   wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: e0a3bb5ef30298d65b413d6f6e3f852c, type: 2}
+  materialToughnessScale: 14
+  retainOnDestruction: 0
 --- !u!114 &6479221814150193115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +105,7 @@ MonoBehaviour:
   wallMounted: 0
   hitSound: {fileID: 8300000, guid: a6e7573760266924eb9123e516fce25e, type: 3}
   breakSound: {fileID: 8300000, guid: af57710c2c0d45791a3c3a2032266b80, type: 3}
+  mountSupports: []
 --- !u!1 &6942756245855573362
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +204,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6942756245855573362}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

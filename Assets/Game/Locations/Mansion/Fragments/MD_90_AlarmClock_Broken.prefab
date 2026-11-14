@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 600657652775524199}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.084946126, y: 0.31231028, z: 0.015295818}
+  m_LocalPosition: {x: -0.091846734, y: 0.2466108, z: -0.029625192}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -71,7 +71,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,8 +114,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.17010777, y: 0.22540914, z: 0.030591749}
-  m_Center: {x: 0.000000007450581, y: 0.000000007450581, z: 0}
+  m_Size: {x: 0.23915976, y: 0.3667783, z: 0.12074962}
+  m_Center: {x: 0, y: -0.000000007450581, z: 0}
 --- !u!54 &5378398750535389138
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,9 +124,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600657652775524199}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -173,7 +174,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.084946126, y: 0.31231028, z: 0.015295818}
+  restCenter: {x: -0.091846734, y: 0.2466108, z: -0.029625192}
 --- !u!1 &631767257782670666
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 1171299595347717532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0969785, y: 0.10763428, z: -0.032513008}
+  m_LocalPosition: {x: -0.14158668, y: 0.04499999, z: -0.057313725}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -297,7 +298,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -340,8 +341,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.256043, y: 0.21526858, z: 0.11497399}
-  m_Center: {x: 0, y: 0.0000000037252903, z: 0}
+  m_Size: {x: 0.13921443, y: 0.09, z: 0.06537256}
+  m_Center: {x: 0.000000011175871, y: 0.0000000018626451, z: 0.0000000018626451}
 --- !u!54 &7078765515642474662
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -350,9 +351,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171299595347717532}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -381,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -399,7 +401,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.0969785, y: 0.10763428, z: -0.032513008}
+  restCenter: {x: -0.14158668, y: 0.04499999, z: -0.057313725}
 --- !u!1 &1331773811862263920
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 1331773811862263920}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11002139, y: 0.11417822, z: 0.026312992}
+  m_LocalPosition: {x: 0.047954455, y: 0.12888178, z: 0.027236078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -471,7 +473,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -514,8 +516,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2299572, y: 0.22835642, z: 0.13537401}
-  m_Center: {x: 0.0000000037252903, y: -0.000000011175871, z: -0.0000000037252903}
+  m_Size: {x: 0.29352745, y: 0.25776353, z: 0.13352782}
+  m_Center: {x: 0, y: -0.000000014901161, z: 0}
 --- !u!54 &5923375038703302789
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -524,9 +526,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331773811862263920}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -555,6 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -573,7 +576,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.11002139, y: 0.11417822, z: 0.026312992}
+  restCenter: {x: 0.047954455, y: 0.12888178, z: 0.027236078}
 --- !u!1 &1670030803038523838
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +607,7 @@ Transform:
   m_GameObject: {fileID: 1670030803038523838}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06956347, y: 0.31632167, z: 0.04699996}
+  m_LocalPosition: {x: 0.055961244, y: 0.287377, z: 0.046999972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -645,7 +648,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -688,8 +691,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20087308, y: 0.22735657, z: 0.09400003}
-  m_Center: {x: -0.0000000037252903, y: -0.000000007450581, z: 0}
+  m_Size: {x: 0.21682264, y: 0.2742129, z: 0.094}
+  m_Center: {x: 0, y: 0.000000022351742, z: 0.0000000018626451}
 --- !u!54 &3773453743073703832
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -698,9 +701,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670030803038523838}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -729,6 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -747,7 +751,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.06956347, y: 0.31632167, z: 0.04699996}
+  restCenter: {x: 0.055961244, y: 0.287377, z: 0.046999972}
 --- !u!1 &2360056925147715615
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +782,7 @@ Transform:
   m_GameObject: {fileID: 2360056925147715615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1125, y: 0.10822631, z: -0.044000007}
+  m_LocalPosition: {x: 0.06131597, y: 0.12989266, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -819,7 +823,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -862,8 +866,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.225, y: 0.21645263, z: 0.09199999}
-  m_Center: {x: 0, y: 0.0000000037252903, z: 0}
+  m_Size: {x: 0.32736805, y: 0.25978535, z: 0.18}
+  m_Center: {x: 0, y: 0.000000007450581, z: -0.0000000037252903}
 --- !u!54 &7087737008364121146
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -872,9 +876,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2360056925147715615}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -903,6 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -921,7 +926,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.1125, y: 0.10822631, z: -0.044000007}
+  restCenter: {x: 0.06131597, y: 0.12989266, z: 0}
 --- !u!1 &3199791707935089603
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,7 +957,7 @@ Transform:
   m_GameObject: {fileID: 3199791707935089603}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03329828, y: 0.32249996, z: 0.009134718}
+  m_LocalPosition: {x: 0.0711825, y: 0.29328018, z: 0.04249995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -993,7 +998,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1036,8 +1041,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.11921823, y: 0.21499999, z: 0.01826955}
-  m_Center: {x: -0.0000000018626451, y: -0.000000007450581, z: -4.656613e-10}
+  m_Size: {x: 0.19763502, y: 0.2636422, z: 0.08500001}
+  m_Center: {x: -0.000000011175871, y: 0.000000007450581, z: 0.0000000018626451}
 --- !u!54 &7857158075344796901
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1046,9 +1051,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3199791707935089603}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1077,6 +1082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1095,7 +1101,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.03329828, y: 0.32249996, z: 0.009134718}
+  restCenter: {x: 0.0711825, y: 0.29328018, z: 0.04249995}
 --- !u!1 &6620274328989202704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 6620274328989202704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09901635, y: 0.10749998, z: 0.039662283}
+  m_LocalPosition: {x: -0.12814167, y: 0.09500063, z: 0.0030923635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1167,7 +1173,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1210,8 +1216,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25196725, y: 0.21499996, z: 0.10867542}
-  m_Center: {x: -0.000000007450581, y: 0, z: -0.0000000018626451}
+  m_Size: {x: 0.19371666, y: 0.19000128, z: 0.18181524}
+  m_Center: {x: 0.000000007450581, y: -0.0000000037252903, z: 0}
 --- !u!54 &2882535467220871700
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1220,9 +1226,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6620274328989202704}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1251,6 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1269,7 +1276,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.09901635, y: 0.10749998, z: 0.039662283}
+  restCenter: {x: -0.12814167, y: 0.09500063, z: 0.0030923635}
 --- !u!1 &9022744627399804292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,7 +1307,7 @@ Transform:
   m_GameObject: {fileID: 9022744627399804292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.085, y: 0.30828947, z: 0.047999986}
+  m_LocalPosition: {x: -0.09589365, y: 0.24646667, z: 0.0036469325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1341,7 +1348,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 5e4f332696ddf325398821e16a382ac4, type: 2}
   - {fileID: 2100000, guid: 5db772e69eb4936c3a1039b04dd4f096, type: 2}
-  - {fileID: 2100000, guid: 23894362c7ad56b0b9dd4c32666cc4c0, type: 2}
+  - {fileID: 2100000, guid: efd176fbfb027f474bb1738696e12108, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1384,8 +1391,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.17, y: 0.23295382, z: 0.091999985}
-  m_Center: {x: 0, y: 0.000000014901161, z: -0.0000000037252903}
+  m_Size: {x: 0.2582127, y: 0.36706656, z: 0.18070611}
+  m_Center: {x: 0, y: 0, z: -0.0000000037252903}
 --- !u!54 &8627878438088820516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1394,9 +1401,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9022744627399804292}
   serializedVersion: 5
-  m_Mass: 0.4375
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.3125
+  m_LinearDamping: 0.08
+  m_AngularDamping: 0.65
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1425,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.5
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1443,4 +1451,4 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.085, y: 0.30828947, z: 0.047999986}
+  restCenter: {x: -0.09589365, y: 0.24646667, z: 0.0036469325}

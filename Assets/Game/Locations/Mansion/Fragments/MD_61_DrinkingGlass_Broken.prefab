@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 127466060318973522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.017495861, y: 0.09499881, z: 0.017548898}
+  m_LocalPosition: {x: -0.008408565, y: 0.090649925, z: 0.018036151}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -113,8 +113,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.034991723, y: 0.07000238, z: 0.035097834}
-  m_Center: {x: 0, y: -0.0000000018626451, z: 0}
+  m_Size: {x: 0.049389422, y: 0.07870014, z: 0.03607232}
+  m_Center: {x: 9.313226e-10, y: 0, z: 9.313226e-10}
 --- !u!54 &1914705086545466828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,8 +124,8 @@ Rigidbody:
   m_GameObject: {fileID: 127466060318973522}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -172,7 +173,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.017495861, y: 0.09499881, z: 0.017548898}
+  restCenter: {x: -0.008408565, y: 0.090649925, z: 0.018036151}
 --- !u!1 &198008593651550823
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 198008593651550823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.017618777, y: 0.09593424, z: -0.01363676}
+  m_LocalPosition: {x: -0.010910459, y: 0.09318091, z: -0.003310211}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -286,8 +287,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.038762443, y: 0.06813149, z: 0.04487117}
-  m_Center: {x: -9.313226e-10, y: 0.0000000055879354, z: -0.0000000018626451}
+  m_Size: {x: 0.052179083, y: 0.07363817, z: 0.065001115}
+  m_Center: {x: 0, y: 0.0000000018626451, z: 0.0000000018626451}
 --- !u!54 &7620523597078540089
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -297,8 +298,8 @@ Rigidbody:
   m_GameObject: {fileID: 198008593651550823}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -327,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -345,7 +347,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.017618777, y: 0.09593424, z: -0.01363676}
+  restCenter: {x: -0.010910459, y: 0.09318091, z: -0.003310211}
 --- !u!1 &676388996815096561
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +378,7 @@ Transform:
   m_GameObject: {fileID: 676388996815096561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.011717223, y: 0.034696575, z: -0.014198769}
+  m_LocalPosition: {x: -0.020301118, y: 0.033472426, z: -0.012743203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -459,8 +461,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.04286365, y: 0.06939316, z: 0.03702028}
-  m_Center: {x: 0.0000000018626451, y: -0.0000000018626451, z: -9.313226e-10}
+  m_Size: {x: 0.025598822, y: 0.057842948, z: 0.029320545}
+  m_Center: {x: 0.0000000027939677, y: -0.000000004656613, z: -4.656613e-10}
 --- !u!54 &662712103967412455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -470,8 +472,8 @@ Rigidbody:
   m_GameObject: {fileID: 676388996815096561}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -500,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -518,7 +521,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.011717223, y: 0.034696575, z: -0.014198769}
+  restCenter: {x: -0.020301118, y: 0.033472426, z: -0.012743203}
 --- !u!1 &1038072491916267843
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +552,7 @@ Transform:
   m_GameObject: {fileID: 1038072491916267843}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.014281997, y: 0.0975, z: -0.01551548}
+  m_LocalPosition: {x: 0.009773519, y: 0.08927372, z: -0.0030403472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -632,8 +635,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.044869788, y: 0.065, z: 0.041113734}
-  m_Center: {x: 9.313226e-10, y: 0, z: 0}
+  m_Size: {x: 0.054452963, y: 0.08145256, z: 0.066064}
+  m_Center: {x: 0, y: -0.0000000055879354, z: 0.0000000018626451}
 --- !u!54 &2902169734241119632
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -643,8 +646,8 @@ Rigidbody:
   m_GameObject: {fileID: 1038072491916267843}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -673,6 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -691,7 +695,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.014281997, y: 0.0975, z: -0.01551548}
+  restCenter: {x: 0.009773519, y: 0.08927372, z: -0.0030403472}
 --- !u!1 &2661282986735331796
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +726,7 @@ Transform:
   m_GameObject: {fileID: 2661282986735331796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.011992402, y: 0.0325, z: 0.013591735}
+  m_LocalPosition: {x: -0.015246958, y: 0.030761214, z: 0.007269118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -805,8 +809,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0402906, y: 0.065, z: 0.03726632}
-  m_Center: {x: 0, y: 0, z: -9.313226e-10}
+  m_Size: {x: 0.035710134, y: 0.06152243, z: 0.04908236}
+  m_Center: {x: 0, y: 9.313226e-10, z: 0}
 --- !u!54 &6303188879604485304
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -816,8 +820,8 @@ Rigidbody:
   m_GameObject: {fileID: 2661282986735331796}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -846,6 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -864,7 +869,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: -0.011992402, y: 0.0325, z: 0.013591735}
+  restCenter: {x: -0.015246958, y: 0.030761214, z: 0.007269118}
 --- !u!1 &3287214439336958035
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +900,7 @@ Transform:
   m_GameObject: {fileID: 3287214439336958035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0133715775, y: 0.09533592, z: 0.015857125}
+  m_LocalPosition: {x: 0.0118796695, y: 0.08900102, z: 0.017527219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -978,8 +983,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.04725685, y: 0.069328144, z: 0.04043038}
-  m_Center: {x: -9.313226e-10, y: 0, z: 0}
+  m_Size: {x: 0.03876274, y: 0.081997946, z: 0.031220298}
+  m_Center: {x: -0.0000000027939677, y: 0, z: -0.0000000013969839}
 --- !u!54 &7322463653167059657
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -989,8 +994,8 @@ Rigidbody:
   m_GameObject: {fileID: 3287214439336958035}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1019,6 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1037,7 +1043,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.0133715775, y: 0.09533592, z: 0.015857125}
+  restCenter: {x: 0.0118796695, y: 0.08900102, z: 0.017527219}
 --- !u!1 &4870823244752448156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1074,7 @@ Transform:
   m_GameObject: {fileID: 4870823244752448156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.015857985, y: 0.034082692, z: 0.012235036}
+  m_LocalPosition: {x: 0.0038124304, y: 0.028180914, z: 0.006568158}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1151,8 +1157,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.035188705, y: 0.068165384, z: 0.04005995}
-  m_Center: {x: -9.313226e-10, y: 0, z: 0}
+  m_Size: {x: 0.055407546, y: 0.05636183, z: 0.050273266}
+  m_Center: {x: -9.313226e-10, y: -9.313226e-10, z: 0}
 --- !u!54 &4602721850071619028
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1162,8 +1168,8 @@ Rigidbody:
   m_GameObject: {fileID: 4870823244752448156}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1192,6 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1210,7 +1217,7 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.015857985, y: 0.034082692, z: 0.012235036}
+  restCenter: {x: 0.0038124304, y: 0.028180914, z: 0.006568158}
 --- !u!1 &7339454095839187618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1300,7 @@ Transform:
   m_GameObject: {fileID: 8192173069413812879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.016242743, y: 0.035044704, z: -0.016367229}
+  m_LocalPosition: {x: 0.004460076, y: 0.030672202, z: -0.013675544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1376,8 +1383,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.032485485, y: 0.070089415, z: 0.03273442}
-  m_Center: {x: 0, y: 0.0000000018626451, z: 0}
+  m_Size: {x: 0.055839393, y: 0.06134441, z: 0.037011236}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4781870020692489734
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1387,8 +1394,8 @@ Rigidbody:
   m_GameObject: {fileID: 8192173069413812879}
   serializedVersion: 5
   m_Mass: 0.025
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_LinearDamping: 0.03
+  m_AngularDamping: 0.18
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1417,6 +1424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037db4eb6e92848e7bff996f17aa8485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Foundation.Runtime::MansionFragment
+  wallImpactMultiplier: 0.2
   sourceName: 
   sourceRestInverse:
     e00: 1
@@ -1435,4 +1443,4 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  restCenter: {x: 0.016242743, y: 0.035044704, z: -0.016367229}
+  restCenter: {x: 0.004460076, y: 0.030672202, z: -0.013675544}

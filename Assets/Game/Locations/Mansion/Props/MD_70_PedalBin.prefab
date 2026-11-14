@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726198825666945558}
-  m_Mesh: {fileID: 8058129350595898447, guid: b2b1820bbe7ea8a9ca067477a3675797, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 3adc738bb3ac89e468b9d33b0ecf44db, type: 2}
 --- !u!23 &7540234104313775065
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726198825666945558}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1936531436304961962}
   - component: {fileID: 5097809899313621459}
   - component: {fileID: 8087599851758287451}
+  - component: {fileID: 2279564695638078968}
   m_Layer: 0
   m_Name: MD_70_PedalBin
   m_TagString: Untagged
@@ -189,12 +190,15 @@ MonoBehaviour:
   maxHP: 110
   damageMultiplier: 0.9
   impactThreshold: 8
-  brokenPrefab: {fileID: 7377507397335287853, guid: 4f2e548230fa66ebd93ce942f862250a, type: 3}
+  brokenPrefab: {fileID: 0}
   explosionForce: 2.5
   explosionRadius: 1.4
   debrisLifetime: 70
   objectValue: 850
   wallet: {fileID: 0}
+  materialProfile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  materialToughnessScale: 1.1053897
+  retainOnDestruction: 1
 --- !u!114 &8087599851758287451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +218,24 @@ MonoBehaviour:
   wallMounted: 0
   hitSound: {fileID: 8300000, guid: b84aa5aaf519f0113b3555a2c3d5e5d5, type: 3}
   breakSound: {fileID: 8300000, guid: 41505cad1564cd95ca1ce6d4237e5485, type: 3}
+  mountSupports: []
+--- !u!114 &2279564695638078968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903049024947600963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99153b015fb94571a6214b2b1575ed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Foundation.Runtime::MansionMaterialResponse
+  profile: {fileID: 11400000, guid: a757a4f5b2df72d04950791d7abc213b, type: 2}
+  deformableSurfaces:
+  - {fileID: 2613459018072880788}
+  - {fileID: 4672828900095828159}
+  - {fileID: 1189752301359721529}
 --- !u!1 &2879191859166893281
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +277,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2879191859166893281}
-  m_Mesh: {fileID: 4602877224643106218, guid: b2b1820bbe7ea8a9ca067477a3675797, type: 3}
+  m_Mesh: {fileID: 4300000, guid: c587537a36b4268aeb84531a1a290fe5, type: 2}
 --- !u!23 &2578043886310741904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -312,7 +334,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2879191859166893281}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -404,7 +426,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5977966211848910676}
-  m_Mesh: {fileID: -1891479803470567541, guid: b2b1820bbe7ea8a9ca067477a3675797, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 04b4094989aaf9ed79b32d6550c0e00b, type: 2}
 --- !u!23 &5133171857786201337
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -461,7 +483,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5977966211848910676}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: df83f04a6aa28f24dbf69bfb6883d2db, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

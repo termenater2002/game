@@ -30,15 +30,21 @@ public class DamageFeedback : MonoBehaviour
             properties.SetColor(colorProperty, Color.Lerp(Color.black, originalColor, receipt.HealthFraction));
             target.SetPropertyBlock(properties);
         }
-        if (!receipt.Destroyed || owner.brokenPrefab == null) return;
+        if (owner.materialProfile != null && GetComponent<MansionProp>() == null)
+        { var clip = receipt.Destroyed ? owner.materialProfile.breakSound : owner.materialProfile.impactSound; if (clip != null) AudioSource.PlayClipAtPoint(clip, transform.position, .25f); }
+        if (!receipt.Destroyed || owner.brokenPrefab == null || owner.retainOnDestruction) return;
         // Prevent the newly spawned pieces colliding with the intact body before Destroy is flushed.
-        foreach (var shape in GetComponentsInChildren<Collider>()) shape.enabled = false;
+        foreach (var shape in GetComponentsInChildren<Collider>())
+        {
+            var independent = shape.GetComponentInParent<IndependentPart>();
+            if (independent == null || independent.gameObject == gameObject) shape.enabled = false;
+        }
         var debris = Instantiate(owner.brokenPrefab, transform.position, transform.rotation);
         debris.name = "Impact Debris";
         var mansionProp = GetComponent<MansionProp>();
+        if (mansionProp != null || GetComponent<IndependentPart>() != null) debris.transform.localScale = transform.lossyScale;
         if (mansionProp != null)
         {
-            debris.transform.localScale = transform.lossyScale;
             mansionProp.PrepareFracture(debris);
         }
         debris.SetActive(true);
@@ -47,6 +53,8 @@ public class DamageFeedback : MonoBehaviour
         {
             piece.isKinematic = false;
             if (velocity != null) piece.linearVelocity = velocity.linearVelocity;
+            float spin = owner.materialProfile != null && owner.materialProfile.substance == DestructionSubstance.Glass ? 6 : 2.5f;
+            piece.angularVelocity = Vector3.ClampMagnitude((velocity != null ? velocity.angularVelocity : Vector3.zero) + Random.insideUnitSphere * spin, 14);
             piece.AddExplosionForce(owner.explosionForce, transform.position, owner.explosionRadius);
         }
         Destroy(debris, Mathf.Max(0f, owner.debrisLifetime));

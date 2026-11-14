@@ -25,11 +25,12 @@ public static class BuildMansion
     static int instances;static bool reuseAssets;
     static Profile Substance(int id)
     {
-        if(new[]{11,12,27,36,37,38,61,62,82,96,115}.Contains(id))return new Profile("glass",id==27?15:id==11?11:id==61?.18f:id==62?.45f:2,32,3.8f,450);
-        if(new[]{34,35,39,40,59,60,63,69,91,93,94,101,104,105}.Contains(id))return new Profile("ceramic",id==91?115:id==93?36:id==34?7:id==35?8:id==59?.4f:id==60?.18f:3, id==91?210:id==93?120:id==59?19:id==60?17:42,3.8f,250);
-        if(new[]{21,22,23,26,73,74,75,88,89,99,100,109}.Contains(id))return new Profile("fabric",id<=23?65:id==26?3:1.5f,id<=23?120:60,8,600);
+        if(new[]{27,56,90,99,115,116,117,119,123,129,130}.Contains(id))return new Profile("plastic",id==27?15:2.5f,100,6,450);
+        if(new[]{11,12,36,61,82,96,127}.Contains(id))return new Profile("glass",id==27?15:id==11?11:id==61?.18f:id==62?.65f:2,32,3.8f,450);
+        if(new[]{34,35,39,40,59,60,62,63,69,91,93,94,101,104,105,126}.Contains(id))return new Profile("ceramic",id==91?115:id==93?36:id==34?7:id==35?8:id==59?.4f:id==60?.18f:id==62?.65f:id==104?.2f:id==105?.15f:3, id==91?210:id==93?120:id==59?19:id==60?17:42,3.8f,250);
+        if(new[]{21,22,23,26,73,74,75,88,89,99,100,109}.Contains(id))return new Profile("fabric",id==21?65:id==22?24:id==23?28:id==26?3:1.5f,id<=23?120:60,8,600);
         if(new[]{31,32,33,43,48,49,50,51,52,53,54,55,56,57,58,64,67,70,78,81,90,92,95,97,103,107,108,112,113,115,116,117,118,119,123,124,125,126,129,130}.Contains(id))return new Profile("metal",id==113?120:id==48?65:id==49||id==55?40:id==33?18:id==97?14:id==43?6:3.5f,id==113?280:id==48?180:110,8,850);
-        return new Profile("wood",id==41?42:id==71?80:id==79?65:id==29?45:id==44?48:id==47?60:id==111?38:id==42?7:id==25?13:id<=10?18:5, id==41||id==71||id==79?130:id==42?62:88,7,500);
+        return new Profile("wood",id==20?95:id==28?32:id==30?55:id==45?22:id==76?12:id==80?35:id==9?35:id==41?42:id==71?80:id==79?65:id==29?45:id==44?48:id==47?60:id==111?38:id==42?7:id==25?13:id<=10?18:5, id==41||id==71||id==79?130:id==42?62:88,7,500);
     }
     static Material Mat(string name)
     {
@@ -93,9 +94,10 @@ public static class BuildMansion
     static GameObject Prop(int id)
     {
         if(prefabs.TryGetValue(id,out var known))return known;
-        var e=specs[id];if(reuseAssets){var stored=AssetDatabase.LoadAssetAtPath<GameObject>(Folder+"/Props/"+e.name+".prefab");if(stored!=null){prefabs[id]=stored;return stored;}}var profile=Substance(id);var go=Visual(id);BoxShapes(go);var body=go.AddComponent<Rigidbody>();body.mass=profile.mass;if(id==27||id==115)body.centerOfMass=new Vector3(0,.16f,.15f);if(id==31||id==32)body.centerOfMass=new Vector3(0,.18f,0);body.interpolation=RigidbodyInterpolation.Interpolate;body.collisionDetectionMode=CollisionDetectionMode.ContinuousSpeculative;body.maxDepenetrationVelocity=2f;body.maxAngularVelocity=12;body.linearDamping=.10f;body.angularDamping=.55f;
+        var e=specs[id];if(reuseAssets){var stored=AssetDatabase.LoadAssetAtPath<GameObject>(Folder+"/Props/"+e.name+".prefab");if(stored!=null){prefabs[id]=stored;return stored;}}var profile=Substance(id);var go=Visual(id);if(id==26)MansionPropFactory.RugGeometry(go);BoxShapes(go);var body=go.AddComponent<Rigidbody>();body.mass=profile.mass;if(id==27||id==115)body.centerOfMass=new Vector3(0,.16f,.15f);if(id==31||id==32)body.centerOfMass=new Vector3(0,.18f,0);body.interpolation=RigidbodyInterpolation.Interpolate;body.collisionDetectionMode=CollisionDetectionMode.ContinuousSpeculative;body.maxDepenetrationVelocity=2f;body.maxAngularVelocity=12;body.linearDamping=.10f;body.angularDamping=.55f;
         var damage=go.AddComponent<DamageOnImpact>();damage.maxHP=profile.hp;damage.impactThreshold=profile.threshold;damage.damageMultiplier=profile.kind=="glass"||profile.kind=="ceramic"?1.5f:.9f;damage.objectValue=profile.value;damage.explosionForce=2.5f;damage.explosionRadius=1.4f;damage.debrisLifetime=70;
         var meta=go.AddComponent<MansionProp>();meta.assetId=id;meta.displayName=e.label;meta.substance=profile.kind;meta.hitSound=AssetDatabase.LoadAssetAtPath<AudioClip>(Folder+"/Art/Audio/"+profile.kind+"_hit.wav");meta.breakSound=AssetDatabase.LoadAssetAtPath<AudioClip>(Folder+"/Art/Audio/"+profile.kind+"_break.wav");
+        Interior("glass");MansionPropFactory.Configure(go,id,profile.kind);
         foreach(var name in e.moving_parts)
         {
             var moving=go.GetComponentsInChildren<Transform>(true).FirstOrDefault(t=>t.name==name);if(moving==null)throw new Exception("Moving part missing: "+name);
@@ -110,7 +112,10 @@ public static class BuildMansion
                 var j=moving.gameObject.AddComponent<HingeJoint>();j.connectedBody=body;j.autoConfigureConnectedAnchor=false;j.anchor=Vector3.zero;j.connectedAnchor=go.transform.InverseTransformPoint(moving.position);bool horizontal=name.Contains("oven_door")||name.Contains("dishwasher")||name.Contains("toilet_lid")||name.Contains("bin_lid")||name.Contains("pot_lid");j.axis=moving.InverseTransformDirection(horizontal?go.transform.right:go.transform.up);j.useLimits=true;j.limits=new JointLimits{min=-105,max=105};j.breakForce=1600;j.breakTorque=1200;j.enableCollision=false;mechanism.hinge=j;mechanism.openAngle=name.EndsWith(".001")?-95:95;
             }
         }
-        var broken=MansionFracture.Build(go,Folder+"/FragmentMeshes/"+id,profile.mass,Interior(profile.kind),e.moving_parts,id);damage.brokenPrefab=PrefabUtility.SaveAsPrefabAsset(broken,Folder+"/Fragments/"+e.name+"_Broken.prefab");UnityEngine.Object.DestroyImmediate(broken);
+        if(!damage.retainOnDestruction)
+        {
+            var broken=MansionFracture.Build(go,Folder+"/FragmentMeshes/"+id,profile.mass,Interior(profile.kind),e.moving_parts,id,profile.kind);damage.brokenPrefab=PrefabUtility.SaveAsPrefabAsset(broken,Folder+"/Fragments/"+e.name+"_Broken.prefab");UnityEngine.Object.DestroyImmediate(broken);
+        }
         go.SetActive(true);var result=PrefabUtility.SaveAsPrefabAsset(go,Folder+"/Props/"+e.name+".prefab");UnityEngine.Object.DestroyImmediate(go);prefabs[id]=result;return result;
     }
     static GameObject Place(int id,string room,Vector3 bottom,float yaw=0,bool mounted=false,Vector3? scale=null)
@@ -231,6 +236,7 @@ public static class BuildMansion
             foreach(var b in Physics.OverlapBox(a.bounds.center,a.bounds.extents+Vector3.one*.002f))
             {
                 int j=Array.IndexOf(colliders,b);if(j<0||j==i||(b.attachedRigidbody!=null&&j<i)||a.attachedRigidbody==b.attachedRigidbody)continue;
+                var composite=a.GetComponentInParent<CompositeContents>();if(composite!=null&&composite==b.GetComponentInParent<CompositeContents>())continue;
                 var bp=b.GetComponentInParent<MansionProp>();if(ap!=null&&ap.mountSupports.Contains(b)||bp!=null&&bp.mountSupports.Contains(a))continue;
                 var aj=a.attachedRigidbody.GetComponent<Joint>();var bj=b.attachedRigidbody!=null?b.attachedRigidbody.GetComponent<Joint>():null;
                 if(aj!=null&&!aj.enableCollision&&aj.connectedBody!=null&&aj.connectedBody==b.attachedRigidbody||bj!=null&&!bj.enableCollision&&bj.connectedBody!=null&&bj.connectedBody==a.attachedRigidbody)continue;
@@ -262,18 +268,10 @@ public static class BuildMansion
         foreach(var s in Enumerable.Range(0,SceneManager.sceneCount).Select(SceneManager.GetSceneAt).ToArray())if(s.isDirty)throw new Exception("Unsaved scene needs saving before level build: "+s.path);
         scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);scene.name="MansionPrototype";SceneManager.SetActiveScene(scene);
         architecture=new GameObject("Mansion shell — structural surfaces").transform;contents=new GameObject("Mansion contents — physical and breakable").transform;ceilings=new GameObject("Ceilings — hide in editor for plan view").transform;ceilings.SetParent(architecture);
-        for(int x=0;x<8;x++)for(int z=0;z<8;z++){Structure(6,new Vector3(-10.5f+3*x,-.18f,-10.5f+3*z));Structure(7,new Vector3(-10.5f+3*x,3.2f,-10.5f+3*z),0,null,ceilings);}
-        // Outer shell: real window openings, individually breakable glazed frames.
-        for(int i=0;i<8;i++)
-        {
-            float p=-10.5f+i*3;foreach(float x in new[]{-12f,12}){float yaw=x<0?90:-90;Structure(i%2==0?3:1,new Vector3(x,0,p),yaw,new Vector3(1,3.2f/3,1));if(i%2==0)Place(11,"Window",new Vector3(x,1.08f,p),yaw,true);}
-            foreach(float z in new[]{-12f,12}){float yaw=z<0?0:180;if(Mathf.Abs(p)<2)continue;Structure(i%2==0?3:1,new Vector3(p,0,z),yaw,new Vector3(1,3.2f/3,1));if(i%2==0)Place(11,"Window",new Vector3(p,1.08f,z),yaw,true);}
-        }
-        // Fill front/back central openings with a framed entrance and a rear garden exit.
-        foreach(float z in new[]{-12f,12}){Place(9,"Entrance",new Vector3(0,0,z),z<0?0:180,true);Wall(new Vector3(-3,0,z),new Vector3(-1.08f,0,z),z<0?0:180);Wall(new Vector3(1.08f,0,z),new Vector3(3,0,z),z<0?0:180);}
-        HallWall(-2,90);HallWall(2,-90);foreach(float z in new[]{-4f,4}){Wall(new Vector3(-12,0,z),new Vector3(-2,0,z),z<0?0:180);Wall(new Vector3(2,0,z),new Vector3(12,0,z),z<0?0:180);}
+        MansionArchitecture.Build(architecture,ceilings,materials,(id,room,p,yaw,mount)=>Place(id,room,p,yaw,mount));
         // Exterior apron catches thrown objects; the structural boundary remains intact.
         var outside=GameObject.CreatePrimitive(PrimitiveType.Cube);outside.name="Stone courtyard apron";outside.transform.SetParent(architecture);outside.transform.localScale=new Vector3(34,.3f,34);outside.transform.position=new Vector3(0,-.36f,0);outside.GetComponent<Renderer>().sharedMaterial=materials["MD_012_cream_marble"];
+        foreach(var kind in new[]{"wood","glass","ceramic","metal","plastic","fabric"})MansionPropFactory.Profile(kind);
         Furnish();CreatePlayer();Lighting();AmbientActors();
         Physics.SyncTransforms();
         var supports=architecture.GetComponentsInChildren<Collider>();
@@ -282,6 +280,10 @@ public static class BuildMansion
             var shapes=prop.GetComponentsInChildren<Collider>();var bounds=new Bounds(prop.transform.position,Vector3.zero);foreach(var shape in shapes)bounds.Encapsulate(shape.bounds);bounds.Expand(.08f);
             prop.mountSupports=supports.Where(c=>c.bounds.Intersects(bounds)&&(!c.name.StartsWith("MD_6_ParquetFloor")&&c.name!="Stone courtyard apron")).ToArray();
             PrefabUtility.RecordPrefabInstancePropertyModifications(prop);
+        }
+        foreach(var chunk in architecture.GetComponentsInChildren<VoxelWallChunk>())
+        {
+            var boxes=chunk.GetComponents<Collider>();chunk.ignoreOnDamage=contents.GetComponentsInChildren<MansionProp>().Where(p=>p.wallMounted&&p.mountSupports.Any(s=>boxes.Contains(s))).SelectMany(p=>p.GetComponentsInChildren<Collider>()).ToArray();
         }
         var overview=new GameObject("Mansion Plan Camera").AddComponent<Camera>();overview.transform.position=new Vector3(21,30,-25);overview.transform.LookAt(Vector3.zero);overview.orthographic=true;overview.orthographicSize=20;overview.enabled=false;overview.farClipPlane=120;overview.clearFlags=CameraClearFlags.SolidColor;overview.backgroundColor=new Color(.12f,.15f,.18f);
         EditorSceneManager.SaveScene(scene,ScenePath);var buildScenes=EditorBuildSettings.scenes.ToList();if(!buildScenes.Any(s=>s.path==ScenePath)){buildScenes.Add(new EditorBuildSettingsScene(ScenePath,true));EditorBuildSettings.scenes=buildScenes.ToArray();}AssetDatabase.SaveAssets();
